@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Google Drive
+.tmp.drivedownload
+.tmp.driveupload
+
+# Microsoft Office temporary files
+~$*
+*.tmp
+
+# Backup files
+*~
+*.bak
+*.swp
+
+# Don't track the bronte-dashboard folder we just created (we'll use the original file)
+bronte-dashboard/
+
