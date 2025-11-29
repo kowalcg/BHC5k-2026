@@ -399,6 +399,7 @@
                 margin-right: -10px;
                 padding-left: 10px;
                 padding-right: 10px;
+                touch-action: pan-x; /* Allow horizontal panning/scrolling */
             }
 
             .tabs::-webkit-scrollbar {
@@ -411,6 +412,9 @@
                 padding: 10px 16px;
                 flex-shrink: 0; /* Prevent buttons from shrinking */
                 min-width: fit-content;
+                touch-action: pan-x; /* Allow horizontal scrolling on buttons */
+                user-select: none; /* Prevent text selection during scroll */
+                -webkit-user-select: none;
             }
 
             .container {
@@ -2931,10 +2935,36 @@
         // Initialize tab buttons with proper event listeners for mobile
         document.addEventListener('DOMContentLoaded', function() {
             const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabsContainer = document.querySelector('.tabs');
+            
+            // Track touch state for scroll detection
+            let touchStartX = 0;
+            let touchStartY = 0;
+            let isScrolling = false;
+            
             tabButtons.forEach(button => {
-                // Add both click and touchstart for better mobile support
-                ['click', 'touchstart'].forEach(eventType => {
-                    button.addEventListener(eventType, function(e) {
+                // Handle touch events to detect scrolling vs tapping
+                button.addEventListener('touchstart', function(e) {
+                    touchStartX = e.touches[0].clientX;
+                    touchStartY = e.touches[0].clientY;
+                    isScrolling = false;
+                }, { passive: true });
+                
+                button.addEventListener('touchmove', function(e) {
+                    const touchMoveX = e.touches[0].clientX;
+                    const touchMoveY = e.touches[0].clientY;
+                    const deltaX = Math.abs(touchMoveX - touchStartX);
+                    const deltaY = Math.abs(touchMoveY - touchStartY);
+                    
+                    // If horizontal movement is greater than vertical, it's a scroll
+                    if (deltaX > deltaY && deltaX > 5) {
+                        isScrolling = true;
+                    }
+                }, { passive: true });
+                
+                button.addEventListener('touchend', function(e) {
+                    // Only trigger tab switch if it wasn't a scroll
+                    if (!isScrolling) {
                         e.preventDefault();
                         e.stopPropagation();
                         
@@ -2944,9 +2974,25 @@
                         if (match) {
                             showTab(match[1], this);
                         }
-                    }, { passive: false });
+                    }
+                    isScrolling = false;
+                }, { passive: false });
+                
+                // Regular click for desktop
+                button.addEventListener('click', function(e) {
+                    // Get tab name from onclick attribute
+                    const onclickAttr = this.getAttribute('onclick');
+                    const match = onclickAttr.match(/showTab\('([^']+)'/);
+                    if (match) {
+                        showTab(match[1], this);
+                    }
                 });
             });
+            
+            // Make the entire tabs container scrollable with better touch handling
+            if (tabsContainer) {
+                tabsContainer.style.touchAction = 'pan-x';
+            }
         });
 
         // Update progress (placeholder - would connect to actual data)
