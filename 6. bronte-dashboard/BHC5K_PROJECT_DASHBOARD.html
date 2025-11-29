@@ -389,13 +389,32 @@
 
             .tabs {
                 overflow-x: auto;
+                overflow-y: hidden;
                 flex-wrap: nowrap;
+                -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+                scrollbar-width: none; /* Hide scrollbar on Firefox */
+                -ms-overflow-style: none; /* Hide scrollbar on IE/Edge */
+                padding: 15px 10px;
+                margin-left: -10px;
+                margin-right: -10px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .tabs::-webkit-scrollbar {
+                display: none; /* Hide scrollbar on Chrome/Safari */
             }
 
             .tab-btn {
                 white-space: nowrap;
                 font-size: 12px;
                 padding: 10px 16px;
+                flex-shrink: 0; /* Prevent buttons from shrinking */
+                min-width: fit-content;
+            }
+
+            .container {
+                padding: 10px;
             }
 
             .committee-section {
