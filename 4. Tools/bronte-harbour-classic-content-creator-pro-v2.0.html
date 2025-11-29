@@ -1,0 +1,3489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bronte Harbour Classic - Complete Content Creator PRO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a0000 0%, #000000 50%, #1a0000 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 30px 20px;
+            background: rgba(255, 0, 0, 0.1);
+            border-radius: 20px;
+            border: 2px solid rgba(255, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #FF0000, #FFFFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #ff6666;
+            font-size: 1.2em;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .version-badge {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 6px 16px;
+            background: linear-gradient(135deg, #FF0000, #000000);
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .quick-presets {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .preset-btn {
+            padding: 8px 16px;
+            background: rgba(255, 0, 0, 0.3);
+            border: 1px solid rgba(255, 0, 0, 0.5);
+            border-radius: 20px;
+            color: #FF0000;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.85em;
+        }
+
+        .preset-btn:hover {
+            background: rgba(255, 0, 0, 0.5);
+            transform: translateY(-2px);
+            color: #FFFFFF;
+        }
+
+        .main-layout {
+            display: grid;
+            grid-template-columns: 420px 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .controls {
+            background: rgba(20, 0, 0, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255, 0, 0, 0.2);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .output-area {
+            background: rgba(20, 0, 0, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(255, 0, 0, 0.2);
+            min-height: 600px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: #FF0000;
+            font-weight: 600;
+            margin-bottom: 12px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+            padding-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+            color: #FF0000;
+            font-size: 0.9em;
+        }
+
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: #FF0000;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.85em;
+            white-space: nowrap;
+            z-index: 1000;
+            border: 1px solid #FF0000;
+        }
+
+        select, input[type="text"], textarea {
+            width: 100%;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            border-radius: 8px;
+            color: #e0e0e0;
+            font-size: 0.95em;
+            transition: all 0.3s;
+        }
+
+        select:focus, input[type="text"]:focus, textarea:focus {
+            outline: none;
+            border-color: #FF0000;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        select option {
+            background: #1a0000;
+            color: #e0e0e0;
+        }
+
+        .option-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .option-btn {
+            padding: 10px;
+            background: rgba(255, 0, 0, 0.2);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            border-radius: 8px;
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.85em;
+            text-align: center;
+        }
+
+        .option-btn:hover {
+            background: rgba(255, 0, 0, 0.4);
+            border-color: #FF0000;
+            transform: translateY(-2px);
+        }
+
+        .option-btn.active {
+            background: linear-gradient(135deg, #FF0000, #000000);
+            border-color: #FFFFFF;
+            color: #fff;
+        }
+
+        button {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1em;
+        }
+
+        .btn-generate {
+            width: 100%;
+            background: linear-gradient(135deg, #FF0000, #CC0000);
+            color: #FFFFFF;
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+
+        .btn-generate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 0, 0, 0.5);
+        }
+
+        .btn-regenerate {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: #FF0000;
+            border: 1px solid #FF0000;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+
+        .btn-regenerate:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: translateY(-2px);
+        }
+
+        .btn-clear {
+            width: 100%;
+            background: rgba(60, 60, 60, 0.5);
+            color: #aaa;
+            border: 1px solid rgba(100, 100, 100, 0.3);
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .btn-clear:hover {
+            background: rgba(100, 100, 100, 0.6);
+            color: #fff;
+            border-color: rgba(200, 200, 200, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .workflow-guide {
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            font-size: 0.85em;
+            line-height: 1.6;
+        }
+
+        .workflow-guide strong {
+            color: #FF0000;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .workflow-guide ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .workflow-guide li {
+            padding: 4px 0;
+            color: #ff6666;
+        }
+
+        .workflow-guide li::before {
+            content: "→ ";
+            color: #FF0000;
+            font-weight: bold;
+        }
+
+        .btn-copy {
+            background: rgba(255, 0, 0, 0.3);
+            color: #FF0000;
+            border: 1px solid #FF0000;
+            padding: 8px 16px;
+            font-size: 0.9em;
+        }
+
+        .btn-copy:hover {
+            background: rgba(255, 0, 0, 0.6);
+            color: #FFFFFF;
+        }
+
+        .btn-export {
+            background: rgba(0, 0, 0, 0.7);
+            color: #FF0000;
+            border: 1px solid #FF0000;
+            padding: 8px 16px;
+            font-size: 0.9em;
+        }
+
+        .btn-export:hover {
+            background: rgba(0, 0, 0, 0.9);
+            color: #FFFFFF;
+        }
+
+        .content-section {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+        }
+
+        .content-title {
+            color: #FF0000;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        .content-icon {
+            font-size: 1.5em;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .prompt-text {
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            line-height: 1.8;
+            color: #f5f5dc;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 0, 0, 0.2);
+        }
+
+        .logo-instructions {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(255, 0, 0, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            color: #ff6666;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .logo-instructions strong {
+            color: #FF0000;
+        }
+
+        .social-posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-post-card {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .social-post-card:hover {
+            border-color: #FF0000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+        }
+
+        .post-number {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 0, 0, 0.5);
+            color: #FFFFFF;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.75em;
+            font-weight: 600;
+        }
+
+        .post-copy {
+            color: #f5f5dc;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            font-size: 0.95em;
+        }
+
+        .post-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 0, 0, 0.1);
+            font-size: 0.8em;
+            color: #ff6666;
+        }
+
+        .char-count {
+            font-size: 0.75em;
+            color: #ff6666;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+
+        .empty-state-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 8px 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .checkbox-option:hover {
+            background: rgba(255, 0, 0, 0.2);
+        }
+
+        .checkbox-option input[type="checkbox"] {
+            width: auto;
+            cursor: pointer;
+        }
+
+        .checkbox-option label {
+            cursor: pointer;
+            flex: 1;
+            font-size: 0.9em;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-label {
+            display: block;
+            color: #ff6666;
+            font-size: 0.85em;
+            margin-bottom: 6px;
+        }
+
+        .input-help {
+            font-size: 0.75em;
+            color: #666;
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        .tips {
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 0.85em;
+            color: #ff6666;
+        }
+
+        .tips-title {
+            font-weight: 600;
+            color: #FF0000;
+            margin-bottom: 8px;
+        }
+
+        .tips ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .tips li {
+            margin-bottom: 5px;
+        }
+
+        .platform-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(255, 0, 0, 0.3);
+            border: 1px solid rgba(255, 0, 0, 0.5);
+            border-radius: 15px;
+            font-size: 0.75em;
+            color: #FFFFFF;
+            margin-left: 10px;
+        }
+
+        .success-message {
+            background: rgba(255, 0, 0, 0.2);
+            border: 1px solid rgba(255, 0, 0, 0.5);
+            color: #FFFFFF;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        @media (max-width: 1200px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .controls {
+                position: relative;
+                top: 0;
+                max-height: none;
+            }
+
+            .social-posts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 0, 0, 0.5);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 0, 0, 0.7);
+        }
+
+        /* ============================================================================ */
+        /* V2.0 NEW STYLES: Two-Stage Image Workflow */
+        /* ============================================================================ */
+
+        .image-dropzone {
+            border: 2px dashed rgba(255, 0, 0, 0.4);
+            border-radius: 12px;
+            padding: 40px 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .image-dropzone:hover,
+        .image-dropzone.dragover {
+            border-color: #FF0000;
+            background: rgba(255, 0, 0, 0.1);
+            transform: scale(1.02);
+        }
+
+        .image-dropzone-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #FF0000;
+        }
+
+        .image-dropzone-text {
+            color: #FF0000;
+            font-size: 0.95em;
+            margin-bottom: 5px;
+        }
+
+        .image-dropzone-subtext {
+            color: #9ca3af;
+            font-size: 0.8em;
+        }
+
+        .image-preview-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .image-preview-box {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .image-preview-box h4 {
+            color: #FF0000;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .uploaded-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(255, 0, 0, 0.3);
+        }
+
+        .analysis-item {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            border-left: 3px solid #FF0000;
+        }
+
+        .analysis-label {
+            color: #FF0000;
+            font-weight: 600;
+            font-size: 0.85em;
+            margin-bottom: 4px;
+        }
+
+        .analysis-value {
+            color: #e0e0e0;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+
+        .color-swatch {
+            width: 50px;
+            height: 50px;
+            border-radius: 6px;
+            border: 2px solid rgba(255, 0, 0, 0.3);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .color-swatch:hover::after {
+            content: attr(data-hex);
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: #FF0000;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.7em;
+            white-space: nowrap;
+            z-index: 100;
+        }
+
+        .prompt-variations {
+            display: grid;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .variation-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            transition: all 0.3s;
+        }
+
+        .variation-card:hover {
+            border-color: #FF0000;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+        }
+
+        .variation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+        }
+
+        .variation-title {
+            color: #FF0000;
+            font-weight: 600;
+            font-size: 1em;
+        }
+
+        .variation-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-icon {
+            padding: 6px 12px;
+            font-size: 0.85em;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            border-radius: 6px;
+            color: #FF0000;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-icon:hover {
+            background: rgba(255, 0, 0, 0.3);
+            border-color: #FF0000;
+        }
+
+        .analyzing-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 0, 0, 0.3);
+            border-radius: 50%;
+            border-top-color: #FF0000;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Stage Dividers */
+        .stage-divider {
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.2), rgba(139, 0, 0, 0.2));
+            border: 2px solid rgba(255, 0, 0, 0.4);
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin: 25px 0 20px 0;
+            text-align: center;
+        }
+
+        .stage-divider-title {
+            color: #FF0000;
+            font-size: 1.3em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .stage-divider-subtitle {
+            color: #ff9999;
+            font-size: 0.85em;
+            font-style: italic;
+        }
+
+        /* Using image badge */
+        .using-image-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF0000, #CC0000);
+            color: #FFFFFF;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(255, 0, 0, 0.4);
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 3px 10px rgba(255, 0, 0, 0.4); }
+            50% { box-shadow: 0 5px 20px rgba(255, 0, 0, 0.6); }
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            background: #FF0000;
+            color: #FFFFFF;
+            border-radius: 8px;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1000;
+        }
+
+        .notification.show {
+            opacity: 1;
+        }
+
+        @media (max-width: 1200px) {
+            .image-preview-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Mobile Phone Styles (iPhone/Android) */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+                line-height: 1.2;
+            }
+
+            .subtitle {
+                font-size: 0.85em;
+            }
+
+            .quick-presets {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .preset-btn {
+                padding: 10px 14px;
+                font-size: 0.85em;
+                flex: 1 1 calc(50% - 4px);
+                min-width: 0;
+            }
+
+            .section {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .section-title {
+                font-size: 1.1em;
+            }
+
+            .btn-group {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .btn-group button {
+                padding: 10px 14px;
+                font-size: 0.85em;
+                flex: 1 1 calc(50% - 4px);
+                min-width: 0;
+            }
+
+            .image-dropzone {
+                padding: 30px 15px;
+            }
+
+            .image-dropzone-text {
+                font-size: 1em;
+            }
+
+            .image-dropzone-subtext {
+                font-size: 0.75em;
+            }
+
+            .image-preview-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .image-preview-box {
+                padding: 15px;
+            }
+
+            .uploaded-image {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .variation-card {
+                padding: 15px;
+            }
+
+            .variation-title {
+                font-size: 0.9em;
+            }
+
+            #variation-0, #variation-1, #variation-2, #variation-3 {
+                font-size: 0.8em;
+                padding: 10px;
+                max-height: 200px;
+            }
+
+            .btn-primary, .btn-secondary, .btn-clear {
+                padding: 12px 20px;
+                font-size: 0.9em;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            select, input[type="text"], textarea {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+
+            .output {
+                padding: 15px;
+            }
+
+            .output h3 {
+                font-size: 1.2em;
+            }
+
+            .social-post {
+                padding: 15px;
+                font-size: 0.9em;
+            }
+
+            .workflow-guide {
+                font-size: 0.85em;
+                padding: 12px;
+            }
+
+            .workflow-guide ul {
+                padding-left: 20px;
+            }
+
+            .workflow-guide li {
+                margin-bottom: 8px;
+            }
+        }
+
+        /* Small Phone Styles (iPhone SE, small Android) */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.3em;
+            }
+
+            .preset-btn {
+                font-size: 0.75em;
+                padding: 8px 10px;
+            }
+
+            .btn-group button {
+                font-size: 0.75em;
+                padding: 8px 10px;
+            }
+
+            .section-title {
+                font-size: 1em;
+            }
+
+            .image-dropzone {
+                padding: 20px 10px;
+            }
+
+            .variation-card {
+                padding: 12px;
+            }
+
+            #variation-0, #variation-1, #variation-2, #variation-3 {
+                font-size: 0.75em;
+                padding: 8px;
+                max-height: 150px;
+            }
+
+            .btn-primary, .btn-secondary, .btn-clear {
+                padding: 10px 16px;
+                font-size: 0.85em;
+            }
+
+            .social-post {
+                padding: 12px;
+                font-size: 0.85em;
+            }
+        }
+
+        /* Touch-friendly improvements for mobile */
+        @media (hover: none) and (pointer: coarse) {
+            button, .preset-btn, .btn-group button, .variation-card button {
+                min-height: 44px; /* Apple's recommended touch target size */
+            }
+
+            .image-dropzone {
+                min-height: 120px;
+            }
+
+            select, input, textarea {
+                min-height: 44px;
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏃 Bronte Harbour Classic - Content Creator PRO</h1>
+            <p class="subtitle">Two-Stage Image Workflow + AI Prompts + 10 Captions + Export Tools</p>
+            <span class="version-badge">v2.0 - November 29, 2025</span>
+            <p style="margin-top: 10px; color: #ff6666; font-size: 0.85em;">June 21, 2026 | Father's Day 5K + Kids 1K | Bronte Harbour, Oakville</p>
+            <p style="margin-top: 10px; color: #999; font-size: 0.8em; font-style: italic;">Designed by Greg Kowalczyk</p>
+
+            <div class="quick-presets">
+                <div class="preset-btn" onclick="loadPreset('launch')">🎯 Registration Launch</div>
+                <div class="preset-btn" onclick="loadPreset('training')">🏃 Training Tips</div>
+                <div class="preset-btn" onclick="loadPreset('countdown')">⏰ Race Countdown</div>
+                <div class="preset-btn" onclick="loadPreset('sponsors')">🤝 Sponsor Feature</div>
+                <div class="preset-btn" onclick="loadPreset('family')">👨‍👩‍👧 Family Fun</div>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <!-- Controls Panel -->
+            <div class="controls">
+
+                <!-- ============================================================ -->
+                <!-- STAGE 1: QUICK IMAGE VARIATIONS -->
+                <!-- ============================================================ -->
+                <div class="stage-divider">
+                    <div class="stage-divider-title">⚡ STAGE 1: Quick Image Variations</div>
+                    <div class="stage-divider-subtitle">Upload runner/scenic image → Get 4 instant race prompts → Copy or Use (30 seconds)</div>
+                </div>
+
+                <!-- IMAGE ANALYSIS SECTION -->
+                <div class="section" id="image-analysis-section">
+                    <div class="section-title">
+                        📸 AI Prompt from Image
+                        <span class="tooltip" data-tooltip="Upload runner photos, Bronte Harbour scenics, or race images">ℹ️</span>
+                    </div>
+
+                    <div class="image-dropzone" id="imageDropzone">
+                        <div class="image-dropzone-icon">📸</div>
+                        <div class="image-dropzone-text">Drop any image here or click to upload</div>
+                        <div class="image-dropzone-subtext">🏃 Runner photos → Match the style | 🌳 Scenic/Street views → Add race elements to scene</div>
+                        <div class="image-dropzone-subtext" style="margin-top: 5px; font-size: 0.75em; opacity: 0.7;">Ctrl+V to paste • JPG, PNG, WebP • Google Street View works great!</div>
+                        <input type="file" id="imageFileInput" accept="image/*" style="display: none;">
+                    </div>
+
+                    <div id="imageAnalysisResults" class="hidden">
+                        <div class="image-preview-container">
+                            <div class="image-preview-box">
+                                <h4>📷 Uploaded Image</h4>
+                                <img id="uploadedImagePreview" class="uploaded-image" alt="Uploaded image">
+                                <button class="btn-clear" onclick="clearImageAnalysis()" style="margin-top: 10px;">🗑️ Clear Image</button>
+                            </div>
+
+                            <div class="image-preview-box">
+                                <h4>🎨 Extracted Analysis</h4>
+                                <div id="imageAnalysisContent"></div>
+                            </div>
+                        </div>
+
+                        <div class="prompt-variations">
+                            <h4 style="color: #FF0000; margin-bottom: 15px;">🏃 Generated Race Prompt Variations</h4>
+
+                            <div class="variation-card">
+                                <div class="variation-header">
+                                    <span class="variation-title">🎯 Exact Match</span>
+                                    <div class="variation-actions">
+                                        <button class="btn-icon" onclick="copyPromptVariation(0)">📋 Copy</button>
+                                        <button class="btn-icon" onclick="sendToGenerator(0)">➡️ Use</button>
+                                    </div>
+                                </div>
+                                <div class="prompt-text" id="variation-0"></div>
+                            </div>
+
+                            <div class="variation-card">
+                                <div class="variation-header">
+                                    <span class="variation-title">✨ Inspired</span>
+                                    <div class="variation-actions">
+                                        <button class="btn-icon" onclick="copyPromptVariation(1)">📋 Copy</button>
+                                        <button class="btn-icon" onclick="sendToGenerator(1)">➡️ Use</button>
+                                    </div>
+                                </div>
+                                <div class="prompt-text" id="variation-1"></div>
+                            </div>
+
+                            <div class="variation-card">
+                                <div class="variation-header">
+                                    <span class="variation-title">💎 Premium</span>
+                                    <div class="variation-actions">
+                                        <button class="btn-icon" onclick="copyPromptVariation(2)">📋 Copy</button>
+                                        <button class="btn-icon" onclick="sendToGenerator(2)">➡️ Use</button>
+                                    </div>
+                                </div>
+                                <div class="prompt-text" id="variation-2"></div>
+                            </div>
+
+                            <div class="variation-card">
+                                <div class="variation-header">
+                                    <span class="variation-title">🏃 Race Branded</span>
+                                    <div class="variation-actions">
+                                        <button class="btn-icon" onclick="copyPromptVariation(3)">📋 Copy</button>
+                                        <button class="btn-icon" onclick="sendToGenerator(3)">➡️ Use</button>
+                                    </div>
+                                </div>
+                                <div class="prompt-text" id="variation-3"></div>
+                            </div>
+                        </div>
+
+                        <div class="workflow-guide">
+                            <strong>💡 Stage 1 Tips:</strong>
+                            <ul>
+                                <li><strong>🌳 Scenic/Street View:</strong> AI preserves exact scene + adds race elements (runners, banners, crowds)</li>
+                                <li><strong>🏃 Runner Photos:</strong> AI matches the style, lighting, mood for new race imagery</li>
+                                <li><strong>📍 Google Street View:</strong> Perfect for showing "what race day will look like here"</li>
+                                <li>Click "Copy" → Paste directly in Gemini/ChatGPT/Midjourney</li>
+                                <li>Click "Use" → Send to Stage 2 for full customization + 10 captions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================================ -->
+                <!-- STAGE 2: FULL CUSTOMIZATION -->
+                <!-- ============================================================ -->
+                <div class="stage-divider">
+                    <div class="stage-divider-title">⚙️ STAGE 2: Full Customization</div>
+                    <div class="stage-divider-subtitle">Customize all settings → Generate complete content (prompt + 10 captions)</div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">
+                        🤖 AI Platform
+                        <span class="tooltip" data-tooltip="Gemini 3 = FREE/Best | Grok = Good for text | Sora2 = Video">ℹ️</span>
+                    </div>
+                    <select id="ai-platform">
+                        <option value="gemini3">Gemini 3 (Nano Banana Pro) - FREE ⭐</option>
+                        <option value="gemini">Gemini 2 (Nano Banana) - FREE</option>
+                        <option value="chatgpt">ChatGPT / DALL-E 3 💰</option>
+                        <option value="grok">Grok (xAI) - Good for Text 💰</option>
+                        <option value="sora">Sora - Images 💰💰</option>
+                        <option value="sora2">Sora 2 - Video Only 💰💰💰</option>
+                        <option value="midjourney">Midjourney 💰💰</option>
+                        <option value="krea">Krea Realtime 💰</option>
+                    </select>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">📱 Content Category</div>
+                    <select id="category">
+                        <option value="">Select Category...</option>
+                        <option value="registration">📢 Race Announcement & Registration</option>
+                        <option value="training">🏃 Training Tips & Motivation</option>
+                        <option value="route">🗺️ Route Highlights & Course Features</option>
+                        <option value="kids">👨‍👩‍👧‍👦 Kids 1K Fun Run</option>
+                        <option value="participants">🏆 Participant Spotlights</option>
+                        <option value="sponsors">🤝 Sponsor & Partner Features</option>
+                        <option value="countdown">⏰ Countdown & Race Week</option>
+                        <option value="logistics">📋 Race Day Logistics</option>
+                        <option value="results">🎉 Post-Race & Results</option>
+                        <option value="charity">💝 Community Impact & Charity</option>
+                        <option value="local">🏙️ Local Pride (GTA)</option>
+                        <option value="custom">→ Custom Category Below ↓</option>
+                    </select>
+                    <div class="input-group" style="margin-top: 10px;">
+                        <input type="text" id="custom-category" placeholder="e.g., Volunteer Spotlight, Weather Update, Special Announcement">
+                        <div class="input-help">Create any content type: vendor features, media coverage, team spotlights, etc.</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">📐 Platform / Format</div>
+                    <div class="option-group">
+                        <div class="option-btn active" data-platform="instagram-square">Instagram Post</div>
+                        <div class="option-btn" data-platform="instagram-story">IG Story</div>
+                        <div class="option-btn" data-platform="facebook-post">Facebook</div>
+                        <div class="option-btn" data-platform="twitter">Twitter/X</div>
+                        <div class="option-btn" data-platform="linkedin">LinkedIn</div>
+                        <div class="option-btn" data-platform="strava">Strava</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">📅 Race Timeline / Phase</div>
+                    <select id="phase">
+                        <option value="launch">📅 Launch & Early Bird (Dec 2025 - Jan 2026)</option>
+                        <option value="training">📅 Training Season (Feb - Mar 2026)</option>
+                        <option value="sprint">📅 Sprint to Race (Apr - May 2026)</option>
+                        <option value="raceweek">📅 Race Week (Jun 15-20, 2026)</option>
+                        <option value="raceday">📅 Race Day (Jun 21, 2026)</option>
+                        <option value="postrace">📅 Post-Race (Jun 22-30, 2026)</option>
+                        <option value="custom">→ Custom Timing Below ↓</option>
+                    </select>
+                    <div class="input-group" style="margin-top: 10px;">
+                        <input type="text" id="custom-timing" placeholder="e.g., Registration Deadline Week, Route Reveal Day, Sponsor Announcement">
+                        <div class="input-help">Use this for specific events or milestones</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">👥 Target Audience</div>
+                    <select id="audience">
+                        <option value="all-runners">🏃 All Runners</option>
+                        <option value="first-timers">🏃‍♀️ First-Time 5K Runners</option>
+                        <option value="experienced">🏃‍♂️ Experienced Runners</option>
+                        <option value="families">👨‍👩‍👧‍👦 Families & Kids</option>
+                        <option value="local">🏙️ Local Residents (Oakville/Burlington/Hamilton)</option>
+                        <option value="gta">🌆 GTA Wider Region (Mississauga/Brampton/Niagara)</option>
+                        <option value="corporate">🏢 Corporate Teams</option>
+                        <option value="clubs">🎽 Running Clubs</option>
+                        <option value="volunteers">🙋 Volunteers</option>
+                        <option value="sponsors">🤝 Sponsors & Partners</option>
+                        <option value="charity">💝 Charity Supporters</option>
+                        <option value="custom">→ Custom Audience Below ↓</option>
+                    </select>
+                    <div class="input-group" style="margin-top: 10px;">
+                        <input type="text" id="custom-audience" placeholder="e.g., Local businesses, Health & wellness professionals, Media & influencers">
+                        <div class="input-help">Target a specific group or demographic</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">🎨 Image Style</div>
+                    <div class="option-group">
+                        <div class="option-btn active" data-style="professional">Race Photography</div>
+                        <div class="option-btn" data-style="lifestyle">Lifestyle</div>
+                        <div class="option-btn" data-style="scenic">Scenic Bronte</div>
+                        <div class="option-btn" data-style="minimalist">Minimalist</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">✨ Image Elements</div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="include-text" checked>
+                        <label for="include-text">Space for text overlay (race info, dates)</label>
+                    </div>
+                    
+                    <!-- CUSTOM TEXT IN IMAGE -->
+                    <div class="section" style="margin-top: 10px; background: rgba(255, 0, 0, 0.05); padding: 15px; border-radius: 8px; border: 1px solid rgba(255, 0, 0, 0.2);">
+                        <label for="custom-text-in-image" style="display: block; margin-bottom: 8px; color: #ff6666; font-weight: 600; font-size: 0.9em;">
+                            📝 Custom Text IN Image (Optional)
+                            <span class="tooltip" data-tooltip="AI will include this exact text in the generated image. Great for dates, pricing, urgency messages!">ℹ️</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="custom-text-in-image" 
+                            placeholder="e.g. REGISTRATION OPENS DEC 1 or EARLY BIRD $49 or JUNE 21, 2026"
+                            style="width: 100%; padding: 10px; border: 1px solid rgba(255, 0, 0, 0.3); border-radius: 5px; background: rgba(0,0,0,0.3); color: #fff; font-size: 0.9em;"
+                        >
+                        <p style="margin-top: 8px; font-size: 0.75em; color: #999; line-height: 1.4;">
+                            💡 <strong>Pro Tip:</strong> Keep text short (3-5 words max). AI platforms vary in text accuracy - Midjourney and ChatGPT work best for text. Use ALL CAPS for emphasis.
+                        </p>
+                        <div style="margin-top: 10px; display: flex; gap: 5px; flex-wrap: wrap;">
+                            <button onclick="document.getElementById('custom-text-in-image').value='REGISTRATION OPEN NOW'" style="padding: 5px 10px; background: rgba(255,0,0,0.2); border: 1px solid rgba(255,0,0,0.4); border-radius: 15px; color: #ff6666; cursor: pointer; font-size: 0.75em;">Quick: Open Now</button>
+                            <button onclick="document.getElementById('custom-text-in-image').value='EARLY BIRD'" style="padding: 5px 10px; background: rgba(255,0,0,0.2); border: 1px solid rgba(255,0,0,0.4); border-radius: 15px; color: #ff6666; cursor: pointer; font-size: 0.75em;">Quick: Early Bird</button>
+                            <button onclick="document.getElementById('custom-text-in-image').value='JUNE 21, 2026'" style="padding: 5px 10px; background: rgba(255,0,0,0.2); border: 1px solid rgba(255,0,0,0.4); border-radius: 15px; color: #ff6666; cursor: pointer; font-size: 0.75em;">Quick: Race Date</button>
+                            <button onclick="document.getElementById('custom-text-in-image').value='FATHERS DAY 5K'" style="padding: 5px 10px; background: rgba(255,0,0,0.2); border: 1px solid rgba(255,0,0,0.4); border-radius: 15px; color: #ff6666; cursor: pointer; font-size: 0.75em;">Quick: Father's Day 5K</button>
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="include-logo" checked>
+                        <label for="include-logo">Bronte Harbour Classic logo area</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="include-location" checked>
+                        <label for="include-location">Waterfront/scenic Bronte location</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="include-runners" checked>
+                        <label for="include-runners">Include runners in action</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="include-fathersday">
+                        <label for="include-fathersday">Father's Day theme elements</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="include-kids">
+                        <label for="include-kids">Show Kids 1K participants</label>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">💬 Caption Options</div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="include-emojis" checked>
+                        <label for="include-emojis">Include emojis (🏃‍♂️🏅🎉)</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="include-questions" checked>
+                        <label for="include-questions">Add engaging questions</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="strong-cta" checked>
+                        <label for="strong-cta">Strong call-to-action</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="include-pricing">
+                        <label for="include-pricing">Mention registration pricing</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="include-date" checked>
+                        <label for="include-date">Include race date/time</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="formal-tone">
+                        <label for="formal-tone">Professional/formal tone (sponsors)</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="urgency">
+                        <label for="urgency">Urgency messaging (limited time)</label>
+                    </div>
+                    
+                    <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255, 0, 0, 0.2);">
+                        <div style="margin-bottom: 8px; color: #ff6666; font-weight: 600; font-size: 0.9em;">
+                            🔗 Include Registration Links
+                            <span class="tooltip" data-tooltip="Add direct registration/info links to captions for easy click-through">ℹ️</span>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="include-landing-page">
+                            <label for="include-landing-page">Landing page (TapeGeeks.com)</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="include-race-roster" checked>
+                            <label for="include-race-roster">Direct registration (Race Roster)</label>
+                        </div>
+                        <p style="margin-top: 8px; font-size: 0.75em; color: #999; line-height: 1.4;">
+                            💡 <strong>Tip:</strong> Landing page = full event info. Race Roster = direct registration. Check both for maximum options!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">🔧 Race Details</div>
+                    <div class="input-group">
+                        <label class="input-label">Race Distance Focus</label>
+                        <select id="distance">
+                            <option value="5k">5K Race</option>
+                            <option value="kids">Kids 1K</option>
+                            <option value="both">Both Races</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Featured Sponsor (if any)</label>
+                        <input type="text" id="sponsor-name" placeholder="e.g., CIBC, Local Business Name">
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Specific Announcement/Message</label>
+                        <input type="text" id="announcement" placeholder="e.g., Early bird ends Jan 31, Route reveal, 500 registered!">
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Special Notes/Requirements</label>
+                        <textarea id="special-notes" rows="2" placeholder="Any specific details, participant stories, weather updates..."></textarea>
+                    </div>
+                </div>
+
+                <button class="btn-generate" onclick="generateContent()">✨ Generate Complete Content</button>
+                <button class="btn-regenerate" onclick="regenerateContent()" style="display: none;" id="btn-regenerate">🔄 Regenerate With Current Settings</button>
+                <button class="btn-clear" onclick="clearForm()">🗑️ Clear All Fields & Start Fresh</button>
+
+                <div class="workflow-guide">
+                    <strong>🎯 How To Use:</strong>
+                    <ul>
+                        <li><strong>Generate</strong> - Creates new content with your settings</li>
+                        <li><strong>Regenerate</strong> - Shuffle captions, update changes</li>
+                        <li><strong>Clear</strong> - Reset everything to start fresh</li>
+                    </ul>
+                </div>
+
+                <div class="tips">
+                    <div class="tips-title">💡 What You Get:</div>
+                    <ul>
+                        <li>✅ AI image prompt (platform-optimized)</li>
+                        <li>✅ 10 unique race captions</li>
+                        <li>✅ Logo placement instructions</li>
+                        <li>✅ Race-specific hashtags</li>
+                        <li>✅ Export & copy options</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Output Area -->
+            <div class="output-area">
+                <div id="output">
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🏃✍️</div>
+                        <div class="empty-state-text">
+                            <strong>Create Race Content in 3 Steps:</strong><br><br>
+                            1️⃣ Select your options (or use Quick Presets above)<br>
+                            2️⃣ Click "Generate Complete Content"<br>
+                            3️⃣ Copy your AI prompt + choose from 10 captions!<br><br>
+                            <em>Perfect for Instagram, Facebook, Twitter, Strava, LinkedIn</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script>
+        let currentPlatform = 'instagram-square';
+        let currentStyle = 'professional';
+        let lastGeneratedOptions = null;
+
+        // ============================================================================
+        // V2.0: Two-Stage Image Workflow Variables
+        // ============================================================================
+        let currentImageData = null;
+        let currentAnalysis = null;
+        let generatedVariations = [];
+
+        // ============================================================================
+        // V2.0: Image Upload & Analysis Functions
+        // ============================================================================
+        
+        // Initialize image dropzone
+        const imageDropzone = document.getElementById('imageDropzone');
+        const imageFileInput = document.getElementById('imageFileInput');
+
+        if (imageDropzone && imageFileInput) {
+            imageDropzone.addEventListener('click', () => imageFileInput.click());
+            
+            imageDropzone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                imageDropzone.classList.add('dragover');
+            });
+            
+            imageDropzone.addEventListener('dragleave', () => {
+                imageDropzone.classList.remove('dragover');
+            });
+            
+            imageDropzone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                imageDropzone.classList.remove('dragover');
+                const files = e.dataTransfer.files;
+                if (files.length > 0 && files[0].type.startsWith('image/')) {
+                    handleImageUpload(files[0]);
+                }
+            });
+            
+            imageFileInput.addEventListener('change', (e) => {
+                if (e.target.files.length > 0) {
+                    handleImageUpload(e.target.files[0]);
+                }
+            });
+            
+            // Paste support
+            document.addEventListener('paste', (e) => {
+                const items = e.clipboardData.items;
+                for (let item of items) {
+                    if (item.type.startsWith('image/')) {
+                        const blob = item.getAsFile();
+                        handleImageUpload(blob);
+                        break;
+                    }
+                }
+            });
+        }
+
+        function handleImageUpload(file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                currentImageData = e.target.result;
+                displayImagePreview(e.target.result);
+                analyzeImage(e.target.result);
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function displayImagePreview(imageData) {
+            document.getElementById('uploadedImagePreview').src = imageData;
+            document.getElementById('imageAnalysisResults').classList.remove('hidden');
+            
+            document.getElementById('imageAnalysisContent').innerHTML = `
+                <div style="text-align: center; padding: 20px;">
+                    <div class="analyzing-spinner"></div>
+                    <p style="color: #FF0000; margin-top: 10px;">Analyzing image...</p>
+                </div>
+            `;
+        }
+
+        function clearImageAnalysis() {
+            currentImageData = null;
+            currentAnalysis = null;
+            generatedVariations = [];
+            document.getElementById('imageAnalysisResults').classList.add('hidden');
+            document.getElementById('uploadedImagePreview').src = '';
+            showNotification('Image cleared');
+        }
+
+        // Color extraction
+        function rgbToHex(r, g, b) {
+            return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase();
+        }
+
+        function extractDominantColors(imageData) {
+            return new Promise((resolve) => {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    
+                    const size = 100;
+                    canvas.width = size;
+                    canvas.height = size;
+                    ctx.drawImage(img, 0, 0, size, size);
+                    
+                    const imageDataObj = ctx.getImageData(0, 0, size, size);
+                    const data = imageDataObj.data;
+                    
+                    const colorCounts = {};
+                    for (let i = 0; i < data.length; i += 4) {
+                        const r = Math.round(data[i] / 32) * 32;
+                        const g = Math.round(data[i + 1] / 32) * 32;
+                        const b = Math.round(data[i + 2] / 32) * 32;
+                        const hex = rgbToHex(r, g, b);
+                        colorCounts[hex] = (colorCounts[hex] || 0) + 1;
+                    }
+                    
+                    const sortedColors = Object.entries(colorCounts)
+                        .sort((a, b) => b[1] - a[1])
+                        .slice(0, 5)
+                        .map(entry => entry[0]);
+                    
+                    resolve(sortedColors);
+                };
+                img.src = imageData;
+            });
+        }
+
+        function analyzeBrightness(imageData) {
+            return new Promise((resolve) => {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    canvas.width = 50;
+                    canvas.height = 50;
+                    ctx.drawImage(img, 0, 0, 50, 50);
+                    
+                    const data = ctx.getImageData(0, 0, 50, 50).data;
+                    let totalBrightness = 0;
+                    
+                    for (let i = 0; i < data.length; i += 4) {
+                        totalBrightness += (data[i] + data[i + 1] + data[i + 2]) / 3;
+                    }
+                    
+                    const avgBrightness = totalBrightness / (data.length / 4);
+                    
+                    let level, description;
+                    if (avgBrightness < 85) {
+                        level = 'Dark';
+                        description = 'Dark/moody - dramatic race photography';
+                    } else if (avgBrightness > 170) {
+                        level = 'Bright';
+                        description = 'Bright/airy - uplifting race energy';
+                    } else {
+                        level = 'Normal';
+                        description = 'Balanced - professional race photography';
+                    }
+                    
+                    resolve({ value: Math.round(avgBrightness), level, description });
+                };
+                img.src = imageData;
+            });
+        }
+
+        function analyzeColorTemperature(imageData) {
+            return new Promise((resolve) => {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    canvas.width = 50;
+                    canvas.height = 50;
+                    ctx.drawImage(img, 0, 0, 50, 50);
+                    
+                    const data = ctx.getImageData(0, 0, 50, 50).data;
+                    let totalR = 0, totalB = 0;
+                    
+                    for (let i = 0; i < data.length; i += 4) {
+                        totalR += data[i];
+                        totalB += data[i + 2];
+                    }
+                    
+                    const avgR = totalR / (data.length / 4);
+                    const avgB = totalB / (data.length / 4);
+                    const tempValue = avgR - avgB;
+                    
+                    let warmth, description;
+                    if (tempValue > 20) {
+                        warmth = 'Warm';
+                        description = 'Warm tones - golden hour, sunrise/sunset race feel';
+                    } else if (tempValue < -20) {
+                        warmth = 'Cool';
+                        description = 'Cool tones - crisp morning race, waterfront feel';
+                    } else {
+                        warmth = 'Neutral';
+                        description = 'Balanced temperature - versatile race imagery';
+                    }
+                    
+                    resolve({ value: Math.round(tempValue), warmth, description });
+                };
+                img.src = imageData;
+            });
+        }
+
+        async function analyzeImage(imageData) {
+            try {
+                const [colors, brightness, temperature] = await Promise.all([
+                    extractDominantColors(imageData),
+                    analyzeBrightness(imageData),
+                    analyzeColorTemperature(imageData)
+                ]);
+
+                currentAnalysis = {
+                    colorPalette: colors,
+                    brightness: brightness,
+                    temperature: temperature,
+                    style: deriveStyle(brightness, temperature),
+                    lighting: deriveLighting(brightness),
+                    mood: deriveMood(brightness, temperature)
+                };
+
+                displayAnalysis(currentAnalysis);
+                generatePromptVariations(currentAnalysis);
+
+            } catch (error) {
+                console.error('Image analysis error:', error);
+                document.getElementById('imageAnalysisContent').innerHTML = `
+                    <p style="color: #ff6666;">Error analyzing image. Please try another image.</p>
+                `;
+            }
+        }
+
+        function deriveStyle(brightness, temperature) {
+            if (brightness.value < 85 && temperature.value > 10) {
+                return 'Moody warm race atmosphere';
+            } else if (brightness.value > 170 && temperature.value < -10) {
+                return 'Clean minimalist waterfront';
+            } else if (brightness.value > 170 && temperature.value > 10) {
+                return 'Bright and energetic race day';
+            } else if (brightness.value < 85) {
+                return 'Dramatic pre-dawn/dusk race';
+            } else {
+                return 'Professional race photography';
+            }
+        }
+
+        function deriveLighting(brightness) {
+            if (brightness.level === 'Dark') return 'Dramatic low-key';
+            if (brightness.level === 'Bright') return 'Bright high-key';
+            return 'Balanced natural';
+        }
+
+        function deriveMood(brightness, temperature) {
+            if (brightness.level === 'Bright' && temperature.warmth === 'Warm') {
+                return 'Energetic, celebratory race atmosphere';
+            } else if (brightness.level === 'Dark' && temperature.warmth === 'Cool') {
+                return 'Focused, competitive race intensity';
+            } else if (brightness.level === 'Dark' && temperature.warmth === 'Warm') {
+                return 'Powerful, inspiring achievement moment';
+            } else {
+                return 'Professional, community-focused race spirit';
+            }
+        }
+
+        function displayAnalysis(analysis) {
+            const colorSwatches = analysis.colorPalette.map(color => 
+                `<div class="color-swatch" style="background-color: ${color}" data-hex="${color}"></div>`
+            ).join('');
+
+            // Detect image type early for display
+            const imageType = detectImageType(analysis);
+            analysis.imageType = imageType;
+            
+            // Image type badge and description
+            const imageTypeBadge = imageType === 'scenic' 
+                ? '<span style="background: linear-gradient(135deg, #228B22, #006400); color: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8em; font-weight: 600;">🌳 SCENIC MODE</span>'
+                : '<span style="background: linear-gradient(135deg, #FF0000, #CC0000); color: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8em; font-weight: 600;">🏃 ACTION MODE</span>';
+            
+            const imageTypeDesc = imageType === 'scenic'
+                ? '📍 Scene preserved + race elements added'
+                : '🎨 Style/mood matched for race imagery';
+
+            document.getElementById('imageAnalysisContent').innerHTML = `
+                <div class="analysis-item" style="background: rgba(255,0,0,0.1); padding: 10px; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255,0,0,0.3);">
+                    <div class="analysis-label" style="margin-bottom: 5px;">📷 Image Type Detected</div>
+                    ${imageTypeBadge}
+                    <div style="font-size: 0.75em; color: #ff6666; margin-top: 8px; line-height: 1.4;">${imageTypeDesc}</div>
+                </div>
+                <div class="analysis-item">
+                    <div class="analysis-label">🎨 Dominant Colors</div>
+                    <div class="color-palette">${colorSwatches}</div>
+                </div>
+                <div class="analysis-item">
+                    <div class="analysis-label">💡 Brightness</div>
+                    <div class="analysis-value">${analysis.brightness.description}</div>
+                </div>
+                <div class="analysis-item">
+                    <div class="analysis-label">🌡️ Temperature</div>
+                    <div class="analysis-value">${analysis.temperature.description}</div>
+                </div>
+                <div class="analysis-item">
+                    <div class="analysis-label">✨ Style</div>
+                    <div class="analysis-value">${analysis.style}</div>
+                </div>
+                <div class="analysis-item">
+                    <div class="analysis-label">🏃 Mood</div>
+                    <div class="analysis-value">${analysis.mood}</div>
+                </div>
+            `;
+        }
+
+        function generatePromptVariations(analysis) {
+            const colors = analysis.colorPalette.slice(0, 3).join(', ');
+            const lightingDesc = buildLightingDescription(analysis);
+            const moodDesc = buildMoodDescription(analysis);
+
+            // Image type already detected in displayAnalysis, use stored value
+            const imageType = analysis.imageType || detectImageType(analysis);
+
+            generatedVariations = [
+                buildExactMatchPrompt(analysis, lightingDesc, moodDesc),
+                buildInspiredPrompt(analysis, lightingDesc, moodDesc),
+                buildPremiumPrompt(analysis, lightingDesc, moodDesc),
+                buildRaceBrandedPrompt(analysis, lightingDesc, moodDesc)
+            ];
+
+            generatedVariations.forEach((variation, index) => {
+                document.getElementById(`variation-${index}`).textContent = variation;
+            });
+
+            // Update variation titles based on image type
+            updateVariationTitles(imageType);
+        }
+
+        // Detect if image is scenic/location (for scene preservation) or action/people
+        function detectImageType(analysis) {
+            // Scenic indicators: green tones, blue tones, nature colors, balanced exposure
+            const colors = analysis.colorPalette;
+            let greenCount = 0, blueCount = 0, brownCount = 0, grayCount = 0;
+            
+            colors.forEach(hex => {
+                const rgb = hexToRgb(hex);
+                if (rgb) {
+                    // Check for nature colors (greens, blues, grays, browns)
+                    if (rgb.g > rgb.r && rgb.g > rgb.b * 0.8) greenCount++;
+                    if (rgb.b > rgb.r && rgb.b > rgb.g * 0.8) blueCount++;
+                    if (Math.abs(rgb.r - rgb.g) < 40 && Math.abs(rgb.g - rgb.b) < 40) grayCount++;
+                    if (rgb.r > rgb.g && rgb.g > rgb.b * 0.9) brownCount++;
+                }
+            });
+
+            const natureScore = greenCount + blueCount + grayCount + brownCount;
+            
+            // If mostly nature colors and neutral mood, likely scenic
+            if (natureScore >= 3 || 
+                (greenCount >= 2) || 
+                (blueCount >= 2 && greenCount >= 1) ||
+                (analysis.brightness.level === 'Medium' && grayCount >= 2)) {
+                return 'scenic'; // Street view, park, lake, venue
+            }
+            
+            return 'action'; // People, runners, race photos
+        }
+
+        function hexToRgb(hex) {
+            const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            return result ? {
+                r: parseInt(result[1], 16),
+                g: parseInt(result[2], 16),
+                b: parseInt(result[3], 16)
+            } : null;
+        }
+
+        function updateVariationTitles(imageType) {
+            if (imageType === 'scenic') {
+                // Update titles for scenic images
+                const titles = {
+                    0: '🎯 Scene Preserved + Runners',
+                    1: '✨ Scene + Race Atmosphere',  
+                    2: '💎 Premium Race Scene',
+                    3: '🏃 Full Race Takeover'
+                };
+                Object.entries(titles).forEach(([idx, title]) => {
+                    const header = document.querySelector(`#variation-${idx}`).parentElement.querySelector('.variation-title');
+                    if (header) header.textContent = title;
+                });
+            }
+        }
+
+        function buildLightingDescription(analysis) {
+            const brightness = analysis.brightness;
+            let lighting = '';
+
+            if (brightness.level === 'Dark') {
+                lighting = 'dramatic low-key lighting with deep shadows, moody race atmosphere';
+            } else if (brightness.level === 'Bright') {
+                lighting = 'bright high-key lighting, airy race day energy, clean vibrant atmosphere';
+            } else {
+                lighting = 'balanced natural lighting, professional race photography quality';
+            }
+
+            if (analysis.temperature.warmth === 'Warm') {
+                lighting += ', golden hour warmth, sunrise/sunset race feel';
+            } else if (analysis.temperature.warmth === 'Cool') {
+                lighting += ', crisp cool tones, fresh waterfront morning feel';
+            }
+
+            return lighting;
+        }
+
+        function buildMoodDescription(analysis) {
+            return analysis.mood;
+        }
+
+        // Variation 1: Exact Match / Scene Preserved
+        function buildExactMatchPrompt(analysis, lightingDesc, moodDesc) {
+            const colors = analysis.colorPalette.slice(0, 3);
+            
+            // SCENIC IMAGE: Preserve exact scene, add runners
+            if (analysis.imageType === 'scenic') {
+                return `🎯 SCENE PRESERVATION MODE - Bronte Harbour Classic 5K
+
+⚠️ CRITICAL: KEEP THE EXACT SCENE COMPOSITION FROM REFERENCE IMAGE ⚠️
+
+PRESERVE EXACTLY FROM REFERENCE:
+- Camera angle and viewpoint: IDENTICAL
+- Scene composition and framing: IDENTICAL  
+- Trees, roads, paths, buildings: SAME POSITIONS
+- Sky and lighting conditions: ${lightingDesc}
+- Color palette: ${colors.join(', ')} - maintain these exact tones
+- Time of day and atmosphere: ${analysis.temperature.description}
+
+SUPERIMPOSE RACE ELEMENTS INTO THIS EXACT SCENE:
+- Add 15-30 runners on the road/path (where it makes sense in the scene)
+- Runners wearing race bibs with "BRONTE HARBOUR" visible
+- Mix of ages, genders, athletic abilities - community race feel
+- Natural running poses, mid-stride motion, authentic movement
+- Add subtle race markers: km signs, directional arrows, water station
+
+DO NOT CHANGE:
+❌ Do NOT change the camera angle
+❌ Do NOT change the background scenery
+❌ Do NOT move trees, buildings, or landscape features
+❌ Do NOT change the lighting/sky conditions
+
+RACE CONTEXT: Bronte Harbour Classic 5K | June 21, 2026 | Father's Day | Oakville
+
+GOAL: Viewer should recognize THIS EXACT LOCATION with race happening in it. The scene is REAL, the race elements are added.`;
+            }
+            
+            // ACTION IMAGE: Match style exactly
+            return `Bronte Harbour Classic 5K race photography - EXACT MATCH to reference:
+
+RECREATE THIS AESTHETIC EXACTLY:
+Style: ${analysis.style}
+Lighting: ${lightingDesc}
+Mood: ${moodDesc}
+Colors: ${colors.join(', ')} - match these exact tones
+Temperature: ${analysis.temperature.description}
+
+SUBJECT: Runners at Bronte Harbour Classic 5K race, ${analysis.brightness.level === 'Bright' ? 'energetic race day action, community celebration' : 'dramatic pre-race or finish line moment'}.
+
+SETTING: Bronte Harbour waterfront, Lake Ontario visible, ${analysis.brightness.level === 'Bright' ? 'bright sunny race day' : 'dramatic lighting, focused atmosphere'}
+
+RACE DETAILS: June 21, 2026 | Father's Day 5K + Kids 1K | Oakville, Ontario
+
+TECHNICAL: 70-200mm lens, f/2.8-4.0, sharp focus on runners, beautiful bokeh, race bib numbers visible.
+
+GOAL: Match reference image style EXACTLY - same lighting, mood, colors. Replace subject with Bronte Harbour race scene.`;
+        }
+
+        // Variation 2: Inspired / Scene + Race Atmosphere
+        function buildInspiredPrompt(analysis, lightingDesc, moodDesc) {
+            const colors = analysis.colorPalette.slice(0, 3);
+            
+            // SCENIC IMAGE: Keep scene, add race atmosphere
+            if (analysis.imageType === 'scenic') {
+                return `✨ SCENE + RACE ATMOSPHERE - Bronte Harbour Classic 5K
+
+PRESERVE THE SCENE STRUCTURE:
+- Keep the same viewpoint and angle as reference
+- Maintain the road/path layout and background elements
+- Preserve the natural scenery (trees, greenery, sky)
+- Keep the lighting feel: ${lightingDesc}
+- Use color palette: ${colors.join(', ')}
+
+ADD RACE DAY ATMOSPHERE:
+- 20-40 runners spread throughout the scene (where paths allow)
+- Race infrastructure: START/FINISH arch visible, directional signs, km markers
+- Spectators along the route (families, volunteers cheering)
+- Race banners: "BRONTE HARBOUR CLASSIC 5K" prominently displayed
+- Water station or aid tent if space allows
+- Balloons, flags, festive race day decorations
+
+RUNNER DETAILS:
+- Diverse runners: men, women, kids, families running together
+- Race bibs clearly visible with numbers
+- Athletic wear in various colors
+- Natural running motion, some waving to crowd
+
+CREATIVE ADAPTATION: 70% original scene preserved, 30% race atmosphere added
+
+RACE: Father's Day 5K | June 21, 2026 | Oakville, Ontario`;
+            }
+            
+            // ACTION IMAGE: Inspired adaptation
+            return `Bronte Harbour Classic 5K photography - INSPIRED by reference (creative adaptation):
+
+INSPIRATION (not exact copy):
+Style feel: ${analysis.style}
+Lighting direction: ${lightingDesc}
+Mood quality: ${moodDesc}
+Color guide: ${colors.join(', ')} - use as inspiration
+
+SUBJECT: Dynamic runners at Bronte Harbour Classic, showing movement, determination, community spirit. Mix of ages and fitness levels.
+
+SETTING: Scenic Bronte Harbour waterfront course, Lake Ontario backdrop, race infrastructure visible (timing mats, water stations, banners).
+
+CREATIVE FREEDOM: Maintain FEEL and ENERGY of reference but adapt for race marketing. 60% inspired by reference, 40% adapted for 5K race showcase.
+
+RACE CONTEXT: Father's Day 5K celebration, family-friendly community event, June 21, 2026
+
+BRAND: Bronte Harbour Classic red/black/white colors as accents.`;
+        }
+
+        // Variation 3: Premium / Premium Race Scene
+        function buildPremiumPrompt(analysis, lightingDesc, moodDesc) {
+            const colors = analysis.colorPalette.slice(0, 3);
+            
+            // SCENIC IMAGE: Premium visualization of the scene with race
+            if (analysis.imageType === 'scenic') {
+                return `💎 PREMIUM RACE VISUALIZATION - Bronte Harbour Classic 5K
+
+SCENE FOUNDATION (from reference):
+- Base composition and viewpoint: PRESERVED
+- Location features and landmarks: MAINTAINED
+- Natural elements (trees, paths, water): KEPT
+- Lighting foundation: ${lightingDesc}
+- Color base: ${colors.join(', ')}
+
+PREMIUM RACE OVERLAY:
+- 40-60 runners creating dynamic energy throughout scene
+- HERO MOMENT: Lead runner pack in foreground, sharp focus, determination
+- Professional race infrastructure prominently featured:
+  * Grand START/FINISH arch with "BRONTE HARBOUR CLASSIC 5K" text
+  * Professional timing mats and displays
+  * Mile/km markers with sponsor logos
+  * Hydration stations, medical tent visible
+- Crowd: Enthusiastic spectators, families cheering, volunteers directing
+
+PREMIUM PRODUCTION VALUE:
+- Elevated lighting: Add subtle golden hour glow or dramatic sky
+- Premium color grading: Rich, vibrant, magazine-quality tones
+- Depth: Sharp foreground runners, beautiful scene bokeh
+- Energy: Captured at peak race moment - excitement palpable
+- Quality: 8K, editorial-ready, sponsor presentation worthy
+
+CAMERA: Sony A1 / Canon R3, 24-70mm f/2.8 wide establishing shot OR 70-200mm f/2.8 runner detail
+
+EVENT: Bronte Harbour Classic 5K | Father's Day June 21, 2026 | Oakville
+
+GOAL: This location transformed into a PREMIUM RACE EVENT - worthy of Runner's World feature.`;
+            }
+            
+            // ACTION IMAGE: Premium elevation
+            return `ULTRA-PREMIUM Bronte Harbour Classic 5K photography - ELEVATE to magazine quality:
+
+ELEVATE TO PREMIUM:
+Foundation: ${analysis.style} + ${lightingDesc} + ${moodDesc}
+Colors: ${colors.join(', ')} - elevate with premium color grading
+Temperature: ${analysis.temperature.description}
+
+PREMIUM EXECUTION:
+Runners: Peak athletic form, powerful strides, determination visible, diverse ages/genders
+Setting: Stunning Bronte Harbour waterfront, Lake Ontario sunrise/sunset, dramatic sky
+Composition: ${analysis.brightness.level === 'Bright' ? 'Bright, aspirational, celebratory finish line or pack running' : 'Dramatic silhouettes, intense focus, competitive spirit'}
+Lighting: Multi-dimensional - natural + fill, professional sports photography quality
+Camera: High-end sports photography (Canon 1DX/Sony A1), 70-200mm f/2.8
+
+GOAL: Editorial quality worthy of Runner's World, race event campaigns, sponsor presentations. Think Boston Marathon/Nike race campaign quality.
+
+EVENT: Bronte Harbour Classic 5K | Father's Day June 21, 2026 | Oakville, Ontario
+
+BRAND: Red/Black/White color scheme, premium community race positioning.`;
+        }
+
+        // Variation 4: Race Branded / Full Race Takeover
+        function buildRaceBrandedPrompt(analysis, lightingDesc, moodDesc) {
+            const colors = analysis.colorPalette.slice(0, 3);
+            
+            // SCENIC IMAGE: Full race takeover of the scene
+            if (analysis.imageType === 'scenic') {
+                return `🏃 FULL RACE TAKEOVER - Bronte Harbour Classic 5K
+
+TRANSFORM THIS LOCATION INTO RACE DAY:
+
+BASE SCENE (recognize the location):
+- Keep the general viewpoint and main landmarks visible
+- Preserve enough of the original scene to recognize the location
+- Use natural lighting: ${lightingDesc}
+- Natural color base: ${colors.join(', ')}
+
+FULL RACE TRANSFORMATION:
+This scene is NOW race day - maximum race presence:
+
+RUNNERS (50-100+ visible):
+- Full field of runners filling the road/path
+- Lead pack in foreground with sharp detail
+- Mid-pack runners showing community spirit
+- Back-of-pack families, casual joggers
+- Kids running (Kids 1K participants)
+- Father-child pairs (Father's Day theme!)
+
+RACE INFRASTRUCTURE (prominent):
+- LARGE START/FINISH arch: "BRONTE HARBOUR CLASSIC 5K - FATHER'S DAY JUNE 21, 2026"
+- Race banners every 20 meters along route
+- Km markers with sponsor logos
+- Timing mats, clocks showing race time
+- Water stations, medical tents, porta-potties
+- PA system speakers, race announcer booth
+
+CROWD & ATMOSPHERE:
+- Spectators 3-4 deep along route
+- Families cheering, holding signs
+- Volunteers in red shirts directing
+- Photography crew capturing moments
+- Local police/marshals managing traffic
+
+BRANDING (RED/BLACK/WHITE dominant):
+- Everything branded: arch, banners, bibs, volunteer shirts
+- Red as PRIMARY accent color throughout
+- "BRONTE HARBOUR CLASSIC" visible multiple places
+- Father's Day messaging: "Happy Father's Day!" signs
+
+MARKETING COMPOSITION:
+- Space for text overlay in sky/upper area
+- Works cropped to 1:1, 4:5, 16:9
+- Shareable, Instagram-ready
+
+GOAL: This location is COMPLETELY TRANSFORMED into Bronte Harbour Classic race day. Maximum energy, full race presence, unmistakably BHC branded.`;
+            }
+            
+            // ACTION IMAGE: Race branded
+            return `BRONTE HARBOUR CLASSIC BRANDED race photography - optimized for marketing:
+
+BRAND FOUNDATION:
+Aesthetic: ${analysis.style} + ${moodDesc} ADAPTED for Bronte Harbour Classic brand
+Reference colors: ${colors.join(', ')} as secondary palette
+HERO COLORS: Race Red (#FF0000) + Black (#000000) + White (#FFFFFF) - PROMINENTLY FEATURED
+
+SUBJECT: Runners at Bronte Harbour Classic with race branding visible. Race bibs, finish line arch, timing displays, sponsor banners in shot.
+
+SETTING: ${analysis.brightness.level === 'Bright' ? 'Bright waterfront race day, Lake Ontario sparkling, community celebration atmosphere' : 'Dramatic race moment, focused competition, achievement celebration'}
+
+BRAND INTEGRATION REQUIREMENTS:
+- Red/Black/White as PRIMARY brand colors - immediately recognizable
+- "Bronte Harbour Classic" branding clearly visible (arch, banners, bibs)
+- Father's Day theme - family participation, dad-and-kid runners
+- Community pride - GTA local race feel
+- Professional yet welcoming atmosphere
+
+MARKETING-READY COMPOSITION:
+- Strategic negative space for text overlay (Instagram/Facebook/Website)
+- Works in multiple crops (1:1, 4:5, 16:9)
+- Focal point positioned for "June 21, 2026" text placement
+
+TARGET AUDIENCES: GTA Runners + Families + First-time 5K runners + Father's Day celebrators
+
+GOAL: UNMISTAKABLY Bronte Harbour Classic branded - viewer immediately identifies Red/Black + waterfront + Father's Day = BHC race.`;
+        }
+
+        function copyPromptVariation(index) {
+            const prompt = generatedVariations[index];
+            if (!prompt) {
+                alert('Please upload an image first');
+                return;
+            }
+
+            navigator.clipboard.writeText(prompt).then(() => {
+                showNotification('Prompt copied to clipboard!');
+            }).catch(err => {
+                console.error('Copy failed:', err);
+            });
+        }
+
+        function sendToGenerator(index) {
+            const prompt = generatedVariations[index];
+            if (!prompt) {
+                alert('Please upload an image first');
+                return;
+            }
+
+            // Auto-populate Stage 2 controls based on analysis and variation
+            autoPopulateControlsFromAnalysis(currentAnalysis, index);
+
+            // Store the selected variation
+            window.selectedImagePrompt = prompt;
+            window.selectedVariationIndex = index;
+            window.usedStage1Variation = true;
+
+            // Generate content
+            generateContent();
+
+            // Scroll to output
+            setTimeout(() => {
+                document.getElementById('output').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 300);
+
+            showNotification('✓ Using variation! Stage 2 auto-populated. Generating...');
+        }
+
+        function autoPopulateControlsFromAnalysis(analysis, variationIndex) {
+            if (!analysis) return;
+
+            // Set AI Platform based on variation
+            const platformMap = { 0: 'gemini3', 1: 'chatgpt', 2: 'gemini3', 3: 'gemini3' };
+            document.getElementById('ai-platform').value = platformMap[variationIndex] || 'gemini3';
+
+            // Set platform format based on brightness
+            if (analysis.brightness.level === 'Bright') {
+                // Find and click instagram-square button
+                document.querySelectorAll('[data-platform]').forEach(btn => {
+                    if (btn.dataset.platform === 'instagram-square') btn.click();
+                });
+            }
+
+            // Set category based on mood
+            if (analysis.mood.toLowerCase().includes('energetic') || analysis.mood.toLowerCase().includes('celebrat')) {
+                document.getElementById('category').value = 'registration';
+            } else if (analysis.mood.toLowerCase().includes('competitive') || analysis.mood.toLowerCase().includes('focused')) {
+                document.getElementById('category').value = 'countdown';
+            } else {
+                document.getElementById('category').value = 'training';
+            }
+
+            // Set style based on analysis
+            document.querySelectorAll('[data-style]').forEach(btn => {
+                if (analysis.brightness.level === 'Bright' && btn.dataset.style === 'professional') {
+                    btn.click();
+                } else if (analysis.brightness.level === 'Dark' && btn.dataset.style === 'scenic') {
+                    btn.click();
+                }
+            });
+        }
+
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            if (notification) {
+                notification.textContent = message;
+                notification.classList.add('show');
+                setTimeout(() => notification.classList.remove('show'), 3000);
+            }
+        }
+
+        // Platform selection
+        document.querySelectorAll('[data-platform]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('[data-platform]').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentPlatform = this.dataset.platform;
+            });
+        });
+
+        // Style selection
+        document.querySelectorAll('[data-style]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('[data-style]').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentStyle = this.dataset.style;
+            });
+        });
+
+        // Quick Presets
+        function loadPreset(type) {
+            switch(type) {
+                case 'launch':
+                    document.getElementById('category').value = 'registration';
+                    document.getElementById('phase').value = 'launch';
+                    document.getElementById('audience').value = 'all-runners';
+                    document.getElementById('announcement').value = 'Registration NOW OPEN! Early Bird pricing!';
+                    break;
+                case 'training':
+                    document.getElementById('category').value = 'training';
+                    document.getElementById('phase').value = 'training';
+                    document.getElementById('audience').value = 'first-timers';
+                    break;
+                case 'countdown':
+                    document.getElementById('category').value = 'countdown';
+                    document.getElementById('phase').value = 'raceweek';
+                    document.getElementById('audience').value = 'all-runners';
+                    break;
+                case 'sponsors':
+                    document.getElementById('category').value = 'sponsors';
+                    document.getElementById('phase').value = 'sprint';
+                    document.getElementById('audience').value = 'sponsors';
+                    document.getElementById('formal-tone').checked = true;
+                    break;
+                case 'family':
+                    document.getElementById('category').value = 'kids';
+                    document.getElementById('phase').value = 'launch';
+                    document.getElementById('audience').value = 'families';
+                    document.getElementById('distance').value = 'kids';
+                    document.getElementById('include-kids').checked = true;
+                    document.getElementById('include-fathersday').checked = true;
+                    break;
+            }
+        }
+
+        function getOptions() {
+            const categorySelect = document.getElementById('category').value;
+            const customCategory = document.getElementById('custom-category').value;
+            const actualCategory = categorySelect === 'custom' ? 'custom' : categorySelect;
+
+            const phaseSelect = document.getElementById('phase').value;
+            const customTiming = document.getElementById('custom-timing').value;
+            const actualPhase = phaseSelect === 'custom' ? customTiming : phaseSelect;
+
+            const audienceSelect = document.getElementById('audience').value;
+            const customAudience = document.getElementById('custom-audience').value;
+            const actualAudience = audienceSelect === 'custom' ? customAudience : audienceSelect;
+
+            return {
+                aiPlatform: document.getElementById('ai-platform').value,
+                category: actualCategory,
+                customCategory: customCategory,
+                platform: currentPlatform,
+                phase: actualPhase,
+                customTiming: customTiming,
+                audience: actualAudience,
+                customAudience: customAudience,
+                style: currentStyle,
+                includeText: document.getElementById('include-text').checked,
+                includeLogo: document.getElementById('include-logo').checked,
+                includeLocation: document.getElementById('include-location').checked,
+                includeRunners: document.getElementById('include-runners').checked,
+                includeFathersDay: document.getElementById('include-fathersday').checked,
+                includeKids: document.getElementById('include-kids').checked,
+                includeEmojis: document.getElementById('include-emojis').checked,
+                includeQuestions: document.getElementById('include-questions').checked,
+                strongCta: document.getElementById('strong-cta').checked,
+                includePricing: document.getElementById('include-pricing').checked,
+                includeDate: document.getElementById('include-date').checked,
+                formalTone: document.getElementById('formal-tone').checked,
+                urgency: document.getElementById('urgency').checked,
+                distance: document.getElementById('distance').value,
+                sponsorName: document.getElementById('sponsor-name').value,
+                announcement: document.getElementById('announcement').value,
+                specialNotes: document.getElementById('special-notes').value,
+                customTextInImage: document.getElementById('custom-text-in-image').value.trim(),
+                includeLandingPage: document.getElementById('include-landing-page').checked,
+                includeRaceRoster: document.getElementById('include-race-roster').checked
+            };
+        }
+
+        function generateContent() {
+            const options = getOptions();
+
+            if (!options.category) {
+                alert('Please select a content category');
+                return;
+            }
+
+            if (options.category === 'custom' && !options.customCategory) {
+                alert('Please enter a custom category description');
+                return;
+            }
+
+            lastGeneratedOptions = JSON.parse(JSON.stringify(options));
+            document.getElementById('btn-regenerate').style.display = 'block';
+
+            const imagePrompt = buildImagePrompt(options);
+            const socialPosts = buildSocialMediaCopy(options, false);
+
+            displayContent(imagePrompt, socialPosts, options);
+        }
+
+        function regenerateContent() {
+            const currentOptions = getOptions();
+
+            if (!currentOptions.category) {
+                alert('Please select a content category');
+                return;
+            }
+
+            if (currentOptions.category === 'custom' && !currentOptions.customCategory) {
+                alert('Please enter a custom category description');
+                return;
+            }
+
+            const imagePrompt = buildImagePrompt(currentOptions);
+            const socialPosts = buildSocialMediaCopy(currentOptions, true);
+
+            displayContent(imagePrompt, socialPosts, currentOptions);
+            lastGeneratedOptions = JSON.parse(JSON.stringify(currentOptions));
+        }
+
+        function clearForm() {
+            if (confirm('Clear all fields and start fresh?')) {
+                // V2.0: Clear Stage 1 image analysis
+                clearImageAnalysis();
+                window.usedStage1Variation = false;
+                window.selectedImagePrompt = null;
+                window.selectedVariationIndex = null;
+
+                document.getElementById('ai-platform').value = 'gemini3';
+                document.getElementById('category').value = '';
+                document.getElementById('phase').value = 'launch';
+                document.getElementById('audience').value = 'all-runners';
+                document.getElementById('distance').value = '5k';
+                
+                document.getElementById('custom-category').value = '';
+                document.getElementById('custom-timing').value = '';
+                document.getElementById('custom-audience').value = '';
+                document.getElementById('sponsor-name').value = '';
+                document.getElementById('announcement').value = '';
+                document.getElementById('special-notes').value = '';
+
+                document.getElementById('include-text').checked = true;
+                document.getElementById('include-logo').checked = true;
+                document.getElementById('include-location').checked = true;
+                document.getElementById('include-runners').checked = true;
+                document.getElementById('include-fathersday').checked = false;
+                document.getElementById('include-kids').checked = false;
+                document.getElementById('include-emojis').checked = true;
+                document.getElementById('include-questions').checked = true;
+                document.getElementById('strong-cta').checked = true;
+                document.getElementById('include-pricing').checked = false;
+                document.getElementById('include-date').checked = true;
+                document.getElementById('formal-tone').checked = false;
+                document.getElementById('urgency').checked = false;
+
+                const firstPlatformBtn = document.querySelector('[data-platform="instagram-square"]');
+                if (firstPlatformBtn) firstPlatformBtn.click();
+
+                const firstStyleBtn = document.querySelector('[data-style="professional"]');
+                if (firstStyleBtn) firstStyleBtn.click();
+
+                document.getElementById('output').innerHTML = '<div class="empty-state"><div class="empty-state-icon">🏃✍️</div></div>';
+                document.getElementById('btn-regenerate').style.display = 'none';
+                lastGeneratedOptions = null;
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function buildImagePrompt(options) {
+            const distanceName = options.distance === '5k' ? '5K Race' : options.distance === 'kids' ? 'Kids 1K Fun Run' : 'Bronte Harbour Classic';
+
+            // ============================================================================
+            // V2.0: Check if Stage 1 image analysis is available
+            // ============================================================================
+            let imageAnalysisBlock = '';
+            if (currentAnalysis && window.usedStage1Variation) {
+                const colors = currentAnalysis.colorPalette.slice(0, 3).join(', ');
+                imageAnalysisBlock = `
+REFERENCE IMAGE ANALYSIS (from uploaded image):
+- Dominant Colors: ${colors}
+- Brightness: ${currentAnalysis.brightness.description}
+- Temperature: ${currentAnalysis.temperature.description}
+- Derived Style: ${currentAnalysis.style}
+- Derived Mood: ${currentAnalysis.mood}
+- Lighting: ${currentAnalysis.lighting}
+
+IMPORTANT: Use the uploaded reference image as visual inspiration. Match its color tones, lighting quality, and mood while adapting for race content.
+`;
+            }
+
+            // CATEGORY-DRIVEN PROMPT BUILDER
+            // Each category gets completely different scene setup to prevent AI confusion
+
+            const categoryScenes = {
+                'registration': {
+                    scene: 'Race day atmosphere with excited participants gathering at Bronte Harbour waterfront',
+                    participants: '30-50 runners visible, wearing race bibs, pre-race energy, community gathering',
+                    setting: 'Event start line area, registration tents visible, professional race infrastructure',
+                    exclude: ''
+                },
+                'training': {
+                    scene: 'Solo runner or small group (2-3 people) on peaceful training run preparing for upcoming race',
+                    participants: '1-3 dedicated runners in training gear (NO race bibs, NOT race day), focused on form and preparation',
+                    setting: 'Quiet morning or evening training route along Bronte Harbour paths, isolated peaceful atmosphere',
+                    exclude: 'CRITICAL: This is NOT race day. NO race bibs, NO crowds, NO event atmosphere, NO starting line, NO finish line, NO race infrastructure. Just training preparation.'
+                },
+                'route': {
+                    scene: 'Showcasing the beautiful 5K race course along Bronte Harbour waterfront',
+                    participants: '5-10 runners spread along scenic route, demonstrating the course beauty',
+                    setting: 'Scenic waterfront running paths, highlighting natural beauty and course features',
+                    exclude: 'Focus on scenery and route, not race day crowds'
+                },
+                'kids': {
+                    scene: 'Kids aged 5-12 running with joy and enthusiasm in the Kids 1K Fun Run',
+                    participants: '10-20 children runners with big smiles, family participation, parents nearby',
+                    setting: 'Family-friendly race environment, safe supervised course, encouraging atmosphere',
+                    exclude: ''
+                },
+                'participants': {
+                    scene: 'Individual runner or small group showcasing personal race journey and achievement',
+                    participants: '1-5 runners with visible determination and pride, diverse ages and fitness levels',
+                    setting: 'Race course or training environment showing authentic participant experience',
+                    exclude: ''
+                },
+                'sponsors': {
+                    scene: 'Professional corporate partnership presence at community race event',
+                    participants: 'Runners with visible sponsor branding, professional event atmosphere',
+                    setting: 'Well-organized race with sponsor banners, corporate partnership visibility',
+                    exclude: ''
+                },
+                'countdown': {
+                    scene: 'Approaching race day energy with final preparations and building excitement',
+                    participants: '10-30 runners preparing, stretching, visualizing, pre-race anticipation',
+                    setting: 'Race venue setup, countdown atmosphere, days before race day',
+                    exclude: ''
+                },
+                'logistics': {
+                    scene: 'Well-organized race infrastructure and helpful event information',
+                    participants: 'Runners interacting with race logistics (water stations, timing, signage)',
+                    setting: 'Professional race organization, clear signage, efficient event management',
+                    exclude: ''
+                },
+                'results': {
+                    scene: 'Finish line celebration and achievement moments after race completion',
+                    participants: 'Finishers celebrating, medals visible, accomplishment joy, post-race celebration',
+                    setting: 'Finish line area, results boards, celebration zone',
+                    exclude: ''
+                },
+                'charity': {
+                    scene: 'Community impact and charitable giving through race participation',
+                    participants: 'Runners with charity cause visibility, community support atmosphere',
+                    setting: 'Race supporting local Oakville Dads charity, community benefit focus',
+                    exclude: ''
+                },
+                'local': {
+                    scene: 'Proud local community participation showcasing GTA regional pride',
+                    participants: 'Local Oakville and GTA region runners, neighborhood community atmosphere',
+                    setting: 'Bronte Harbour local landmarks visible, community roots emphasized',
+                    exclude: ''
+                },
+                'custom': {
+                    scene: options.customCategory || 'Dynamic community race photography',
+                    participants: 'Diverse community runners in action',
+                    setting: 'Bronte Harbour Classic 5K event atmosphere',
+                    exclude: ''
+                }
+            };
+
+            const categoryMoods = {
+                'registration': 'welcoming, exciting, action-oriented, opportunity-focused, encouraging, accessible, community-spirited',
+                'training': 'motivational, determined, empowering, inspiring, goal-focused, strength-building, transformative, peaceful, preparatory',
+                'route': 'scenic, beautiful, inspiring, achievable, picturesque, inviting, breathtaking',
+                'kids': 'joyful, fun, family-friendly, energetic, playful, exciting, safe, encouraging',
+                'participants': 'inspiring, authentic, diverse, accomplished, proud, community-connected, relatable',
+                'sponsors': 'professional, partnership-focused, prestigious, quality-oriented, trustworthy, community-supportive',
+                'countdown': 'exciting, anticipatory, energizing, time-sensitive, building-energy, pre-race buzz',
+                'logistics': 'organized, professional, clear, helpful, well-planned, trustworthy, efficient',
+                'results': 'celebratory, victorious, achievement-focused, joyful, accomplished, proud, successful',
+                'charity': 'heartwarming, community-focused, impactful, giving, meaningful, purpose-driven',
+                'local': 'community-proud, locally-rooted, regional-spirited, neighborhood-connected, GTA-focused',
+                'custom': 'professional, engaging, purpose-driven, community-oriented'
+            };
+
+            // Platform specs
+            const platformSpecs = {
+                'instagram-square': '1:1 aspect ratio (square)',
+                'instagram-story': '9:16 vertical aspect ratio (portrait)',
+                'facebook-post': '1.91:1 landscape aspect ratio',
+                'twitter': '16:9 landscape aspect ratio',
+                'linkedin': '1.91:1 landscape aspect ratio',
+                'strava': '1:1 square or 16:9 landscape'
+            };
+
+            // Style specs
+            const styleSpecs = {
+                'professional': 'professional race event photography with dynamic action shots, clean composition, athletic excellence captured',
+                'lifestyle': 'lifestyle fitness photography with natural authentic moments, relatable runners, aspirational healthy living',
+                'scenic': 'scenic location photography showcasing stunning Bronte Harbour waterfront, beautiful natural surroundings, picturesque Ontario lakefront',
+                'minimalist': 'minimalist sports photography with clean lines, focused subject, simple powerful composition, dramatic negative space'
+            };
+
+            // PHASE/TIMELINE modifiers - affects timing and energy
+            const phaseModifiers = {
+                'launch': 'Early announcement energy, registration opening excitement, launching campaign atmosphere',
+                'training': 'Training season preparation, building toward race goal, fitness journey in progress',
+                'sprint': 'Final weeks approach, building urgency, approaching race day energy',
+                'raceweek': 'Race week intensity, final preparations, imminent event atmosphere',
+                'raceday': 'Race day happening NOW, active event, live competition energy',
+                'postrace': 'Post-race celebration, achievement reflection, results and accomplishment'
+            };
+
+            // TARGET AUDIENCE modifiers - affects how runners are portrayed
+            const audienceModifiers = {
+                'all-runners': 'Inclusive diverse running community, all fitness levels welcome, broad appeal',
+                'first-timers': 'Welcoming and encouraging atmosphere, accessible and achievable, beginner-friendly energy, supportive and non-intimidating',
+                'experienced': 'Competitive performance focus, serious athletic dedication, PR-chasing intensity, experienced runner sophistication',
+                'families': 'Family-friendly atmosphere, multi-generational participation, kids and parents together, inclusive fun for all ages',
+                'local': 'Local community pride, neighborhood runners, GTA regional identity, familiar faces and places',
+                'corporate': 'Professional team-building, corporate wellness, group collaboration, business casual athletic wear',
+                'clubs': 'Running club camaraderie, group training atmosphere, club jersey visibility, team spirit',
+                'volunteers': 'Community support, volunteer appreciation, behind-the-scenes helpers, event organization',
+                'sponsors': 'Corporate partnership presence, brand visibility, professional sponsorship integration',
+                'charity': 'Charitable purpose, giving back, community impact, meaningful participation'
+            };
+
+            // Get category-specific scene details
+            const sceneDetails = categoryScenes[options.category] || categoryScenes['custom'];
+
+            // Get phase and audience context (if available)
+            const phaseContext = phaseModifiers[options.phase] || '';
+            const audienceContext = audienceModifiers[options.audience] || '';
+            const customAudienceContext = options.customAudience ? `Custom audience focus: ${options.customAudience}` : '';
+            const customTimingContext = options.customTiming ? `Specific timing: ${options.customTiming}` : '';
+
+            // Build the prompt with CATEGORY-SPECIFIC + PHASE + AUDIENCE CONTENT
+            let prompt = `Create a stunning high-quality photograph for Bronte Harbour Classic 5K with the following specifications:
+${imageAnalysisBlock}
+SCENE & SUBJECT:
+${sceneDetails.scene}
+
+PARTICIPANTS:
+${sceneDetails.participants}
+
+SETTING:
+${sceneDetails.setting}
+
+TIMING/PHASE CONTEXT:
+${phaseContext}${customTimingContext ? `\n${customTimingContext}` : ''}
+
+TARGET AUDIENCE FOCUS:
+${audienceContext}${customAudienceContext ? `\n${customAudienceContext}` : ''}
+
+EVENT CONTEXT (For Reference Only):
+- Event: Bronte Harbour Classic 5K + Kids 1K
+- Date: June 21, 2026 (Father's Day)
+- Location: Bronte Harbour, Oakville, Ontario
+- Distance featured: ${distanceName}
+
+COMPOSITION & STYLE:
+- Image format: ${platformSpecs[options.platform]}
+- Photography style: ${styleSpecs[currentStyle]}
+- Camera settings: fast shutter speed (1/500-1/1000) for action freeze, moderate depth of field (f/4-f/8), dynamic angles
+- Composition: rule of thirds, leading lines, balanced visual weight, professional race photography standards
+- Mood and atmosphere: ${categoryMoods[options.category]}
+- Audience-specific tone: ${audienceContext}`;
+
+            if (options.includeText) {
+                prompt += `\n- Strategic negative space: generous clean area in top portion or side specifically reserved for text overlay (race date, registration info)`;
+            }
+
+            if (options.includeLogo) {
+                prompt += `\n- Logo placement area: clean unobstructed space in bottom right or top corner for Bronte Harbour Classic logo overlay`;
+            }
+
+            // CATEGORY-SPECIFIC RUNNERS SECTION (only if enabled AND appropriate for category)
+            if (options.includeRunners && options.category !== 'training') {
+                prompt += `\n\nRUNNERS IN FRAME:
+- Action: Dynamic running motion, mid-stride energy, athletic form, forward momentum
+- Diversity: Mixed ages, genders, fitness levels representing community participation
+- Expression: Joy, determination, achievement, community spirit
+- Apparel: Mix of running gear, race bibs visible, athletic clothing in various colors`;
+            } else if (options.includeRunners && options.category === 'training') {
+                // Training-specific runner description (NO RACE BIBS!)
+                prompt += `\n\nTRAINING RUNNERS IN FRAME:
+- Action: Steady training pace, focused form, endurance running motion, building fitness
+- Count: 1-3 individual runners (NOT a crowd)
+- Expression: Determined, focused, goal-oriented, training mindset
+- Apparel: Casual training gear - NO RACE BIBS, just regular running clothes, fitness watches visible`;
+            }
+
+            if (options.includeKids) {
+                prompt += `\n- Kids runners: Children aged 5-12 running with enthusiasm, family participation, parent-child bonding, youth energy and excitement`;
+            }
+
+            if (options.includeFathersDay) {
+                prompt += `\n- Father's Day elements: Subtle Father's Day atmosphere, parent-child runners, family bonding, dad-and-kids participation, multi-generational runners`;
+            }
+
+            prompt += `\n\nLIGHTING SETUP:
+- Natural outdoor lighting: Golden hour warmth (early morning or evening light), soft natural illumination, clear blue sky
+- Lighting quality: Even exposure, no harsh shadows, natural skin tones, vibrant colors without overexposure
+- Weather atmosphere: Perfect ${options.category === 'training' ? 'training' : 'race'} day weather, clear visibility, comfortable running conditions`;
+
+            prompt += `\n\nCOLOR PALETTE & BRAND IDENTITY:
+- Primary brand colors: Bold race red (#FF0000), crisp white (#FFFFFF), strong black (#000000)
+- Color grading: Vibrant energetic palette, saturated athletic colors, dynamic contrast, professional sports photography color
+- Visual energy: High-energy athletic vibe, motivating atmosphere, ${options.category === 'training' ? 'preparatory training feeling' : 'exciting race day feeling'}`;
+
+            if (options.includeLocation) {
+                prompt += `\n\nLOCATION & SETTING:
+- Bronte Harbour waterfront: Stunning Lake Ontario views, scenic harbor background, beautiful waterfront paths
+- Oakville character: Well-maintained community spaces, upscale suburban atmosphere, family-friendly environment
+- Natural elements: Waterfront scenery, parkland settings, tree-lined paths, lakefront beauty
+- Local landmarks: Bronte lighthouse softly visible, harbor boats in background, waterfront pavilion areas`;
+            }
+
+            // CATEGORY-SPECIFIC ATMOSPHERE (critical to prevent wrong imagery)
+            if (options.category === 'registration' || options.category === 'results' || options.category === 'countdown') {
+                prompt += `\n\nRACE DAY ATMOSPHERE:
+- Event scale: Community race with 300-500 participants, grassroots feel with professional organization
+- Crowd energy: Supportive spectators, encouraging atmosphere, community cheering, family support
+- Race elements: Timing mats, water stations, kilometer markers, professional race infrastructure
+- Community spirit: Local volunteers, neighborhood pride, GTA regional participation`;
+            } else if (options.category === 'training') {
+                prompt += `\n\nTRAINING ATMOSPHERE:
+- Peaceful, quiet training environment (NOT race day)
+- Solo or small group focused training
+- Personal fitness journey, individual preparation
+- Calm, motivational atmosphere for building toward race goals`;
+            } else if (options.category === 'route') {
+                prompt += `\n\nROUTE SHOWCASE ATMOSPHERE:
+- Scenic course demonstration (may show race or training runners)
+- Focus on natural beauty and waterfront scenery
+- Inviting running paths highlighting the 5K course features`;
+            }
+
+            // Add exclusions to prevent AI confusion
+            if (sceneDetails.exclude) {
+                prompt += `\n\n⚠️ CRITICAL EXCLUSIONS:
+${sceneDetails.exclude}`;
+            }
+
+            if (options.announcement || options.specialNotes) {
+                prompt += `\n\nSPECIAL FOCUS:`;
+                if (options.announcement) prompt += `\n- Key message: ${options.announcement}`;
+                if (options.specialNotes) prompt += `\n- Additional details: ${options.specialNotes}`;
+            }
+
+            if (options.sponsorName) {
+                prompt += `\n- Featured sponsor: Include subtle ${options.sponsorName} branding or presence (banners, signage) in professional way`;
+            }
+
+            prompt += `\n\nTECHNICAL QUALITY STANDARDS:
+- Resolution: Ultra-high 4K-8K quality, social media optimized, print-ready 300 DPI
+- Sharpness: Tack-sharp focus on main subjects, clean bokeh on background, professional sports photography quality
+- Action capture: Freeze motion for runners, sharp details, dynamic energy preserved
+- Color accuracy: Vibrant athletic colors, accurate brand colors (red/black/white), professional color grading
+- Professional finish: Sports photography standard, ${options.category === 'training' ? 'training motivation' : 'race marketing'} quality, social media hero image quality
+
+STYLE REFERENCES: ${options.category === 'training'
+    ? 'Training motivation photography (Nike Training Club style), fitness journey imagery, Runner\'s World training features, personal achievement focus'
+    : 'Professional race photography (Boston Marathon, NYC Marathon style), Runner\'s World magazine aesthetics, Nike/Adidas race campaign quality, Canadian community race photography standards'}
+
+TARGET USE: Social media marketing, ${options.category === 'training' ? 'training motivation, fitness inspiration' : 'race registration promotion'}, sponsor presentations, print materials, website hero images`;
+
+            // Category-specific final result description
+            const finalResults = {
+                'training': 'Motivational training photography that inspires runners to prepare for the race, showcases personal fitness journeys, emphasizes dedication and goal-setting, and builds anticipation for Bronte Harbour Classic 5K.',
+                'registration': 'Professional race announcement photography that inspires immediate registration, showcases the exciting race opportunity, captures community energy, and represents the welcoming spirit of Bronte Harbour Classic.',
+                'route': 'Stunning scenic photography that showcases the beautiful 5K course, highlights the waterfront setting, inspires runners with the picturesque route, and emphasizes the natural beauty of Bronte Harbour.',
+                'kids': 'Joyful family-friendly photography that captures the excitement of Kids 1K Fun Run, shows children having fun while being active, emphasizes safe family participation, and represents the inclusive spirit of the event.',
+                'sponsors': 'Professional corporate partnership photography that showcases brand presence, demonstrates community investment, highlights quality sponsorship, and represents professional collaboration.',
+                'results': 'Celebratory finish line photography that captures achievement and victory, showcases personal bests and accomplishments, emphasizes community celebration, and inspires future participation.',
+                'countdown': 'Exciting anticipatory photography building race week energy, creates urgency and excitement, shows final preparations, and builds momentum toward race day.',
+                'default': 'Professional race photography that inspires registration, showcases the scenic Bronte Harbour location, captures the family-friendly Father\'s Day atmosphere, and represents the welcoming community spirit of the Bronte Harbour Classic.'
+            };
+
+            prompt += `\n\nFINAL RESULT: ${finalResults[options.category] || finalResults['default']}`;
+
+            // PLATFORM-SPECIFIC OPTIMIZATION
+            prompt = optimizePromptForPlatform(prompt, options);
+
+            return {
+                platform: options.aiPlatform.toUpperCase(),
+                prompt: prompt,
+                includeLogo: options.includeLogo
+            };
+        }
+
+        function optimizePromptForPlatform(genericPrompt, options) {
+            const platform = options.aiPlatform;
+            const aspectRatio = {
+                'instagram-square': '1:1',
+                'instagram-story': '9:16',
+                'facebook-post': '1.91:1',
+                'twitter': '16:9',
+                'linkedin': '1.91:1',
+                'strava': '16:9'
+            }[options.platform];
+
+            // Build custom text instructions if provided
+            let customTextInstructions = '';
+            if (options.customTextInImage && options.customTextInImage.length > 0) {
+                customTextInstructions = buildCustomTextInstructions(options.customTextInImage, platform);
+            }
+
+            switch(platform) {
+                case 'gemini3':
+                    // Gemini 3 (Nano Banana Pro) - LATEST: Enhanced conversational, reference-aware, structured
+                    return `[GEMINI 3 - NANO BANANA PRO IMAGE GENERATION]
+
+Create a professional race photography image for the Bronte Harbour Classic 5K race.
+
+EVENT DETAILS:
+• Event: Bronte Harbour Classic 5K + Kids 1K Fun Run
+• Date: June 21, 2026 (Father's Day)
+• Location: Bronte Harbour, Oakville, Ontario
+• Brand Colors: Red (#FF0000), Black (#000000), White (#FFFFFF)
+${currentAnalysis ? `
+REFERENCE IMAGE GUIDANCE:
+• Color Palette: ${currentAnalysis.colorPalette.slice(0, 3).join(', ')}
+• Brightness: ${currentAnalysis.brightness.description}
+• Temperature: ${currentAnalysis.temperature.description}
+• Style Match: ${currentAnalysis.style}
+• Mood Target: ${currentAnalysis.mood}
+
+INSTRUCTION: Match the reference image's visual style, lighting quality, and color tones while creating race-specific content.
+` : ''}
+IMAGE SPECIFICATIONS:
+${genericPrompt}
+${customTextInstructions}
+
+OUTPUT REQUIREMENTS:
+• Aspect Ratio: ${aspectRatio} for ${options.platform}
+• Quality: Photorealistic, ultra-high resolution, professional sports photography
+• Style: Editorial quality worthy of Runner's World or Nike campaign
+• Mood: Inspiring, community-focused, aspirational
+
+Generate an image that captures the energy, community spirit, and scenic beauty of this waterfront Father's Day race celebration. Make viewers want to register immediately!`;
+
+                case 'gemini':
+                    // Gemini (Nano Banana) - Conversational, natural language, detailed descriptions
+                    return `Generate an image for me using these specifications:
+
+I need a professional race photography image for the Bronte Harbour Classic 5K race happening on Father's Day (June 21, 2026) in Bronte Harbour, Oakville, Ontario.
+
+${genericPrompt}
+${customTextInstructions}
+
+Please create this image with photorealistic quality, capturing the energy and community spirit of this waterfront race. The image should be in ${aspectRatio} aspect ratio, optimized for ${options.platform} posting.
+
+Make it inspiring and professional - something that would make people want to register for the race!`;
+
+                case 'chatgpt':
+                    // ChatGPT/DALL-E 3 - Structured, descriptive, natural language
+                    return `Create a professional photograph with these specifications:
+
+**Race Event:** Bronte Harbour Classic 5K + Kids 1K (Father's Day, June 21, 2026)
+**Location:** Bronte Harbour waterfront, Oakville, Ontario
+
+${genericPrompt}
+${customTextInstructions}
+
+**Format:** ${aspectRatio} aspect ratio for ${options.platform}
+**Quality:** Photorealistic, professional race photography
+**Brand Colors:** Red (#FF0000), Black (#000000), White (#FFFFFF)
+
+Generate a high-quality image that captures the excitement and community spirit of this scenic waterfront race.`;
+
+                case 'sora':
+                    // Sora - Image generation with dynamic composition
+                    return `[SORA IMAGE GENERATION]
+
+Create a professional race photography image with dynamic composition and energy.
+
+Scene Description:
+Professional race photography capturing the essence of Bronte Harbour Classic 5K (Father's Day 2026, Bronte Harbour, Oakville, Ontario).
+
+${genericPrompt}
+${customTextInstructions}
+
+Composition Details:
+- Dynamic moment: Peak action, decisive moment, athletic energy captured
+- Movement quality: Sense of motion and energy, runners in stride
+- Atmosphere: Race day excitement, community celebration mood
+- Visual impact: Compelling composition that draws the viewer in
+
+Image Format: ${aspectRatio} aspect ratio for ${options.platform}
+Quality: Photorealistic, high-resolution race photography
+Brand Colors: Red/Black/White color scheme maintained throughout
+
+Output: Professional race photograph optimized for social media marketing and race promotion.`;
+
+                case 'sora2':
+                    // Sora 2 - Video generation with enhanced realism and longer sequences
+                    return `[SORA 2 VIDEO GENERATION]
+
+Generate a professional race event video for Bronte Harbour Classic 5K (Father's Day 2026, Bronte Harbour, Oakville, Ontario).
+
+Video Content:
+${genericPrompt}
+${customTextInstructions}
+
+Motion & Temporal Details:
+- Video duration: 5-10 second dynamic sequence
+- Natural running biomechanics: Mid-stride motion, forward lean, arm swing, continuous running movement
+- Camera technique: Professional sports videography, smooth gimbal tracking, dynamic framing, following runners
+- Temporal flow: Continuous action sequence - runners moving through frame, building energy
+- Environmental motion: Wind in hair, clothing movement, natural outdoor dynamics, crowd movement
+
+Sora 2 Video Parameters:
+- Photorealism level: Maximum (Sora 2 enhanced realism engine)
+- Temporal coherence: Smooth, natural motion throughout video sequence
+- Motion authenticity: Real-world physics, natural human movement, fluid transitions
+- Lighting simulation: True outdoor lighting, golden hour accuracy, consistent lighting throughout
+- Weather integration: Perfect race conditions, clear visibility
+- Frame coherence: Consistent composition and quality across all video frames
+
+Video Format: ${aspectRatio} aspect ratio for ${options.platform}
+Output Quality: 4K-8K photorealistic video sequence
+Brand Accuracy: Red/Black/White color scheme maintained throughout
+Audio: Consider adding ambient race sounds (crowd cheering, footsteps, announcer)
+
+Generate a compelling race video that captures the dynamic energy and community spirit of the Bronte Harbour Classic.`;
+
+                case 'midjourney':
+                    // Midjourney - Keyword/tag based, parameter syntax, artistic descriptors
+                    const mjKeywords = extractKeywordsForMidjourney(genericPrompt, options);
+                    const mjTextKeywords = options.customTextInImage ? `, bold text overlay reading "${options.customTextInImage}", professional typography integrated into composition, readable text design` : '';
+                    return `${mjKeywords.main}
+
+${mjKeywords.details}${mjTextKeywords}
+
+--ar ${aspectRatio.replace(':', ':')} --style raw --quality 2 --stylize 250 --v 6.1
+
+Midjourney Parameters Explained:
+- --ar ${aspectRatio}: Aspect ratio for ${options.platform} optimization
+- --style raw: Photorealistic race photography (not artistic interpretation)
+- --quality 2: Maximum generation quality
+- --stylize 250: Balanced - not too artistic, professional sports photography
+- --v 6.1: Latest Midjourney model for photorealism
+
+Keywords optimized for Midjourney's understanding of: race photography, athletic action, waterfront scenery, community events, professional sports marketing imagery.`;
+
+                case 'grok':
+                    // Grok (xAI) - Technical, precise, structured with emphasis on realism and good text rendering
+                    return `[GROK IMAGE GENERATION REQUEST]
+
+Objective: Generate photorealistic race event photograph
+
+Event Specifications:
+- Race: Bronte Harbour Classic 5K + Kids 1K
+- Date: June 21, 2026 (Father's Day)
+- Location: Bronte Harbour, Oakville, Ontario, Canada
+- Geographic coordinates: Lake Ontario waterfront, GTA region
+
+${genericPrompt}
+${customTextInstructions}
+
+Technical Generation Parameters:
+- Output format: ${aspectRatio} aspect ratio (${options.platform} optimized)
+- Rendering mode: Photorealistic (not illustrative or artistic)
+- Image quality: 4K-8K resolution, professional print quality
+- Color space: sRGB for digital, brand colors: #FF0000 (red), #000000 (black), #FFFFFF (white)
+- Lighting model: Natural outdoor illumination (golden hour preferred)
+- Physics accuracy: Realistic human biomechanics, authentic running motion
+- Environmental accuracy: Canadian lakefront geography, Ontario seasonal context
+
+Grok-specific optimization: Leverage xAI's understanding of:
+- Real-world physics and natural motion
+- Geographic/location authenticity (Oakville/Lake Ontario specific features)
+- Canadian race photography conventions
+- Professional sports marketing imagery standards
+- TEXT RENDERING: Grok performs well at integrating readable text into images with clear typography
+
+Expected output: Publication-ready race photograph suitable for social media marketing, sponsor presentations, and race registration promotion. If text is specified, render text clearly with professional typography quality.`;
+
+                case 'krea':
+                    // Krea - Realtime generation, artistic control, style emphasis
+                    return `[KREA REALTIME GENERATION]
+
+Base Concept: Professional race photography - Bronte Harbour Classic 5K
+
+${genericPrompt}
+${customTextInstructions}
+
+Krea Generation Settings:
+- Mode: Photorealistic (not illustration/art)
+- Aspect Ratio: ${aspectRatio} (${options.platform} format)
+- Style Strength: 0.6-0.7 (balanced realism with professional sports photography aesthetic)
+- AI Strength: 0.7-0.8 (high adherence to prompt, photorealistic output)
+- Quality: Maximum resolution available
+- Speed: Quality mode (not realtime preview - final render)
+
+Visual Style References for Krea:
+- Sports photography style: Runner's World magazine, marathon race coverage, Nike/Adidas campaign imagery
+- Color grading: Vibrant race day palette, saturated athletic colors, professional color correction
+- Composition style: Dynamic sports photography, rule of thirds, action-focused
+- Mood: Energetic, inspiring, community-spirited, professional race marketing
+
+Krea-Specific Notes:
+- Emphasize waterfront scenery (Lake Ontario, Bronte Harbour distinctive features)
+- Capture authentic running motion (mid-stride, athletic form)
+- Brand color accuracy critical: Red/Black/White scheme
+- Community race atmosphere: 300-500 participants, family-friendly, Father's Day context
+
+Generate with photorealistic quality optimized for ${options.platform} social media posting.`;
+
+                default:
+                    // Fallback to generic format
+                    return genericPrompt;
+            }
+        }
+
+        function buildCustomTextInstructions(customText, platform) {
+            // Generate platform-specific instructions for including text in the image
+            const textUpper = customText.toUpperCase();
+            
+            switch(platform) {
+                case 'gemini':
+                    return `\n\n**IMPORTANT TEXT OVERLAY REQUIREMENT:**
+Please include the following text directly IN the image (not as a caption):
+"${textUpper}"
+
+- Position: Prominently visible, top third or center of image
+- Style: Bold, clean, professional typography
+- Color: White text with black drop shadow OR Red text with white outline (brand colors)
+- Font: Sans-serif, modern, highly readable
+- Size: Large enough to read clearly in social media thumbnail
+- Integration: Text should feel naturally integrated into the composition, not awkwardly placed
+- Readability: Ensure text contrasts well with background (use overlay/gradient if needed)
+
+The text is CRITICAL to the marketing message - make it the focal point!`;
+
+                case 'chatgpt':
+                    return `\n\n**TEXT OVERLAY SPECIFICATION:**
+Include this exact text prominently in the image: "${textUpper}"
+
+Typography Requirements:
+- Font: Bold, modern sans-serif (similar to Impact, Arial Black, or Helvetica Bold)
+- Position: Upper third of image or centered (wherever most visible)
+- Color scheme: White text with dark shadow/outline OR Red (#FF0000) with white outline
+- Size: 72-96pt equivalent (large, thumb-stopping scale)
+- Style: ALL CAPS for maximum impact
+- Contrast: Ensure perfect readability against background (add semi-transparent overlay behind text if needed)
+- Integration: Professional marketing aesthetic - text should enhance, not detract from image
+
+Make the text impossible to miss - it's the key marketing message!`;
+
+                case 'sora':
+                    return `\n\n**SORA IMAGE TEXT OVERLAY:**
+Include this text directly in the image: "${textUpper}"
+
+Text Rendering Specifications:
+- Typography: Bold, high-impact sans-serif font
+- Placement: Strategic position (top banner, center overlay, or lower third - wherever most effective)
+- Color: High-contrast - White with black outline OR Race red (#FF0000) with white stroke
+- Scale: Large, social-media-thumbnail-readable size
+- Background treatment: Add subtle dark gradient/vignette behind text for readability if needed
+- Brand consistency: Professional race marketing aesthetic
+- Integration: Text should appear naturally part of the image composition
+
+Text is mission-critical marketing element - prioritize visibility and impact!`;
+
+                case 'sora2':
+                    return `\n\n**TEXT OVERLAY IN VIDEO FRAME:**
+Render this text INTO the video frame: "${textUpper}"
+
+Text Rendering Specifications:
+- Typography: Bold, high-impact sans-serif font
+- Placement: Strategic position (top banner, center overlay, or lower third - wherever most effective)
+- Animation consideration: Text should appear naturally integrated (not mid-animation)
+- Color: High-contrast - White with black outline OR Race red (#FF0000) with white stroke
+- Scale: Large, social-media-thumbnail-readable size
+- Background treatment: Add subtle dark gradient/vignette behind text for readability if needed
+- Brand consistency: Professional race marketing aesthetic
+- Video context: Text should be visible throughout the video sequence
+
+Text is mission-critical marketing element - prioritize visibility and impact in video format!`;
+
+                case 'midjourney':
+                    // Already handled in the main Midjourney case with mjTextKeywords
+                    return '';
+
+                case 'grok':
+                    return `\n\n**GROK TEXT RENDERING REQUIREMENTS:**
+Generate text overlay with exact string: "${textUpper}"
+
+Technical Specifications:
+- Typography rendering: Bold sans-serif typeface with clean edges
+- Positioning algorithm: Optimal placement for maximum visibility (rule-of-thirds consideration)
+- Color theory application: High-contrast color selection (white/black or brand red/white combination)
+- Legibility optimization: Minimum 72pt equivalent scale, stroke/shadow for separation from background
+- Integration quality: Professional graphic design standard - text as integral composition element
+- Background treatment: Apply semi-transparent overlay or gradient if needed for contrast
+- Brand alignment: Red/Black/White color scheme consistency
+- Text sharpness: Clear, readable text rendering
+
+Requirements:
+✓ Text must be readable at thumbnail size
+✓ Render exactly as specified
+✓ Professional typography quality matching race marketing standards
+✓ Text should appear naturally integrated into the image`;
+
+                case 'krea':
+                    return `\n\n**KREA TEXT OVERLAY SETTINGS:**
+Include this text in the generated image: "${textUpper}"
+
+Text Generation Parameters:
+- Font weight: Bold (700-900)
+- Font family: Modern sans-serif (clean, professional)
+- Position: Strategic placement in upper or center region
+- Color: Brand-aligned (White + black shadow OR Red + white outline)
+- Scale: Large, thumb-stopping size
+- Text effect: Drop shadow or stroke for readability
+- Background handling: Add dark overlay behind text if background is busy
+- Style consistency: Professional race marketing aesthetic
+
+Text is PRIMARY marketing element - prioritize prominence and readability over artistic subtlety!`;
+
+                default:
+                    return `\n\nIMPORTANT: Include this text prominently in the image: "${textUpper}"
+Make it bold, large, and highly visible with good contrast against the background.`;
+            }
+        }
+
+        function extractKeywordsForMidjourney(prompt, options) {
+            // Extract key concepts for Midjourney's keyword-based format - CATEGORY SPECIFIC!
+            const category = options.category;
+            const distance = options.distance === '5k' ? '5K race' : options.distance === 'kids' ? 'kids fun run' : '5K race event';
+
+            // Category-specific main subject keywords
+            const categoryMainKeywords = {
+                'training': `Training motivation photography, ${distance} preparation, solo runner or small group`,
+                'registration': `Race announcement photography, ${distance}, registration promotion`,
+                'route': `Scenic course photography, ${distance} route showcase`,
+                'kids': `Kids running photography, children 1K fun run, family fitness`,
+                'results': `Finish line celebration, race completion photography, achievement moments`,
+                'sponsors': `Corporate partnership photography, professional sponsorship presence`,
+                'default': `Professional race photography, ${distance}`
+            };
+
+            const mjMain = `${categoryMainKeywords[category] || categoryMainKeywords['default']}, Bronte Harbour waterfront, Lake Ontario scenic background, Father's Day race event, Oakville Ontario Canada, community running event, athletic action photography`;
+
+            // Category-specific detail keywords
+            let mjDetails = '';
+            if (category === 'training') {
+                mjDetails = `1-3 solo runners in training gear, focused determined expression, peaceful training atmosphere, NO race bibs, NO crowds, personal fitness journey, golden hour natural lighting, clear blue sky, waterfront parkland setting, professional sports photography quality, mixed ages and genders, red black white brand colors, ${options.platform.replace('-', ' ')} composition`;
+            } else if (category === 'registration' || category === 'results' || category === 'countdown') {
+                mjDetails = `dynamic runners in motion, mid-stride athletic form, vibrant race day energy, golden hour natural lighting, clear blue sky, waterfront parkland setting, professional sports photography quality, race bibs visible, mixed ages and genders, community participation, red black white brand colors, ${options.platform.replace('-', ' ')} composition`;
+            } else if (category === 'route') {
+                mjDetails = `scenic waterfront course, runners on beautiful paths, stunning Lake Ontario views, golden hour natural lighting, clear blue sky, waterfront parkland setting, professional sports photography quality, mixed ages and genders, red black white brand colors, ${options.platform.replace('-', ' ')} composition`;
+            } else if (category === 'kids') {
+                mjDetails = `children aged 5-12 running with joy, big smiles, family participation, parents nearby, fun energetic atmosphere, golden hour natural lighting, clear blue sky, safe supervised course, professional sports photography quality, red black white brand colors, ${options.platform.replace('-', ' ')} composition`;
+            } else {
+                mjDetails = `dynamic runners in motion, mid-stride athletic form, vibrant athletic energy, golden hour natural lighting, clear blue sky, waterfront parkland setting, professional sports photography quality, mixed ages and genders, community participation, red black white brand colors, ${options.platform.replace('-', ' ')} composition`;
+            }
+
+            if (options.includeKids && category !== 'kids') mjDetails += `, children running with enthusiasm, family participation, youth energy`;
+            if (options.includeFathersDay) mjDetails += `, Father's Day atmosphere, parent-child bonding, multi-generational runners`;
+            if (options.includeLocation) mjDetails += `, Bronte lighthouse background, harbor boats, waterfront pavilion, tree-lined paths, lakefront scenery`;
+
+            // Add phase/timing keywords
+            const phaseKeywords = {
+                'launch': 'registration opening, campaign launch energy, announcement atmosphere',
+                'training': 'training preparation, fitness journey, building toward goal',
+                'sprint': 'approaching race day, final weeks urgency, building excitement',
+                'raceweek': 'race week intensity, final prep, imminent event',
+                'raceday': 'race day NOW, active event, live competition',
+                'postrace': 'celebration, achievement, post-race joy'
+            };
+            if (phaseKeywords[options.phase]) mjDetails += `, ${phaseKeywords[options.phase]}`;
+            if (options.customTiming) mjDetails += `, ${options.customTiming}`;
+
+            // Add audience keywords
+            const audienceKeywords = {
+                'first-timers': 'welcoming, beginner-friendly, encouraging, accessible',
+                'experienced': 'competitive, performance-focused, serious athletes, PR-chasing',
+                'families': 'family-friendly, multi-generational, kids and parents, inclusive',
+                'local': 'local community pride, neighborhood runners, GTA regional',
+                'corporate': 'team-building, corporate wellness, professional groups',
+                'clubs': 'running club camaraderie, team jerseys, group training'
+            };
+            if (audienceKeywords[options.audience]) mjDetails += `, ${audienceKeywords[options.audience]}`;
+            if (options.customAudience) mjDetails += `, ${options.customAudience}`;
+
+            return {
+                main: mjMain,
+                details: mjDetails
+            };
+        }
+
+        function generateContextualHashtags(options, captionIndex) {
+            const coreBrand = ['#BronteHarbourClassic', '#BronteHarbour5K'];
+            
+            const locationTags = ['#OakvilleON', '#BronteHarbour', '#HaltonRegion', '#BurlingtonON', '#GTA', '#OntarioRaces', '#LakeOntario', '#Oakville'];
+            
+            const raceTags = ['#5KRace', '#RunningCommunity', '#RaceDay', '#5KTraining', '#CommunityRun', '#LocalRace', '#RunLocal', '#CanadianRunners', '#OntarioRunning', '#RunOntario'];
+            
+            const fathersDayTags = ['#FathersDayRace', '#FathersDayRun', '#DadsWhoRun', '#FathersDayWeekend'];
+            
+            const familyTags = ['#FamilyRun', '#KidsRun', '#FamilyFitness', '#ActiveFamily', '#Kids1K', '#FamilyRace'];
+            
+            const motivationTags = ['#RunForACause', '#RunningGoals', '#RaceGoals', '#FitnessGoals', '#RunnerLife', '#RunningMotivation', '#JustRun', '#RunnersOfInstagram', '#InstaRunners'];
+            
+            const communityTags = ['#CommunityEvent', '#LocalEvents', '#SupportLocal', '#CommunityRace', '#NeighborhoodRun'];
+
+            let selectedTags = [...coreBrand];
+            
+            // Add location tags (rotate)
+            const locationPool = locationTags.slice((captionIndex * 2) % locationTags.length, ((captionIndex * 2) % locationTags.length) + 2);
+            selectedTags.push(...locationPool);
+            
+            // Add race tags
+            const racePool = raceTags.slice((captionIndex * 2) % raceTags.length, ((captionIndex * 2) % raceTags.length) + 3);
+            selectedTags.push(...racePool);
+            
+            // Add Father's Day tags if applicable
+            if (options.includeFathersDay || options.phase === 'raceday') {
+                selectedTags.push(fathersDayTags[captionIndex % fathersDayTags.length]);
+            }
+            
+            // Add family tags if kids race
+            if (options.includeKids || options.distance === 'kids' || options.audience === 'families') {
+                selectedTags.push(familyTags[captionIndex % familyTags.length]);
+            }
+            
+            // Add motivation tags
+            selectedTags.push(motivationTags[captionIndex % motivationTags.length]);
+            
+            // Add community tags
+            if (options.audience === 'local' || options.category === 'local') {
+                selectedTags.push(communityTags[captionIndex % communityTags.length]);
+            }
+            
+            // Remove duplicates and limit
+            selectedTags = [...new Set(selectedTags)];
+            const maxTags = options.platform === 'twitter' ? 3 : (options.platform === 'instagram-story' ? 5 : 12);
+            selectedTags = selectedTags.slice(0, maxTags);
+            
+            return options.includeEmojis ? `🏃 ${selectedTags.join(' ')}` : selectedTags.join(' ');
+        }
+
+        function buildSocialMediaCopy(options, isRegenerate) {
+            const posts = [];
+            const e = options.includeEmojis;
+            const question = options.includeQuestions;
+            const formal = options.formalTone;
+            
+            const distanceText = options.distance === '5k' ? '5K' : options.distance === 'kids' ? 'Kids 1K' : '5K and Kids 1K';
+            const dateText = options.includeDate ? 'June 21, 2026 (Father\'s Day)' : '';
+            const pricingText = options.includePricing ? 'Premier: $49 (until Nov 30) | Early Bird: $59 | Regular: $69 | Kids 1K: $25' : '';
+            
+            const ctas = {
+                'instagram-square': options.strongCta ? ['Register now - link in bio! 🏃', 'Sign up today! Link in bio! 👆', 'Join us - register via link in bio! 🎯', 'Reserve your spot - link in bio! ⏰'] : ['Link in bio', 'Register now', 'Sign up'],
+                'instagram-story': options.strongCta ? ['Swipe up to register! 👆', 'Tap link to sign up! 🏃', 'Register now! Swipe up! ⏰'] : ['Swipe up', 'Link in bio'],
+                'facebook-post': ['Register Now', 'Sign Up Today', 'Join the Race', 'Reserve Your Spot'],
+                'twitter': ['Register: [link]', 'Sign up: [link]', 'Join us: [link]'],
+                'linkedin': ['Learn more and register', 'Professional registration details', 'Join our corporate teams'],
+                'strava': ['Log this race!', 'Add to calendar!', 'Join the event!']
+            };
+            
+            const platformCtas = ctas[options.platform];
+            
+            let templates = getSocialMediaTemplates(options);
+            
+            if (isRegenerate) {
+                templates = shuffleArray(templates);
+            }
+            
+            templates.forEach((template, index) => {
+                const cta = platformCtas[index % platformCtas.length];
+                let copy = template;
+                
+                if (options.includeDate && dateText) {
+                    copy = copy.replace('[DATE]', dateText);
+                }
+                
+                if (options.includePricing && pricingText) {
+                    copy += `\n\n💰 ${pricingText}`;
+                }
+                
+                // Add registration links if selected
+                let linksText = '';
+                if (options.includeLandingPage && options.includeRaceRoster) {
+                    linksText = `\n\n🔗 Event Info: https://tapegeeks.com/pages/bronte-harbour-classic-5-10k-race\n🏃 Register: https://raceroster.com/events/2026/111468/bronte-harbour-classic-5k`;
+                } else if (options.includeLandingPage) {
+                    linksText = `\n\n🔗 Full Event Info: https://tapegeeks.com/pages/bronte-harbour-classic-5-10k-race`;
+                } else if (options.includeRaceRoster) {
+                    linksText = `\n\n🏃 Register Now: https://raceroster.com/events/2026/111468/bronte-harbour-classic-5k`;
+                }
+                
+                const contextualHashtags = generateContextualHashtags(options, index);
+                
+                if (options.platform !== 'twitter') {
+                    copy = `${copy}\n\n${cta}${linksText}\n\n${contextualHashtags}`;
+                } else {
+                    copy = `${copy} ${cta}${linksText} ${contextualHashtags}`;
+                }
+                
+                posts.push({
+                    number: index + 1,
+                    copy: copy.trim(),
+                    charCount: copy.length
+                });
+            });
+            
+            return posts.slice(0, 10);
+        }
+
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        function getSocialMediaTemplates(options) {
+            const e = options.includeEmojis;
+            const question = options.includeQuestions;
+            const distanceText = options.distance === '5k' ? 'Bronte Harbour Classic 5K' : options.distance === 'kids' ? 'Kids 1K Fun Run' : 'Bronte Harbour Classic';
+            
+            let templates = [];
+            
+            // Generate category-specific templates (simplified version - full version would have all categories)
+            if (options.category === 'registration') {
+                templates = [
+                    `${e ? '🏃‍♂️ ' : ''}REGISTRATION OPEN for ${distanceText}!${question ? ` ${e ? '🎯 ' : ''}Ready to join us on [DATE]?` : ''} Scenic waterfront 5K through beautiful Bronte Harbour! Perfect Father's Day celebration!`,
+                    `${e ? '🎉 ' : ''}It's official! ${distanceText} registration is LIVE!${question ? ` ${e ? '🏃 ' : ''}Who's signing up?` : ''} Early bird pricing available now!`,
+                    `${e ? '📣 ' : ''}Mark your calendars! ${distanceText} - [DATE] at stunning Bronte Harbour, Oakville!${question ? ` ${e ? '❤️ ' : ''}Running on Father's Day - what could be better?` : ''}`,
+                    `${e ? '🌊 ' : ''}Join us for the inaugural ${distanceText} along Lake Ontario's beautiful waterfront!${question ? ` ${e ? '🎽 ' : ''}First community race - who's in?` : ''}`,
+                    `${e ? '⚡ ' : ''}EARLY BIRD SPECIAL! Register now for ${distanceText}!${question ? ` ${e ? '💰 ' : ''}Ready to save AND run?` : ''} Limited time pricing!`,
+                    `${e ? '🏃‍♀️ ' : ''}Father's Day 5K at Bronte Harbour! Bring the family for ${distanceText}!${question ? ` ${e ? '👨‍👩‍👧‍👦 ' : ''}Perfect family morning?` : ''}`,
+                    `${e ? '🎯 ' : ''}NEW RACE ALERT! ${distanceText} coming to Oakville!${question ? ` ${e ? '🏆 ' : ''}Who's ready for a waterfront PR?` : ''}`,
+                    `${e ? '✨ ' : ''}Beautiful Bronte Harbour. Scenic 5K route. Perfect Father's Day. ${distanceText} - register now!${question ? ` ${e ? '😍 ' : ''}Dream race?` : ''}`,
+                    `${e ? '🎊 ' : ''}LAUNCH DAY! ${distanceText} registration is officially OPEN!${question ? ` ${e ? '🏃 ' : ''}Securing your spot?` : ''} Don't miss out!`,
+                    `${e ? '🌟 ' : ''}Join Oakville's newest community 5K! ${distanceText} - [DATE]!${question ? ` ${e ? '❤️ ' : ''}Supporting local races?` : ''}`
+                ];
+            } else if (options.category === 'training') {
+                templates = [
+                    `${e ? '💪 ' : ''}Training for ${distanceText}?${question ? ` ${e ? '🏃 ' : ''}What's your strategy?` : ''} Remember: consistency beats intensity! Start slow, build steady!`,
+                    `${e ? '📅 ' : ''}[TRAINING TIP] Building to 5K? Try the run-walk method!${question ? ` ${e ? '⏱️ ' : ''}Who's using intervals?` : ''} Perfect for first-timers!`,
+                    `${e ? '🏃‍♀️ ' : ''}Getting race-ready for ${distanceText}!${question ? ` ${e ? '💯 ' : ''}How's your training going?` : ''} Share your progress with us!`,
+                    `${e ? '✨ ' : ''}Couch to 5K in 8 weeks!${question ? ` ${e ? '🎯 ' : ''}Ready to start your journey?` : ''} ${distanceText} is the perfect first race goal!`,
+                    `${e ? '🎽 ' : ''}Training Tuesday! Today's focus: Easy 3K pace run${question ? ` ${e ? '🏃 ' : ''}Who's hitting the roads?` : ''} Building toward ${distanceText}!`,
+                    `${e ? '💚 ' : ''}REST is training too!${question ? ` ${e ? '😊 ' : ''}Taking a recovery day?` : ''} Your body needs time to adapt! Smart training for ${distanceText}!`,
+                    `${e ? '🌅 ' : ''}Morning runs > Evening runs?${question ? ` ${e ? '🤔 ' : ''}What's your preference?` : ''} Training for ${distanceText} means finding YOUR perfect time!`,
+                    `${e ? '🔥 ' : ''}Interval training = Speed gains!${question ? ` ${e ? '⚡ ' : ''}Adding speedwork?` : ''} Try 6x400m for ${distanceText} prep!`,
+                    `${e ? '🎧 ' : ''}Best running playlist?${question ? ` ${e ? '🎵 ' : ''}What gets you through tough runs?` : ''} Share your training music for ${distanceText}!`,
+                    `${e ? '👟 ' : ''}New running shoes time!${question ? ` ${e ? '🏃 ' : ''}What's your go-to brand?` : ''} Proper footwear = happy ${distanceText}!`
+                ];
+            } else if (options.category === 'kids') {
+                templates = [
+                    `${e ? '👧👦 ' : ''}Kids 1K Fun Run at ${distanceText}!${question ? ` ${e ? '🎉 ' : ''}Who's bringing the little ones?` : ''} Perfect first race for ages 5-12!`,
+                    `${e ? '🏃‍♀️ ' : ''}Father's Day fun! Kids 1K + Parent 5K = Perfect family morning!${question ? ` ${e ? '👨‍👩‍👧‍👦 ' : ''}Making memories?` : ''}`,
+                    `${e ? '✨ ' : ''}First race experience for your kids! Kids 1K at Bronte Harbour!${question ? ` ${e ? '💫 ' : ''}Building healthy habits early?` : ''}`,
+                    `${e ? '🎽 ' : ''}Kids 1K is FREE with adult 5K registration!${question ? ` ${e ? '🎁 ' : ''}Family deal?` : ''} Bring the whole crew to ${distanceText}!`,
+                    `${e ? '🏅 ' : ''}Every kid gets a medal at the Kids 1K!${question ? ` ${e ? '😊 ' : ''}Who's earning their first race medal?` : ''} Sign up for ${distanceText}!`,
+                    `${e ? '🌈 ' : ''}Fun, safe, supportive! Kids 1K at ${distanceText}!${question ? ` ${e ? '❤️ ' : ''}Introducing kids to running?` : ''} We make it FUN!`,
+                    `${e ? '👨‍👧 ' : ''}Dad + Kids = Unbeatable team! Father's Day ${distanceText}!${question ? ` ${e ? '💙 ' : ''}Best Father's Day ever?` : ''}`,
+                    `${e ? '🎉 ' : ''}Short, fun, exciting! Kids 1K is perfect for beginners!${question ? ` ${e ? '🏃 ' : ''}First race jitters?` : ''} We've got you covered!`,
+                    `${e ? '⭐ ' : ''}Build confidence! Build fitness! Build memories! Kids 1K at ${distanceText}!${question ? ` ${e ? '👪 ' : ''}Ready for family fun?` : ''}`,
+                    `${e ? '🎊 ' : ''}Calling all parents! Kids 1K registration open!${question ? ` ${e ? '🏃‍♀️ ' : ''}Getting the kids active?` : ''} ${distanceText} welcomes families!`
+                ];
+            } else if (options.category === 'sponsors') {
+                if (formal) {
+                    templates = [
+                        `We're proud to partner with ${options.sponsorName || '[Sponsor]'} for ${distanceText}. Together, we're building a stronger community through fitness and wellness.`,
+                        `${distanceText} is made possible through the generous support of ${options.sponsorName || 'our sponsors'}. Thank you for investing in our community's health.`,
+                        `Introducing our valued partner ${options.sponsorName || '[Sponsor]'} - supporting ${distanceText} and our community's active lifestyle.`,
+                        `Corporate wellness meets community impact. Thank you ${options.sponsorName || '[Sponsor]'} for sponsoring ${distanceText}.`,
+                        `${options.sponsorName || 'Our sponsors'} share our vision: a healthier, more active GTA. Thank you for supporting ${distanceText}.`,
+                        `Partnership spotlight: ${options.sponsorName || '[Sponsor]'} is helping make ${distanceText} possible. Corporate responsibility in action.`,
+                        `Community events require community support. Thank you ${options.sponsorName || '[Sponsor]'} for being a ${distanceText} sponsor.`,
+                        `${distanceText} is proud to collaborate with ${options.sponsorName || 'industry leaders'} who believe in community wellness.`,
+                        `Sponsorship matters. ${options.sponsorName || 'Our partners'} make ${distanceText} accessible and impactful. Thank you.`,
+                        `Excellence meets purpose. ${options.sponsorName || '[Sponsor]'} + ${distanceText} = Community wellness partnership.`
+                    ];
+                } else {
+                    templates = [
+                        `${e ? '🤝 ' : ''}HUGE shoutout to ${options.sponsorName || '[Sponsor]'}!${question ? ` ${e ? '👏 ' : ''}Know them?` : ''} Supporting ${distanceText} and our community!`,
+                        `${e ? '❤️ ' : ''}Thank you ${options.sponsorName || '[Sponsor]'} for believing in ${distanceText}!${question ? ` ${e ? '🙏 ' : ''}Local support matters?` : ''}`,
+                        `${e ? '✨ ' : ''}Sponsor spotlight: ${options.sponsorName || '[Sponsor]'} is making ${distanceText} possible!${question ? ` ${e ? '🎉 ' : ''}Supporting local businesses?` : ''}`,
+                        `${e ? '🏆 ' : ''}Big things happen when businesses invest in community! Thanks ${options.sponsorName || '[Sponsor]'}!${question ? ` ${e ? '💪 ' : ''}Community pride?` : ''}`,
+                        `${e ? '🎯 ' : ''}${options.sponsorName || 'Our sponsors'} = Community champions!${question ? ` ${e ? '❤️ ' : ''}Grateful?` : ''} ${distanceText} wouldn't happen without them!`,
+                        `${e ? '🌟 ' : ''}Meet our partner: ${options.sponsorName || '[Sponsor]'}!${question ? ` ${e ? '🤗 ' : ''}Check them out?` : ''} Supporting ${distanceText} and our health!`,
+                        `${e ? '💙 ' : ''}Community-minded businesses = Best businesses! Thanks ${options.sponsorName || '[Sponsor]'}!${question ? ` ${e ? '🙌 ' : ''}Shop local?` : ''}`,
+                        `${e ? '🎊 ' : ''}${options.sponsorName || '[Sponsor]'} believes in us!${question ? ` ${e ? '💕 ' : ''}Community support matters?` : ''} Thank you for ${distanceText}!`,
+                        `${e ? '✨ ' : ''}Behind every great race: Great sponsors! Thank you ${options.sponsorName || '[Sponsor]'}!${question ? ` ${e ? '👏 ' : ''}Appreciate them?` : ''}`,
+                        `${e ? '🏃 ' : ''}${distanceText} + ${options.sponsorName || '[Sponsor]'} = Perfect partnership!${question ? ` ${e ? '🤝 ' : ''}Love community collaboration?` : ''}`
+                    ];
+                }
+            } else {
+                // Default generic templates
+                templates = [
+                    `${e ? '🏃 ' : ''}${distanceText} - [DATE] at beautiful Bronte Harbour!${question ? ` ${e ? '🌊 ' : ''}Ready to run?` : ''}`,
+                    `${e ? '🎯 ' : ''}Join us for ${distanceText}!${question ? ` ${e ? '💪 ' : ''}Setting race goals?` : ''} Perfect waterfront course!`,
+                    `${e ? '✨ ' : ''}Father's Day 5K! ${distanceText} in stunning Oakville!${question ? ` ${e ? '👨‍👩‍👧 ' : ''}Family tradition?` : ''}`,
+                    `${e ? '🏆 ' : ''}Challenge yourself! ${distanceText} - [DATE]!${question ? ` ${e ? '🏃‍♀️ ' : ''}PR potential?` : ''}`,
+                    `${e ? '🌟 ' : ''}New race, scenic route, great cause! ${distanceText}!${question ? ` ${e ? '❤️ ' : ''}Count you in?` : ''}`,
+                    `${e ? '🎉 ' : ''}Celebrate Father's Day running! ${distanceText}!${question ? ` ${e ? '👟 ' : ''}Best celebration?` : ''}`,
+                    `${e ? '💫 ' : ''}Community. Fitness. Fun. ${distanceText} has it all!${question ? ` ${e ? '🎽 ' : ''}Your kind of race?` : ''}`,
+                    `${e ? '🏃‍♂️ ' : ''}Waterfront 5K at its finest! ${distanceText}!${question ? ` ${e ? '🌊 ' : ''}Scenic routes = better runs?` : ''}`,
+                    `${e ? '❤️ ' : ''}Local race. Local pride. ${distanceText} - [DATE]!${question ? ` ${e ? '🏙️ ' : ''}Supporting community events?` : ''}`,
+                    `${e ? '🎯 ' : ''}Your next 5K adventure: ${distanceText}!${question ? ` ${e ? '✨ ' : ''}Ready for Bronte Harbour?` : ''}`
+                ];
+            }
+            
+            return templates;
+        }
+
+        function displayContent(imagePrompt, socialPosts, options) {
+            const output = document.getElementById('output');
+            const platformName = {
+                'instagram-square': 'Instagram Post',
+                'instagram-story': 'Instagram Story',
+                'facebook-post': 'Facebook',
+                'twitter': 'Twitter/X',
+                'linkedin': 'LinkedIn',
+                'strava': 'Strava'
+            }[options.platform];
+
+            let logoInstructions = '';
+            if (options.includeLogo) {
+                logoInstructions = `
+                    <div class="logo-instructions">
+                        <strong>📍 Logo Placement Instructions:</strong><br>
+                        After generating the image:<br>
+                        1. Download your AI-generated image<br>
+                        2. Open in Canva (canva.com - free)<br>
+                        3. Upload your "Bronte Harbour Classic" logo<br>
+                        4. Place logo in bottom right or top corner (AI left space there)<br>
+                        5. Use brand colors: Red/Black/White<br>
+                        6. Export final image with logo overlay!
+                    </div>
+                `;
+            }
+
+            // V2.0: Show badge if using uploaded image analysis
+            const usingImageBadge = (currentAnalysis && window.usedStage1Variation) 
+                ? '<span class="using-image-badge">📷 Using Reference Image</span>' 
+                : '';
+
+            let html = `
+                <div class="success-message">
+                    ✅ Content Generated! ${usingImageBadge ? '<br>🎯 Prompt enhanced with uploaded image analysis!' : 'Copy your prompt, generate the image, then pick your favorite caption!'}
+                </div>
+
+                <div class="content-section">
+                    <div class="content-header">
+                        <div>
+                            <span class="content-icon">🎨</span>
+                            <span class="content-title">AI Image Prompt</span>
+                            <span class="platform-badge">${imagePrompt.platform}</span>
+                            ${usingImageBadge}
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn-copy" onclick="copyText(this, 'prompt')">📋 Copy Prompt</button>
+                            <button class="btn-export" onclick="exportPrompt()">💾 Export</button>
+                        </div>
+                    </div>
+                    <div class="prompt-text" data-copy-type="prompt">${imagePrompt.prompt}</div>
+                    ${logoInstructions}
+                </div>
+
+                <div class="content-section">
+                    <div class="content-header">
+                        <div>
+                            <span class="content-icon">✍️</span>
+                            <span class="content-title">10 ${platformName} Captions</span>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn-copy" onclick="copyAllCaptions()">📋 Copy All 10</button>
+                            <button class="btn-export" onclick="exportCaptions()">💾 Export</button>
+                        </div>
+                    </div>
+                    <div class="social-posts-grid">
+                        ${socialPosts.map(post => `
+                            <div class="social-post-card">
+                                <div class="post-number">#${post.number}</div>
+                                <div class="post-copy" data-copy-text="${escapeHtml(post.copy)}">${escapeHtml(post.copy).replace(/\n/g, '<br>')}</div>
+                                <div class="post-meta">
+                                    <span class="char-count">${post.charCount} characters</span>
+                                    <button class="btn-copy" onclick="copySocialPost(this)">📋 Copy</button>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <div class="content-header">
+                        <div>
+                            <span class="content-icon">🚀</span>
+                            <span class="content-title">Quick Start Guide</span>
+                        </div>
+                    </div>
+                    <div style="color: #ff6666; line-height: 1.8;">
+                        <p style="margin-bottom: 15px;"><strong style="color: #FF0000;">1. Generate Image:</strong> Copy the AI prompt above → Paste into ${imagePrompt.platform} → Generate 3-5 variations → Pick your favorite!</p>
+                        <p style="margin-bottom: 15px;"><strong style="color: #FF0000;">2. ${options.includeLogo ? 'Add Logo:' : 'Finalize Image:'}</strong> ${options.includeLogo ? 'Download image → Open in Canva → Add logo → Export!' : 'Download your favorite and you\'re ready!'}</p>
+                        <p style="margin-bottom: 15px;"><strong style="color: #FF0000;">3. Choose Caption:</strong> Browse 10 captions → Copy favorite → Ready to post!</p>
+                        <p><strong style="color: #FF0000;">4. Post & Engage:</strong> Share on ${platformName} → Respond to comments → Track registrations! 🎉</p>
+                    </div>
+                </div>
+            `;
+
+            output.innerHTML = html;
+        }
+
+        function copyText(button, type) {
+            const section = button.closest('.content-section');
+            const textElement = section.querySelector('[data-copy-type="' + type + '"]');
+            const text = textElement.textContent;
+
+            navigator.clipboard.writeText(text).then(() => {
+                showCopySuccess(button);
+            });
+        }
+
+        function copySocialPost(button) {
+            const card = button.closest('.social-post-card');
+            const copyElement = card.querySelector('[data-copy-text]');
+            const text = copyElement.getAttribute('data-copy-text');
+
+            navigator.clipboard.writeText(text).then(() => {
+                showCopySuccess(button);
+            });
+        }
+
+        function copyAllCaptions() {
+            const captions = document.querySelectorAll('[data-copy-text]');
+            let allText = '';
+            captions.forEach((caption, index) => {
+                allText += `--- Caption ${index + 1} ---\n${caption.getAttribute('data-copy-text')}\n\n`;
+            });
+
+            navigator.clipboard.writeText(allText).then(() => {
+                alert('✅ All 10 captions copied! Paste into your content planner.');
+            });
+        }
+
+        function exportPrompt() {
+            const promptText = document.querySelector('[data-copy-type="prompt"]').textContent;
+            const blob = new Blob([promptText], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'bronte-harbour-classic-ai-prompt.txt';
+            a.click();
+        }
+
+        function exportCaptions() {
+            const captions = document.querySelectorAll('[data-copy-text]');
+            let content = '=== BRONTE HARBOUR CLASSIC - SOCIAL MEDIA CAPTIONS ===\n\n';
+            captions.forEach((caption, index) => {
+                content += `--- CAPTION ${index + 1} ---\n${caption.getAttribute('data-copy-text')}\n\n`;
+            });
+
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'bronte-harbour-classic-captions.txt';
+            a.click();
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function showCopySuccess(button) {
+            const originalText = button.textContent;
+            button.textContent = '✓ Copied!';
+            button.style.background = 'rgba(255, 0, 0, 0.7)';
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
+
