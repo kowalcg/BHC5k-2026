@@ -2754,25 +2754,54 @@ GOAL: UNMISTAKABLY Bronte Harbour Classic branded - viewer immediately identifie
         }
 
         function generateContent() {
-            const options = getOptions();
+            try {
+                const options = getOptions();
 
-            if (!options.category) {
-                alert('Please select a content category');
-                return;
+                if (!options.category) {
+                    alert('Please select a content category');
+                    return;
+                }
+
+                if (options.category === 'custom' && !options.customCategory) {
+                    alert('Please enter a custom category description');
+                    return;
+                }
+
+                lastGeneratedOptions = JSON.parse(JSON.stringify(options));
+                document.getElementById('btn-regenerate').style.display = 'block';
+
+                // Ensure Stage 1 variables are properly initialized if not set
+                if (typeof window.usedStage1Variation === 'undefined') {
+                    window.usedStage1Variation = false;
+                }
+                if (typeof window.selectedImagePrompt === 'undefined') {
+                    window.selectedImagePrompt = null;
+                }
+                if (typeof window.selectedVariationIndex === 'undefined') {
+                    window.selectedVariationIndex = null;
+                }
+
+                const imagePrompt = buildImagePrompt(options);
+                
+                if (!imagePrompt || !imagePrompt.prompt) {
+                    console.error('Error: buildImagePrompt returned invalid result', imagePrompt);
+                    alert('Error generating prompt. Please try again or refresh the page.');
+                    return;
+                }
+
+                const socialPosts = buildSocialMediaCopy(options, false);
+                
+                if (!socialPosts || !Array.isArray(socialPosts) || socialPosts.length === 0) {
+                    console.error('Error: buildSocialMediaCopy returned invalid result', socialPosts);
+                    alert('Error generating social media captions. Please try again or refresh the page.');
+                    return;
+                }
+
+                displayContent(imagePrompt, socialPosts, options);
+            } catch (error) {
+                console.error('Error in generateContent:', error);
+                alert('An error occurred while generating content. Please check the console for details and try again.');
             }
-
-            if (options.category === 'custom' && !options.customCategory) {
-                alert('Please enter a custom category description');
-                return;
-            }
-
-            lastGeneratedOptions = JSON.parse(JSON.stringify(options));
-            document.getElementById('btn-regenerate').style.display = 'block';
-
-            const imagePrompt = buildImagePrompt(options);
-            const socialPosts = buildSocialMediaCopy(options, false);
-
-            displayContent(imagePrompt, socialPosts, options);
         }
 
         function regenerateContent() {
@@ -2844,13 +2873,16 @@ GOAL: UNMISTAKABLY Bronte Harbour Classic branded - viewer immediately identifie
         }
 
         function buildImagePrompt(options) {
-            const distanceName = options.distance === '5k' ? '5K Race' : options.distance === 'kids' ? 'Kids 1K Fun Run' : 'Bronte Harbour Classic';
+            try {
+                const distanceName = options.distance === '5k' ? '5K Race' : options.distance === 'kids' ? 'Kids 1K Fun Run' : 'Bronte Harbour Classic';
 
-            // ============================================================================
-            // V2.0: Check if Stage 1 image analysis is available
-            // ============================================================================
-            let imageAnalysisBlock = '';
-            if (currentAnalysis && window.usedStage1Variation) {
+                // ============================================================================
+                // V2.0: Check if Stage 1 image analysis is available
+                // ============================================================================
+                let imageAnalysisBlock = '';
+                // Only use Stage 1 analysis if it was explicitly selected (usedStage1Variation is true)
+                // If user uploaded image but didn't select a variation, proceed without it
+                if (currentAnalysis && window.usedStage1Variation === true) {
                 const colors = currentAnalysis.colorPalette.slice(0, 3).join(', ');
                 imageAnalysisBlock = `
 REFERENCE IMAGE ANALYSIS (from uploaded image):
@@ -2936,9 +2968,15 @@ IMPORTANT: Use the uploaded reference image as visual inspiration. Match its col
                     exclude: ''
                 },
                 'custom': {
-                    scene: options.customCategory || 'Dynamic community race photography',
-                    participants: 'Diverse community runners in action',
-                    setting: 'Bronte Harbour Classic 5K event atmosphere',
+                    scene: options.customCategory 
+                        ? `Dynamic community race photography specifically focused on: ${options.customCategory}`
+                        : 'Dynamic community race photography',
+                    participants: options.customCategory 
+                        ? `Diverse community participants relevant to ${options.customCategory} theme`
+                        : 'Diverse community runners in action',
+                    setting: options.customCategory
+                        ? `Bronte Harbour Classic 5K event atmosphere showcasing ${options.customCategory} context`
+                        : 'Bronte Harbour Classic 5K event atmosphere',
                     exclude: ''
                 }
             };
@@ -3001,7 +3039,17 @@ IMPORTANT: Use the uploaded reference image as visual inspiration. Match its col
             };
 
             // Get category-specific scene details
-            const sceneDetails = categoryScenes[options.category] || categoryScenes['custom'];
+            let sceneDetails = categoryScenes[options.category] || categoryScenes['custom'];
+            
+            // Enhance sponsor category scene details when sponsor name is provided
+            if (options.category === 'sponsors' && options.sponsorName && options.sponsorName.trim()) {
+                sceneDetails = {
+                    scene: `Professional corporate partnership photography featuring ${options.sponsorName} as a valued sponsor of the Bronte Harbour Classic 5K community race event`,
+                    participants: `Runners with visible ${options.sponsorName} branding, professional event atmosphere, community partnership celebration, sponsor appreciation visible`,
+                    setting: `Well-organized race with prominent ${options.sponsorName} sponsor banners, branded tents or water stations, corporate partnership visibility, professional sponsorship integration`,
+                    exclude: ''
+                };
+            }
 
             // Get phase and audience context (if available)
             const phaseContext = phaseModifiers[options.phase] || '';
@@ -3022,24 +3070,24 @@ SETTING:
 ${sceneDetails.setting}
 
 TIMING/PHASE CONTEXT:
-${phaseContext}${customTimingContext ? `\n${customTimingContext}` : ''}
+${phaseContext}${customTimingContext ? `\n- Specific Timing: ${customTimingContext} (This timing context should be clearly reflected in the image atmosphere and content)` : ''}
 
 TARGET AUDIENCE FOCUS:
-${audienceContext}${customAudienceContext ? `\n${customAudienceContext}` : ''}
+${audienceContext}${customAudienceContext ? `\n- Custom Audience: ${customAudienceContext} (Image should specifically appeal to and represent this audience)` : ''}
 
-EVENT CONTEXT (For Reference Only):
+EVENT CONTEXT:
 - Event: Bronte Harbour Classic 5K + Kids 1K
 - Date: June 21, 2026 (Father's Day)
 - Location: Bronte Harbour, Oakville, Ontario
-- Distance featured: ${distanceName}
+- Distance featured: ${distanceName}${options.distance === 'kids' ? ' (Focus on children and family participation)' : options.distance === '5k' ? ' (Focus on 5K race distance and adult participants)' : ''}
 
 COMPOSITION & STYLE:
-- Image format: ${platformSpecs[options.platform]}
-- Photography style: ${styleSpecs[currentStyle]}
+- Image format: ${platformSpecs[options.platform]} (optimized for ${options.platform} platform)
+- Photography style: ${styleSpecs[currentStyle]}${currentStyle === 'professional' ? ' - Dynamic action shots, clean composition, athletic excellence' : currentStyle === 'lifestyle' ? ' - Natural authentic moments, relatable runners, aspirational healthy living' : currentStyle === 'scenic' ? ' - Stunning waterfront scenery, beautiful natural surroundings, picturesque lakefront' : currentStyle === 'minimalist' ? ' - Clean lines, focused subject, simple powerful composition, dramatic negative space' : ''}
 - Camera settings: fast shutter speed (1/500-1/1000) for action freeze, moderate depth of field (f/4-f/8), dynamic angles
 - Composition: rule of thirds, leading lines, balanced visual weight, professional race photography standards
 - Mood and atmosphere: ${categoryMoods[options.category]}
-- Audience-specific tone: ${audienceContext}`;
+- Audience-specific tone: ${audienceContext}${customAudienceContext ? `\n- Custom audience emphasis: ${customAudienceContext}` : ''}`;
 
             if (options.includeText) {
                 prompt += `\n- Strategic negative space: generous clean area in top portion or side specifically reserved for text overlay (race date, registration info)`;
@@ -3066,11 +3114,17 @@ COMPOSITION & STYLE:
             }
 
             if (options.includeKids) {
-                prompt += `\n- Kids runners: Children aged 5-12 running with enthusiasm, family participation, parent-child bonding, youth energy and excitement`;
+                prompt += `\n\n👶 KIDS & FAMILY ELEMENTS:
+- Kids runners: Children aged 5-12 running with enthusiasm, family participation, parent-child bonding, youth energy and excitement
+- Family atmosphere: Multi-generational participation, parents and children together, family-friendly race environment
+- Youth focus: Emphasize children's joy, safe supervised environment, encouraging family support`;
             }
 
             if (options.includeFathersDay) {
-                prompt += `\n- Father's Day elements: Subtle Father's Day atmosphere, parent-child runners, family bonding, dad-and-kids participation, multi-generational runners`;
+                prompt += `\n\n👨‍👩‍👧‍👦 FATHER'S DAY THEME:
+- Father's Day atmosphere: Celebrate Father's Day (June 21, 2026) - parent-child runners, family bonding, dad-and-kids participation
+- Multi-generational participation: Fathers running with children, family groups, generational connection
+- Family celebration: Emphasize the special Father's Day timing and family-focused nature of this race event`;
             }
 
             prompt += `\n\nLIGHTING SETUP:
@@ -3084,15 +3138,25 @@ COMPOSITION & STYLE:
 - Visual energy: High-energy athletic vibe, motivating atmosphere, ${options.category === 'training' ? 'preparatory training feeling' : 'exciting race day feeling'}`;
 
             if (options.includeLocation) {
-                prompt += `\n\nLOCATION & SETTING:
+                prompt += `\n\n📍 LOCATION & SETTING (BRONTE HARBOUR FOCUS):
 - Bronte Harbour waterfront: Stunning Lake Ontario views, scenic harbor background, beautiful waterfront paths
 - Oakville character: Well-maintained community spaces, upscale suburban atmosphere, family-friendly environment
 - Natural elements: Waterfront scenery, parkland settings, tree-lined paths, lakefront beauty
-- Local landmarks: Bronte lighthouse softly visible, harbor boats in background, waterfront pavilion areas`;
+- Local landmarks: Bronte lighthouse softly visible, harbor boats in background, waterfront pavilion areas
+- Geographic context: Lake Ontario waterfront, GTA region, Oakville community identity, Bronte Harbour distinctive features`;
             }
 
             // CATEGORY-SPECIFIC ATMOSPHERE (critical to prevent wrong imagery)
-            if (options.category === 'registration' || options.category === 'results' || options.category === 'countdown') {
+            if (options.category === 'sponsors' && options.sponsorName && options.sponsorName.trim()) {
+                prompt += `\n\nSPONSOR PARTNERSHIP ATMOSPHERE:
+- Corporate partnership presence: ${options.sponsorName} sponsorship prominently featured and professionally integrated
+- Sponsor visibility: ${options.sponsorName} banners, branded tents, sponsor signage, logo placement on race infrastructure
+- Community partnership: Show ${options.sponsorName} supporting community wellness and active living through race sponsorship
+- Professional integration: Sponsor branding feels natural and enhances the race experience, not overly commercial
+- Event scale: Community race with 300-500 participants, professional organization with corporate partnership support
+- Partnership celebration: Runners and community benefiting from ${options.sponsorName}'s community investment
+- Brand presence: ${options.sponsorName} logos visible on banners, water stations, start/finish line, or sponsor tents`;
+            } else if (options.category === 'registration' || options.category === 'results' || options.category === 'countdown') {
                 prompt += `\n\nRACE DAY ATMOSPHERE:
 - Event scale: Community race with 300-500 participants, grassroots feel with professional organization
 - Crowd energy: Supportive spectators, encouraging atmosphere, community cheering, family support
@@ -3117,14 +3181,42 @@ COMPOSITION & STYLE:
 ${sceneDetails.exclude}`;
             }
 
-            if (options.announcement || options.specialNotes) {
-                prompt += `\n\nSPECIAL FOCUS:`;
-                if (options.announcement) prompt += `\n- Key message: ${options.announcement}`;
-                if (options.specialNotes) prompt += `\n- Additional details: ${options.specialNotes}`;
+            // Enhanced handling for announcements, special notes, and custom categories
+            if (options.announcement || options.specialNotes || (options.category === 'custom' && options.customCategory)) {
+                prompt += `\n\n🎯 SPECIAL FOCUS & KEY MESSAGES:`;
+                
+                if (options.category === 'custom' && options.customCategory) {
+                    prompt += `\n- Content Type: ${options.customCategory}`;
+                    prompt += `\n- Primary Focus: This image should prominently feature and support the "${options.customCategory}" content theme`;
+                }
+                
+                if (options.announcement && options.announcement.trim()) {
+                    prompt += `\n- Key Announcement: ${options.announcement}`;
+                    prompt += `\n- Message Priority: The announcement "${options.announcement}" should be clearly visible or supported by the image composition`;
+                }
+                
+                if (options.specialNotes && options.specialNotes.trim()) {
+                    prompt += `\n- Special Requirements: ${options.specialNotes}`;
+                    prompt += `\n- Important Details: Ensure these specific requirements are reflected in the image: ${options.specialNotes}`;
+                }
             }
 
-            if (options.sponsorName) {
-                prompt += `\n- Featured sponsor: Include subtle ${options.sponsorName} branding or presence (banners, signage) in professional way`;
+            // Enhanced sponsor feature handling
+            if (options.sponsorName && options.sponsorName.trim()) {
+                if (options.category === 'sponsors') {
+                    // For sponsor category, create a dedicated prominent section
+                    prompt += `\n\n🤝 SPONSOR FEATURE - ${options.sponsorName.toUpperCase()}:
+- PRIMARY FOCUS: This image prominently features ${options.sponsorName} as a valued sponsor and community partner
+- Sponsor Branding: Include visible ${options.sponsorName} logos, banners, signage, or branded elements in professional, integrated way
+- Brand Presence: ${options.sponsorName} sponsorship should be clearly visible but tastefully integrated into the race scene
+- Partnership Context: Show ${options.sponsorName} supporting the Bronte Harbour Classic community event
+- Professional Integration: Sponsor branding should feel natural and professional, not overly commercial
+- Visual Elements: Sponsor banners at start/finish line, branded water stations, sponsor tents, or logo placement on race infrastructure
+- Community Partnership: Emphasize ${options.sponsorName}'s role in supporting community wellness and active living`;
+                } else {
+                    // For other categories, still include sponsor but less prominently
+                    prompt += `\n- Featured sponsor: Include ${options.sponsorName} branding or presence (banners, signage) in professional way`;
+                }
             }
 
             prompt += `\n\nTECHNICAL QUALITY STANDARDS:
@@ -3152,16 +3244,25 @@ TARGET USE: Social media marketing, ${options.category === 'training' ? 'trainin
                 'default': 'Professional race photography that inspires registration, showcases the scenic Bronte Harbour location, captures the family-friendly Father\'s Day atmosphere, and represents the welcoming community spirit of the Bronte Harbour Classic.'
             };
 
-            prompt += `\n\nFINAL RESULT: ${finalResults[options.category] || finalResults['default']}`;
+                prompt += `\n\nFINAL RESULT: ${finalResults[options.category] || finalResults['default']}`;
 
-            // PLATFORM-SPECIFIC OPTIMIZATION
-            prompt = optimizePromptForPlatform(prompt, options);
+                // PLATFORM-SPECIFIC OPTIMIZATION
+                prompt = optimizePromptForPlatform(prompt, options);
 
-            return {
-                platform: options.aiPlatform.toUpperCase(),
-                prompt: prompt,
-                includeLogo: options.includeLogo
-            };
+                if (!prompt || prompt.trim().length === 0) {
+                    console.error('Error: Generated prompt is empty');
+                    throw new Error('Failed to generate prompt. Please try again.');
+                }
+
+                return {
+                    platform: options.aiPlatform ? options.aiPlatform.toUpperCase() : 'GEMINI3',
+                    prompt: prompt,
+                    includeLogo: options.includeLogo || false
+                };
+            } catch (error) {
+                console.error('Error in buildImagePrompt:', error);
+                throw error;
+            }
         }
 
         function optimizePromptForPlatform(genericPrompt, options) {
@@ -3184,6 +3285,26 @@ TARGET USE: Social media marketing, ${options.category === 'training' ? 'trainin
             switch(platform) {
                 case 'gemini3':
                     // Gemini 3 (Nano Banana Pro) - LATEST: Enhanced conversational, reference-aware, structured
+                    const sponsorInfo = (options.sponsorName && options.sponsorName.trim() && options.category === 'sponsors') 
+                        ? `\n• Featured Sponsor: ${options.sponsorName} - Community Partner`
+                        : '';
+                    const customCategoryInfo = (options.category === 'custom' && options.customCategory && options.customCategory.trim())
+                        ? `\n• Content Focus: ${options.customCategory}`
+                        : '';
+                    const announcementInfo = (options.announcement && options.announcement.trim())
+                        ? `\n• Key Message: ${options.announcement}`
+                        : '';
+                    const distanceInfo = options.distance === 'kids' 
+                        ? `\n• Distance Focus: Kids 1K Fun Run (children and family participation)`
+                        : options.distance === '5k'
+                        ? `\n• Distance Focus: 5K Race (adult participants)`
+                        : '';
+                    const customTimingInfo = (options.customTiming && options.customTiming.trim())
+                        ? `\n• Timing Context: ${options.customTiming}`
+                        : '';
+                    const customAudienceInfo = (options.customAudience && options.customAudience.trim())
+                        ? `\n• Target Audience: ${options.customAudience}`
+                        : '';
                     return `[GEMINI 3 - NANO BANANA PRO IMAGE GENERATION]
 
 Create a professional race photography image for the Bronte Harbour Classic 5K race.
@@ -3192,7 +3313,7 @@ EVENT DETAILS:
 • Event: Bronte Harbour Classic 5K + Kids 1K Fun Run
 • Date: June 21, 2026 (Father's Day)
 • Location: Bronte Harbour, Oakville, Ontario
-• Brand Colors: Red (#FF0000), Black (#000000), White (#FFFFFF)
+• Brand Colors: Red (#FF0000), Black (#000000), White (#FFFFFF)${sponsorInfo}${customCategoryInfo}${announcementInfo}${distanceInfo}${customTimingInfo}${customAudienceInfo}
 ${currentAnalysis ? `
 REFERENCE IMAGE GUIDANCE:
 • Color Palette: ${currentAnalysis.colorPalette.slice(0, 3).join(', ')}
@@ -3230,10 +3351,30 @@ Make it inspiring and professional - something that would make people want to re
 
                 case 'chatgpt':
                     // ChatGPT/DALL-E 3 - Structured, descriptive, natural language
+                    const chatgptSponsorInfo = (options.sponsorName && options.sponsorName.trim() && options.category === 'sponsors')
+                        ? `\n**Featured Sponsor:** ${options.sponsorName} - Community Partner (sponsor branding should be prominently and professionally visible)`
+                        : '';
+                    const chatgptCustomCategoryInfo = (options.category === 'custom' && options.customCategory && options.customCategory.trim())
+                        ? `\n**Content Focus:** ${options.customCategory} (this should be the primary theme of the image)`
+                        : '';
+                    const chatgptAnnouncementInfo = (options.announcement && options.announcement.trim())
+                        ? `\n**Key Message:** ${options.announcement} (ensure this message is supported or visible in the image)`
+                        : '';
+                    const chatgptDistanceInfo = options.distance === 'kids'
+                        ? `\n**Distance Focus:** Kids 1K Fun Run (focus on children and family participation)`
+                        : options.distance === '5k'
+                        ? `\n**Distance Focus:** 5K Race (focus on adult participants)`
+                        : '';
+                    const chatgptCustomTimingInfo = (options.customTiming && options.customTiming.trim())
+                        ? `\n**Timing Context:** ${options.customTiming} (reflect this timing in the image atmosphere)`
+                        : '';
+                    const chatgptCustomAudienceInfo = (options.customAudience && options.customAudience.trim())
+                        ? `\n**Target Audience:** ${options.customAudience} (image should appeal to this specific audience)`
+                        : '';
                     return `Create a professional photograph with these specifications:
 
 **Race Event:** Bronte Harbour Classic 5K + Kids 1K (Father's Day, June 21, 2026)
-**Location:** Bronte Harbour waterfront, Oakville, Ontario
+**Location:** Bronte Harbour waterfront, Oakville, Ontario${chatgptSponsorInfo}${chatgptCustomCategoryInfo}${chatgptAnnouncementInfo}${chatgptDistanceInfo}${chatgptCustomTimingInfo}${chatgptCustomAudienceInfo}
 
 ${genericPrompt}
 ${customTextInstructions}
@@ -3242,7 +3383,7 @@ ${customTextInstructions}
 **Quality:** Photorealistic, professional race photography
 **Brand Colors:** Red (#FF0000), Black (#000000), White (#FFFFFF)
 
-Generate a high-quality image that captures the excitement and community spirit of this scenic waterfront race.`;
+Generate a high-quality image that captures the excitement and community spirit of this scenic waterfront race.${(options.sponsorName && options.sponsorName.trim() && options.category === 'sponsors') ? ` Ensure ${options.sponsorName} sponsor branding is clearly visible and professionally integrated.` : ''}`;
 
                 case 'sora':
                     // Sora - Image generation with dynamic composition
