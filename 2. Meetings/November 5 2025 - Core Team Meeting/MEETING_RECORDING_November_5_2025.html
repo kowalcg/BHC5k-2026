@@ -190,9 +190,42 @@
             text-decoration: underline;
         }
         
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            padding: 10px 20px;
+            background: #e10600;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: opacity 0.3s, transform 0.2s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .back-button:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .back-button::before {
+            content: "←";
+            font-size: 18px;
+        }
+        
         @media print {
             body {
                 padding: 0;
+            }
+            .back-button {
+                display: none;
             }
             .section {
                 page-break-inside: avoid;
@@ -201,6 +234,7 @@
     </style>
 </head>
 <body>
+    <a href="../../index.html" class="back-button">Back to Dashboard</a>
     <div class="document-container">
         <div class="header">
             <h1>Bronte Harbour Classic 5K Race Committee</h1>
