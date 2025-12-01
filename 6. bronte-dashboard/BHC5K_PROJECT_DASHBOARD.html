@@ -3125,13 +3125,12 @@
                 
                 <!-- QUICK NAVIGATION BUTTONS -->
                 <div style="display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
-                    <button onclick="showSection('postrace-main')" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
                     <button onclick="showSection('postrace-action-plan')" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
                     <button onclick="showSection('postrace-references')" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
                 </div>
                 
-                <!-- MAIN CONTENT -->
-                <div id="postrace-main" class="main-content" style="display: block !important;">
+                <!-- MAIN CONTENT - Tasks always visible -->
+                <div id="postrace-main">
                 <h3 id="postrace-tasks" style="margin: 20px 0 15px 0; color: #e10600;">Key Tasks</h3>
                 <p style="color: #666; font-size: 14px; margin-bottom: 15px;"><strong>Planning & Recruitment Phase:</strong></p>
                 <ul class="task-list">
@@ -3870,14 +3869,13 @@
                 
                 <!-- QUICK NAVIGATION BUTTONS -->
                 <div style="display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
-                    <button onclick="showSection('financial-main')" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
                     <button onclick="showSection('financial-action-plan')" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
                     <button onclick="showSection('financial-references')" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
                     <button onclick="showSection('financial-outreach')" style="padding: 12px 24px; background: #9c27b0; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📧 Sponsor Outreach</button>
                 </div>
                 
-                <!-- MAIN CONTENT -->
-                <div id="financial-main" class="main-content" style="display: block !important;">
+                <!-- MAIN CONTENT - Tasks always visible -->
+                <div id="financial-main">
                 <h3 id="financial-tasks" style="margin: 20px 0 15px 0; color: #e10600;">Financial & Sponsorship Tasks</h3>
                 <p style="color: #666; font-size: 14px; margin-bottom: 15px;"><strong>Planning & Sales Phase:</strong></p>
                 <ul class="task-list">
@@ -4420,19 +4418,30 @@
             const section = activeTab.querySelector('#' + sectionId);
             
             if (section && section.classList.contains('section-card')) {
-                // Hide all main content in this tab
+                // Hide all main content in this tab (both with and without main-content class)
                 activeTab.querySelectorAll('.main-content').forEach(content => {
                     content.classList.add('hidden');
                 });
+                // Also hide divs that are main content but don't have the class (financial-main, postrace-main)
+                const mainContentDivs = activeTab.querySelectorAll('#financial-main, #postrace-main');
+                mainContentDivs.forEach(div => {
+                    div.style.display = 'none';
+                });
                 // Show the selected section card
                 section.classList.add('active');
-            } else if (section && section.classList.contains('main-content')) {
-                // Show main content, hide all section cards
-                activeTab.querySelectorAll('.section-card').forEach(card => {
-                    card.classList.remove('active');
-                });
+            } else if (section) {
+                // Show main content (either with main-content class or without)
                 activeTab.querySelectorAll('.main-content').forEach(content => {
                     content.classList.remove('hidden');
+                });
+                // Show divs that are main content but don't have the class
+                const mainContentDivs = activeTab.querySelectorAll('#financial-main, #postrace-main');
+                mainContentDivs.forEach(div => {
+                    div.style.display = 'block';
+                });
+                // Hide all section cards
+                activeTab.querySelectorAll('.section-card').forEach(card => {
+                    card.classList.remove('active');
                 });
             }
         }
