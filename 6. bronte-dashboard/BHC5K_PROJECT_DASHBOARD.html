@@ -152,9 +152,11 @@
             animation: fadeIn 0.3s;
         }
 
-        /* Main content wrapper */
+        /* Main content wrapper - visible by default */
         .main-content {
             display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
         }
 
         .main-content.hidden {
@@ -162,11 +164,18 @@
         }
         
         /* Ensure main-content is visible in active tabs */
-        .tab-content.active .main-content {
+        .tab-content.active .main-content:not(.hidden) {
             display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
         }
         
         .tab-content.active .main-content.hidden {
+            display: none !important;
+        }
+        
+        /* Hide main-content in inactive tabs */
+        .tab-content:not(.active) .main-content {
             display: none !important;
         }
 
@@ -4381,9 +4390,17 @@
 
         // Tab switching
         function showTab(tabName, buttonElement) {
-            // Hide all tabs
+            // Hide all tabs and their content
             document.querySelectorAll('.tab-content').forEach(tab => {
                 tab.classList.remove('active');
+                // Hide all content in inactive tabs
+                tab.querySelectorAll('.main-content').forEach(content => {
+                    content.style.display = 'none';
+                });
+                tab.querySelectorAll('.section-card').forEach(card => {
+                    card.classList.remove('active');
+                    card.style.display = 'none';
+                });
             });
             
             // Remove active from all buttons
@@ -4405,26 +4422,20 @@
                 buttonElement.classList.add('active');
             }
             
-            // Reset sections for the active tab - show main content, hide all section cards
+            // Hide all section cards in active tab
             activeTab.querySelectorAll('.section-card').forEach(card => {
                 card.classList.remove('active');
                 card.style.display = 'none';
             });
             
-            // Force show all main-content elements
+            // Show all main-content elements in active tab
             const mainContentElements = activeTab.querySelectorAll('.main-content');
-            console.log('Found main-content elements:', mainContentElements.length);
             mainContentElements.forEach(content => {
                 content.classList.remove('hidden');
                 content.style.display = 'block';
                 content.style.visibility = 'visible';
                 content.style.opacity = '1';
             });
-            
-            // If no main-content found, log for debugging
-            if (mainContentElements.length === 0) {
-                console.warn('No main-content found in tab:', tabName);
-            }
         }
 
         // Section card switching (for Action Plans, References, etc.)
@@ -4545,11 +4556,11 @@
                 });
             });
             
-            // Also ensure all main-content elements are visible by default (not hidden)
-            document.querySelectorAll('.main-content').forEach(content => {
-                if (!content.classList.contains('hidden')) {
-                    content.style.display = 'block';
-                }
+            // Hide main-content in all inactive tabs
+            document.querySelectorAll('.tab-content:not(.active)').forEach(inactiveTab => {
+                inactiveTab.querySelectorAll('.main-content').forEach(content => {
+                    content.style.display = 'none';
+                });
             });
         });
 
