@@ -4365,6 +4365,8 @@
 
         // Tab switching
         function showTab(tabName, buttonElement) {
+            console.log('Switching to tab:', tabName);
+            
             // Hide all tabs
             document.querySelectorAll('.tab-content').forEach(tab => {
                 tab.classList.remove('active');
@@ -4383,6 +4385,7 @@
             }
             
             activeTab.classList.add('active');
+            console.log('Tab activated, main-content elements:', activeTab.querySelectorAll('.main-content').length);
             
             // Add active to clicked button
             if (buttonElement) {
@@ -4394,9 +4397,11 @@
                 card.classList.remove('active');
             });
             
-            // Show all main-content elements in active tab (CSS will handle visibility)
+            // Show all main-content elements in active tab
             activeTab.querySelectorAll('.main-content').forEach(content => {
                 content.classList.remove('hidden');
+                content.style.display = 'block';
+                console.log('Main-content element shown:', content.id);
             });
         }
 
