@@ -4376,15 +4376,21 @@
             });
             
             // Show selected tab
-            document.getElementById(tabName).classList.add('active');
+            const activeTab = document.getElementById(tabName);
+            activeTab.classList.add('active');
             
             // Add active to clicked button
             if (buttonElement) {
                 buttonElement.classList.add('active');
             }
             
-            // Reset all sections to show main content when switching tabs
-            resetAllSections();
+            // Reset sections for the active tab - show main content, hide all section cards
+            activeTab.querySelectorAll('.section-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            activeTab.querySelectorAll('.main-content').forEach(content => {
+                content.classList.remove('hidden');
+            });
         }
 
         // Section card switching (for Action Plans, References, etc.)
@@ -4393,29 +4399,29 @@
             const activeTab = document.querySelector('.tab-content.active');
             if (!activeTab) return;
             
-            // Hide all section cards and main content in this tab
+            // Hide all section cards in this tab
             activeTab.querySelectorAll('.section-card').forEach(card => {
                 card.classList.remove('active');
             });
-            activeTab.querySelectorAll('.main-content').forEach(content => {
-                content.classList.remove('hidden');
-            });
             
-            // If showing a section card, hide main content and show the section
+            // Get the target section
             const section = activeTab.querySelector('#' + sectionId);
+            
             if (section && section.classList.contains('section-card')) {
                 // Hide all main content in this tab
                 activeTab.querySelectorAll('.main-content').forEach(content => {
                     content.classList.add('hidden');
                 });
-                // Show the selected section
+                // Show the selected section card
                 section.classList.add('active');
             } else if (section && section.classList.contains('main-content')) {
-                // Show main content, hide all sections
+                // Show main content, hide all section cards
                 activeTab.querySelectorAll('.section-card').forEach(card => {
                     card.classList.remove('active');
                 });
-                section.classList.remove('hidden');
+                activeTab.querySelectorAll('.main-content').forEach(content => {
+                    content.classList.remove('hidden');
+                });
             }
         }
 
