@@ -135,6 +135,45 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* Section Cards - Hidden by default */
+        .section-card {
+            display: none;
+        }
+
+        .section-card.active {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+
+        /* Main content wrapper */
+        .main-content {
+            display: block;
+        }
+
+        .main-content.hidden {
+            display: none;
+        }
+
+        /* Back button styling */
+        .back-button {
+            padding: 12px 24px;
+            background: #666;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-button:hover {
+            background: #555;
+        }
+
         .committee-section {
             background: white;
             padding: 30px;
@@ -905,11 +944,13 @@
                 
                 <!-- QUICK NAVIGATION BUTTONS -->
                 <div style="display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
-                    <button onclick="document.getElementById('route-tasks').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
-                    <button onclick="document.getElementById('route-action-plan').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
-                    <button onclick="document.getElementById('route-references').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
+                    <button onclick="showSection('route-main')" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
+                    <button onclick="showSection('route-action-plan')" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
+                    <button onclick="showSection('route-references')" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
                 </div>
                 
+                <!-- MAIN CONTENT -->
+                <div id="route-main" class="main-content">
                 <h3 id="route-tasks" style="margin: 20px 0 15px 0; color: #e10600;">Key Tasks</h3>
                 <p style="color: #666; font-size: 14px; margin-bottom: 15px;"><strong>Planning Phase:</strong></p>
                 <ul class="task-list">
@@ -1213,10 +1254,13 @@
                         </div>
                     </li>
                 </ul>
+                </div>
                 
                 <!-- PLAN OF ACTION SECTION -->
-                <div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
-                    <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
+                <div id="route-action-plan" class="section-card">
+                    <button onclick="showSection('route-main')" class="back-button">← Back to Tasks</button>
+                    <div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
+                        <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
                     <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
                         <h4 style="color: #e10600; margin-bottom: 10px;">🚨 CRITICAL PRIORITY (Start Immediately)</h4>
                         <ol style="margin: 0; padding-left: 20px; color: #333;">
@@ -1338,8 +1382,11 @@
                             <li>Insurance policy requirements</li>
                         </ul>
                     </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
         </div>
 
         <!-- MARKETING TAB -->
@@ -1385,12 +1432,14 @@
                 
                 <!-- QUICK NAVIGATION BUTTONS -->
                 <div style="display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
-                    <button onclick="document.getElementById('promotion-tasks').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
-                    <button onclick="document.getElementById('promotion-action-plan').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
-                    <button onclick="document.getElementById('promotion-references').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
-                    <button onclick="document.getElementById('promotion-templates').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #9c27b0; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📧 Email Templates</button>
+                    <button onclick="showSection('promotion-main')" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
+                    <button onclick="showSection('promotion-action-plan')" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
+                    <button onclick="showSection('promotion-references')" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
+                    <button onclick="showSection('promotion-templates')" style="padding: 12px 24px; background: #9c27b0; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📧 Email Templates</button>
                 </div>
                 
+                <!-- MAIN CONTENT -->
+                <div id="promotion-main" class="main-content">
                 <h3 id="promotion-tasks" style="margin: 20px 0 15px 0; color: #e10600;">Marketing & Promotion Tasks</h3>
                 <p style="color: #666; font-size: 14px; margin-bottom: 15px;"><strong>Planning Phase:</strong></p>
                 <ul class="task-list">
@@ -1663,10 +1712,13 @@
                         </div>
                     </li>
                 </ul>
+                </div>
                 
                 <!-- PLAN OF ACTION SECTION -->
-                <div id="promotion-action-plan" style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
-                    <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
+                <div id="promotion-action-plan" class="section-card">
+                    <button onclick="showSection('promotion-main')" class="back-button">← Back to Tasks</button>
+                    <div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
+                        <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
                     <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
                         <h4 style="color: #e10600; margin-bottom: 10px;">🚨 IMMEDIATE PRIORITY (This Week)</h4>
                         <ol style="margin: 0; padding-left: 20px; color: #333;">
@@ -1732,6 +1784,7 @@
                             <li><strong>Content Strategy:</strong> Mix of promotional, educational (training tips), inspirational (runner stories), and behind-the-scenes content</li>
                         </ul>
                     </div>
+                    </div>
                 </div>
                 
                 <!-- REFERENCE MATERIALS SECTION -->
@@ -1780,11 +1833,15 @@
                             <li>Pricing strategy: <code>5. Landing pages/PRICING-UPDATE-NOVEMBER-8-2025.md</code></li>
                         </ul>
                     </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- EMAIL TEMPLATES & OUTREACH SECTION -->
-                <div id="promotion-templates" style="background: #f3e5f5; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #9c27b0;">
-                    <h3 style="color: #6a1b9a; margin-bottom: 15px;">📧 Email Templates & Outreach Materials</h3>
+                <div id="promotion-templates" class="section-card">
+                    <button onclick="showSection('promotion-main')" class="back-button">← Back to Tasks</button>
+                    <div style="background: #f3e5f5; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #9c27b0;">
+                        <h3 style="color: #6a1b9a; margin-bottom: 15px;">📧 Email Templates & Outreach Materials</h3>
                     <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
                         <h4 style="color: #e10600; margin-bottom: 10px;">📨 Email Templates</h4>
                         <div style="margin-bottom: 15px;">
@@ -1886,6 +1943,7 @@
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1926,11 +1984,13 @@
                 
                 <!-- QUICK NAVIGATION BUTTONS -->
                 <div style="display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
-                    <button onclick="document.getElementById('startfinish-tasks').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
-                    <button onclick="document.getElementById('startfinish-action-plan').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
-                    <button onclick="document.getElementById('startfinish-references').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
+                    <button onclick="showSection('startfinish-main')" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
+                    <button onclick="showSection('startfinish-action-plan')" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
+                    <button onclick="showSection('startfinish-references')" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
                 </div>
                 
+                <!-- MAIN CONTENT -->
+                <div id="startfinish-main" class="main-content">
                 <h3 id="startfinish-tasks" style="margin: 20px 0 15px 0; color: #e10600;">Key Tasks</h3>
                 <p style="color: #666; font-size: 14px; margin-bottom: 15px;"><strong>Planning Phase:</strong></p>
                 <ul class="task-list">
@@ -2084,10 +2144,13 @@
                         </div>
                     </li>
                 </ul>
+                </div>
                 
                 <!-- PLAN OF ACTION SECTION -->
-                <div id="startfinish-action-plan" style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
-                    <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
+                <div id="startfinish-action-plan" class="section-card">
+                    <button onclick="showSection('startfinish-main')" class="back-button">← Back to Tasks</button>
+                    <div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
+                        <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
                     <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
                         <h4 style="color: #e10600; margin-bottom: 10px;">📅 START NOW (December 2025)</h4>
                         <ol style="margin: 0; padding-left: 20px; color: #333;">
@@ -2148,11 +2211,14 @@
                             <li><strong>Safety:</strong> Ensure emergency vehicle access, clear evacuation routes, first aid station visibility</li>
                         </ul>
                     </div>
+                    </div>
                 </div>
                 
                 <!-- REFERENCE MATERIALS SECTION -->
-                <div id="startfinish-references" style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #2196F3;">
-                    <h3 style="color: #01579b; margin-bottom: 15px;">📖 Reference Materials</h3>
+                <div id="startfinish-references" class="section-card">
+                    <button onclick="showSection('startfinish-main')" class="back-button">← Back to Tasks</button>
+                    <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #2196F3;">
+                        <h3 style="color: #01579b; margin-bottom: 15px;">📖 Reference Materials</h3>
                     <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
                         <h4 style="color: #e10600; margin-bottom: 10px;">🌙 Moon in June References</h4>
                         <ul style="margin: 0; padding-left: 20px; color: #333;">
@@ -2183,6 +2249,8 @@
                             <li>Equipment rental catalogs</li>
                             <li>Vendor list from Post-Race Activities committee</li>
                         </ul>
+                    </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2223,11 +2291,13 @@
                 
                 <!-- QUICK NAVIGATION BUTTONS -->
                 <div style="display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
-                    <button onclick="document.getElementById('registration-tasks').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
-                    <button onclick="document.getElementById('registration-action-plan').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
-                    <button onclick="document.getElementById('registration-references').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
+                    <button onclick="showSection('registration-main')" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
+                    <button onclick="showSection('registration-action-plan')" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
+                    <button onclick="showSection('registration-references')" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
                 </div>
                 
+                <!-- MAIN CONTENT -->
+                <div id="registration-main" class="main-content">
                 <h3 id="registration-tasks" style="margin: 20px 0 15px 0; color: #e10600;">Key Tasks</h3>
                 <p style="color: #666; font-size: 14px; margin-bottom: 15px;"><strong>Planning Phase:</strong></p>
                 <ul class="task-list">
@@ -2490,10 +2560,13 @@
                         </div>
                     </li>
                 </ul>
+                </div>
                 
                 <!-- PLAN OF ACTION SECTION -->
-                <div id="registration-action-plan" style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
-                    <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
+                <div id="registration-action-plan" class="section-card">
+                    <button onclick="showSection('registration-main')" class="back-button">← Back to Tasks</button>
+                    <div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
+                        <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
                     <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
                         <h4 style="color: #e10600; margin-bottom: 10px;">🚨 CRITICAL PRIORITY (Start Now)</h4>
                         <ol style="margin: 0; padding-left: 20px; color: #333;">
@@ -2561,8 +2634,10 @@
                 </div>
                 
                 <!-- REFERENCE MATERIALS SECTION -->
-                <div id="registration-references" style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #2196F3;">
-                    <h3 style="color: #01579b; margin-bottom: 15px;">📖 Reference Materials</h3>
+                <div id="registration-references" class="section-card">
+                    <button onclick="showSection('registration-main')" class="back-button">← Back to Tasks</button>
+                    <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #2196F3;">
+                        <h3 style="color: #01579b; margin-bottom: 15px;">📖 Reference Materials</h3>
                     <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
                         <h4 style="color: #e10600; margin-bottom: 10px;">🌐 Best Practice Resources</h4>
                         <ul style="margin: 0; padding-left: 20px; color: #333;">
@@ -2594,6 +2669,8 @@
                             <li>Pricing strategy: <code>5. Landing pages/PRICING-UPDATE-NOVEMBER-8-2025.md</code></li>
                             <li>Race Roster platform documentation and training materials</li>
                         </ul>
+                    </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2640,11 +2717,13 @@
                 
                 <!-- QUICK NAVIGATION BUTTONS -->
                 <div style="display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
-                    <button onclick="document.getElementById('postrace-tasks').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
-                    <button onclick="document.getElementById('postrace-action-plan').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
-                    <button onclick="document.getElementById('postrace-references').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
+                    <button onclick="showSection('postrace-main')" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
+                    <button onclick="showSection('postrace-action-plan')" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
+                    <button onclick="showSection('postrace-references')" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
                 </div>
                 
+                <!-- MAIN CONTENT -->
+                <div id="postrace-main" class="main-content">
                 <h3 id="postrace-tasks" style="margin: 20px 0 15px 0; color: #e10600;">Key Tasks</h3>
                 <p style="color: #666; font-size: 14px; margin-bottom: 15px;"><strong>Planning & Recruitment Phase:</strong></p>
                 <ul class="task-list">
@@ -2864,10 +2943,13 @@
                         </div>
                     </li>
                 </ul>
+                </div>
                 
                 <!-- PLAN OF ACTION SECTION -->
-                <div id="postrace-action-plan" style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
-                    <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
+                <div id="postrace-action-plan" class="section-card">
+                    <button onclick="showSection('postrace-main')" class="back-button">← Back to Tasks</button>
+                    <div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
+                        <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
                     <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
                         <h4 style="color: #e10600; margin-bottom: 10px;">🚨 URGENT PRIORITY (This Week)</h4>
                         <ol style="margin: 0; padding-left: 20px; color: #333;">
@@ -2929,8 +3011,10 @@
                 </div>
                 
                 <!-- REFERENCE MATERIALS SECTION -->
-                <div id="postrace-references" style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #2196F3;">
-                    <h3 style="color: #01579b; margin-bottom: 15px;">📖 Reference Materials</h3>
+                <div id="postrace-references" class="section-card">
+                    <button onclick="showSection('postrace-main')" class="back-button">← Back to Tasks</button>
+                    <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #2196F3;">
+                        <h3 style="color: #01579b; margin-bottom: 15px;">📖 Reference Materials</h3>
                     <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
                         <h4 style="color: #e10600; margin-bottom: 10px;">🌙 Moon in June References</h4>
                         <ul style="margin: 0; padding-left: 20px; color: #333;">
@@ -2984,6 +3068,8 @@
                             <li>Local school contact lists</li>
                             <li>Vendor prospect database templates</li>
                         </ul>
+                    </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -3361,12 +3447,14 @@
                 
                 <!-- QUICK NAVIGATION BUTTONS -->
                 <div style="display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
-                    <button onclick="document.getElementById('financial-tasks').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
-                    <button onclick="document.getElementById('financial-action-plan').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
-                    <button onclick="document.getElementById('financial-references').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
-                    <button onclick="document.getElementById('financial-outreach').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #9c27b0; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📧 Sponsor Outreach</button>
+                    <button onclick="showSection('financial-main')" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
+                    <button onclick="showSection('financial-action-plan')" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
+                    <button onclick="showSection('financial-references')" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
+                    <button onclick="showSection('financial-outreach')" style="padding: 12px 24px; background: #9c27b0; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📧 Sponsor Outreach</button>
                 </div>
                 
+                <!-- MAIN CONTENT -->
+                <div id="financial-main" class="main-content">
                 <h3 id="financial-tasks" style="margin: 20px 0 15px 0; color: #e10600;">Financial & Sponsorship Tasks</h3>
                 <p style="color: #666; font-size: 14px; margin-bottom: 15px;"><strong>Planning & Sales Phase:</strong></p>
                 <ul class="task-list">
@@ -3439,10 +3527,13 @@
                         </div>
                     </li>
                 </ul>
+                </div>
                 
                 <!-- PLAN OF ACTION SECTION -->
-                <div id="financial-action-plan" style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
-                    <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
+                <div id="financial-action-plan" class="section-card">
+                    <button onclick="showSection('financial-main')" class="back-button">← Back to Tasks</button>
+                    <div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
+                        <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
                     <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
                         <h4 style="color: #e10600; margin-bottom: 10px;">🚨 CRITICAL PRIORITY (Start Immediately)</h4>
                         <ol style="margin: 0; padding-left: 20px; color: #333;">
@@ -3504,11 +3595,14 @@
                             <li><strong>Sponsor Recognition:</strong> Deliver on all promised benefits, provide regular updates, thank publicly</li>
                         </ul>
                     </div>
+                    </div>
                 </div>
                 
                 <!-- REFERENCE MATERIALS SECTION -->
-                <div id="financial-references" style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #2196F3;">
-                    <h3 style="color: #01579b; margin-bottom: 15px;">📖 Reference Materials</h3>
+                <div id="financial-references" class="section-card">
+                    <button onclick="showSection('financial-main')" class="back-button">← Back to Tasks</button>
+                    <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #2196F3;">
+                        <h3 style="color: #01579b; margin-bottom: 15px;">📖 Reference Materials</h3>
                     <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
                         <h4 style="color: #e10600; margin-bottom: 10px;">🌙 Moon in June References</h4>
                         <ul style="margin: 0; padding-left: 20px; color: #333;">
@@ -3580,11 +3674,15 @@
                             <li>Sponsor database template: <code>4. Tools/SPONSOR-DATABASE-TEMPLATE.md</code></li>
                         </ul>
                     </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- SPONSOR OUTREACH TEMPLATES SECTION -->
-                <div id="financial-outreach" style="background: #f3e5f5; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #9c27b0;">
-                    <h3 style="color: #6a1b9a; margin-bottom: 15px;">📧 Sponsor Outreach Templates</h3>
+                <div id="financial-outreach" class="section-card">
+                    <button onclick="showSection('financial-main')" class="back-button">← Back to Tasks</button>
+                    <div style="background: #f3e5f5; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #9c27b0;">
+                        <h3 style="color: #6a1b9a; margin-bottom: 15px;">📧 Sponsor Outreach Templates</h3>
                     <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
                         <h4 style="color: #e10600; margin-bottom: 10px;">📨 Email Template - Initial Sponsor Outreach</h4>
                         <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; border-left: 3px solid #9c27b0; font-size: 13px; color: #666;">
@@ -3626,6 +3724,7 @@
                             <li><strong>Automotive:</strong> Car dealerships, auto service centers</li>
                             <li><strong>Professional Services:</strong> Law firms, accounting firms, consulting</li>
                         </ul>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -3860,6 +3959,51 @@
             if (buttonElement) {
                 buttonElement.classList.add('active');
             }
+            
+            // Reset all sections to show main content when switching tabs
+            resetAllSections();
+        }
+
+        // Section card switching (for Action Plans, References, etc.)
+        function showSection(sectionId) {
+            // Get the current active tab
+            const activeTab = document.querySelector('.tab-content.active');
+            if (!activeTab) return;
+            
+            // Hide all section cards and main content in this tab
+            activeTab.querySelectorAll('.section-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            activeTab.querySelectorAll('.main-content').forEach(content => {
+                content.classList.remove('hidden');
+            });
+            
+            // If showing a section card, hide main content and show the section
+            const section = activeTab.querySelector('#' + sectionId);
+            if (section && section.classList.contains('section-card')) {
+                // Hide all main content in this tab
+                activeTab.querySelectorAll('.main-content').forEach(content => {
+                    content.classList.add('hidden');
+                });
+                // Show the selected section
+                section.classList.add('active');
+            } else if (section && section.classList.contains('main-content')) {
+                // Show main content, hide all sections
+                activeTab.querySelectorAll('.section-card').forEach(card => {
+                    card.classList.remove('active');
+                });
+                section.classList.remove('hidden');
+            }
+        }
+
+        // Reset all sections to default (show main content)
+        function resetAllSections() {
+            document.querySelectorAll('.section-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            document.querySelectorAll('.main-content').forEach(content => {
+                content.classList.remove('hidden');
+            });
         }
 
         // Initialize tab buttons with proper event listeners for mobile
