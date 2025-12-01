@@ -902,7 +902,15 @@
                         <li>All permits and approvals</li>
                     </ul>
                 </div>
-                <h3 style="margin: 20px 0 15px 0; color: #e10600;">Key Tasks</h3>
+                
+                <!-- QUICK NAVIGATION BUTTONS -->
+                <div style="display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
+                    <button onclick="document.getElementById('route-tasks').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
+                    <button onclick="document.getElementById('route-action-plan').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
+                    <button onclick="document.getElementById('route-references').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
+                </div>
+                
+                <h3 id="route-tasks" style="margin: 20px 0 15px 0; color: #e10600;">Key Tasks</h3>
                 <p style="color: #666; font-size: 14px; margin-bottom: 15px;"><strong>Planning Phase:</strong></p>
                 <ul class="task-list">
                     <li class="task-item pending">
@@ -1205,6 +1213,132 @@
                         </div>
                     </li>
                 </ul>
+                
+                <!-- PLAN OF ACTION SECTION -->
+                <div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
+                    <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">🚨 CRITICAL PRIORITY (Start Immediately)</h4>
+                        <ol style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Traffic Control Plan (TCP)</strong> - Required for final permits
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Research 3-5 traffic control providers in Oakville/Halton region</li>
+                                    <li>Get quotes ($2,000-5,000 budget range)</li>
+                                    <li>Select provider and sign contract</li>
+                                    <li>Work with provider to develop comprehensive TCP including:
+                                        <ul style="margin-top: 5px; padding-left: 20px;">
+                                            <li>Route map with all road closures</li>
+                                            <li>Traffic control points and signage locations</li>
+                                            <li>Timing for setup/teardown</li>
+                                            <li>Emergency vehicle access routes</li>
+                                            <li>Pedestrian safety measures</li>
+                                        </ul>
+                                    </li>
+                                    <li>Submit TCP to Town of Oakville Roads Corridor team (allow 2-4 weeks for review)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Event Liability Insurance</strong> - $2-5M coverage required
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Research insurance providers (event liability specialists)</li>
+                                    <li>Get quotes ($500-1,500 budget)</li>
+                                    <li>Ensure Town of Oakville is added as additional insured</li>
+                                    <li>Purchase policy and obtain certificate</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📅 Next Steps (This Month)</h4>
+                        <ol style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Route Finalization</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Schedule meeting with Town staff to finalize exact course</li>
+                                    <li>Walk the route and identify any safety concerns</li>
+                                    <li>Document route with GPS coordinates</li>
+                                </ul>
+                            </li>
+                            <li><strong>Timing Company Selection</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Research chip timing companies (get 2-3 quotes)</li>
+                                    <li>Compare services: chip timing, results, finish line technology</li>
+                                    <li>Select vendor and sign contract</li>
+                                </ul>
+                            </li>
+                            <li><strong>Medical Support</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Contact paramedic services for on-site coverage</li>
+                                    <li>Arrange ambulance on-site</li>
+                                    <li>Coordinate with local emergency services</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📚 Best Practices</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Traffic Control:</strong> Use police at all stop-light intersections and significant traffic points. Review course with police before race day.</li>
+                            <li><strong>Safety:</strong> Have course closure plan ready for extreme weather. Ensure clear emergency access routes.</li>
+                            <li><strong>Water Stations:</strong> Plan for 1-2 water stations for 5K distance. Recruit volunteers early.</li>
+                            <li><strong>Course Marking:</strong> Use clear, visible markers every 1K. Have volunteers at key turns.</li>
+                            <li><strong>Equipment:</strong> Order all rentals (barriers, cones, signage) 4-6 weeks in advance.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- REFERENCE MATERIALS SECTION -->
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #2196F3;">
+                    <h3 style="color: #01579b; margin-bottom: 15px;">📖 Reference Materials</h3>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">🌙 Moon in June References</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>TCP Moon In June 2025.pdf</strong> - Reference traffic control plan from successful 37-year event
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Location: <code>2. MIJ references/TCP Moon In June 2025.pdf</code></li>
+                                    <li>Use as template for Bronte Harbour TCP structure</li>
+                                </ul>
+                            </li>
+                            <li><strong>25_CityHall Site Map.pdf</strong> - Site layout reference
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Location: <code>2. MIJ references/25_CityHall Site Map.pdf</code></li>
+                                    <li>Reference for venue layout planning</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">🌐 Best Practice Resources</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Road Runners Club of America (RRCA) Safe Event Guidelines</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Comprehensive safety guidelines for road races</li>
+                                    <li>Traffic control requirements and best practices</li>
+                                    <li>Emergency protocols and course closure procedures</li>
+                                </ul>
+                            </li>
+                            <li><strong>CARA Best Practices Guidelines</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Police and traffic management requirements</li>
+                                    <li>Permit and municipal service coordination</li>
+                                </ul>
+                            </li>
+                            <li><strong>Summit Flagging - Special Events Traffic Control</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Professional traffic control for events</li>
+                                    <li>Temporary road closure procedures</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📋 Key Documents to Review</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li>Town of Oakville approval documents (project root)</li>
+                            <li>Race route maps and GPS coordinates</li>
+                            <li>Equipment rental catalogs and quotes</li>
+                            <li>Insurance policy requirements</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1248,7 +1382,16 @@
                         <li>Community outreach and cross-promotion</li>
                     </ul>
                 </div>
-                <h3 style="margin: 20px 0 15px 0; color: #e10600;">Marketing & Promotion Tasks</h3>
+                
+                <!-- QUICK NAVIGATION BUTTONS -->
+                <div style="display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
+                    <button onclick="document.getElementById('promotion-tasks').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
+                    <button onclick="document.getElementById('promotion-action-plan').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
+                    <button onclick="document.getElementById('promotion-references').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
+                    <button onclick="document.getElementById('promotion-templates').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #9c27b0; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📧 Email Templates</button>
+                </div>
+                
+                <h3 id="promotion-tasks" style="margin: 20px 0 15px 0; color: #e10600;">Marketing & Promotion Tasks</h3>
                 <p style="color: #666; font-size: 14px; margin-bottom: 15px;"><strong>Planning Phase:</strong></p>
                 <ul class="task-list">
                     <li class="task-item completed">
@@ -1520,6 +1663,230 @@
                         </div>
                     </li>
                 </ul>
+                
+                <!-- PLAN OF ACTION SECTION -->
+                <div id="promotion-action-plan" style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
+                    <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">🚨 IMMEDIATE PRIORITY (This Week)</h4>
+                        <ol style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Premier Pricing Campaign Push</strong> - Ends December 5
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Create urgency messaging for social media</li>
+                                    <li>Email blast to existing contacts</li>
+                                    <li>Leverage Bronte Runners network</li>
+                                </ul>
+                            </li>
+                            <li><strong>Social Media Launch</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Create Facebook, Instagram, Twitter accounts</li>
+                                    <li>Post 3-5 times per week</li>
+                                    <li>Share race highlights, training tips, sponsor spotlights</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📅 Next Steps (This Month)</h4>
+                        <ol style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Develop Comprehensive Marketing Plan</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Create content calendar through race day</li>
+                                    <li>Plan email marketing sequences</li>
+                                    <li>Schedule social media posts</li>
+                                    <li>Budget for paid advertising</li>
+                                </ul>
+                            </li>
+                            <li><strong>Bronte Runners Marketing Package</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Create shareable graphics and posts</li>
+                                    <li>Provide email templates</li>
+                                    <li>Set up referral tracking</li>
+                                    <li>Train members on sharing effectively</li>
+                                </ul>
+                            </li>
+                            <li><strong>Community Outreach</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Contact Oakville and Burlington community centers</li>
+                                    <li>Reach out to local schools and fitness centers</li>
+                                    <li>Connect with running clubs for cross-promotion</li>
+                                </ul>
+                            </li>
+                            <li><strong>Media Kit Development</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Press release templates</li>
+                                    <li>High-resolution photos</li>
+                                    <li>Event fact sheet</li>
+                                    <li>Contact information for media</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📚 Best Practices</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Social Media:</strong> Post consistently (3-5x/week), use hashtags (#BronteHarbourClassic, #OakvilleRuns, #FathersDay), engage with comments</li>
+                            <li><strong>Email Marketing:</strong> Send welcome series, training tips, race updates, create urgency with pricing deadlines</li>
+                            <li><strong>Paid Advertising:</strong> Target local runners, families, health-conscious audience. Use Facebook/Instagram ads, Google Search</li>
+                            <li><strong>Community Engagement:</strong> Partner with local businesses, cross-promote with other events, leverage community bulletin boards</li>
+                            <li><strong>Content Strategy:</strong> Mix of promotional, educational (training tips), inspirational (runner stories), and behind-the-scenes content</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- REFERENCE MATERIALS SECTION -->
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #2196F3;">
+                    <h3 style="color: #01579b; margin-bottom: 15px;">📖 Reference Materials</h3>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">🌙 Moon in June References</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Race committee concepts.docx</strong> - Marketing and promotion strategies
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Location: <code>2. MIJ references/Race committee concepts.docx</code></li>
+                                    <li>Review marketing approaches from successful event</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">🌐 Best Practice Resources</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Race Directors HQ - Race Promotion Guide</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Complete guide to promoting races</li>
+                                    <li>Race calendar listings, email marketing, social media strategies</li>
+                                </ul>
+                            </li>
+                            <li><strong>RunSignup - Race Marketing Tools</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Built-in marketing technology</li>
+                                    <li>Brand activation tools, social sharing features</li>
+                                </ul>
+                            </li>
+                            <li><strong>Race Roster - Digital Marketing Tactics</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Paid social media campaigns</li>
+                                    <li>Google Search advertising</li>
+                                    <li>Email marketing best practices</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📋 Key Documents to Review</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li>Landing page strategy: <code>5. Landing pages/BRONTE_HARBOUR_CLASSIC_LANDING_PAGE_STRATEGY.md</code></li>
+                            <li>Content Creator Tool: <code>4. Tools/bronte-harbour-classic-content-creator-pro-v3.0.html</code></li>
+                            <li>Pricing strategy: <code>5. Landing pages/PRICING-UPDATE-NOVEMBER-8-2025.md</code></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- EMAIL TEMPLATES & OUTREACH SECTION -->
+                <div id="promotion-templates" style="background: #f3e5f5; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #9c27b0;">
+                    <h3 style="color: #6a1b9a; margin-bottom: 15px;">📧 Email Templates & Outreach Materials</h3>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📨 Email Templates</h4>
+                        <div style="margin-bottom: 15px;">
+                            <h5 style="color: #333; margin-bottom: 8px;">1. Welcome Email (New Registrants)</h5>
+                            <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; border-left: 3px solid #9c27b0; font-size: 13px; color: #666;">
+                                <strong>Subject:</strong> Welcome to the Bronte Harbour Classic 5K! 🏃‍♂️<br><br>
+                                <strong>Body:</strong> Hi [Name],<br><br>
+                                Thank you for registering for the Bronte Harbour Classic 5K on Father's Day, June 21, 2026! We're excited to have you join us for this inaugural event at beautiful Bronte Harbour Park.<br><br>
+                                <strong>What's Next:</strong><br>
+                                • Save the date: Sunday, June 21, 2026 at 8:00 AM<br>
+                                • Follow us on social media: @BronteHarbourClassic<br>
+                                • Share with friends and family - registration is open!<br><br>
+                                We'll send you regular updates including training tips, race day information, and exciting announcements. If you have any questions, just reply to this email.<br><br>
+                                See you at the starting line!<br>
+                                The Bronte Harbour Classic Team
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <h5 style="color: #333; margin-bottom: 8px;">2. Premier Pricing Deadline Reminder</h5>
+                            <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; border-left: 3px solid #9c27b0; font-size: 13px; color: #666;">
+                                <strong>Subject:</strong> ⏰ Premier Pricing Ends December 5 - Register Now!<br><br>
+                                <strong>Body:</strong> Hi [Name],<br><br>
+                                Don't miss out! Premier pricing for the Bronte Harbour Classic 5K ends in [X] days on December 5, 2025.<br><br>
+                                <strong>Current Price:</strong> $45.82 (Premier Rate)<br>
+                                <strong>After Dec 5:</strong> $62.15 (Early Bird Rate)<br>
+                                <strong>You Save:</strong> $16.33 by registering now!<br><br>
+                                [Register Button/Link]<br><br>
+                                Join us for Oakville's newest Father's Day tradition. Register today to lock in the best price!<br><br>
+                                The Bronte Harbour Classic Team
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <h5 style="color: #333; margin-bottom: 8px;">3. Community Outreach Email</h5>
+                            <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; border-left: 3px solid #9c27b0; font-size: 13px; color: #666;">
+                                <strong>Subject:</strong> Join Us for the Inaugural Bronte Harbour Classic 5K<br><br>
+                                <strong>Body:</strong> Dear [Organization Name],<br><br>
+                                We're excited to announce the inaugural Bronte Harbour Classic 5K, taking place on Father's Day, June 21, 2026 at Bronte Harbour Park!<br><br>
+                                This family-friendly event features:<br>
+                                • 5K Race for runners and walkers<br>
+                                • Kids 1K Fun Run<br>
+                                • All-day festival with live music, vendors, and activities<br>
+                                • Supporting Oakville Dads Charity<br><br>
+                                We'd love to partner with [Organization Name] to promote this event to your members/community. Would you be interested in:<br>
+                                • Sharing event information in your newsletter/social media?<br>
+                                • Cross-promoting the event?<br>
+                                • Forming a corporate team?<br><br>
+                                Let's connect! Reply to this email or call [Phone Number].<br><br>
+                                Thank you,<br>
+                                [Your Name]<br>
+                                Bronte Harbour Classic Team
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📱 Social Media Templates</h4>
+                        <div style="margin-bottom: 15px;">
+                            <h5 style="color: #333; margin-bottom: 8px;">Facebook/Instagram Post - Premier Pricing</h5>
+                            <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; border-left: 3px solid #9c27b0; font-size: 13px; color: #666;">
+                                🏃‍♂️ Premier Pricing Ends December 5! ⏰<br><br>
+                                Register now for the Bronte Harbour Classic 5K and save $16.33!<br><br>
+                                ✅ Premier Rate: $45.82 (ends Dec 5)<br>
+                                ⬆️ Early Bird: $62.15 (starts Dec 6)<br><br>
+                                Join us for Oakville's newest Father's Day tradition on June 21, 2026!<br><br>
+                                👨‍👨‍👧‍👦 Family-friendly event with 5K race, Kids 1K, and all-day festival<br>
+                                🎯 Supporting Oakville Dads Charity<br><br>
+                                Register today: [Registration Link]<br><br>
+                                #BronteHarbourClassic #OakvilleRuns #FathersDay #5KRace #Oakville
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <h5 style="color: #333; margin-bottom: 8px;">Twitter/X Post</h5>
+                            <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; border-left: 3px solid #9c27b0; font-size: 13px; color: #666;">
+                                🏃‍♂️ Premier pricing ends Dec 5! Register now for Bronte Harbour Classic 5K on Father's Day 2026. Save $16.33!<br><br>
+                                [Registration Link]<br><br>
+                                #BronteHarbourClassic #OakvilleRuns
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📞 Outreach Scripts</h4>
+                        <div style="margin-bottom: 15px;">
+                            <h5 style="color: #333; margin-bottom: 8px;">Phone Script - Sponsor Outreach</h5>
+                            <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; border-left: 3px solid #9c27b0; font-size: 13px; color: #666;">
+                                "Hi [Name], this is [Your Name] from the Bronte Harbour Classic 5K. I'm reaching out because [Company Name] has such a strong presence in the Oakville community, and I thought you might be interested in learning about a unique sponsorship opportunity.<br><br>
+                                We're launching the inaugural Bronte Harbour Classic 5K on Father's Day, June 21, 2026. It's a family-friendly event that will bring together 800+ participants and thousands of festival visitors at Bronte Harbour Park, all while supporting Oakville Dads Charity.<br><br>
+                                As a founding sponsor, [Company Name] would have the opportunity to lock in inaugural rates before prices increase in 2027, and receive maximum brand visibility throughout the event.<br><br>
+                                Would you be available for a brief 15-minute call this week to discuss how we can create a partnership that benefits both [Company Name] and our community?"
+                            </div>
+                        </div>
+                        <div>
+                            <h5 style="color: #333; margin-bottom: 8px;">In-Person Pitch - Community Organizations</h5>
+                            <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; border-left: 3px solid #9c27b0; font-size: 13px; color: #666;">
+                                "We're creating a new Father's Day tradition in Oakville - the Bronte Harbour Classic 5K. This inaugural event will bring families together for a day of running, celebration, and community support.<br><br>
+                                We'd love to partner with [Organization] to:<br>
+                                • Cross-promote the event to your members<br>
+                                • Offer group discounts for teams<br>
+                                • Create mutual visibility opportunities<br><br>
+                                This is a great way to engage your community while supporting a local charity. Would you be interested in exploring a partnership?"
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1556,7 +1923,15 @@
                         <li>Equipment placement and logistics (tents, barriers, tables, etc.)</li>
                     </ul>
                 </div>
-                <h3 style="margin: 20px 0 15px 0; color: #e10600;">Key Tasks</h3>
+                
+                <!-- QUICK NAVIGATION BUTTONS -->
+                <div style="display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
+                    <button onclick="document.getElementById('startfinish-tasks').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
+                    <button onclick="document.getElementById('startfinish-action-plan').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
+                    <button onclick="document.getElementById('startfinish-references').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
+                </div>
+                
+                <h3 id="startfinish-tasks" style="margin: 20px 0 15px 0; color: #e10600;">Key Tasks</h3>
                 <p style="color: #666; font-size: 14px; margin-bottom: 15px;"><strong>Planning Phase:</strong></p>
                 <ul class="task-list">
                     <li class="task-item pending">
@@ -1709,6 +2084,107 @@
                         </div>
                     </li>
                 </ul>
+                
+                <!-- PLAN OF ACTION SECTION -->
+                <div id="startfinish-action-plan" style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
+                    <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📅 START NOW (December 2025)</h4>
+                        <ol style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Complete Park Layout Design</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Visit Bronte Harbour Park and map out all areas</li>
+                                    <li>Design start/finish line location (consider wind, visibility, participant flow)</li>
+                                    <li>Plan vendor booth zones (coordinate with Post-Race Activities for vendor count)</li>
+                                    <li>Designate food truck area with proper access routes</li>
+                                    <li>Plan kids activities zones (safe, visible, accessible)</li>
+                                    <li>Map participant flow throughout entire park</li>
+                                    <li>Identify parking areas and access routes</li>
+                                </ul>
+                            </li>
+                            <li><strong>Create Comprehensive Layout Map</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Use Google Maps or CAD software to create detailed blueprint</li>
+                                    <li>Mark all zones: start/finish, vendors, food trucks, kids zone, parking, restrooms, first aid</li>
+                                    <li>Share map with all committees for coordination</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📅 Next Steps (January-February 2026)</h4>
+                        <ol style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Equipment Inventory & Ordering</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>List all needed equipment: barriers, tents, tables, chairs, sound system</li>
+                                    <li>Get quotes from rental companies</li>
+                                    <li>Order 4-6 weeks before race day</li>
+                                </ul>
+                            </li>
+                            <li><strong>Coordinate with Other Committees</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Work with Post-Race Activities for vendor booth assignments</li>
+                                    <li>Coordinate with Registration for packet pickup location</li>
+                                    <li>Work with Route Committee for start/finish line placement</li>
+                                </ul>
+                            </li>
+                            <li><strong>Setup/Teardown Schedule</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Create detailed timeline for race day setup</li>
+                                    <li>Plan teardown sequence</li>
+                                    <li>Assign volunteers to specific tasks</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📚 Best Practices</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Start/Finish Line:</strong> Choose location with good visibility, minimal wind, easy access for participants and spectators</li>
+                            <li><strong>Vendor Layout:</strong> Create logical flow, group similar vendors, ensure adequate spacing (10x10 minimum)</li>
+                            <li><strong>Food Trucks:</strong> Position for easy access, away from race course, with clear queuing areas</li>
+                            <li><strong>Kids Zone:</strong> Safe distance from race course, visible to parents, accessible restrooms nearby</li>
+                            <li><strong>Participant Flow:</strong> Design clear paths from parking → registration → start → finish → festival areas</li>
+                            <li><strong>Safety:</strong> Ensure emergency vehicle access, clear evacuation routes, first aid station visibility</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- REFERENCE MATERIALS SECTION -->
+                <div id="startfinish-references" style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #2196F3;">
+                    <h3 style="color: #01579b; margin-bottom: 15px;">📖 Reference Materials</h3>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">🌙 Moon in June References</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>25_CityHall Site Map.pdf</strong> - Site layout and venue planning reference
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Location: <code>2. MIJ references/25_CityHall Site Map.pdf</code></li>
+                                    <li>Use as template for Bronte Harbour park layout structure</li>
+                                </ul>
+                            </li>
+                            <li><strong>Expo Specifications (3).doc</strong> - Vendor booth specifications
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Location: <code>2. MIJ references/Expo Specifications (3).doc</code></li>
+                                    <li>Reference for vendor booth requirements and layout</li>
+                                </ul>
+                            </li>
+                            <li><strong>expo Booths.xlsx</strong> - Vendor management spreadsheet
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Location: <code>2. MIJ references/expo Booths.xlsx</code></li>
+                                    <li>Template for tracking vendor booth assignments</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📋 Key Documents to Review</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li>Bronte Harbour Park maps and site plans</li>
+                            <li>Equipment rental catalogs</li>
+                            <li>Vendor list from Post-Race Activities committee</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1744,7 +2220,15 @@
                         <li>Race awards and prizes for main participants</li>
                     </ul>
                 </div>
-                <h3 style="margin: 20px 0 15px 0; color: #e10600;">Key Tasks</h3>
+                
+                <!-- QUICK NAVIGATION BUTTONS -->
+                <div style="display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
+                    <button onclick="document.getElementById('registration-tasks').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
+                    <button onclick="document.getElementById('registration-action-plan').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
+                    <button onclick="document.getElementById('registration-references').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
+                </div>
+                
+                <h3 id="registration-tasks" style="margin: 20px 0 15px 0; color: #e10600;">Key Tasks</h3>
                 <p style="color: #666; font-size: 14px; margin-bottom: 15px;"><strong>Planning Phase:</strong></p>
                 <ul class="task-list">
                     <li class="task-item completed">
@@ -2006,6 +2490,112 @@
                         </div>
                     </li>
                 </ul>
+                
+                <!-- PLAN OF ACTION SECTION -->
+                <div id="registration-action-plan" style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
+                    <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">🚨 CRITICAL PRIORITY (Start Now)</h4>
+                        <ol style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Participant Communication Plan</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Create email templates: welcome, pre-race info, race day instructions</li>
+                                    <li>Set up automated email sequences in Race Roster</li>
+                                    <li>Plan regular updates (monthly, then weekly as race approaches)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Race Shirt Design & Ordering</strong> - Allow 4-6 weeks production
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Design gray race shirt with logo and sponsor logos</li>
+                                    <li>Get quotes from 2-3 vendors</li>
+                                    <li>Order based on size breakdown (typically: 30% S, 30% M, 25% L, 10% XL, 5% XXL+)</li>
+                                    <li>Order 10-15% extra for race day registrations</li>
+                                </ul>
+                            </li>
+                            <li><strong>Finisher Medal Design & Ordering</strong> - Allow 6-8 weeks production
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Design medal with race logo and date</li>
+                                    <li>Get quotes from medal manufacturers</li>
+                                    <li>Order quantity based on registration projections (order extra)</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📅 Next Steps (January-March 2026)</h4>
+                        <ol style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Packet Preparation Planning</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Coordinate with sponsors for swag bag items</li>
+                                    <li>Order swag bags (reusable preferred)</li>
+                                    <li>Plan assembly process and volunteer needs</li>
+                                </ul>
+                            </li>
+                            <li><strong>Packet Pickup Process</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Determine location (pre-race day pickup option)</li>
+                                    <li>Plan race day packet pickup area</li>
+                                    <li>Train volunteers on check-in process</li>
+                                </ul>
+                            </li>
+                            <li><strong>Race Awards Planning</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Determine award categories (overall M/F, age groups)</li>
+                                    <li>Coordinate with sponsors for prize donations</li>
+                                    <li>Order trophies/plaques if needed</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📚 Best Practices</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Registration Management:</strong> Use Race Roster features for automated communications, participant management, and reporting</li>
+                            <li><strong>Shirt Sizing:</strong> Collect size during registration, order based on actual selections, keep extras for exchanges</li>
+                            <li><strong>Packet Pickup:</strong> Offer pre-race pickup to reduce race day congestion. Have organized system by last name or bib number</li>
+                            <li><strong>Swag Bags:</strong> Coordinate early with sponsors for delivery dates. Plan assembly 1-2 weeks before race</li>
+                            <li><strong>Race Day Registration:</strong> Have backup system if online registration has issues. Train volunteers on process</li>
+                            <li><strong>Communication:</strong> Send regular updates, training tips, race day instructions. Create urgency with pricing deadlines</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- REFERENCE MATERIALS SECTION -->
+                <div id="registration-references" style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #2196F3;">
+                    <h3 style="color: #01579b; margin-bottom: 15px;">📖 Reference Materials</h3>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">🌐 Best Practice Resources</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>RunSignup - Participant Management</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Complete participant management system</li>
+                                    <li>Automated communications, check-in tools, reporting</li>
+                                </ul>
+                            </li>
+                            <li><strong>Race Roster - Registration Best Practices</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Creating urgency with pricing tiers</li>
+                                    <li>Boosting registration in final 30-60 days</li>
+                                    <li>Marketing strategies for event registration</li>
+                                </ul>
+                            </li>
+                            <li><strong>Race Directors HQ - 5K Organization Guide</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Complete guide to organizing 5K races</li>
+                                    <li>Registration management, participant communication</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📋 Key Documents to Review</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li>Race Roster setup guide: <code>RACE_ROSTER_SETUP_GUIDE.md</code></li>
+                            <li>Pricing strategy: <code>5. Landing pages/PRICING-UPDATE-NOVEMBER-8-2025.md</code></li>
+                            <li>Race Roster platform documentation and training materials</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -2047,7 +2637,15 @@
                         <li>Awards presentation coordination</li>
                     </ul>
                 </div>
-                <h3 style="margin: 20px 0 15px 0; color: #e10600;">Key Tasks</h3>
+                
+                <!-- QUICK NAVIGATION BUTTONS -->
+                <div style="display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
+                    <button onclick="document.getElementById('postrace-tasks').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
+                    <button onclick="document.getElementById('postrace-action-plan').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
+                    <button onclick="document.getElementById('postrace-references').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
+                </div>
+                
+                <h3 id="postrace-tasks" style="margin: 20px 0 15px 0; color: #e10600;">Key Tasks</h3>
                 <p style="color: #666; font-size: 14px; margin-bottom: 15px;"><strong>Planning & Recruitment Phase:</strong></p>
                 <ul class="task-list">
                     <li class="task-item pending">
@@ -2266,6 +2864,128 @@
                         </div>
                     </li>
                 </ul>
+                
+                <!-- PLAN OF ACTION SECTION -->
+                <div id="postrace-action-plan" style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
+                    <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">🚨 URGENT PRIORITY (This Week)</h4>
+                        <ol style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Connect with Oakville Dads - URGENT</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Schedule meeting to finalize volunteer commitments</li>
+                                    <li>Clarify exact number of volunteers (not 50 people as initially mentioned)</li>
+                                    <li>Determine roles and responsibilities</li>
+                                    <li>Get commitment in writing</li>
+                                </ul>
+                            </li>
+                            <li><strong>Volunteer Recruitment Strategy</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Reach out to local Oakville schools (student and parent volunteers)</li>
+                                    <li>Coordinate with Bronte Runners for core volunteer base</li>
+                                    <li>Create volunteer sign-up form (use Race Roster or Google Forms)</li>
+                                    <li>Develop volunteer job descriptions</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📅 Next Steps (December-January 2026)</h4>
+                        <ol style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Vendor Recruitment</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Create vendor prospect list (local businesses, food vendors, health/fitness, retail)</li>
+                                    <li>Develop vendor contract template (pricing, requirements, insurance)</li>
+                                    <li>Begin outreach campaign</li>
+                                    <li>Target: 20-30 vendors ($250 per 10x10 booth)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Expo Layout Planning</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Work with Start/Finish committee on booth placement</li>
+                                    <li>Plan traffic flow and vendor zones</li>
+                                    <li>Create vendor layout map</li>
+                                </ul>
+                            </li>
+                            <li><strong>Festival Activities Planning</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Book live music/entertainment</li>
+                                    <li>Plan kids activities (jumping castles, games)</li>
+                                    <li>Develop full-day entertainment schedule</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📚 Best Practices</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Volunteer Recruitment:</strong> Start early (January), leverage existing networks (schools, clubs, charities), provide clear job descriptions, offer incentives (t-shirts, food, recognition)</li>
+                            <li><strong>Volunteer Training:</strong> Hold pre-race briefing, provide written instructions, assign team leaders, have backup volunteers</li>
+                            <li><strong>Vendor Management:</strong> Clear contracts, early communication, provide setup instructions, have vendor coordinator on race day</li>
+                            <li><strong>Entertainment:</strong> Book early, have backup plans, ensure sound system works, coordinate with schedule</li>
+                            <li><strong>Volunteer Retention:</strong> Thank volunteers immediately, provide food/drinks, recognize outstanding volunteers, collect feedback</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- REFERENCE MATERIALS SECTION -->
+                <div id="postrace-references" style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #2196F3;">
+                    <h3 style="color: #01579b; margin-bottom: 15px;">📖 Reference Materials</h3>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">🌙 Moon in June References</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Expo Specifications (3).doc</strong> - Vendor booth specifications and requirements
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Location: <code>2. MIJ references/Expo Specifications (3).doc</code></li>
+                                    <li>Use as template for Bronte Harbour vendor requirements</li>
+                                </ul>
+                            </li>
+                            <li><strong>expo Booths.xlsx</strong> - Vendor management spreadsheet
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Location: <code>2. MIJ references/expo Booths.xlsx</code></li>
+                                    <li>Template for tracking vendor information and booth assignments</li>
+                                </ul>
+                            </li>
+                            <li><strong>Race committee concepts.docx</strong> - Volunteer and vendor management strategies
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Location: <code>2. MIJ references/Race committee concepts.docx</code></li>
+                                    <li>Review volunteer coordination approaches</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">🌐 Best Practice Resources</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Race Directors HQ - Volunteer Management Guide</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>5-step guide to finding, training, and retaining race volunteers</li>
+                                    <li>Recruitment strategies, training programs, race-day deployment</li>
+                                </ul>
+                            </li>
+                            <li><strong>Race Roster - Volunteer Recruitment & Retention</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Leverage existing networks, activate board's power, turn sponsors into recruiters</li>
+                                    <li>Volunteer management tools and best practices</li>
+                                </ul>
+                            </li>
+                            <li><strong>Configio - Volunteer Management</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Comprehensive guide to managing event volunteers</li>
+                                    <li>Recruitment, training, motivation, retention strategies</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📋 Key Documents to Review</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li>Oakville Dads Charity contact information</li>
+                            <li>Local school contact lists</li>
+                            <li>Vendor prospect database templates</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- REMOVED: Volunteers tab - consolidated into Post-Race Activities -->
@@ -2639,7 +3359,15 @@
                     </ul>
                 </div>
                 
-                <h3 style="margin: 20px 0 15px 0; color: #e10600;">Financial & Sponsorship Tasks</h3>
+                <!-- QUICK NAVIGATION BUTTONS -->
+                <div style="display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
+                    <button onclick="document.getElementById('financial-tasks').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
+                    <button onclick="document.getElementById('financial-action-plan').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
+                    <button onclick="document.getElementById('financial-references').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
+                    <button onclick="document.getElementById('financial-outreach').scrollIntoView({behavior: 'smooth', block: 'start'})" style="padding: 12px 24px; background: #9c27b0; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📧 Sponsor Outreach</button>
+                </div>
+                
+                <h3 id="financial-tasks" style="margin: 20px 0 15px 0; color: #e10600;">Financial & Sponsorship Tasks</h3>
                 <p style="color: #666; font-size: 14px; margin-bottom: 15px;"><strong>Planning & Sales Phase:</strong></p>
                 <ul class="task-list">
                     <li class="task-item pending">
@@ -2711,6 +3439,195 @@
                         </div>
                     </li>
                 </ul>
+                
+                <!-- PLAN OF ACTION SECTION -->
+                <div id="financial-action-plan" style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffc107;">
+                    <h3 style="color: #856404; margin-bottom: 15px;">📋 Plan of Action - Where to Start</h3>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">🚨 CRITICAL PRIORITY (Start Immediately)</h4>
+                        <ol style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Finalize Sponsorship Package</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Complete final presentation file (PowerPoint/PDF)</li>
+                                    <li>Ensure all pricing and benefits are accurate</li>
+                                    <li>Create digital and print versions</li>
+                                </ul>
+                            </li>
+                            <li><strong>Create Sponsor Prospect List</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Research local businesses in Oakville and Burlington</li>
+                                    <li>Target: Healthcare, financial services, tech companies, retail, restaurants</li>
+                                    <li>Identify decision-makers and contact information</li>
+                                    <li>Prioritize prospects by sponsorship level potential</li>
+                                </ul>
+                            </li>
+                            <li><strong>Begin Sponsor Outreach</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Send personalized sponsorship proposals</li>
+                                    <li>Follow up with phone calls</li>
+                                    <li>Schedule meetings with interested prospects</li>
+                                    <li>Target: Secure first sponsor by December 2025</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📅 Financial Management (Ongoing)</h4>
+                        <ol style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Financial Tracking System</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Set up revenue tracking (registrations, sponsorships, vendors)</li>
+                                    <li>Track expenses by category</li>
+                                    <li>Create monthly financial reports</li>
+                                    <li>Monitor budget vs. actual</li>
+                                </ul>
+                            </li>
+                            <li><strong>Monthly Financial Reports</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Revenue breakdown by source</li>
+                                    <li>Expense tracking by committee</li>
+                                    <li>Budget projections and updates</li>
+                                    <li>Share with leadership team</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📚 Best Practices - Finding Sponsors</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Local Businesses:</strong> Target companies that serve your participant demographic (healthcare, fitness, family services)</li>
+                            <li><strong>Community Involvement:</strong> Look for businesses that already sponsor community events or charities</li>
+                            <li><strong>Personal Connections:</strong> Leverage team members' networks and relationships</li>
+                            <li><strong>Value Proposition:</strong> Emphasize founding sponsor opportunity, community impact, brand visibility</li>
+                            <li><strong>Follow-Up:</strong> Send proposal, follow up in 1 week, schedule meeting, close the deal</li>
+                            <li><strong>Multi-Year Deals:</strong> Offer discounts for 2-3 year commitments to lock in revenue</li>
+                            <li><strong>Sponsor Recognition:</strong> Deliver on all promised benefits, provide regular updates, thank publicly</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- REFERENCE MATERIALS SECTION -->
+                <div id="financial-references" style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #2196F3;">
+                    <h3 style="color: #01579b; margin-bottom: 15px;">📖 Reference Materials</h3>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">🌙 Moon in June References</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>25_MIJ Partnership package.pdf</strong> - Complete sponsorship package reference
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Location: <code>2. MIJ references/25_MIJ Partnership package.pdf</code></li>
+                                    <li>Use as template for sponsorship tiers, pricing, and benefits structure</li>
+                                </ul>
+                            </li>
+                            <li><strong>25_MIJ Partnership package1.pdf</strong> - Alternative sponsorship package version
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Location: <code>2. MIJ references/25_MIJ Partnership package1.pdf</code></li>
+                                    <li>Additional reference for sponsorship package design</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📄 Project Sponsorship Documents</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>SPONSORSHIP_PACKAGE_FINAL.md</strong> - Complete sponsorship package content
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Location: <code>1. Sponsors/SPONSORSHIP_PACKAGE_FINAL.md</code></li>
+                                    <li>All sponsorship levels, pricing, benefits, and contact information</li>
+                                </ul>
+                            </li>
+                            <li><strong>TG-BrontePartnershipDeck-V2-29nov2025.pdf</strong> - Final presentation deck
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Location: <code>1. Sponsors/TG-BrontePartnershipDeck-V2-29nov2025.pdf</code></li>
+                                    <li>Ready-to-use sponsorship presentation</li>
+                                </ul>
+                            </li>
+                            <li><strong>SPONSORSHIP_PACKAGE_UPDATE_GUIDE.md</strong> - Package update instructions
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Location: <code>1. Sponsors/SPONSORSHIP_PACKAGE_UPDATE_GUIDE.md</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">🌐 Best Practice Resources</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Race Directors HQ - Race Sponsorship Guide</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Complete guide to race sponsorship</li>
+                                    <li>How to find sponsors, create packages, close deals</li>
+                                    <li>Sponsor Finder tool and resources</li>
+                                </ul>
+                            </li>
+                            <li><strong>SponsorMyEvent</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Marketplace for event sponsorships</li>
+                                    <li>Resources on how to get sponsors</li>
+                                </ul>
+                            </li>
+                            <li><strong>Kick It Event Management</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                    <li>Event sponsorship information and strategies</li>
+                                    <li>Cost-efficient marketing through race sponsorship</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📋 Key Documents to Review</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li>Budget: <code>7.Budget and KPIs/Bronte_Harbour_Classic_KPI_Dashboard.xlsx</code></li>
+                            <li>Revenue projections and financial planning documents</li>
+                            <li>Sponsor database template: <code>4. Tools/SPONSOR-DATABASE-TEMPLATE.md</code></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- SPONSOR OUTREACH TEMPLATES SECTION -->
+                <div id="financial-outreach" style="background: #f3e5f5; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #9c27b0;">
+                    <h3 style="color: #6a1b9a; margin-bottom: 15px;">📧 Sponsor Outreach Templates</h3>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📨 Email Template - Initial Sponsor Outreach</h4>
+                        <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; border-left: 3px solid #9c27b0; font-size: 13px; color: #666;">
+                            <strong>Subject:</strong> Partnership Opportunity - Inaugural Bronte Harbour Classic 5K<br><br>
+                            <strong>Body:</strong> Dear [Contact Name],<br><br>
+                            I'm reaching out because [Company Name] has such a strong presence in the Oakville community, and I thought you might be interested in a unique sponsorship opportunity.<br><br>
+                            We're launching the <strong>inaugural Bronte Harbour Classic 5K</strong> on Father's Day, June 21, 2026. This family-friendly event will bring together 800+ participants and thousands of festival visitors at beautiful Bronte Harbour Park, all while supporting Oakville Dads Charity.<br><br>
+                            <strong>Why This Opportunity is Special:</strong><br>
+                            • <strong>Founding Sponsor Status</strong> - Lock in inaugural rates before prices increase in 2027<br>
+                            • <strong>Community Impact</strong> - Support local families through Oakville Dads Charity<br>
+                            • <strong>Brand Visibility</strong> - Maximum exposure to engaged, health-conscious families<br>
+                            • <strong>Multi-Year Savings</strong> - Significant discounts for 2-3 year commitments<br><br>
+                            I've attached our sponsorship package for your review. I'd love to schedule a brief 15-minute call this week to discuss how we can create a partnership that benefits both [Company Name] and our community.<br><br>
+                            Would [Day/Time] work for you?<br><br>
+                            Thank you for your consideration,<br>
+                            [Your Name]<br>
+                            Bronte Harbour Classic 5K<br>
+                            [Phone] | [Email]
+                        </div>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">📞 Phone Script - Sponsor Follow-Up</h4>
+                        <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; border-left: 3px solid #9c27b0; font-size: 13px; color: #666;">
+                            "Hi [Name], this is [Your Name] from the Bronte Harbour Classic 5K. I sent you an email earlier this week about a sponsorship opportunity, and I wanted to follow up personally.<br><br>
+                            We're creating a new Father's Day tradition in Oakville - the inaugural Bronte Harbour Classic 5K on June 21, 2026. This event will bring together 800+ runners and thousands of festival visitors, all while supporting Oakville Dads Charity.<br><br>
+                            As a founding sponsor, [Company Name] would have the opportunity to lock in inaugural rates before prices increase in 2027, and receive maximum brand visibility throughout the event - from race materials to social media to on-site signage.<br><br>
+                            I know you're busy, but would you be available for a brief 15-minute call this week? I'd love to show you how this partnership can benefit [Company Name] while making a real impact in our community."
+                        </div>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 6px;">
+                        <h4 style="color: #e10600; margin-bottom: 10px;">🎯 Sponsor Prospect Categories</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: #333;">
+                            <li><strong>Healthcare:</strong> Hospitals, clinics, medical practices, health services</li>
+                            <li><strong>Financial Services:</strong> Banks, credit unions, financial advisors, insurance companies</li>
+                            <li><strong>Technology:</strong> Local tech companies, software firms, IT services</li>
+                            <li><strong>Retail:</strong> Sporting goods stores, fitness equipment, running stores</li>
+                            <li><strong>Food & Beverage:</strong> Restaurants, cafes, local food businesses</li>
+                            <li><strong>Real Estate:</strong> Real estate agencies, property management companies</li>
+                            <li><strong>Automotive:</strong> Car dealerships, auto service centers</li>
+                            <li><strong>Professional Services:</strong> Law firms, accounting firms, consulting</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
