@@ -147,19 +147,10 @@
 
         /* Main content wrapper - visible by default */
         .main-content {
-            display: block;
+            display: block !important;
         }
 
         .main-content.hidden {
-            display: none !important;
-        }
-        
-        /* Show main-content in active tabs, hide in inactive tabs */
-        .tab-content.active .main-content:not(.hidden) {
-            display: block !important;
-        }
-        
-        .tab-content:not(.active) .main-content {
             display: none !important;
         }
 
