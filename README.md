@@ -2,8 +2,10 @@
 
 ## 🚀 Quick Links
 
-- **[📊 Project Dashboard](https://raw.githubusercontent.com/kowalcg/BHC5k-2026/main/6.%20bronte-dashboard/BHC5K_PROJECT_DASHBOARD.html)** - Complete project management dashboard with tasks, timelines, and committee tracking
-- **[✨ Content Creator Tool v3.0](https://raw.githubusercontent.com/kowalcg/BHC5k-2026/main/4.%20Tools/bronte-harbour-classic-content-creator-pro-v3.0.html)** - AI-powered content generation tool for social media posts, captions, and image prompts
+- **[📊 Project Dashboard](https://htmlpreview.github.io/?https://github.com/kowalcg/BHC5k-2026/blob/main/6.%20bronte-dashboard/BHC5K_PROJECT_DASHBOARD.html)** - Complete project management dashboard with tasks, timelines, and committee tracking
+- **[✨ Content Creator Tool v3.0](https://htmlpreview.github.io/?https://github.com/kowalcg/BHC5k-2026/blob/main/4.%20Tools/bronte-harbour-classic-content-creator-pro-v3.0.html)** - AI-powered content generation tool for social media posts, captions, and image prompts
+
+> **Note:** These links use HTMLPreview to render the files in your browser. Alternatively, you can download the files from the repository and open them locally.
 
 ---
 
@@ -156,15 +158,17 @@ Bronte Harbour Classic 5-10k Race/
 
 ### Opening the Dashboard
 
-1. Click the **[Project Dashboard](https://raw.githubusercontent.com/kowalcg/BHC5k-2026/main/6.%20bronte-dashboard/BHC5K_PROJECT_DASHBOARD.html)** link above
-2. Opens directly in your web browser
-3. No installation or setup required
+1. Click the **[Project Dashboard](https://htmlpreview.github.io/?https://github.com/kowalcg/BHC5k-2026/blob/main/6.%20bronte-dashboard/BHC5K_PROJECT_DASHBOARD.html)** link above
+2. Opens directly in your web browser (rendered via HTMLPreview)
+3. Or download `6. bronte-dashboard/BHC5K_PROJECT_DASHBOARD.html` and open locally
+4. No installation or setup required
 
 ### Opening the Content Creator Tool
 
-1. Click the **[Content Creator Tool v3.0](https://raw.githubusercontent.com/kowalcg/BHC5k-2026/main/4.%20Tools/bronte-harbour-classic-content-creator-pro-v3.0.html)** link above
-2. Opens directly in your web browser
-3. Upload images or use AI prompts to generate race content
+1. Click the **[Content Creator Tool v3.0](https://htmlpreview.github.io/?https://github.com/kowalcg/BHC5k-2026/blob/main/4.%20Tools/bronte-harbour-classic-content-creator-pro-v3.0.html)** link above
+2. Opens directly in your web browser (rendered via HTMLPreview)
+3. Or download `4. Tools/bronte-harbour-classic-content-creator-pro-v3.0.html` and open locally
+4. Upload images or use AI prompts to generate race content
 
 ### Updating Information
 
