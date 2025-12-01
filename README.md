@@ -2,10 +2,11 @@
 
 ## 🚀 Quick Links
 
-- **[📊 Project Dashboard](https://htmlpreview.github.io/?https://github.com/kowalcg/BHC5k-2026/blob/main/6.%20bronte-dashboard/BHC5K_PROJECT_DASHBOARD.html)** - Complete project management dashboard with tasks, timelines, and committee tracking
+- **[📊 Project Dashboard](https://kowalcg.github.io/BHC5k-2026/)** - **Live Dashboard** - Complete project management dashboard with tasks, timelines, and committee tracking
+  - *This is the primary dashboard URL shared with the team - always shows the latest version*
 - **[✨ Content Creator Tool v3.0](https://htmlpreview.github.io/?https://github.com/kowalcg/BHC5k-2026/blob/main/4.%20Tools/bronte-harbour-classic-content-creator-pro-v3.0.html)** - AI-powered content generation tool for social media posts, captions, and image prompts
 
-> **Note:** These links use HTMLPreview to render the files in your browser. Alternatively, you can download the files from the repository and open them locally.
+> **Note:** The Project Dashboard is hosted on GitHub Pages and automatically updates when changes are pushed to the repository. The Content Creator Tool can be downloaded from the repository or viewed via HTMLPreview.
 
 ---
 
@@ -158,10 +159,10 @@ Bronte Harbour Classic 5-10k Race/
 
 ### Opening the Dashboard
 
-1. Click the **[Project Dashboard](https://htmlpreview.github.io/?https://github.com/kowalcg/BHC5k-2026/blob/main/6.%20bronte-dashboard/BHC5K_PROJECT_DASHBOARD.html)** link above
-2. Opens directly in your web browser (rendered via HTMLPreview)
-3. Or download `6. bronte-dashboard/BHC5K_PROJECT_DASHBOARD.html` and open locally
-4. No installation or setup required
+1. **Primary Method:** Visit **[https://kowalcg.github.io/BHC5k-2026/](https://kowalcg.github.io/BHC5k-2026/)** - This is the live dashboard URL shared with the team
+2. The dashboard automatically updates when changes are pushed to GitHub
+3. No installation or setup required - works in any modern web browser
+4. **Alternative:** Download `6. bronte-dashboard/BHC5K_PROJECT_DASHBOARD.html` and open locally if needed
 
 ### Opening the Content Creator Tool
 
