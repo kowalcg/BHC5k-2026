@@ -129,6 +129,13 @@
             display: block;
             animation: fadeIn 0.3s;
         }
+        
+        /* Force main-content to be visible in active tabs */
+        .tab-content.active .main-content:not(.hidden) {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
@@ -4386,7 +4393,10 @@
             
             // Show selected tab
             const activeTab = document.getElementById(tabName);
-            if (!activeTab) return;
+            if (!activeTab) {
+                console.error('Tab not found:', tabName);
+                return;
+            }
             
             activeTab.classList.add('active');
             
@@ -4398,14 +4408,23 @@
             // Reset sections for the active tab - show main content, hide all section cards
             activeTab.querySelectorAll('.section-card').forEach(card => {
                 card.classList.remove('active');
-            });
-            activeTab.querySelectorAll('.main-content').forEach(content => {
-                content.classList.remove('hidden');
-                content.style.display = 'block';
+                card.style.display = 'none';
             });
             
-            // Scroll to top of the tab content
-            activeTab.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Force show all main-content elements
+            const mainContentElements = activeTab.querySelectorAll('.main-content');
+            console.log('Found main-content elements:', mainContentElements.length);
+            mainContentElements.forEach(content => {
+                content.classList.remove('hidden');
+                content.style.display = 'block';
+                content.style.visibility = 'visible';
+                content.style.opacity = '1';
+            });
+            
+            // If no main-content found, log for debugging
+            if (mainContentElements.length === 0) {
+                console.warn('No main-content found in tab:', tabName);
+            }
         }
 
         // Section card switching (for Action Plans, References, etc.)
@@ -4517,10 +4536,20 @@
                 activeTab.querySelectorAll('.main-content').forEach(content => {
                     content.classList.remove('hidden');
                     content.style.display = 'block';
+                    content.style.visibility = 'visible';
+                    content.style.opacity = '1';
                 });
                 activeTab.querySelectorAll('.section-card').forEach(card => {
                     card.classList.remove('active');
+                    card.style.display = 'none';
                 });
+            });
+            
+            // Also ensure all main-content elements are visible by default (not hidden)
+            document.querySelectorAll('.main-content').forEach(content => {
+                if (!content.classList.contains('hidden')) {
+                    content.style.display = 'block';
+                }
             });
         });
 
