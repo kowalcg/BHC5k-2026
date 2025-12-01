@@ -147,11 +147,20 @@
 
         /* Main content wrapper */
         .main-content {
-            display: block;
+            display: block !important;
         }
 
         .main-content.hidden {
-            display: none;
+            display: none !important;
+        }
+        
+        /* Ensure main-content is visible in active tabs */
+        .tab-content.active .main-content {
+            display: block !important;
+        }
+        
+        .tab-content.active .main-content.hidden {
+            display: none !important;
         }
 
         /* Back button styling */
@@ -4377,6 +4386,8 @@
             
             // Show selected tab
             const activeTab = document.getElementById(tabName);
+            if (!activeTab) return;
+            
             activeTab.classList.add('active');
             
             // Add active to clicked button
@@ -4390,7 +4401,11 @@
             });
             activeTab.querySelectorAll('.main-content').forEach(content => {
                 content.classList.remove('hidden');
+                content.style.display = 'block';
             });
+            
+            // Scroll to top of the tab content
+            activeTab.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         // Section card switching (for Action Plans, References, etc.)
@@ -4496,6 +4511,17 @@
             if (tabsContainer) {
                 tabsContainer.style.touchAction = 'pan-x';
             }
+            
+            // Initialize: Ensure main-content is visible in active tabs
+            document.querySelectorAll('.tab-content.active').forEach(activeTab => {
+                activeTab.querySelectorAll('.main-content').forEach(content => {
+                    content.classList.remove('hidden');
+                    content.style.display = 'block';
+                });
+                activeTab.querySelectorAll('.section-card').forEach(card => {
+                    card.classList.remove('active');
+                });
+            });
         });
 
         // Update progress (placeholder - would connect to actual data)
