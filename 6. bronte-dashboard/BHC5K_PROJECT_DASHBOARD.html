@@ -152,25 +152,12 @@
             animation: fadeIn 0.3s;
         }
 
-        /* Main content wrapper - visible by default */
-        .main-content {
+        /* Main content wrapper - visible by default in active tabs */
+        .tab-content.active .main-content {
             display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
         }
 
         .main-content.hidden {
-            display: none !important;
-        }
-        
-        /* Ensure main-content is visible in active tabs */
-        .tab-content.active .main-content:not(.hidden) {
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-        }
-        
-        .tab-content.active .main-content.hidden {
             display: none !important;
         }
         
@@ -4390,17 +4377,9 @@
 
         // Tab switching
         function showTab(tabName, buttonElement) {
-            // Hide all tabs and their content
+            // Hide all tabs
             document.querySelectorAll('.tab-content').forEach(tab => {
                 tab.classList.remove('active');
-                // Hide all content in inactive tabs
-                tab.querySelectorAll('.main-content').forEach(content => {
-                    content.style.display = 'none';
-                });
-                tab.querySelectorAll('.section-card').forEach(card => {
-                    card.classList.remove('active');
-                    card.style.display = 'none';
-                });
             });
             
             // Remove active from all buttons
@@ -4425,16 +4404,11 @@
             // Hide all section cards in active tab
             activeTab.querySelectorAll('.section-card').forEach(card => {
                 card.classList.remove('active');
-                card.style.display = 'none';
             });
             
-            // Show all main-content elements in active tab
-            const mainContentElements = activeTab.querySelectorAll('.main-content');
-            mainContentElements.forEach(content => {
+            // Show all main-content elements in active tab (CSS will handle visibility)
+            activeTab.querySelectorAll('.main-content').forEach(content => {
                 content.classList.remove('hidden');
-                content.style.display = 'block';
-                content.style.visibility = 'visible';
-                content.style.opacity = '1';
             });
         }
 
@@ -4546,20 +4520,9 @@
             document.querySelectorAll('.tab-content.active').forEach(activeTab => {
                 activeTab.querySelectorAll('.main-content').forEach(content => {
                     content.classList.remove('hidden');
-                    content.style.display = 'block';
-                    content.style.visibility = 'visible';
-                    content.style.opacity = '1';
                 });
                 activeTab.querySelectorAll('.section-card').forEach(card => {
                     card.classList.remove('active');
-                    card.style.display = 'none';
-                });
-            });
-            
-            // Hide main-content in all inactive tabs
-            document.querySelectorAll('.tab-content:not(.active)').forEach(inactiveTab => {
-                inactiveTab.querySelectorAll('.main-content').forEach(content => {
-                    content.style.display = 'none';
                 });
             });
         });
