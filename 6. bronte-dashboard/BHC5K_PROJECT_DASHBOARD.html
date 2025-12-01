@@ -129,13 +129,6 @@
             display: block;
             animation: fadeIn 0.3s;
         }
-        
-        /* Force main-content to be visible in active tabs */
-        .tab-content.active .main-content:not(.hidden) {
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-        }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
@@ -152,16 +145,20 @@
             animation: fadeIn 0.3s;
         }
 
-        /* Main content wrapper - visible by default in active tabs */
-        .tab-content.active .main-content {
-            display: block !important;
+        /* Main content wrapper - visible by default */
+        .main-content {
+            display: block;
         }
 
         .main-content.hidden {
             display: none !important;
         }
         
-        /* Hide main-content in inactive tabs */
+        /* Show main-content in active tabs, hide in inactive tabs */
+        .tab-content.active .main-content:not(.hidden) {
+            display: block !important;
+        }
+        
         .tab-content:not(.active) .main-content {
             display: none !important;
         }
