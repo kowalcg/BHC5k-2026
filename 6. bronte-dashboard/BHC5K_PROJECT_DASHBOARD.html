@@ -1435,6 +1435,7 @@
                     <button onclick="showSection('promotion-main')" style="padding: 12px 24px; background: #e10600; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📋 View Tasks</button>
                     <button onclick="showSection('promotion-action-plan')" style="padding: 12px 24px; background: #ffc107; color: #333; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🚀 Action Plan</button>
                     <button onclick="showSection('promotion-references')" style="padding: 12px 24px; background: #2196F3; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📖 References</button>
+                    <button onclick="showSection('promotion-bronte-runners')" style="padding: 12px 24px; background: #4caf50; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">🏃‍♂️ Bronte Runners</button>
                     <button onclick="showSection('promotion-templates')" style="padding: 12px 24px; background: #9c27b0; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;">📧 Email Templates</button>
                 </div>
                 
@@ -1788,51 +1789,217 @@
                 </div>
                 
                 <!-- REFERENCE MATERIALS SECTION -->
-                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #2196F3;">
-                    <h3 style="color: #01579b; margin-bottom: 15px;">📖 Reference Materials</h3>
-                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
-                        <h4 style="color: #e10600; margin-bottom: 10px;">🌙 Moon in June References</h4>
-                        <ul style="margin: 0; padding-left: 20px; color: #333;">
-                            <li><strong>Race committee concepts.docx</strong> - Marketing and promotion strategies
-                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
-                                    <li>Location: <code>2. MIJ references/Race committee concepts.docx</code></li>
-                                    <li>Review marketing approaches from successful event</li>
-                                </ul>
-                            </li>
-                        </ul>
+                <div id="promotion-references" class="section-card">
+                    <button onclick="showSection('promotion-main')" class="back-button">← Back to Tasks</button>
+                    <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #2196F3;">
+                        <h3 style="color: #01579b; margin-bottom: 15px;">📖 Reference Materials</h3>
+                        <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                            <h4 style="color: #e10600; margin-bottom: 10px;">🌙 Moon in June References</h4>
+                            <ul style="margin: 0; padding-left: 20px; color: #333;">
+                                <li><strong>Race committee concepts.docx</strong> - Marketing and promotion strategies
+                                    <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                        <li>Location: <code>2. MIJ references/Race committee concepts.docx</code></li>
+                                        <li>Review marketing approaches from successful event</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                            <h4 style="color: #e10600; margin-bottom: 10px;">🌐 Best Practice Resources</h4>
+                            <ul style="margin: 0; padding-left: 20px; color: #333;">
+                                <li><strong>Race Directors HQ - Race Promotion Guide</strong>
+                                    <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                        <li>Complete guide to promoting races</li>
+                                        <li>Race calendar listings, email marketing, social media strategies</li>
+                                    </ul>
+                                </li>
+                                <li><strong>RunSignup - Race Marketing Tools</strong>
+                                    <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                        <li>Built-in marketing technology</li>
+                                        <li>Brand activation tools, social sharing features</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Race Roster - Digital Marketing Tactics</strong>
+                                    <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
+                                        <li>Paid social media campaigns</li>
+                                        <li>Google Search advertising</li>
+                                        <li>Email marketing best practices</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 6px;">
+                            <h4 style="color: #e10600; margin-bottom: 10px;">📋 Key Documents to Review</h4>
+                            <ul style="margin: 0; padding-left: 20px; color: #333;">
+                                <li>Landing page strategy: <code>5. Landing pages/BRONTE_HARBOUR_CLASSIC_LANDING_PAGE_STRATEGY.md</code></li>
+                                <li>Content Creator Tool: <code>4. Tools/bronte-harbour-classic-content-creator-pro-v3.0.html</code></li>
+                                <li>Pricing strategy: <code>5. Landing pages/PRICING-UPDATE-NOVEMBER-8-2025.md</code></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
-                        <h4 style="color: #e10600; margin-bottom: 10px;">🌐 Best Practice Resources</h4>
-                        <ul style="margin: 0; padding-left: 20px; color: #333;">
-                            <li><strong>Race Directors HQ - Race Promotion Guide</strong>
-                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
-                                    <li>Complete guide to promoting races</li>
-                                    <li>Race calendar listings, email marketing, social media strategies</li>
+                </div>
+                
+                <!-- BRONTE RUNNERS MOBILIZATION SECTION -->
+                <div id="promotion-bronte-runners" class="section-card">
+                    <button onclick="showSection('promotion-main')" class="back-button">← Back to Tasks</button>
+                    <div style="background: #e8f5e9; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #4caf50;">
+                        <h3 style="color: #2e7d32; margin-bottom: 15px;">🏃‍♂️ Bronte Runners Mobilization - Race Ambassadors Program</h3>
+                        <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                            <h4 style="color: #e10600; margin-bottom: 10px;">🎯 This is YOUR Event - Make It Happen!</h4>
+                            <p style="color: #333; margin-bottom: 15px; font-size: 16px; line-height: 1.6;">
+                                The Bronte Harbour Classic is <strong>Bronte Runners' event</strong> - created by runners, for runners, and for our community. With [X] members, we have incredible power to make this inaugural race a huge success. Every member can be a race ambassador and help spread the word!
+                            </p>
+                        </div>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                            <h4 style="color: #e10600; margin-bottom: 10px;">💡 Creative Ways to Promote - Use These Ideas!</h4>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <h5 style="color: #333; margin-bottom: 10px; font-size: 16px;">🎁 Perfect Gift Ideas</h5>
+                                <ul style="margin: 0; padding-left: 20px; color: #333;">
+                                    <li><strong>Father's Day Gift:</strong> "Buy a race entry for your dad as a Father's Day gift! What better way to celebrate than running together on Father's Day?"</li>
+                                    <li><strong>Birthday Gift:</strong> "Looking for a unique birthday gift? Give the gift of running - a race entry to Bronte Harbour Classic!"</li>
+                                    <li><strong>Holiday Gift:</strong> "Skip the usual gifts - give an experience! Race entry for someone special."</li>
+                                    <li><strong>Family Activity:</strong> "Plan a family activity for Father's Day - run the 5K together or cheer from the sidelines!"</li>
                                 </ul>
-                            </li>
-                            <li><strong>RunSignup - Race Marketing Tools</strong>
-                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
-                                    <li>Built-in marketing technology</li>
-                                    <li>Brand activation tools, social sharing features</li>
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <h5 style="color: #333; margin-bottom: 10px; font-size: 16px;">👥 Who to Reach Out To</h5>
+                                <ul style="margin: 0; padding-left: 20px; color: #333;">
+                                    <li><strong>Family Members:</strong> Parents, siblings, cousins, extended family</li>
+                                    <li><strong>Neighbors:</strong> Next-door neighbors, people in your building/street</li>
+                                    <li><strong>Friends:</strong> Close friends, casual friends, old friends you've lost touch with</li>
+                                    <li><strong>Work Colleagues:</strong> Coworkers, former colleagues, professional network</li>
+                                    <li><strong>Social Media Friends:</strong> Facebook friends, Instagram followers, LinkedIn connections</li>
+                                    <li><strong>Running Community:</strong> Other running groups, training partners, running store customers</li>
+                                    <li><strong>Local Community:</strong> People at your gym, yoga class, coffee shop, local businesses</li>
                                 </ul>
-                            </li>
-                            <li><strong>Race Roster - Digital Marketing Tactics</strong>
-                                <ul style="margin-top: 5px; padding-left: 20px; color: #666;">
-                                    <li>Paid social media campaigns</li>
-                                    <li>Google Search advertising</li>
-                                    <li>Email marketing best practices</li>
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <h5 style="color: #333; margin-bottom: 10px; font-size: 16px;">📱 Social Media Posting Ideas</h5>
+                                <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; border-left: 3px solid #4caf50; margin-bottom: 10px;">
+                                    <strong>Post 1 - Personal Story:</strong><br>
+                                    "Excited to be part of the inaugural Bronte Harbour Classic 5K on Father's Day! This is OUR event - created by Bronte Runners for our community. Who's joining me? 🏃‍♂️ [Registration Link] #BronteHarbourClassic #BronteRunners"
+                                </div>
+                                <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; border-left: 3px solid #4caf50; margin-bottom: 10px;">
+                                    <strong>Post 2 - Gift Idea:</strong><br>
+                                    "Looking for the perfect Father's Day gift? How about running the Bronte Harbour Classic 5K together? Race entry makes a great gift! 🎁 [Registration Link] #FathersDay #BronteHarbourClassic"
+                                </div>
+                                <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; border-left: 3px solid #4caf50; margin-bottom: 10px;">
+                                    <strong>Post 3 - Community Call:</strong><br>
+                                    "Oakville! Join us for the first-ever Bronte Harbour Classic 5K on Father's Day. Beautiful waterfront course, family festival, supporting Oakville Dads Charity. Let's make this amazing! [Registration Link] #OakvilleRuns"
+                                </div>
+                                <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; border-left: 3px solid #4caf50;">
+                                    <strong>Post 4 - Invite Friends:</strong><br>
+                                    "Hey [Friend's Name]! Thought you might be interested in this - Bronte Harbour Classic 5K on Father's Day. Want to run it together? It's going to be a great event! [Registration Link]"
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <h5 style="color: #333; margin-bottom: 10px; font-size: 16px;">💬 Conversation Starters</h5>
+                                <ul style="margin: 0; padding-left: 20px; color: #333;">
+                                    <li>"Hey, have you heard about the Bronte Harbour Classic? It's our new race on Father's Day - want to join?"</li>
+                                    <li>"I'm running the Bronte Harbour Classic 5K - it's going to be a great event. You should check it out!"</li>
+                                    <li>"Looking for something fun to do on Father's Day? We're organizing a 5K race at Bronte Harbour - perfect for families!"</li>
+                                    <li>"This is OUR race - created by Bronte Runners! Want to be part of making it amazing?"</li>
                                 </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div style="background: white; padding: 15px; border-radius: 6px;">
-                        <h4 style="color: #e10600; margin-bottom: 10px;">📋 Key Documents to Review</h4>
-                        <ul style="margin: 0; padding-left: 20px; color: #333;">
-                            <li>Landing page strategy: <code>5. Landing pages/BRONTE_HARBOUR_CLASSIC_LANDING_PAGE_STRATEGY.md</code></li>
-                            <li>Content Creator Tool: <code>4. Tools/bronte-harbour-classic-content-creator-pro-v3.0.html</code></li>
-                            <li>Pricing strategy: <code>5. Landing pages/PRICING-UPDATE-NOVEMBER-8-2025.md</code></li>
-                        </ul>
-                    </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <h5 style="color: #333; margin-bottom: 10px; font-size: 16px;">📧 Email/Text Templates for Members</h5>
+                                <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; border-left: 3px solid #4caf50; margin-bottom: 10px;">
+                                    <strong>Template 1 - Personal Invite:</strong><br>
+                                    "Hi [Name],<br><br>
+                                    I wanted to let you know about the Bronte Harbour Classic 5K on Father's Day, June 21, 2026. This is a new race organized by Bronte Runners (my running club), and I'm really excited about it!<br><br>
+                                    It's a family-friendly event with a 5K race, kids 1K, and all-day festival at beautiful Bronte Harbour Park. Would you be interested in joining? I'd love to have you there!<br><br>
+                                    [Registration Link]<br><br>
+                                    Thanks!<br>
+                                    [Your Name]"
+                                </div>
+                                <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; border-left: 3px solid #4caf50;">
+                                    <strong>Template 2 - Gift Suggestion:</strong><br>
+                                    "Hi [Name],<br><br>
+                                    I thought you might like this idea - the Bronte Harbour Classic 5K on Father's Day could be a perfect gift for [Dad/Uncle/etc.]! It's a fun family activity and a great way to celebrate Father's Day together.<br><br>
+                                    Check it out: [Registration Link]<br><br>
+                                    [Your Name]"
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                            <h4 style="color: #e10600; margin-bottom: 10px;">🏪 Local Business Promotion - How to Reach Out</h4>
+                            
+                            <div style="margin-bottom: 15px;">
+                                <h5 style="color: #333; margin-bottom: 8px;">Target Businesses:</h5>
+                                <ul style="margin: 0; padding-left: 20px; color: #333;">
+                                    <li><strong>Fitness Centers & Gyms:</strong> CrossFit boxes, yoga studios, personal training studios</li>
+                                    <li><strong>Running Stores:</strong> Local running shops, athletic stores</li>
+                                    <li><strong>Health & Wellness:</strong> Chiropractors, physiotherapists, massage therapists, nutritionists</li>
+                                    <li><strong>Restaurants & Cafes:</strong> Local eateries, coffee shops, breweries</li>
+                                    <li><strong>Retail Stores:</strong> Sporting goods, outdoor gear, lifestyle stores</li>
+                                    <li><strong>Professional Services:</strong> Law firms, accounting firms, real estate offices</li>
+                                    <li><strong>Community Centers:</strong> Recreation centers, community hubs</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="margin-bottom: 15px;">
+                                <h5 style="color: #333; margin-bottom: 8px;">Approach Strategies:</h5>
+                                <ul style="margin: 0; padding-left: 20px; color: #333;">
+                                    <li><strong>In-Person Visit:</strong> Drop by with flyers, talk to the owner/manager, leave materials</li>
+                                    <li><strong>Email Outreach:</strong> Send professional email with event details and partnership opportunities</li>
+                                    <li><strong>Social Media:</strong> Tag local businesses in posts, ask them to share</li>
+                                    <li><strong>Community Boards:</strong> Post flyers at community centers, libraries, coffee shops</li>
+                                    <li><strong>Partnership Opportunities:</strong> Offer to cross-promote, provide discounts to their customers</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="margin-bottom: 15px;">
+                                <h5 style="color: #333; margin-bottom: 8px;">Local Business Outreach Script:</h5>
+                                <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; border-left: 3px solid #4caf50; font-size: 13px; color: #666;">
+                                    "Hi [Business Owner/Manager Name],<br><br>
+                                    I'm [Your Name] from Bronte Runners, and we're organizing the inaugural Bronte Harbour Classic 5K on Father's Day, June 21, 2026. This is a family-friendly event that will bring 800+ participants and thousands of visitors to Bronte Harbour Park.<br><br>
+                                    I thought [Business Name] might be interested in:<br>
+                                    • Promoting the event to your customers/clients<br>
+                                    • Cross-promotion opportunities<br>
+                                    • Sponsorship opportunities (if interested)<br>
+                                    • Having your team participate as a corporate team<br><br>
+                                    Would you be open to displaying a flyer or sharing information with your customers? I can provide materials and we can discuss partnership opportunities.<br><br>
+                                    Thank you!<br>
+                                    [Your Name]<br>
+                                    [Contact Info]"
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h5 style="color: #333; margin-bottom: 8px;">Where to Place Flyers/Materials:</h5>
+                                <ul style="margin: 0; padding-left: 20px; color: #333;">
+                                    <li>Community bulletin boards (libraries, community centers, grocery stores)</li>
+                                    <li>Fitness centers and gyms</li>
+                                    <li>Local coffee shops and cafes</li>
+                                    <li>Running stores and athletic shops</li>
+                                    <li>Health clinics and wellness centers</li>
+                                    <li>Real estate offices</li>
+                                    <li>Local restaurants (with permission)</li>
+                                    <li>Schools and community centers</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 6px;">
+                            <h4 style="color: #e10600; margin-bottom: 10px;">📦 Marketing Materials Package for Bronte Runners</h4>
+                            <p style="color: #333; margin-bottom: 10px;">Each Bronte Runners member should receive:</p>
+                            <ul style="margin: 0; padding-left: 20px; color: #333;">
+                                <li>Social media post templates (ready to copy/paste)</li>
+                                <li>Email templates for personal outreach</li>
+                                <li>Race flyers (digital and printable)</li>
+                                <li>Registration link and QR code</li>
+                                <li>Key talking points and conversation starters</li>
+                                <li>Gift idea suggestions</li>
+                                <li>Graphics for social media (Instagram, Facebook, Twitter)</li>
+                                <li>Referral tracking (if applicable)</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
