@@ -4,7 +4,7 @@ Copy and paste this prompt when starting a new session:
 
 ---
 
-**I'm working on the Bronte Harbour Classic 5K Race project. A complete handover document has been created.**
+**I'm working on the Bronte Harbour Classic 5K Race project. A complete handover document has been created for the dashboard work.**
 
 **Project Location:** 
 `/Users/MacBook1/Library/CloudStorage/GoogleDrive-info@geartopdesign.com/Shared drives/TapeGeeks/1. TapeGeeks/12. Events/1. Bronte Harbour Classic 5-10k Race`
@@ -12,39 +12,63 @@ Copy and paste this prompt when starting a new session:
 **GitHub Repository:**
 - Repo: kowalcg/BHC5k-2026 (public)
 - Live Dashboard: https://kowalcg.github.io/BHC5k-2026/
+- Direct Dashboard: https://kowalcg.github.io/BHC5k-2026/6.%20bronte-dashboard/BHC5K_PROJECT_DASHBOARD.html
+- Content Creator Tool: https://kowalcg.github.io/BHC5k-2026/4.%20Tools/bronte-harbour-classic-content-creator-pro-v3.0.html
 - All changes committed and pushed to main branch
 
-**📋 Complete Handover Document:**
-Please read: `HANDOVER_TO_NEW_AGENT.md` in the project root
+**📋 Complete Dashboard Handover Document:**
+Please read: `HANDOVER_DASHBOARD_December_2025.md` in the project root
 
 This document contains:
-- Complete project structure
-- All file locations
-- Recently completed work (Content Creator v3.0, dashboard updates, meeting management)
-- Current project status
-- Technical details
-- Critical priorities for December 2 meeting
-- Git status and reference information
+- Summary of all recent dashboard enhancements (Action Plans, Templates, References)
+- Current financial metrics (CA$1,768.45 net revenue, 41 registrations)
+- Volunteer requirements (70-80 total, based on Greg Pace recommendations)
+- Vendor information (single $250 pricing, 5:30 AM setup, 8 AM - 5 PM event)
+- All fixed links and GitHub Pages URLs
+- Technical details and update workflow
+- Key decisions and pending items
+- How to continue work on the dashboard
 
-**Quick Summary:**
-✅ Content Creator Tool v3.0 deployed with enhanced variable handling
-✅ Dashboard updated (v3.0 link, brand colors, meeting updates)
-✅ Meeting management (Nov 19 marked complete, Dec 2 agenda created)
-✅ Volunteer section corrections (Oakville Dads)
-✅ All changes committed and pushed to GitHub
+**Quick Summary of Recent Work:**
+✅ Enhanced Financial & Sponsorships tab with Action Plans, References, and 5 email templates
+✅ Enhanced Post-Race & Volunteers tab with Action Plans, References, 5 email templates, and Volunteer Roles breakdown
+✅ Updated financial data: CA$1,768.45 net revenue, CA$203.45 tax, 41 registrations
+✅ Updated volunteer requirements: ~50 race + 20-30 support (event runs until 5 PM)
+✅ Fixed vendor email templates: Single $250 price, 5:30 AM setup, 8 AM - 5 PM event
+✅ Corrected all "Oakville Dances" to "Oakville Dads" throughout dashboard
+✅ Added new sponsorship tasks: shoe manufacturers, Running Room, VR Pro (Kellie)
+✅ Fixed all meeting document links to use GitHub Pages URLs
+✅ Fixed Content Creator Tool link
+✅ Marked "Finalize Sponsorship Package" as completed
+✅ Added designer credit with auto-updating date
+✅ Created comprehensive README.md
 
-**Current Status:**
-- Race Date: June 21, 2026 (Father's Day)
-- 40 registrations, 203 days until race
-- Critical priorities: Traffic Control Plan, Event Insurance, Sponsorship, Registration strategy
-- Next meeting: December 2, 2025 - Full Team Update at ACE Coworking Space
+**Current Dashboard State:**
+- **Registrations:** 41
+- **Net Revenue:** CA$1,768.45
+- **Tax Collected:** CA$203.45 (due to be remitted)
+- **Volunteers Needed:** 70-80 total (~50 race + 20-30 support)
+- **Event Duration:** 8:00 AM - 5:00 PM
+- **Vendor Pricing:** $250 for 10x10 space (no tables/equipment)
+
+**Important Notes:**
+- All Oakville Dads tasks marked as "[Pending meeting with Greg & Charles]"
+- Dashboard is served from `index.html` which redirects to the main dashboard file
+- All links use GitHub Pages URLs (not relative paths) for proper browser access
+- When updating dashboard, always copy to `index.html` after editing main file
 
 **Key Files:**
-- Dashboard: `index.html`
-- Content Creator: `4. Tools/bronte-harbour-classic-content-creator-pro-v3.0.html`
-- Handover: `HANDOVER_TO_NEW_AGENT.md`
+- Main Dashboard: `6. bronte-dashboard/BHC5K_PROJECT_DASHBOARD.html`
+- GitHub Pages Root: `index.html` (must be kept in sync)
+- Handover Document: `HANDOVER_DASHBOARD_December_2025.md`
+- README: `README.md`
 
-The handover document has everything you need to continue!
+**Workflow for Updates:**
+1. Edit `6. bronte-dashboard/BHC5K_PROJECT_DASHBOARD.html`
+2. Copy to `index.html`: `cp "6. bronte-dashboard/BHC5K_PROJECT_DASHBOARD.html" "index.html"`
+3. Commit and push both files
+4. GitHub Pages updates within 1-2 minutes
+
+The handover document has everything you need to continue working on the dashboard!
 
 ---
-
