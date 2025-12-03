@@ -1,0 +1,28 @@
+Task ID,Task Description,Owner,Due Date,Status,Priority,Notes,Dependencies,Date Updated
+REG-001,Confirm early-bird deadline (Dec 4 or 5),Ursula,"Dec 3, 2025",In Progress,Critical,FINAL extension - NO MORE EXTENSIONS,,"Dec 2, 2025"
+REG-002,Deploy 15% promo codes for groups/partners,Ursula,"Dec 6, 2025",Not Started,Critical,After early-bird ends,REG-001,"Dec 2, 2025"
+REG-003,Create group promo codes for running clubs,Ursula,"Dec 10, 2025",Not Started,High,"GEORGETOWN20, BURLINGTON15, TERRYFOX10, OAKDADS15",,"Dec 2, 2025"
+REG-004,Provide team with Race Roster access,Ursula,"Dec 10, 2025",Not Started,High,Team members need access to view registrations,,"Dec 2, 2025"
+REG-005,Set up communication templates in Race Roster,Ursula,"Dec 15, 2025",Not Started,High,Email templates for outreach,,"Dec 2, 2025"
+REG-006,Send targeted emails to registered participants,Ursula,"Dec 20, 2025",Not Started,Medium,Ask registrants to invite friends with promo codes,REG-002,"Dec 2, 2025"
+REG-007,Pull registration lists by promo code,Ursula,Ongoing,Not Started,Medium,Track which codes are performing,REG-003,"Dec 2, 2025"
+REG-008,Email group leaders with signup numbers (3 weeks before),Ursula,"Jun 1, 2026",Not Started,Medium,Allow follow-up with members who haven't signed up,REG-007,"Dec 2, 2025"
+REG-009,Finalize medal design,Ursula,"Feb 28, 2026",Not Started,Medium,"Medals sourced, design to be finalized",,"Dec 2, 2025"
+REG-010,Track registration progress weekly,Ursula,Ongoing,In Progress,High,Report to team at meetings,,"Dec 2, 2025"
+REG-011,Coordinate race day check-in process,Ursula,"May 31, 2026",Not Started,High,"Bib pickup, late registration, etc.",,"Dec 2, 2025"
+,,,,,,,,
+PRICING STRUCTURE,,,,,,,,
+,Early Bird (until Dec 5): Base price,,,,,LAST extension,,
+,Regular (after Dec 5): Higher price,,,,,,,
+,Promo Code: 15% off regular (still more than early bird),,,,,,,
+,,,,,,,,
+SPECIAL PROMOTIONS,,,,,,,,
+,Valentine's Day: $5 off for signing up partner (3 days before),,,,,,,
+,St. Patrick's Day: Extra beer ticket (3 days before signup),,,,,,,
+,Groups 20+: Special pricing + custom t-shirts,,,,,,,
+,,,,,,,,
+CURRENT STATS,,,,,,,,
+,"Registered: 41 runners (as of Dec 2, 2025)",,,,,,,
+,Target: 800+ participants,,,,,,,
+,"Optimistic Goal: 1,500 participants",,,,,,,
+,Georgetown Runners: 20+ already signed up,,,,,,,

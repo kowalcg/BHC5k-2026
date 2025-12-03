@@ -1,0 +1,27 @@
+Task ID,Task Description,Owner,Due Date,Status,Priority,Notes,Dependencies,Budget Est.,Date Updated
+RS-001,Finalize traffic control plan with consultant,Charles,"Dec 15, 2025",In Progress,Critical,"Consultant was in Detroit for Thanksgiving, plan expected by end of week",,"$2,000-5,000","Dec 2, 2025"
+RS-002,Review traffic control plan with team,Charles,"Dec 20, 2025",Not Started,Critical,Quick team review before submission,RS-001,,"Dec 2, 2025"
+RS-003,Submit traffic control plan to City of Oakville,Charles,"Jan 15, 2026",Not Started,Critical,"City dissects plan, forwards to police",RS-002,,"Dec 2, 2025"
+RS-004,Coordinate with police on officer requirements,Charles,"Jan 31, 2026",Not Started,Critical,Minimum 3-hour commitment per officer,RS-003,"$3,000-5,000","Dec 2, 2025"
+RS-005,Form race course validation subcommittee,Charles,"Dec 20, 2025",Not Started,High,Need 2-3 others to validate course,,,"Dec 2, 2025"
+RS-006,Validate race course for safety and accuracy,Charles + subcommittee,"Jan 31, 2026",Not Started,High,Ensure course is safe and accurate,RS-005,,"Dec 2, 2025"
+RS-007,Confirm final route based on construction status,Charles,"Feb 15, 2026",Not Started,High,Coben Lodge construction may require adjustment via Third Line,,,"Dec 2, 2025"
+RS-008,Research traffic control providers (quotes),Charles,Completed,Completed,High,Selected consultant,,,Nov 2025
+RS-009,Select traffic control provider and sign contract,Charles,Completed,Completed,High,,,"$2,000-5,000",Nov 2025
+RS-010,Order traffic control equipment,Charles,"Apr 15, 2026",Not Started,Medium,"Coordinate with provider for signage, barriers, cones",RS-003,,"Dec 2, 2025"
+RS-011,Arrange paid duty police,Charles,"Mar 15, 2026",Not Started,High,Based on police requirements from TCP,RS-004,"$3,000-5,000","Dec 2, 2025"
+RS-012,Arrange banner placement (2 locations in Oakville),Charles,"Mar 1, 2026",Not Started,Medium,Street banners for promotion,,"$500-1,000","Dec 2, 2025"
+RS-013,Connect with Oakville Chamber of Commerce president,Charles,"Jan 15, 2026",Not Started,Medium,"Business community outreach, sponsor connections",,,"Dec 2, 2025"
+RS-014,Setup traffic control equipment (Race Day),Charles + team,"Jun 21, 2026",Not Started,Critical,Race day morning setup - 5:00 AM,RS-010,,"Dec 2, 2025"
+RS-015,Supervise traffic control (Race Day),Charles,"Jun 21, 2026",Not Started,Critical,"Monitor traffic flow, ensure plan executed",,,"Dec 2, 2025"
+,,,,,,,,,
+ROAD CLOSURE TIMELINE,,,,,,,,,
+,6:30 AM - Road closure begins (police),,,,,Minimum 3-hour police commitment,,,
+,8:00 AM - Kids race starts,,,,,,,,
+,8:20 AM - 5K race starts,,,,,,,,
+,9:30 AM - Roads begin reopening,,,,,After police approval,,,
+,10:00 AM - Ontario Street fully reopens,,,,,Once all runners in park,,,
+,,,,,,,,,
+NOTES,,,,,,,,,
+,Athletics Ontario Certification NOT possible Year 1 - path width 6ft (requires 8ft),,,,,,,,
+,Can pursue AO certification in Year 2 with route modifications,,,,,,,,
