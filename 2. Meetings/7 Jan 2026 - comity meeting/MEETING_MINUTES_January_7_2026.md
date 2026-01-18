@@ -73,17 +73,27 @@ The committee met to review progress since the last meeting and coordinate effor
 - Will follow up with contacts
 - Created spreadsheet in WhatsApp group chat for tracking sponsor outreach (note: team members haven't filled it out yet)
 
+### Tim Hortons Outreach (NOT YET CONTACTED)
+**Discussion:**
+- Patricia asked if Charles or Greg Pace could handle Tim Hortons outreach
+- Charles indicated he is too swamped with other commitments
+- Greg Pace will provide contact information
+- Patricia will handle the outreach using Greg Pace's contact
+- Proposed: Coffee cart providing free coffee for race participants
+- Note: Local coffee shops (like Peach) may not participate if Tim Hortons partnership confirmed (exclusivity concerns)
+
 ### Coordination Issues
 - Need to avoid duplicate outreach to same sponsors
 - WhatsApp spreadsheet available but underutilized
-- Tim Hortons will likely provide coffee cart (free coffee)
-- Local coffee shops (like Peach) may not participate if Tim Hortons is involved (exclusivity concerns)
+- **ALL leads must update Patricia's WhatsApp spreadsheet with contacts and action plans**
 
 ### Action Items
-- **All team members:** Review and update WhatsApp sponsorship tracking spreadsheet
-- **Miles:** Add Fire Hall, Fortinos, and gym contacts to tracking spreadsheet
-- **Miles:** Follow up with all 3 main contacts in early January
-- **Miles:** Begin approaching smaller local businesses
+- **All team members:** Review and update WhatsApp sponsorship tracking spreadsheet (CRITICAL - MANDATORY)
+- **Miles/Greg Pace:** Add Fire Hall, Fortinos, and gym contacts to tracking spreadsheet
+- **Miles/Greg Pace:** Follow up with all 3 main contacts in early January
+- **Miles/Greg Pace:** Begin approaching smaller local businesses
+- **Miles/Greg Pace:** Provide Tim Hortons contact information to Patricia
+- **Patricia:** Get Tim Hortons contact from Greg Pace and reach out
 - **Patricia:** Call Miles to discuss sponsorship approach strategy
 - **Patricia:** Follow up with her sponsorship contacts
 - **Team:** Review sponsorship package and provide feedback
@@ -110,25 +120,25 @@ The committee met to review progress since the last meeting and coordinate effor
 
 ---
 
-## 4. CROSS-PROMOTION PARTNERSHIP (KELLY'S RACES)
+## 4. CROSS-PROMOTION PARTNERSHIP (KELLY'S RACES) - NOT YET FINALIZED
 
 ### Discussion
 **Patricia/Ursula** had extensive meeting with Kelly (race organizer):
 
-**Proposal:**
+**Proposed Partnership (Under Negotiation by Patricia & Miles):**
 - Bundle registration for 3 races:
   - Bronte Harbour Classic 5-10K (Father's Day - June 15)
   - Kelly's Canada Day race (July 1)
   - Kelly's other race
-- 20% discount for bundle registration
-- Kelly will provide access to her database for promotional emails
+- Approximately 20% discount for bundle registration (to be confirmed)
+- Kelly may provide access to her database for promotional emails (pending agreement)
 
-**Benefits:**
-- Kelly provides booth space at all her races for Bronte promotion
-- Bronte provides booth space at our race for Kelly's promotion
+**Potential Benefits (Pending Finalization):**
+- Kelly may provide booth space at all her races for Bronte promotion
+- Bronte may provide booth space at our race for Kelly's promotion
 - Eliminates pressure to distribute each other's flyers everywhere
-- Kelly organizing special group run for Bronte Runners
-- Special restaurant gathering for participants
+- Kelly potentially organizing special group run for Bronte Runners
+- Possible special restaurant gathering for participants
 
 **Additional Insight:**
 - Kelly reported that offering cash prizes significantly increased race registrations
@@ -145,9 +155,10 @@ The committee met to review progress since the last meeting and coordinate effor
 - Attracts wider participation
 
 ### Action Items
-- **Greg K. & Patricia:** Finalize bundle pricing structure with Kelly (confirm 20% discount)
-- **Greg K.:** Set up Race Roster integration for bundle registration (Kelly knows how to configure)
-- **Patricia:** Coordinate booth setup requirements for Kelly's races
+- **Patricia & Miles:** Continue negotiating bundle pricing structure with Kelly (confirm discount percentage)
+- **Patricia:** Finalize database access agreement and booth space exchange details
+- **Greg K.:** Set up Race Roster integration for bundle registration once partnership finalized (Kelly knows how to configure)
+- **Patricia:** Coordinate booth setup requirements for Kelly's races (pending partnership finalization)
 - **Team:** Discuss elite runner half-price entry strategy
 - **Team:** Confirm cash prize structure and promotion
 
@@ -163,10 +174,16 @@ The committee met to review progress since the last meeting and coordinate effor
 - Police approval required for final route
 - Need route finalized soon for promotional materials
 
-**Miles:**
+**Miles/Greg Pace:**
 - Suggested using Strava heat maps to identify popular running routes
 - Can help optimize route based on where runners already go
 - Would make route more familiar and attractive to local runners
+- Will complete traffic control plan by end of month
+
+**Ursula:**
+- Requested CRM access from Greg K. to track registrations
+- Plans individual outreach to all 600 Bronte Runners members
+- Will ask each member: "Are you going to run? Are you going to volunteer?"
 
 ### Route Considerations
 - Start/finish location (Bronte Harbour area)
@@ -178,8 +195,11 @@ The committee met to review progress since the last meeting and coordinate effor
 
 ### Action Items
 - **Greg K. & Ursula:** Walk and finalize race route by end of January
-- **Miles:** Provide Strava heat map data for Bronte area
+- **Miles/Greg Pace:** Provide Strava heat map data for Bronte area
+- **Miles/Greg Pace:** Complete traffic control plan by end of month
 - **Greg K.:** Submit route to police for approval
+- **Greg K.:** Provide CRM access to Ursula for registration tracking
+- **Ursula:** Begin individual outreach to Bronte Runners members
 - **Team:** Review proposed route and provide feedback
 - **Greg K.:** Create route map for marketing materials
 
@@ -190,11 +210,14 @@ The committee met to review progress since the last meeting and coordinate effor
 ### Discussion
 Need vendors for race day and potential expo:
 
-**Confirmed/Potential Vendors:**
-- Tim Hortons (coffee cart - free coffee)
-- Fortinos (products: water, Gatorade, bananas, etc.)
-- Gym partners (potential health/fitness vendors)
-- Fire Hall restaurant group (food/beverage)
+**Being Negotiated (NOT YET CONFIRMED):**
+- Tim Hortons (coffee cart - free coffee) - Patricia to contact using Greg Pace's contact
+- Kelly's Races (cross-promotion partnership) - Patricia & Miles working on pricing structure
+- Fortinos (products: water, Gatorade, bananas, etc.) - Miles following up in January
+- Gym partners (potential health/fitness vendors) - Miles awaiting head office approval
+- Fire Hall restaurant group (food/beverage) - Miles awaiting response
+
+**Potential Vendors:**
 - Running Room (Kelly's connection - potential booth)
 
 **Vendor Requirements:**
@@ -336,23 +359,33 @@ Need vendors for race day and potential expo:
 ## CRITICAL NEXT STEPS (NEXT 2 WEEKS)
 
 ### Immediate Priorities
-1. **ALL TEAM:** Update WhatsApp sponsorship tracking spreadsheet
-2. **Miles:** Follow up with Fortinos, gyms, and Fire Hall group
-3. **Patricia:** Follow up with sponsorship contacts and call Miles for strategy session
-4. **Patricia:** Send Bronte Runners request to share social media posts
-5. **Patricia:** Create Facebook group invitation guide
-6. **Greg K.:** Finalize route with Ursula and submit to police
-7. **Greg K.:** Create shoe manufacturer letter template
-8. **Greg K. & Patricia:** Finalize Kelly partnership details and pricing
-9. **Patricia:** Create vendor application form
-10. **Team:** Provide running content for social media
+1. **ALL TEAM:** Update WhatsApp sponsorship tracking spreadsheet (CRITICAL - MANDATORY)
+2. **Miles/Greg Pace:** Provide Tim Hortons contact to Patricia
+3. **Miles/Greg Pace:** Follow up with Fortinos, gyms, and Fire Hall group
+4. **Patricia:** Get Tim Hortons contact from Greg Pace and reach out
+5. **Patricia:** Follow up with sponsorship contacts and call Miles for strategy session
+6. **Patricia & Miles:** Continue negotiating Kelly partnership details and pricing
+7. **Patricia:** Send Bronte Runners request to share social media posts
+8. **Patricia:** Create Facebook group invitation guide
+9. **Greg K.:** Finalize route with Ursula and submit to police
+10. **Greg K.:** Provide CRM access to Ursula for Bronte Runners outreach
+11. **Greg K.:** Create shoe manufacturer letter template
+12. **Miles/Greg Pace:** Complete traffic control plan by end of month
+13. **Patricia:** Create vendor application form
+14. **Ursula:** Begin individual outreach to Bronte Runners members
+15. **Team:** Provide running content for social media
 
 ### End of January Deadlines
 - Route finalized and approved
+- Traffic control plan completed (Miles/Greg Pace)
 - Registration page live
+- Kelly partnership finalized (Patricia & Miles working on it)
+- Tim Hortons contacted (Patricia with Greg Pace's contact)
 - Major sponsor commitments secured
 - Vendor application process launched
 - Volunteer recruitment initiated
+- CRM access provided to Ursula
+- Bronte Runners individual outreach started
 
 ---
 
@@ -372,18 +405,20 @@ Need vendors for race day and potential expo:
 ## ATTENDANCE & PARTICIPATION NOTES
 
 **Highly Engaged:**
-- Greg Kowalczyk (leading route, operations, overall coordination)
-- Patricia Kowalczyk (leading marketing, vendor coordination, partnerships)
-- Miles/Greg Pace (leading sponsorship outreach with strong strategy)
+- Greg Kowalczyk (leading route, operations, overall coordination, CRM management)
+- Patricia Kowalczyk (leading marketing, vendor coordination, partnerships, Tim Hortons outreach)
+- Miles/Greg Pace (leading sponsorship outreach with strong strategy, traffic control plan, Tim Hortons contact provider)
 
 **Contributing:**
-- Ursula (route planning with Greg)
+- Ursula (route planning with Greg, Bronte Runners individual outreach, requesting CRM access)
 - Charles (content creation - photo shoot participant)
 
-**Present but Limited Input:**
-- Yasmin, Jono, Adriana (noted as participants but minimal contribution in transcript)
+**Present but Need Specific Role Assignments:**
+- Yasmin (present at meeting, needs ownership area to increase engagement)
+- Jono (present at meeting, needs ownership area to increase engagement)
+- Adriana (present at meeting, needs ownership area to increase engagement)
 
-**Action:** Consider assigning specific roles to all committee members to ensure balanced workload and engagement.
+**Action:** Assign specific roles to Yasmin, Jono, and Adriana (e.g., volunteer coordination, vendor liaison, awards management) to ensure balanced workload and engagement across all committee members.
 
 ---
 
@@ -416,18 +451,23 @@ Need vendors for race day and potential expo:
 
 | Action Item | Owner | Deadline | Priority | Status |
 |-------------|-------|----------|----------|--------|
-| Update WhatsApp sponsorship tracker | ALL | Jan 14 | HIGH | Pending |
-| Follow up with Fortinos, gyms, Fire Hall | Miles | Jan 14-21 | HIGH | In Progress |
+| **Update WhatsApp sponsorship tracker with ALL contacts/plans** | **ALL** | **Jan 14** | **CRITICAL** | **Pending** |
+| Provide Tim Hortons contact to Patricia | Miles/Greg Pace | Jan 14 | HIGH | Pending |
+| Contact Tim Hortons (after getting contact) | Patricia | Jan 14-21 | HIGH | Pending |
+| Follow up with Fortinos, gyms, Fire Hall | Miles/Greg Pace | Jan 14-21 | HIGH | In Progress |
+| Continue negotiating Kelly partnership | Patricia & Miles | Jan 21 | HIGH | In Progress |
 | Call Miles for sponsorship strategy session | Patricia | Jan 14 | HIGH | Pending |
 | Send Bronte Runners social share request | Patricia | After each post | HIGH | Ongoing |
 | Create Facebook group invitation guide | Patricia | Jan 14 | MEDIUM | Pending |
 | Finalize route with Ursula & submit to police | Greg K. | Jan 31 | HIGH | In Progress |
+| Provide CRM access to Ursula | Greg K. | Jan 21 | HIGH | Pending |
+| Begin Bronte Runners individual outreach | Ursula | Jan 21 | HIGH | Pending |
+| Complete traffic control plan | Miles/Greg Pace | Jan 31 | HIGH | Pending |
 | Create shoe manufacturer letter template | Greg K. | Jan 21 | MEDIUM | Pending |
-| Finalize Kelly partnership pricing | Greg K. & Patricia | Jan 21 | MEDIUM | Pending |
 | Create vendor application form | Patricia | Jan 31 | MEDIUM | Pending |
 | Share Instagram posts to stories | ALL | Ongoing | HIGH | Ongoing |
 | Provide running content for social media | ALL | Ongoing | MEDIUM | Pending |
-| Provide Strava heat map data | Miles | Jan 21 | LOW | Pending |
+| Provide Strava heat map data | Miles/Greg Pace | Jan 21 | MEDIUM | Pending |
 | Create detailed budget spreadsheet | Greg K. | Jan 31 | HIGH | Pending |
 | Define prize money structure | Greg K. | Jan 31 | MEDIUM | Pending |
 | Source medals and trophies quotes | TBD | Feb 15 | MEDIUM | Not Started |

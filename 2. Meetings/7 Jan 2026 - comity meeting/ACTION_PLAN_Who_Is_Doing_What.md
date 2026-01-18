@@ -5,12 +5,12 @@
 
 ---
 
-## GREG K./Charles 
+## GREG K./Charles
 
 ### Immediate (By Jan 21)
 - [ ] Create standardized letter template for shoe manufacturer outreach
-- [ ] Finalize Kelly partnership pricing structure (with Patricia)
 - [ ] Submit final race route to police for approval (with Ursula)
+- [ ] Provide CRM access to Ursula for Bronte Runners outreach
 
 ### End of January
 - [ ] Create detailed budget spreadsheet with expense tracking
@@ -37,10 +37,11 @@
 - [ ] Create step-by-step guide for inviting people to Facebook group
 - [ ] Call Miles to discuss sponsorship approach strategy
 - [ ] Follow up with sponsorship contacts she reached out to
+- [ ] Get Tim Hortons contact from Greg Pace and reach out (NOT YET CONTACTED)
 
 ### By Jan 21
-- [ ] Finalize Kelly partnership pricing structure (with Greg K.)
-- [ ] Coordinate booth setup requirements for Kelly's races
+- [ ] Continue working on Kelly partnership pricing structure (with Miles) - NOT YET FINALIZED
+- [ ] Coordinate booth setup requirements for Kelly's races (pending finalization)
 - [ ] Finalize registration pricing tiers and timeline
 
 ### End of January
@@ -59,16 +60,21 @@
 
 ---
 
-## MILES/GREG PACE 
+## MILES/GREG PACE
 
 ### Immediate (By Jan 14-21)
 - [ ] Update WhatsApp sponsorship tracking spreadsheet with current contacts
 - [ ] Add Fire Hall, Fortinos, and gym contacts to tracking spreadsheet
 - [ ] Follow up with 3 main contacts (Fortinos, gyms, Fire Hall group)
 - [ ] Have strategy call with Patricia
+- [ ] Continue working on Kelly partnership pricing (with Patricia) - NOT YET FINALIZED
+- [ ] Provide Tim Hortons contact information to Patricia
 
 ### By Jan 21
 - [ ] Provide Strava heat map data for Bronte area route optimization
+
+### End of January
+- [ ] Complete traffic control plan by end of month
 
 ### Ongoing
 - [ ] Begin approaching smaller local businesses for sponsorship
@@ -84,6 +90,12 @@
 ### Immediate
 - [ ] Walk and finalize race route with Greg K. by end of January
 - [ ] Review proposed route and provide feedback
+- [ ] Get CRM access from Greg K. to track registrations
+
+### Ongoing
+- [ ] Individual outreach to all 600 Bronte Runners members
+- [ ] Ask each member: "Are you going to run? Are you going to volunteer?"
+- [ ] Track member responses and commitments
 
 ---
 
@@ -95,17 +107,59 @@
 
 ---
 
-## ALL TEAM MEMBERS
+## JONO
 
 ### Immediate (By Jan 14)
 - [ ] Update WhatsApp sponsorship tracking spreadsheet with any contacts
-- [ ] Review sponsorship package and provide feedback
+- [ ] Identify area of contribution (needs specific role assignment)
 
 ### Ongoing
 - [ ] Share Instagram posts to personal stories with "Follow this account"
 - [ ] Provide running content/videos for social media use
 - [ ] Share event on personal social media weekly
+
+---
+
+## ADRIANA
+
+### Immediate (By Jan 14)
+- [ ] Update WhatsApp sponsorship tracking spreadsheet with any contacts
+- [ ] Identify area of contribution (needs specific role assignment)
+
+### Ongoing
+- [ ] Share Instagram posts to personal stories with "Follow this account"
+- [ ] Provide running content/videos for social media use
+- [ ] Share event on personal social media weekly
+
+---
+
+## YASMIN
+
+### Immediate (By Jan 14)
+- [ ] Update WhatsApp sponsorship tracking spreadsheet with any contacts
+- [ ] Identify area of contribution (needs specific role assignment)
+
+### Ongoing
+- [ ] Share Instagram posts to personal stories with "Follow this account"
+- [ ] Provide running content/videos for social media use
+- [ ] Share event on personal social media weekly
+
+---
+
+## ALL TEAM MEMBERS
+
+### Immediate (By Jan 14) - CRITICAL
+- [ ] **Update WhatsApp sponsorship tracking spreadsheet with ALL contacts and action plans** (MANDATORY - Patricia's spreadsheet in WhatsApp group)
+- [ ] Review sponsorship package and provide feedback
+
+### Ongoing
+- [ ] **Keep WhatsApp spreadsheet updated with all sponsorship activities and plans**
+- [ ] Share Instagram posts to personal stories with "Follow this account"
+- [ ] Provide running content/videos for social media use
+- [ ] Share event on personal social media weekly
 - [ ] Review and provide input on major decisions
+
+**IMPORTANT:** All leads MUST put their action plans in the spreadsheet shared by Patricia in WhatsApp to avoid duplicate outreach and coordinate efforts.
 
 ---
 
@@ -117,7 +171,6 @@
 - [ ] Source medals and trophies (get quotes) - **Due: Feb 15**
 - [ ] Develop volunteer training materials
 - [ ] Create race day operations manual
-- [ ] Assign specific roles to Yasmin, Jono, Adriana
 
 ---
 
@@ -131,11 +184,12 @@
 5. **ALL:** Update sponsorship tracker
 
 ### Week of Jan 20-26
-1. **Greg K. & Patricia:** Finalize Kelly partnership
+1. **Patricia & Miles:** Continue negotiating Kelly partnership pricing
 2. **Greg K.:** Submit route to police
 3. **Miles:** Provide Strava data
-4. **Patricia:** Follow up with sponsors
-5. **ALL:** Continue social media sharing
+4. **Patricia:** Contact Tim Hortons (get contact from Greg Pace first)
+5. **Patricia:** Follow up with sponsors
+6. **ALL:** Continue social media sharing and updating WhatsApp tracker
 
 ---
 
@@ -153,30 +207,31 @@
 **Patricia's Contacts:**
 - Several unnamed opportunities (need follow-up)
 
-**Confirmed Partners:**
-- Tim Hortons (coffee cart - free coffee)
-- Kelly's Races (cross-promotion partnership)
+**Being Negotiated (NOT YET FINALIZED):**
+- Kelly's Races (cross-promotion partnership) - Patricia & Miles working on pricing structure
+- Tim Hortons (coffee cart - free coffee) - Patricia to contact using Greg Pace's contact
 
 **Potential/To Contact:**
-- Local coffee shops (Peach - on hold due to Tim Hortons)
+- Local coffee shops (Peach - on hold pending Tim Hortons status)
 - Shoe manufacturers (Nike, Asics, Brooks, New Balance - letters needed)
 - Running Room (through Kelly connection)
 
 ---
 
-## PARTNERSHIP SUMMARY: KELLY'S RACES
+## PARTNERSHIP SUMMARY: KELLY'S RACES (NOT YET FINALIZED)
 
-**Deal Structure:**
+**Proposed Deal Structure (Under Negotiation):**
 - Bundle registration: Bronte (June 15) + Kelly's Canada Day + Kelly's other race
-- 20% discount for bundle
-- Kelly provides database access for email marketing
-- Booth space exchange at all races
-- Kelly organizing special group run for Bronte Runners
-- Special restaurant gathering for participants
+- 20% discount for bundle (to be confirmed)
+- Kelly provides database access for email marketing (pending agreement)
+- Booth space exchange at all races (pending agreement)
+- Kelly organizing special group run for Bronte Runners (pending finalization)
+- Special restaurant gathering for participants (pending finalization)
 
 **Action Needed:**
-- Finalize pricing (Greg K. & Patricia)
-- Set up Race Roster integration (Greg K. - Kelly knows how)
+- **Patricia & Miles:** Finalize pricing structure and discount percentage
+- **Patricia:** Confirm database access agreement
+- **Greg K.:** Set up Race Roster integration once partnership finalized (Kelly knows how)
 
 ---
 
@@ -234,16 +289,20 @@
 ## ENGAGEMENT OPTIMIZATION
 
 **Currently Highly Active:**
-- Greg Kowalczyk
-- Patricia Kowalczyk
-- Miles/Greg Pace
+- Greg Kowalczyk (Race Coordination, Route Planning, Operations)
+- Patricia Kowalczyk (Marketing Lead, Vendor Coordination, Partnerships)
+- Miles/Greg Pace (Sponsorship Outreach, Route Optimization)
 
-**Need More Engagement:**
-- Yasmin (needs assigned role)
-- Jono (needs assigned role)
-- Adriana (needs assigned role)
+**Contributing:**
+- Ursula (Route Planning, Bronte Runners Outreach)
+- Charles (Content Creation)
 
-**Recommendation:** Assign specific ownership areas to increase engagement and distribute workload.
+**Need Specific Role Assignments to Increase Engagement:**
+- Yasmin (present at meetings, needs ownership area)
+- Jono (present at meetings, needs ownership area)
+- Adriana (present at meetings, needs ownership area)
+
+**Recommendation:** Assign specific ownership areas (e.g., volunteer coordination, vendor liaison, awards management) to Yasmin, Jono, and Adriana to increase engagement and distribute workload more evenly across the team.
 
 ---
 
