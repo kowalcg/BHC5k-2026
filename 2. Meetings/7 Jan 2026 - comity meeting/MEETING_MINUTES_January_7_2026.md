@@ -404,22 +404,25 @@ Need vendors for race day and potential expo:
 
 ## ATTENDANCE & PARTICIPATION NOTES
 
-**Core Leadership Team:**
+**Core Leadership Team Present:**
 - Greg Kowalczyk - Race Co-Director (Sponsorships Committee Leader) - leading route, operations, overall coordination, CRM management
 - Charles Sathmary - Race Co-Director (Route & Safety Committee Leader) - content creation, route planning
-- Yasmin Bleik - Race Coordinator (Core Leadership) - present at meeting, coordinating cross-functional activities
-- Judi Meston - Project Manager (Financial Management Committee Leader) - project oversight and financial tracking
+- Yasmin Bleik - Race Coordinator (Core Leadership) - coordinating cross-functional activities
 - Greg Pace - Race Advisor - leading sponsorship outreach with strong strategy, traffic control plan, Tim Hortons contact provider
 
 **Committee Leaders Present:**
 - Patricia Kowalczyk - Marketing Lead - leading marketing, vendor coordination, partnerships, Tim Hortons outreach, social media management
-- Liz - Promotion Committee Leader - marketing and media oversight
 - Ursula - Registration & Race Coordination Committee Leader - route planning with Greg, Bronte Runners individual outreach (600 members), requesting CRM access
-- Jono - Start/Finish & Park Layout Committee Leader - present at meeting, responsible for venue setup and park layout
-- Adriana - Post-Race Activities & Volunteers Committee Leader - present at meeting, responsible for vendor coordination and volunteer management
+- Jono - Start/Finish & Park Layout Committee Leader - responsible for venue setup and park layout
+- Adriana - Post-Race Activities & Volunteers Committee Leader - responsible for vendor coordination and volunteer management
+
+**Not Present at Meeting:**
+- Liz - Promotion Committee Leader (Marketing & Media oversight) - Team: Patricia, Gus
+- Gus - Promotion Committee Team Member (supporting Liz and Patricia with marketing)
+- Judi Meston - Project Manager (Financial Management Committee Leader)
 
 **Meeting Participation Summary:**
-All core leadership team members and committee leaders were present. Greg Kowalczyk, Patricia, and Greg Pace were highly vocal with detailed updates. Ursula provided specific requests (CRM access) and plans (individual Bronte Runners outreach). Other committee leaders attended but had less vocal participation in this particular meeting.
+Greg Kowalczyk, Patricia, and Greg Pace were highly vocal with detailed updates on marketing, sponsorships, and strategy. Ursula provided specific requests (CRM access) and plans (individual Bronte Runners outreach to 600 members). Charles, Yasmin, Jono, and Adriana attended but had less vocal participation in this particular meeting.
 
 ---
 
