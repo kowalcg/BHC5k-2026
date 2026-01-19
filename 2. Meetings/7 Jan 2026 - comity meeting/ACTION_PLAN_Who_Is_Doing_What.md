@@ -112,7 +112,7 @@
 
 ### Immediate (By Jan 21)
 - [ ] Update WhatsApp sponsorship tracking spreadsheet with any contacts
-- [ ] Coordinate with Patricia on social media content calendar
+- [ ] Coordinate with Patricia and Gus on social media content calendar
 - [ ] Develop email marketing campaign strategy
 - [ ] Plan Bronte Runners mobilization campaign
 
@@ -124,10 +124,31 @@
 
 ### Ongoing
 - [ ] Oversee all marketing and promotional activities
-- [ ] Coordinate social media strategy across platforms
+- [ ] Coordinate social media strategy across platforms with Patricia and Gus
 - [ ] Monitor engagement metrics and adjust strategy
 - [ ] Share event on personal social media weekly
 - [ ] Leverage Bronte Runners network for promotion
+
+---
+
+## GUS (Promotion Committee Team Member)
+
+### Immediate (By Jan 21)
+- [ ] Update WhatsApp sponsorship tracking spreadsheet with any contacts
+- [ ] Support Liz and Patricia with social media content calendar execution
+- [ ] Assist with email marketing campaign development
+
+### End of January
+- [ ] Help create promotional materials (flyers, posters, digital graphics)
+- [ ] Support media outreach efforts
+- [ ] Assist with Bronte Runners mobilization campaign
+
+### Ongoing
+- [ ] Support marketing and promotional activities under Liz's leadership
+- [ ] Contribute to social media content creation and posting
+- [ ] Share event on personal social media weekly
+- [ ] Provide running content/videos for social media use
+- [ ] Help monitor engagement metrics
 
 ---
 
@@ -393,13 +414,14 @@
 
 **Committee Leaders (Active):**
 - Patricia Kowalczyk - Marketing Lead (Vendor Coordination, Partnerships, Social Media)
-- Liz - Promotion Committee Leader (Marketing & Media oversight)
+- Liz - Promotion Committee Leader (Marketing & Media oversight) - Team: Patricia, Gus
 - Ursula - Registration & Race Coordination Committee Leader (Bronte Runners Outreach)
 - Jono - Start/Finish & Park Layout Committee Leader
 - Adriana - Post-Race Activities & Volunteers Committee Leader
 
 **Active Contributors:**
 - Miles/Greg Pace (same as Greg Pace above)
+- Gus - Promotion Committee Team Member (supporting Liz and Patricia with marketing activities)
 
 **Committee Structure Complete:** All committee leadership positions are now assigned with clear responsibilities and action items.
 
