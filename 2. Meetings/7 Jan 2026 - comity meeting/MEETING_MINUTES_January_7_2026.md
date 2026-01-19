@@ -411,10 +411,12 @@ Need vendors for race day and potential expo:
 - Greg Pace - Race Advisor - leading sponsorship outreach with strong strategy, traffic control plan, Tim Hortons contact provider
 
 **Committee Leaders Present:**
-- Patricia Kowalczyk - Marketing Lead - leading marketing, vendor coordination, partnerships, Tim Hortons outreach, social media management
 - Ursula - Registration & Race Coordination Committee Leader - route planning with Greg, Bronte Runners individual outreach (600 members), requesting CRM access
 - Jono - Start/Finish & Park Layout Committee Leader - responsible for venue setup and park layout
 - Adriana - Post-Race Activities & Volunteers Committee Leader - responsible for vendor coordination and volunteer management
+
+**Active Team Members Present:**
+- Patricia Kowalczyk - (Marketing Team, Vendor & Partnerships) - executing marketing initiatives with Liz's team, vendor coordination, partnerships (Kelly, Tim Hortons), sponsorship outreach, social media management
 
 **Not Present at Meeting:**
 - Liz - Promotion Committee Leader (Marketing & Media oversight) - Team: Patricia, Gus
