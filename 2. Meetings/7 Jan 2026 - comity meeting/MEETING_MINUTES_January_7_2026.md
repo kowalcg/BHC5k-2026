@@ -404,21 +404,22 @@ Need vendors for race day and potential expo:
 
 ## ATTENDANCE & PARTICIPATION NOTES
 
-**Highly Engaged:**
-- Greg Kowalczyk (leading route, operations, overall coordination, CRM management)
-- Patricia Kowalczyk (leading marketing, vendor coordination, partnerships, Tim Hortons outreach)
-- Miles/Greg Pace (leading sponsorship outreach with strong strategy, traffic control plan, Tim Hortons contact provider)
+**Core Leadership Team:**
+- Greg Kowalczyk - Race Co-Director (Sponsorships Committee Leader) - leading route, operations, overall coordination, CRM management
+- Charles Sathmary - Race Co-Director (Route & Safety Committee Leader) - content creation, route planning
+- Yasmin Bleik - Race Coordinator (Core Leadership) - present at meeting, coordinating cross-functional activities
+- Judi Meston - Project Manager (Financial Management Committee Leader) - project oversight and financial tracking
+- Greg Pace - Race Advisor - leading sponsorship outreach with strong strategy, traffic control plan, Tim Hortons contact provider
 
-**Contributing:**
-- Ursula (route planning with Greg, Bronte Runners individual outreach, requesting CRM access)
-- Charles (content creation - photo shoot participant)
+**Committee Leaders Present:**
+- Patricia Kowalczyk - Marketing Lead - leading marketing, vendor coordination, partnerships, Tim Hortons outreach, social media management
+- Liz - Promotion Committee Leader - marketing and media oversight
+- Ursula - Registration & Race Coordination Committee Leader - route planning with Greg, Bronte Runners individual outreach (600 members), requesting CRM access
+- Jono - Start/Finish & Park Layout Committee Leader - present at meeting, responsible for venue setup and park layout
+- Adriana - Post-Race Activities & Volunteers Committee Leader - present at meeting, responsible for vendor coordination and volunteer management
 
-**Present but Need Specific Role Assignments:**
-- Yasmin (present at meeting, needs ownership area to increase engagement)
-- Jono (present at meeting, needs ownership area to increase engagement)
-- Adriana (present at meeting, needs ownership area to increase engagement)
-
-**Action:** Assign specific roles to Yasmin, Jono, and Adriana (e.g., volunteer coordination, vendor liaison, awards management) to ensure balanced workload and engagement across all committee members.
+**Meeting Participation Summary:**
+All core leadership team members and committee leaders were present. Greg Kowalczyk, Patricia, and Greg Pace were highly vocal with detailed updates. Ursula provided specific requests (CRM access) and plans (individual Bronte Runners outreach). Other committee leaders attended but had less vocal participation in this particular meeting.
 
 ---
 

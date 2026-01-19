@@ -85,64 +85,160 @@
 
 ---
 
-## URSULA
+## URSULA (Registration & Race Coordination Committee Leader)
 
-### Immediate
+### Immediate (By Jan 21)
 - [ ] Walk and finalize race route with Greg K. by end of January
 - [ ] Review proposed route and provide feedback
 - [ ] Get CRM access from Greg K. to track registrations
+- [ ] Update WhatsApp sponsorship tracking spreadsheet with any contacts
+
+### End of January
+- [ ] Coordinate Race Roster registration page setup with Greg K.
+- [ ] Develop registration confirmation email templates
+- [ ] Create participant communication plan
+- [ ] Set up registration tracking system
 
 ### Ongoing
 - [ ] Individual outreach to all 600 Bronte Runners members
 - [ ] Ask each member: "Are you going to run? Are you going to volunteer?"
 - [ ] Track member responses and commitments
+- [ ] Manage participant database and communications
+- [ ] Process registrations and handle participant inquiries
 
 ---
 
-## CHARLES
+## LIZ (Promotion - Marketing & Media Committee Leader)
+
+### Immediate (By Jan 21)
+- [ ] Update WhatsApp sponsorship tracking spreadsheet with any contacts
+- [ ] Coordinate with Patricia on social media content calendar
+- [ ] Develop email marketing campaign strategy
+- [ ] Plan Bronte Runners mobilization campaign
+
+### End of January
+- [ ] Create comprehensive marketing timeline through race day
+- [ ] Develop media outreach list (local news, community publications)
+- [ ] Plan paid advertising strategy (if budget allows)
+- [ ] Create promotional materials (flyers, posters, digital graphics)
+
+### Ongoing
+- [ ] Oversee all marketing and promotional activities
+- [ ] Coordinate social media strategy across platforms
+- [ ] Monitor engagement metrics and adjust strategy
+- [ ] Share event on personal social media weekly
+- [ ] Leverage Bronte Runners network for promotion
+
+---
+
+## JUDI (Project Manager & Financial Management Committee Leader)
+
+### Immediate (By Jan 21)
+- [ ] Update WhatsApp sponsorship tracking spreadsheet with any contacts
+- [ ] Review budget spreadsheet structure with Greg K.
+- [ ] Set up financial tracking system for all income and expenses
+- [ ] Coordinate with Greg K. on break-even analysis
+
+### End of January
+- [ ] Maintain detailed budget tracking (revenue vs. expenses)
+- [ ] Track all sponsorship commitments and payments
+- [ ] Monitor registration revenue and projections
+- [ ] Create monthly financial reports for team
+
+### Ongoing
+- [ ] Project management oversight and timeline coordination
+- [ ] Monthly financial reviews with leadership team
+- [ ] Ensure all committees stay on schedule
+- [ ] Identify and escalate project risks and bottlenecks
+- [ ] Coordinate cross-functional dependencies
+
+---
+
+## CHARLES (Route & Safety Committee Leader - Race Co-Director)
+
+### Immediate (By Jan 21)
+- [ ] Update WhatsApp sponsorship tracking spreadsheet with any contacts
+- [ ] Finalize race route with Greg K. and Ursula
+- [ ] Coordinate with Miles/Greg Pace on traffic control plan
+
+### End of January
+- [ ] Submit final route to police for approval
+- [ ] Develop safety plan and emergency protocols
+- [ ] Identify water station locations and requirements
+- [ ] Plan course marshal positions and responsibilities
 
 ### Ongoing
 - [ ] Provide running content for social media
 - [ ] Participate in content creation (photo/video shoots)
+- [ ] Oversee route safety and logistics
+- [ ] Coordinate with Town of Oakville on permits
 
 ---
 
-## JONO
+## JONO (Start/Finish & Park Layout Committee Leader)
 
-### Immediate (By Jan 14)
+### Immediate (By Jan 21)
 - [ ] Update WhatsApp sponsorship tracking spreadsheet with any contacts
-- [ ] Identify area of contribution (needs specific role assignment)
+- [ ] Develop start/finish line layout plan
+- [ ] Coordinate park layout with vendor and expo zones
+- [ ] Identify equipment needs (finish line arch, barriers, signage)
+
+### End of January
+- [ ] Create venue setup diagram showing start/finish areas, vendor zones, spectator areas
+- [ ] Coordinate with Town of Oakville on park usage and setup permits
+- [ ] Plan parking layout and flow for race day
 
 ### Ongoing
 - [ ] Share Instagram posts to personal stories with "Follow this account"
 - [ ] Provide running content/videos for social media use
 - [ ] Share event on personal social media weekly
+- [ ] Coordinate with other committees on space requirements
 
 ---
 
-## ADRIANA
+## ADRIANA (Post-Race Activities & Volunteers Committee Leader)
 
-### Immediate (By Jan 14)
+### Immediate (By Jan 21)
 - [ ] Update WhatsApp sponsorship tracking spreadsheet with any contacts
-- [ ] Identify area of contribution (needs specific role assignment)
+- [ ] Coordinate with Patricia on vendor application form and screening criteria
+- [ ] Identify post-race activity needs (food, entertainment, awards ceremony)
+- [ ] Begin planning volunteer recruitment strategy
+
+### End of January
+- [ ] Create volunteer role descriptions and quantities needed
+- [ ] Develop volunteer recruitment plan with timeline
+- [ ] Coordinate with vendors for post-race activities
+- [ ] Plan awards ceremony logistics and timeline
 
 ### Ongoing
 - [ ] Share Instagram posts to personal stories with "Follow this account"
 - [ ] Provide running content/videos for social media use
 - [ ] Share event on personal social media weekly
+- [ ] Oversee volunteer management and coordination
+- [ ] Manage vendor relationships for race day
 
 ---
 
-## YASMIN
+## YASMIN (Race Coordinator - Core Leadership)
 
-### Immediate (By Jan 14)
+### Immediate (By Jan 21)
 - [ ] Update WhatsApp sponsorship tracking spreadsheet with any contacts
-- [ ] Identify area of contribution (needs specific role assignment)
+- [ ] Coordinate with committee leaders on cross-functional dependencies
+- [ ] Review overall race timeline and identify potential bottlenecks
+- [ ] Support Greg K. with race day operations planning
+
+### End of January
+- [ ] Assist with Race Roster registration page setup and testing
+- [ ] Coordinate timing company research and selection
+- [ ] Review race day logistics across all committees
+- [ ] Help develop race day operations manual
 
 ### Ongoing
 - [ ] Share Instagram posts to personal stories with "Follow this account"
 - [ ] Provide running content/videos for social media use
 - [ ] Share event on personal social media weekly
+- [ ] Monitor overall race coordination and committee progress
+- [ ] Facilitate communication between committees
 
 ---
 
@@ -288,21 +384,24 @@
 
 ## ENGAGEMENT OPTIMIZATION
 
-**Currently Highly Active:**
-- Greg Kowalczyk (Race Coordination, Route Planning, Operations)
-- Patricia Kowalczyk (Marketing Lead, Vendor Coordination, Partnerships)
-- Miles/Greg Pace (Sponsorship Outreach, Route Optimization)
+**Core Leadership Team (Highly Active):**
+- Greg Kowalczyk - Race Co-Director (Sponsorships, Route Planning, Operations)
+- Charles Sathmary - Race Co-Director (Route & Safety Committee Leader)
+- Yasmin Bleik - Race Coordinator (Cross-functional coordination)
+- Judi Meston - Project Manager (Financial Management Committee Leader)
+- Greg Pace - Race Advisor (Sponsorship Outreach, Traffic Control Plan)
 
-**Contributing:**
-- Ursula (Route Planning, Bronte Runners Outreach)
-- Charles (Content Creation)
+**Committee Leaders (Active):**
+- Patricia Kowalczyk - Marketing Lead (Vendor Coordination, Partnerships, Social Media)
+- Liz - Promotion Committee Leader (Marketing & Media oversight)
+- Ursula - Registration & Race Coordination Committee Leader (Bronte Runners Outreach)
+- Jono - Start/Finish & Park Layout Committee Leader
+- Adriana - Post-Race Activities & Volunteers Committee Leader
 
-**Need Specific Role Assignments to Increase Engagement:**
-- Yasmin (present at meetings, needs ownership area)
-- Jono (present at meetings, needs ownership area)
-- Adriana (present at meetings, needs ownership area)
+**Active Contributors:**
+- Miles/Greg Pace (same as Greg Pace above)
 
-**Recommendation:** Assign specific ownership areas (e.g., volunteer coordination, vendor liaison, awards management) to Yasmin, Jono, and Adriana to increase engagement and distribute workload more evenly across the team.
+**Committee Structure Complete:** All committee leadership positions are now assigned with clear responsibilities and action items.
 
 ---
 
