@@ -190,6 +190,39 @@
             animation: fadeIn 0.3s;
         }
 
+        /* Fix for tabs that may be outside container due to HTML nesting */
+        #promotion.tab-content.active,
+        #start-finish.tab-content.active,
+        #registration.tab-content.active,
+        #post-race.tab-content.active,
+        #financial.tab-content.active,
+        #oversight.tab-content.active {
+            margin-left: 300px;
+            width: calc(100% - 300px);
+            max-width: calc(100% - 300px);
+            padding: 30px 40px;
+            box-sizing: border-box;
+        }
+
+        /* Hide container when outside tabs are active */
+        body:has(#promotion.tab-content.active) .container,
+        body:has(#start-finish.tab-content.active) .container,
+        body:has(#registration.tab-content.active) .container,
+        body:has(#post-race.tab-content.active) .container,
+        body:has(#financial.tab-content.active) .container,
+        body:has(#oversight.tab-content.active) .container {
+            display: none;
+        }
+
+        /* Keep first 3 tabs without extra margin (they're inside container) */
+        #overview.tab-content.active,
+        #meetings.tab-content.active,
+        #route-safety.tab-content.active {
+            margin-left: 0;
+            width: 100%;
+            max-width: 100%;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }

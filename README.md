@@ -33,6 +33,13 @@ The race supports two local charities:
 - **Revenue Target:** $84,750-89,750 (sponsorships, registrations, vendor fees)
 - **Community Impact** - Establishing an annual Oakville tradition that brings families together on Father's Day
 
+### Key Partnerships
+
+- **🏦 CIBC** - Founding Sponsor ($5,000) - Secured January 2026
+- **🏃 Bronte Runners Club** - Event organizers and founding members
+- **🏘️ Bronte BIA** - Community partnership (in discussion)
+- **👟 Athletic Footwear Brands** - Official Shoe Sponsor opportunity (Nike, Asics, Brooks, New Balance outreach)
+
 ---
 
 ## 📊 Project Dashboard Overview
@@ -45,7 +52,7 @@ The **Bronte Harbour Classic 5K Project Dashboard** is a comprehensive web-based
 - **Days Until Race** - Automatically calculated countdown
 - **Registration Tracking** - Current participant count (currently 41 registrations)
 - **Revenue Tracking** - Net revenue with tax breakdown (CA$1,768.45 net, CA$203.45 tax collected)
-- **Sponsor Status** - Secured and potential sponsors tracking
+- **Sponsor Status** - CIBC secured as Founding Sponsor ($5,000) + additional prospects
 - **Volunteer Count** - Recruitment progress monitoring
 - **Overall Progress** - Committee completion percentage
 
@@ -134,15 +141,20 @@ Based on recommendations from Greg Pace:
 
 ```
 Bronte Harbour Classic 5-10k Race/
-├── 1. Sponsors/              # Sponsorship materials and packages
+├── 1. Sponsors-vendors/      # Sponsorship packages, vendor materials, outreach letters
+│   ├── SPONSORSHIP_PACKAGE_FINAL.md
+│   ├── SHOE_MANUFACTURER_LETTERS.md (Nike, Asics, Brooks, New Balance templates)
+│   └── 2. Vendors/           # Vendor expo documentation and tracking
 ├── 2. Meetings/              # Meeting agendas, minutes, templates
 ├── 2. MIJ references/        # Reference materials from Moon In June event
 ├── 3. KPI/                   # Key Performance Indicators tracking
+├── 3. Race Planning & Operations/  # Race day planning and logistics
 ├── 4. Tools/                 # Content Creator Tool and utilities
 ├── 5. Landing pages/         # Public-facing event pages
 ├── 6. bronte-dashboard/      # Project Dashboard (main file)
 ├── 7. Budget and KPIs/       # Financial tracking spreadsheets
-└── 8. Volunteer/             # Volunteer management resources
+├── 8. Volunteer/             # Volunteer management resources
+└── 9. Vendor Expo/           # Vendor expo planning and coordination
 ```
 
 ---
@@ -199,6 +211,26 @@ Bronte Harbour Classic 5-10k Race/
 
 ---
 
+## 🎉 Recent Updates (January 2026)
+
+### Sponsorship Milestones
+- **✅ CIBC Secured** - $5,000 Founding Sponsor confirmed (Nicole Kelly, Community Relations)
+- **📝 Shoe Manufacturer Outreach** - Letter templates created for Nike, Asics, Brooks, New Balance
+- **🤝 Bronte BIA Partnership** - Initial contact established with Kylie Wilson, Executive Director
+
+### Documentation & Tools
+- **Sponsorship Materials** - Complete partnership package finalized
+- **Vendor Resources** - Comprehensive vendor management system created
+- **Email Templates** - Professional outreach templates for sponsors, vendors, and partners
+- **Dashboard Updates** - Fixed sidebar navigation issues, improved mobile responsiveness
+
+### Community Engagement
+- **Bronte Runners Club** - Active promotion within founding member community
+- **Facebook Growth** - Strategy developed for group expansion and member invitations
+- **Social Media Assets** - AI-generated image prompts and post templates
+
+---
+
 ## 📞 Contact & Support
 
 For questions about the dashboard or project:
@@ -213,5 +245,5 @@ This dashboard and project materials are for internal use by the Bronte Harbour 
 
 ---
 
-*Last updated: December 2025*
+*Last updated: January 28, 2026*
 
