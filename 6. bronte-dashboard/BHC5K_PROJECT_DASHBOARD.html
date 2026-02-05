@@ -575,24 +575,102 @@
             }
 
             .main-wrapper {
-                margin-left: 0;
+                margin-left: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            /* Fix all tab content sections for mobile */
+            #promotion.tab-content.active,
+            #start-finish.tab-content.active,
+            #registration.tab-content.active,
+            #post-race.tab-content.active,
+            #financial.tab-content.active,
+            #oversight.tab-content.active {
+                margin-left: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 15px !important;
+            }
+
+            #overview.tab-content.active,
+            #meetings.tab-content.active,
+            #route-safety.tab-content.active {
+                margin-left: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .header {
+                padding: 20px 15px;
             }
 
             .header h1 {
                 font-size: 24px;
-                padding-left: 60px;
+                padding-left: 50px;
+                padding-right: 10px;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+            }
+
+            .header .race-date {
+                font-size: 16px;
+            }
+
+            .quick-links {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 15px;
+            }
+
+            .quick-link-btn {
+                display: block !important;
+                width: 100%;
+                margin: 0 !important;
+                padding: 10px 15px !important;
+                font-size: 13px !important;
+                box-sizing: border-box;
             }
 
             .stats-bar {
                 grid-template-columns: 1fr;
+                padding: 15px;
+                gap: 15px;
+            }
+
+            .stat-card {
+                padding: 12px;
+            }
+
+            .stat-card .value {
+                font-size: 28px;
+            }
+
+            .stat-card .label {
+                font-size: 12px;
             }
 
             .container {
-                padding: 10px;
+                padding: 15px !important;
+                width: 100% !important;
+                max-width: 100% !important;
             }
 
             .committee-section {
-                padding: 20px;
+                padding: 15px;
+            }
+
+            .committee-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .committee-header h2 {
+                font-size: 20px;
             }
 
             .task-item {
@@ -602,6 +680,44 @@
 
             .task-status {
                 margin-top: 10px;
+            }
+
+            .overview-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .overview-card {
+                padding: 20px;
+            }
+
+            /* Info cards in mobile */
+            .info-card {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 15px !important;
+            }
+
+            /* Meeting cards and content */
+            div[style*="border-radius: 12px"] {
+                padding: 20px !important;
+            }
+
+            /* Ensure all text content wraps properly */
+            p, li, div, span {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+
+            /* Fix any fixed-width elements */
+            * {
+                max-width: 100% !important;
+            }
+
+            /* Back button */
+            .back-button {
+                padding: 10px 20px;
+                font-size: 13px;
             }
         }
 
@@ -969,7 +1085,7 @@
                     <div style="margin: 15px 0;">
                         <h5 style="color: #333; margin-bottom: 10px;">Infrastructure & Operations Planning</h5>
                         <p style="color: #666; font-size: 14px; line-height: 1.6;">
-                            <strong>Equipment Needs:</strong> 28 porta-potties (1 per 75 participants for 1,000 target); tents, barriers, finish line arch/truss with banner; radios for key personnel communication; two sound systems<br>
+                            <strong>Equipment Needs:</strong> 10 porta-potties; tents, barriers, finish line arch/truss with banner; radios for key personnel communication; two sound systems<br>
                             <strong>Water Stations:</strong> One station at 2.5K mark (parking lot for easy cleanup); potential construction impact being monitored<br>
                             <strong>Safety Protocols:</strong> Comprehensive emergency protocols needed; weather contingency plans; Greg K. as primary decision-maker with backup; St. John Ambulance providing medical support and volunteers
                         </p>
