@@ -152,6 +152,48 @@
             border-left-color: #e10600;
         }
 
+        /* Submenu styles */
+        .nav-submenu {
+            display: none;
+            padding-left: 0;
+            margin: 0;
+            list-style: none;
+            background: #f8f9fa;
+            border-left: 4px solid #e8e8e8;
+        }
+
+        .nav-submenu.active {
+            display: block;
+        }
+
+        .nav-submenu-item {
+            padding: 10px 20px 10px 40px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            color: #666;
+            transition: all 0.2s;
+            display: block;
+            width: 100%;
+            text-align: left;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-submenu-item:hover {
+            background: #fff;
+            color: #e10600;
+            border-left-color: #ffcccc;
+        }
+
+        .nav-submenu-item.active {
+            background: #fff;
+            color: #e10600;
+            border-left-color: #e10600;
+            font-weight: 600;
+        }
+
         /* Main content wrapper */
         .main-wrapper {
             margin-left: 300px;
@@ -719,6 +761,21 @@
                 padding: 10px 20px;
                 font-size: 13px;
             }
+
+            /* Submenu items on mobile - ensure proper touch targets */
+            .nav-submenu-item {
+                padding: 12px 20px 12px 40px;
+                font-size: 13px;
+                min-height: 44px; /* Minimum touch target size */
+                display: flex;
+                align-items: center;
+            }
+
+            .nav-item {
+                min-height: 48px; /* Minimum touch target size */
+                display: flex;
+                align-items: center;
+            }
         }
 
         .critical-badge {
@@ -795,15 +852,69 @@
             <p>Project Dashboard</p>
         </div>
         <ul class="nav-menu">
-            <li><button class="nav-item active" onclick="showTab('overview', this)">📊 Overview</button></li>
-            <li><button class="nav-item" onclick="showTab('meetings', this)">📅 Meetings</button></li>
-            <li><button class="nav-item" onclick="showTab('route-safety', this)">🛣️ Route & Safety</button></li>
-            <li><button class="nav-item" onclick="showTab('start-finish', this)">🏁 Start/Finish</button></li>
-            <li><button class="nav-item" onclick="showTab('registration', this)">📝 Registration</button></li>
-            <li><button class="nav-item" onclick="showTab('promotion', this)">📱 Marketing</button></li>
-            <li><button class="nav-item" onclick="showTab('financial', this)">💰 Financial & Sponsors</button></li>
-            <li><button class="nav-item" onclick="showTab('post-race', this)">🎪 Post-Race & Volunteers</button></li>
-            <li><button class="nav-item" onclick="showTab('oversight', this)">📋 Project Oversight</button></li>
+            <li>
+                <button class="nav-item active" onclick="showTab('overview', this)">📊 Overview</button>
+            </li>
+            <li>
+                <button class="nav-item" onclick="showTab('meetings', this)">📅 Meetings</button>
+            </li>
+            <li>
+                <button class="nav-item" onclick="showTab('route-safety', this)">🛣️ Route & Safety</button>
+                <ul class="nav-submenu" id="submenu-route-safety">
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('route-main', 'route-safety', this)">📋 View Tasks</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('route-action-plan', 'route-safety', this)">🚀 Action Plan</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('route-references', 'route-safety', this)">📖 References</button></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item" onclick="showTab('start-finish', this)">🏁 Start/Finish</button>
+                <ul class="nav-submenu" id="submenu-start-finish">
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('startfinish-main', 'start-finish', this)">📋 View Tasks</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('startfinish-action-plan', 'start-finish', this)">🚀 Action Plan</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('startfinish-references', 'start-finish', this)">📖 References</button></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item" onclick="showTab('registration', this)">📝 Registration</button>
+                <ul class="nav-submenu" id="submenu-registration">
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('registration-main', 'registration', this)">📋 View Tasks</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('registration-action-plan', 'registration', this)">🚀 Action Plan</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('registration-references', 'registration', this)">📖 References</button></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item" onclick="showTab('promotion', this)">📱 Marketing</button>
+                <ul class="nav-submenu" id="submenu-promotion">
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('promotion-main', 'promotion', this)">📋 View Tasks</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('promotion-action-plan', 'promotion', this)">🚀 Action Plan</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('promotion-references', 'promotion', this)">📖 References</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('promotion-bronte-runners', 'promotion', this)">🏃‍♂️ Bronte Runners</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('promotion-templates', 'promotion', this)">📧 Email Templates</button></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item" onclick="showTab('financial', this)">💰 Financial & Sponsors</button>
+                <ul class="nav-submenu" id="submenu-financial">
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('financial-main', 'financial', this)">📋 View Tasks</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('financial-action-plan', 'financial', this)">🚀 Action Plan</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('financial-references', 'financial', this)">📖 References</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('financial-templates', 'financial', this)">📧 Email Templates</button></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item" onclick="showTab('post-race', this)">🎪 Post-Race & Volunteers</button>
+                <ul class="nav-submenu" id="submenu-post-race">
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('postrace-main', 'post-race', this)">📋 View Tasks</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('postrace-action-plan', 'post-race', this)">🚀 Action Plan</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('postrace-references', 'post-race', this)">📖 References</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('postrace-templates', 'post-race', this)">📧 Email Templates</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('postrace-volunteer-roles', 'post-race', this)">👥 Volunteer Roles</button></li>
+                    <li><button class="nav-submenu-item" onclick="showSectionFromNav('postrace-vendor-references', 'post-race', this)">📁 Vendor References</button></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item" onclick="showTab('oversight', this)">📋 Project Oversight</button>
+            </li>
         </ul>
     </nav>
 
@@ -5810,6 +5921,22 @@ Bronte Harbour Classic 5K</div>
                 btn.classList.remove('active');
             });
 
+            // Hide all submenus
+            document.querySelectorAll('.nav-submenu').forEach(submenu => {
+                submenu.classList.remove('active');
+            });
+
+            // Remove active from all submenu items
+            document.querySelectorAll('.nav-submenu-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Show submenu for the current tab if it exists
+            const submenu = document.getElementById('submenu-' + tabName);
+            if (submenu) {
+                submenu.classList.add('active');
+            }
+
             // Show selected tab
             const activeTab = document.getElementById(tabName);
             if (!activeTab) {
@@ -5824,12 +5951,12 @@ Bronte Harbour Classic 5K</div>
             if (buttonElement) {
                 buttonElement.classList.add('active');
             }
-            
+
             // Reset section cards and main-content for tabs that have them
             activeTab.querySelectorAll('.section-card').forEach(card => {
                 card.classList.remove('active');
             });
-            
+
             // Show all main-content elements in active tab (if any exist)
             const mainContents = activeTab.querySelectorAll('.main-content');
             if (mainContents.length > 0) {
@@ -5841,20 +5968,47 @@ Bronte Harbour Classic 5K</div>
             }
         }
 
+        // New function to show section from sidebar navigation
+        function showSectionFromNav(sectionId, tabName, buttonElement) {
+            // First, make sure we're on the correct tab
+            const mainNavButton = document.querySelector(`.nav-item[onclick*="'${tabName}'"]`);
+            if (mainNavButton && !mainNavButton.classList.contains('active')) {
+                showTab(tabName, mainNavButton);
+            }
+
+            // Remove active from all submenu items
+            document.querySelectorAll('.nav-submenu-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Add active to clicked submenu item
+            if (buttonElement) {
+                buttonElement.classList.add('active');
+            }
+
+            // Show the section
+            showSection(sectionId);
+
+            // Close sidebar on mobile
+            if (window.innerWidth <= 768) {
+                closeSidebar();
+            }
+        }
+
         // Section card switching (for Action Plans, References, etc.)
         function showSection(sectionId) {
             // Get the current active tab
             const activeTab = document.querySelector('.tab-content.active');
             if (!activeTab) return;
-            
+
             // Hide all section cards in this tab
             activeTab.querySelectorAll('.section-card').forEach(card => {
                 card.classList.remove('active');
             });
-            
+
             // Get the target section
             const section = activeTab.querySelector('#' + sectionId);
-            
+
             if (section && section.classList.contains('section-card')) {
                 // Hide all main content in this tab (both with and without main-content class)
                 activeTab.querySelectorAll('.main-content').forEach(content => {
@@ -5881,6 +6035,23 @@ Bronte Harbour Classic 5K</div>
                 activeTab.querySelectorAll('.section-card').forEach(card => {
                     card.classList.remove('active');
                 });
+            }
+
+            // Sync submenu highlighting
+            syncSubmenuHighlight(sectionId);
+        }
+
+        // Sync submenu highlighting based on current section
+        function syncSubmenuHighlight(sectionId) {
+            // Remove active from all submenu items
+            document.querySelectorAll('.nav-submenu-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Find and highlight the matching submenu item
+            const submenuItem = document.querySelector(`.nav-submenu-item[onclick*="'${sectionId}'"]`);
+            if (submenuItem) {
+                submenuItem.classList.add('active');
             }
         }
 
