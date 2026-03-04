@@ -51,7 +51,7 @@ Greg and Charles have been booked as guests on the **Your Life Your Terms** podc
 ### Permits & Operations
 - [ ] **Town of Oakville follow-up meeting** — needs to be scheduled (they asked for end of Feb/early March). Has Anna been contacted to book this?
 - [ ] **Construction at Coronation Park** — has Audrey's assessment come back?
-- [ ] **Insurance certificates** — $5M CGL, Town of Oakville as additionally insured. Do we have a broker? What's the timeline?
+- [ ] **Insurance certificates** — $5M CGL, Town of Oakville as additionally insured. Application form to be filled out — Greg to complete. Do we have a broker? What's the timeline?
 - [ ] **Resident notification letter** — drafted? Needs Town approval before distributing.
 - [ ] **Visit Oakville event calendar** — have we applied?
 - [ ] **Banner permit applications** — submitted?
@@ -61,7 +61,6 @@ Greg and Charles have been booked as guests on the **Your Life Your Terms** podc
 - [ ] **Media outreach** — has anyone contacted Lucas/Tyler (Oakville News), Davidson (Inside Halton), TV Halton yet? Who owns this?
 - [ ] **Social media** — is content going out consistently? Sunday run videos? Who's posting and how often?
 - [ ] **Musician booking** — which of the three are we going with? Someone needs to make the call and book.
-- [ ] **Musician insurance** — there is an application form that needs to be filled out. Greg to complete this.
 
 ### Sponsors
 - [ ] **Cedar Planters / Liz** — Liz Carino (Cedar Planters Director of Marketing) is also on our volunteer committee. She may be at today's meeting. How do we move the sponsor/vendor conversation forward without it being awkward? Assign point person.
@@ -196,7 +195,7 @@ Registration typically surges 6–8 weeks out (late April onward). The next 6 we
 
 ### Musician
 - Decision:
-- Musician insurance application — Greg to complete by:
+- Decision:
 
 ### Sponsors
 - Cedar Planters / Liz — plan agreed:
