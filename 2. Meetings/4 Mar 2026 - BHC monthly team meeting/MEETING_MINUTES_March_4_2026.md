@@ -16,9 +16,10 @@
 - Adriana
 - Yasmine (hello@startwithyaz.com)
 
-**Apologies:**
-- Charles J. Sathmary — Co-Race Director (unavailable)
-- Ursula (noted as absent during shirt/apparel discussion)
+**Absent:**
+- Charles J. Sathmary — Co-Race Director
+- Ursula
+- Liz Carino
 
 **Race Status:** 109 days to race day (June 21, 2026)
 **Current Registrations:** ~91 participants | Target: 800
@@ -45,12 +46,9 @@
 ### Pending / In Negotiation
 
 **Cedar Planters (Title Sponsor — Priority)**
-- Cedar Planters relocated from Spears Avenue to the Great Lakes area (new warehouse on Greyhouse).
-- Greg had an existing relationship with them and messaged their WhatsApp. It then emerged that **Liz (Liz Carino) is both a volunteer committee member for BHC and works at Cedar Planters** — this was a surprise to the group.
-- Patricia reached out to Liz approximately 2 days before the meeting; Liz responded that she was too busy and has not yet engaged further.
-- Cedar Planters was brought to attention as a potential title sponsor by Kayla from the Bronte BIA.
-- **Situation to navigate:** Liz's dual role as committee member and Cedar Planters employee creates a potential conflict of interest. The team needs to determine how to approach this sensitively — whether Liz is the right point of contact or whether a separate direct approach is needed.
-- Status: **Pending — follow-up required immediately.**
+- Brought to the team's attention as a potential title sponsor by Kylie Wilson (Bronte BIA).
+- To be developed and confirmed. Follow-up required.
+- Status: **Pending.**
 
 **Rockstar Real Estate Brokerage**
 - Greg has a long-standing personal relationship with the owners.
