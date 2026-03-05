@@ -97,7 +97,7 @@
 - Vendor booth pricing confirmed:
   - **$250** — Booth space at the expo
   - **$250 + $100 additional** = $350 total for booth + swag bag item contribution
-  - **$230** — Swag bag contribution only (no booth)
+  - **$200** — Swag bag contribution only (no booth)
 - Corner booth premium pricing: to be determined.
 - Booth locations for confirmed partners: Be Active, CIBC, Radix/Natrilyte, Oakville Dads, BIA, Town of Oakville, Saint John Ambulance — all to be confirmed and assigned numbers on the map.
 - Vendor map to be finalized, then submitted to the Town of Oakville for approval.
