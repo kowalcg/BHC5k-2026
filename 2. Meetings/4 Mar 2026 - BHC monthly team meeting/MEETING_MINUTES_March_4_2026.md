@@ -337,44 +337,44 @@ A site map was reviewed during the meeting. Key layout decisions discussed:
 | # | Action | Owner | Deadline |
 |---|--------|-------|----------|
 | 1 | Complete and submit race insurance ($5M CGL) application | Greg | **ASAP — Priority** |
-| 2 | Follow up with Cedar Planters re: title sponsorship (navigate Liz's dual role carefully) | Greg / Patricia | This week |
+| 2 | Follow up with Cedar Planters re: title sponsorship | Greg / Patricia | This week |
 | 3 | Finalize Radix/Natrilyte hydration station sponsorship details and booth assignment | Greg | ASAP |
 | 4 | Follow up with Rockstar Real Estate re: April 25 conference table logistics | Greg | ASAP |
-| 5 | Coordinate with Rockstar Real Estate to book podcast episode recording (Charles + Greg) | Greg | This week |
-| 6 | Book Tim Hortons (vendor/coffee truck) | Greg | ASAP |
-| 7 | Reach out to Nickelbrook re: beer garden | Greg | ASAP |
-| 8 | Reach out to Primal re: vendor booth + swag bag contribution | Team | This week |
-| 9 | Finalize Red Bull sponsor commitment; then confirm truck | Greg | ASAP |
-| 10 | Confirm Lululemon Burlington as sponsor/booth (even if not announcer) | Greg | ASAP |
-| 11 | Finalize and publish vendor application (complete any outstanding sections) | Patricia | ASAP |
-| 12 | Build working spreadsheet of committed vendors | Jono | This week |
+| 5 | Coordinate with Rockstar Real Estate to book podcast episode recording (Charles + Greg) | Greg | End of March |
+| 6 | Book Tim Hortons (vendor/coffee truck) | Patricia / Adriana | ASAP |
+| 7 | Reach out to Nickelbrook re: beer garden | Jono | ASAP |
+| 8 | Reach out to Primal re: vendor booth + swag bag contribution | Yasmin | This week |
+| 9 | Finalize Red Bull sponsor commitment; then confirm truck | Patricia | ASAP |
+| 10 | Confirm Lululemon Burlington as sponsor/booth (even if not announcer) | Patricia | ASAP |
+| 11 | Finalize and publish vendor application (complete any outstanding sections) | Adriana | ASAP |
+| 12 | Build working spreadsheet of committed vendors | Adriana | This week |
 | 13 | Reduce vendor layout to 60–70 spaces; number all booths on site map | Jono | This week |
-| 14 | Confirm porta-potty booking — 7–8 units; confirm pricing | Yasmine | ASAP |
-| 15 | Contact Burlington Sound of Music organizers re: equipment lending (tents, barriers, tables) | Greg | This week |
-| 16 | Confirm parking lot access with Bronte Legion for vendor parking | Greg | This week |
+| 14 | Confirm porta-potty booking — 7–8 units; confirm pricing | Jono | ASAP |
+| 15 | Contact Burlington Sound of Music organizers re: equipment lending (tents, barriers, tables) | Yasmin | This week |
+| 16 | Confirm parking lot access with Bronte Legion for vendor parking | Jono | This week |
 | 17 | Finalize site map and submit to Town of Oakville for approval | Greg | ASAP |
 | 18 | Address Town of Oakville feedback on traffic control plan | Greg | Pending town |
-| 19 | Count apartment exits along race route; determine volunteer quantity needed for high-vis coverage | Team | This week |
-| 20 | Prepare resident notification letters re: road closures; organize hand delivery to building managers | Greg | 2 weeks out from roads-close date |
+| 19 | Count apartment exits along race route; determine volunteer quantity needed for high-vis coverage | Myles | This week |
+| 20 | Prepare resident notification letters re: road closures; organize hand delivery to building managers | Myles | 2 weeks out from roads-close date |
 | 21 | Determine if high-vis vests need to be purchased or can be borrowed (Moon in June, etc.) | Greg Pace / Greg | ASAP |
-| 22 | Update poster design with QR code; print 50+ copies | Greg / Patricia | By this Friday |
+| 22 | Update poster design with QR code; print 50+ copies | Patricia / Yasmin | By this Friday |
 | 23 | Coordinate poster distribution — 5 people, 10 posters each — this Saturday and Sunday | All team | This weekend |
-| 24 | Submit media release with photo to: TV Halton, Inside Halton, Oakville News, Burlington News | Greg / team | ASAP |
-| 25 | Approach Peach Coffee and Colombia Coffee re: poster placement + possible $250 vendor/sponsor | Greg | This week |
-| 26 | Reach out to Runner's Den re: influencer partnership / promotion | Greg | This week |
-| 27 | Follow up with Lucas at Running Room (Charles's contact) for running community connections | Charles | This week |
-| 28 | Design and launch social media giveaway (follow + tag mechanic) | Greg / Patricia | This week |
-| 29 | Leverage existing sponsors' social media for cross-promotion | Patricia | Ongoing |
+| 24 | Submit media release with photo to: TV Halton, Inside Halton, Oakville News, Burlington News | Patricia / Yasmin | ASAP |
+| 25 | Approach Peach Coffee and Colombia Coffee re: poster placement + possible $250 vendor/sponsor | Yasmin | This week |
+| 26 | Reach out to Runner's Den re: influencer partnership / promotion | Patricia | This week |
+| 27 | Follow up with Lucas at Running Room (Charles's contact) for running community connections | Yasmin / Charles | This week |
+| 28 | Design and launch social media giveaway (follow + tag mechanic) | Patricia | This week |
+| 29 | Leverage existing sponsors' social media for cross-promotion | Team | Ongoing |
 | 30 | Meeting with Kelly, Greg Pace, Charles to discuss interlocking three-race medal design | Greg + Greg Pace + Charles | This Sunday |
-| 31 | Confirm Moon in June and Canada Day medal status before committing to interlocking design | Greg Pace | Before Sunday meeting |
-| 32 | Finalize t-shirt design direction; confirm cotton/poly blend and single-color (or 3-color) spec with Brent | Greg | 6–8 weeks before race (by ~mid-April) |
+| 31 | Confirm Moon in June and Canada Day medal status before committing to interlocking design | Greg | Before Sunday meeting |
+| 32 | Finalize t-shirt design direction; confirm cotton/poly blend and single-color (or 3-color) spec with Brent | Yasmin | 6–8 weeks before race (by ~mid-April) |
 | 33 | Finalize beer garden and kids zone layout; resolve stage proximity question | Jono + Greg | Before Town submission |
 | 34 | Identify flat area for jumping castle | Jono | Before Town submission |
-| 35 | Confirm volunteer shirt/vest design and quantities | Greg / Patricia | 6 weeks before race |
+| 35 | Confirm volunteer shirt/vest design and quantities | Yasmin | 6 weeks before race |
 | 36 | Confirm Oakville Dads monthly coordination meeting schedule | Greg | This week |
-| 37 | Finalize band lineup for expo (2–3 bands, 10 AM–3 PM) | Jono | 4 weeks |
+| 37 | Finalize band lineup for expo (2–3 bands, 10 AM–3 PM) | Jono / Adriana | 4 weeks |
 | 38 | Confirm announcer contract and schedule (6:30 AM – 3 PM) | Greg | ASAP |
-| 39 | Reach out to swim club re: vendor booth interest | Team | This week |
+| 39 | Reach out to swim club re: vendor booth interest | Yasmin | This week |
 | 40 | Explore summer camps and youth programs as potential vendor participants | Team | 4 weeks |
 | 41 | Schedule Zoom call in two weeks for progress update | Greg | By March 6 |
 
