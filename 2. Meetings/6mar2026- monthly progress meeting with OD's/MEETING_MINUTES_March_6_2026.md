@@ -16,7 +16,7 @@
 | Andrew Rymes | Oakville Dads / Royal LePage Burloak | Member |
 | Brent Stevens | Oakville Dads / Promotional Products | Member |
 
-**Absent:** Charles Sathmary | Race Co-Director
+**Absent:** Charles Sathmary (Race Co-Director)
 
 ---
 
@@ -57,6 +57,7 @@
 ## 3. Race Day Event Overview
 
 **Schedule (planned):**
+
 | Time | Activity |
 |------|----------|
 | 4:00 AM | BHC team arrives; setup begins |
