@@ -593,7 +593,23 @@ All they need to bring is the relationship. We handle the rest.
 
 ---
 
-**Our commitment in return:** We handle all the copywriting. Every post above is ready to drop in — you review, approve, and post. We provide all graphics, logos, QR codes, and links. We will never ask you to post something that isn't ready and that you haven't approved.
+**Our commitment in return:** We handle all the copywriting. Every post above is ready to drop in — you review, approve, and post. We will never ask you to post something that isn't ready and that you haven't approved.
+
+**On images and graphics:** We want to be direct about this. For the Oakville Dads Facebook group posts, we strongly encourage your team to use your own photos and graphics wherever possible — candid shots of your members, real moments from your community, things that look and feel like they came from inside the group. This isn't us being hands-off. It's intentional strategy.
+
+When content looks like it was made by a race organizer, it reads like marketing. When it looks like it came from a Dad in the group, it reads like a recommendation. That difference converts better, earns more trust, and feels natural to your members in a way that polished branded content cannot replicate.
+
+**What we will provide:**
+- All race logistics copy (ready to post as written)
+- BHC logo files and race poster assets (for posts where branding is appropriate)
+- QR codes linking directly to registration, donation, and volunteer pages — on request, anytime
+- All links updated and confirmed before each post goes live — we will send you the correct links in advance of every scheduled post
+
+**What we'd love you to handle:**
+- Photos from your group, your members, your community events — anything that shows real Oakville Dads doing what they do
+- Your own graphics or designs if you have someone who can create them — we're not prescriptive; whatever looks natural coming from your brand and community is better than anything we could produce for you
+
+If you ever need us to step in on visuals, just ask. We have design capability and can turn things around quickly. But for your group's posts specifically, authentic beats polished every time.
 
 To show you what pushing all the way looks like from our side — here's what Greg and Charles are already doing beyond social media:
 
