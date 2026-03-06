@@ -79,7 +79,7 @@
 - **Physio tent**: recovery/stretching support for runners
 
 **Entertainment:**
-- **Red Bull** confirmed — branded truck with DJ, 7 AM to 10 AM at the start/finish line
+- **Red Bull** — meeting held, to be confirmed — branded truck with DJ at start/finish line (7 AM – 10 AM)
 - **Live bands** to follow on main stage (no lineup confirmed yet; Greg has some Thursday-night artist contacts)
 - Jeremy Sims offered to suggest musicians who have performed at Oakville Dads events
 
@@ -114,7 +114,7 @@
 - Primal Athletics (Anna) — confirmed as onboard
 - Running groups: Jamie's Traveling Circus confirmed; others being pursued
 
-**Team Cortado (coffee):** Coffee truck confirmed for race day — will provide free coffee on-site.
+**Tim Hortons (coffee):** Coffee truck being organized for race day — to be confirmed.
 
 ---
 
