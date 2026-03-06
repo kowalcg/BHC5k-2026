@@ -53,9 +53,9 @@ But here's the other part of the story — this isn't just a race. It's a full F
 
 Whether you run, volunteer, donate, or just come out with the family — this event is ours.
 
-Register to run: [RACE ROSTER LINK]
+Register to run: https://raceroster.com/events/2026/111468/bronte-harbour-classic-5k
 Donate to our Community Fund: [DONATION LINK]
-Volunteer to make it happen: [VOLUNTEER LINK]
+Volunteer to make it happen: contact Jeremy / Per / Andrew directly
 
 More details coming — but mark June 21.
 
@@ -126,8 +126,8 @@ Live music all day. Jumping castle for the kids. Food trucks and vendors. Beer g
 
 You don't need to run a kilometre. You don't need to buy a ticket. Just come, have a great Father's Day, and watch some of our members volunteer their way through the event.
 
-If you want to run: [RACE ROSTER LINK]
-If you want to volunteer: [VOLUNTEER LINK]
+If you want to run: https://raceroster.com/events/2026/111468/bronte-harbour-classic-5k
+If you want to volunteer: contact Jeremy / Per / Andrew directly
 Just want to come out? Show up — Bronte Harbour Park, June 21.
 
 It's your event. Be there.
@@ -152,7 +152,7 @@ You're up early (4 AM setup time). You get to see every runner cross that finish
 
 No running required. Just show up and be the reason someone finishes.
 
-Volunteer sign-up: [VOLUNTEER LINK]
+Volunteer sign-up: contact Jeremy / Per / Andrew directly
 
 This is what we were built for. Let's fill those spots.
 
@@ -242,7 +242,7 @@ Registration pricing steps up on June 1. Current price: $73.05. After June 1: $8
 
 If anyone in the group has been thinking about running — this is the week to commit.
 
-Register: [RACE ROSTER LINK]
+Register: https://raceroster.com/events/2026/111468/bronte-harbour-classic-5k
 Donate to our fund: [DONATION LINK]
 Just want to come out? No ticket needed.
 
@@ -280,7 +280,7 @@ If you're not running — come anyway. June 21 at Bronte Harbour is a proper Fat
 
 And if you haven't heard — 60+ of our members are volunteering their morning to make this race happen. That's who we are.
 
-Register: [RACE ROSTER LINK]
+Register: https://raceroster.com/events/2026/111468/bronte-harbour-classic-5k
 Donate: [DONATION LINK]
 Just come: Bronte Harbour Park, June 21, 8 AM onward
 
@@ -345,7 +345,7 @@ THE DAY: Live music, jumping castle, beer garden, food vendors, kids' zone — a
 OUR ROLE: 60+ Oakville Dads volunteering their Sunday morning. Water stations, finish line, course marshalling. This is us doing what we do.
 
 Last chance to register before prices go up: $83.94 until June 16, then $99 race day.
-[RACE ROSTER LINK]
+https://raceroster.com/events/2026/111468/bronte-harbour-classic-5k
 
 Still want to donate before race day? We're close to our goal.
 [DONATION LINK]
