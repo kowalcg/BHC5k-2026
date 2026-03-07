@@ -1,0 +1,32 @@
+# Ralph Progress Tracker - BronteHarbourClassic.com
+# Each line: US-XXX | STATUS | NOTES
+# STATUS: pending | in_progress | complete | failed
+
+US-001 | complete | Astro 5 + Tailwind CSS 4 via @tailwindcss/vite, TypeScript strict, Vercel adapter, sitemap, robots.txt
+US-002 | complete | BaseLayout with nav, mobile hamburger, skip-to-main, active page indicator, Register CTA with UTM
+US-003 | complete | Footer with 3 columns, social links, organizer links, copyright, mailto
+US-004 | complete | Hero with countdown timer (client-side JS), trust badges, dual CTAs with UTM
+US-005 | complete | At-a-glance 6-item grid, JSON-LD Event + Organization schemas in head slot
+US-006 | complete | Two race cards (5K + Kids 1K) with features lists and Register CTAs
+US-007 | complete | Pricing data in src/data/pricing.ts, 6 tiers rendered with current tier highlighting
+US-008 | complete | Sponsors data in src/data/sponsors.ts, tiered showcase on home page with clickable links
+US-009 | complete | Community impact section with Oakville Dads, blockquote, stats, Donate CTA
+US-010 | complete | Festival highlights 4-card grid (music, vendors, kids zone, beer garden)
+US-011 | complete | FAQ preview accordion on home page (top 5 from content collection), keyboard accessible
+US-012 | complete | Newsletter capture with honeypot, dark background, success message
+US-013 | complete | StickyBar component with pricing, IntersectionObserver, sessionStorage dismiss
+US-014 | complete | Social media feed section with placeholder grid, hashtags, social platform links
+US-015 | complete | 5K race detail page with awards, rules, pricing, breadcrumb, Register CTA
+US-016 | complete | Kids 1K detail page with pricing, safety info, breadcrumb, Register CTA
+US-017 | complete | Festival overview page with 5 activity sections, links to schedule and vendors
+US-018 | complete | Schedule page with vertical timeline 7AM-3PM, color-coded entries
+US-019 | complete | Course map page with Google Maps iframe (lazy), parking, road closures
+US-020 | complete | Sponsors page with 6 tiers table, benefits grid, inquiry form with honeypot
+US-021 | complete | Vendors page with booth details, application form with honeypot
+US-022 | complete | Volunteer page with 7 roles, shifts, perks, signup form with honeypot
+US-023 | complete | FAQ page with all items in accordion, FAQPage JSON-LD schema
+US-024 | complete | Contact page with form (subject dropdown), honeypot, validation
+US-025 | complete | Blog content collection, 3 posts, news listing, dynamic post pages, RSS feed
+US-026 | complete | Media kit page with press summary, leadership bios, downloadable assets section
+US-027 | complete | All pages have unique title + description, OG/Twitter meta, geo tags, sitemap
+US-028 | complete | GA4 conditional script, analytics.ts utilities, all Race Roster links use UTM via getRegisterUrl()

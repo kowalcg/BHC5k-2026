@@ -1,0 +1,540 @@
+{
+  "project": "BronteHarbourClassic",
+  "branchName": "ralph/bhc-website-astro5",
+  "description": "Official BronteHarbourClassic.com website built with Astro 5, Tailwind CSS 4 - community race event site with registration CTAs, sponsor showcase, social media integration, and volunteer/vendor/sponsor lead capture forms",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "Astro 5 project scaffolding with Tailwind CSS 4",
+      "description": "As a developer, I need the Astro 5 project initialized with Tailwind CSS 4, TypeScript, and core configuration so all subsequent pages can be built.",
+      "acceptanceCriteria": [
+        "Astro 5 project created with npm create astro@latest in the 10. BronteHarbourClassic.com/ directory",
+        "Tailwind CSS 4 integrated via @astrojs/tailwind",
+        "TypeScript configured in strict mode",
+        "astro.config.mjs has site URL https://www.bronteharbourclassic.com, sitemap integration, image optimization, Vercel adapter",
+        "Project structure created: src/layouts/, src/components/, src/pages/, src/content/, src/assets/, src/styles/",
+        "Global CSS file with Tailwind directives and CSS custom properties: --color-primary: #E10600, --color-black: #111111, --color-white: #FFFFFF, --color-gray: #F5F5F5, --color-text: #333333",
+        "public/robots.txt created: Allow all, Allow OAI-SearchBot, Disallow GPTBot, Sitemap reference",
+        "Dev server runs without errors (npm run dev)",
+        "Typecheck passes"
+      ],
+      "priority": 1,
+      "passes": true,
+      "notes": "Colors: Red #E10600, Black #111111, White #FFFFFF, Light Gray #F5F5F5. This is a race event website for Bronte Harbour Classic 5K in Oakville, Ontario."
+    },
+    {
+      "id": "US-002",
+      "title": "Base layout with responsive navigation",
+      "description": "As a visitor, I want consistent navigation across all pages so I can easily find race info, register, and explore the festival.",
+      "acceptanceCriteria": [
+        "BaseLayout.astro created with HTML lang=en-CA, meta viewport, theme-color #E10600, slot for page content",
+        "BaseLayout accepts props: title, description, ogImage for per-page SEO",
+        "Navigation component with logo text 'BHC' and links: Home, Races, Festival, Course Map, Sponsors, Volunteer, FAQ, Contact",
+        "Mobile hamburger menu with slide-out drawer that closes on escape key",
+        "Red 'Register Now' button in nav linking to https://raceroster.com/events/2026/111468/bronte-harbour-classic-5k?utm_source=website&utm_medium=nav&utm_campaign=bhc2026",
+        "Skip-to-main-content link as first focusable element",
+        "Active page indicator highlights current nav item based on Astro.url.pathname",
+        "Navigation works with keyboard only (tab through items, enter to activate, escape to close mobile menu)",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 2,
+      "passes": true,
+      "notes": "All external links must use target=_blank rel=noopener noreferrer. Nav should be black/white with red accent for Register button."
+    },
+    {
+      "id": "US-003",
+      "title": "Footer component with social links and organizer info",
+      "description": "As a visitor, I want a footer with contact info, social links, and sponsor logos so I can connect with organizers.",
+      "acceptanceCriteria": [
+        "Footer component created and added to BaseLayout",
+        "Footer shows: Bronte Harbour Classic 2026, Sunday June 21 2026, Bronte Harbour Park Oakville ON",
+        "Contact email: info@bronteharbourclassic.com (mailto link)",
+        "Social media icon links for Instagram, Facebook, Strava (placeholder URLs, open in new tab)",
+        "Organized by section listing: TapeGeeks, GearTOP Design, Pace Performance, Bronte Runners Club",
+        "Copyright line with dynamic year",
+        "Responsive: 3-column on desktop, stacked on mobile",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 3,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-004",
+      "title": "Home page hero with countdown timer",
+      "description": "As a visitor landing on the homepage, I want an impactful hero section with countdown timer so I know what the event is and feel urgency to register.",
+      "acceptanceCriteria": [
+        "src/pages/index.astro created using BaseLayout",
+        "Full-width hero section with CSS gradient overlay (dark to transparent) over a placeholder background color #1a1a2e",
+        "Event name heading h1: Bronte Harbour Classic 2026",
+        "Subtitle: 5K Race + Kids 1K + Father's Day Waterfront Festival",
+        "Date line: Sunday, June 21, 2026 | 8:00 AM | Bronte Harbour Park, Oakville",
+        "Trust badges row with 3 items: Town of Oakville Approved, Professionally Chip-Timed, Inaugural Event",
+        "Two CTA buttons: Register for 5K (red bg white text) and Kids 1K Fun Run (white border, transparent bg)",
+        "Both CTAs link to Race Roster with UTM params utm_source=website utm_medium=hero utm_campaign=bhc2026",
+        "Countdown timer Astro island (client:load) counting down to June 21 2026 08:00:00 EDT showing days hours minutes seconds",
+        "Responsive: buttons stack full-width on mobile, text centers",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 4,
+      "passes": true,
+      "notes": "Countdown timer needs client-side JS via Astro island. Use client:load directive. Timer target: 2026-06-21T08:00:00-04:00"
+    },
+    {
+      "id": "US-005",
+      "title": "Event facts at-a-glance component with JSON-LD Event schema",
+      "description": "As a visitor and search engine, I want a clear facts section with structured data so event details are instantly scannable and machine-readable.",
+      "acceptanceCriteria": [
+        "EventFacts.astro component with 6-item grid: Date and Time (Sun Jun 21 2026 8AM), Location (Bronte Harbour Park Oakville ON), Distances (5K chip-timed plus Kids 1K), Whats Included (medal timing festival swag), Charity (Oakville Dads Community Fund), Course (flat paved waterfront stroller-friendly)",
+        "Each fact rendered as a card with SVG icon placeholder, bold label, and value text",
+        "Grid: 3 columns on desktop, 2 on tablet, 1 on mobile",
+        "JSON-LD Event script tag in BaseLayout head slot with: @type Event, name Bronte Harbour Classic 2026, startDate 2026-06-21T08:00:00-04:00, endDate 2026-06-21T17:00:00-04:00, location Place with PostalAddress Oakville ON CA, organizer Organization Bronte Harbour Classic, offers array with 5K and Kids 1K Offer objects, eventStatus EventScheduled, eventAttendanceMode OfflineEventAttendanceMode",
+        "JSON-LD Organization script tag with name url email sameAs",
+        "Component placed on home page below hero",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 5,
+      "passes": true,
+      "notes": "JSON-LD must be valid per Google Rich Results Test. Use schema.org types exactly."
+    },
+    {
+      "id": "US-006",
+      "title": "Choose Your Distance race cards section",
+      "description": "As a visitor, I want to see available races as clear cards so I can choose my distance and register.",
+      "acceptanceCriteria": [
+        "Section with h2 Choose Your Distance on home page",
+        "Two race cards side by side (stack on mobile): 5K Race and Kids 1K Fun Run",
+        "5K card: h3 title, description (Chip-timed flat waterfront course), Who Its For paragraph, What You Get list (finisher medal, chip timing with instant results, post-race festival access, sponsor swag bag), red Register for 5K button",
+        "Kids 1K card: h3 title, Ages 2-12 badge, description (non-timed everyone gets medal), What You Get list (finisher medal, festival access, family fun), Register for Kids 1K button",
+        "Both buttons link to Race Roster with UTM params utm_source=website utm_medium=race_card utm_campaign=bhc2026",
+        "Cards have white background, rounded corners, subtle shadow, hover lift effect",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 6,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-007",
+      "title": "Dynamic pricing tiers section with auto-highlighting",
+      "description": "As a visitor, I want to see all pricing tiers with the current active tier highlighted based on today's date.",
+      "acceptanceCriteria": [
+        "Pricing section on home page with h2 Registration Pricing",
+        "Pricing data defined in src/data/pricing.ts as typed array: each tier has name, price, startDate, endDate, savings string",
+        "6 tiers rendered: Premier $45.82 (until Dec 4 2025), Early Bird $62.15 (Dec 5-Jan 31), Regular $73.05 (Feb 1-Mar 31), Spring $83.94 (Apr 1-May 31), Last Chance $89.39 (Jun 1-16), Race Day $99.00 (Jun 17-21)",
+        "Kids 1K pricing shown below: Premier $29.47, Standard $40.37",
+        "Client-side Astro island (client:load) that checks current date and adds active class to current tier and expired class to past tiers",
+        "Active tier has red border and Best Value badge",
+        "Expired tiers grayed out with EXPIRED label",
+        "Register Now CTA button at bottom linking to Race Roster with UTM params",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 7,
+      "passes": true,
+      "notes": "Pricing data source file makes it easy to update prices without touching component code."
+    },
+    {
+      "id": "US-008",
+      "title": "Sponsor showcase section with tiered logo grid",
+      "description": "As a visitor and sponsor, I want to see who sponsors the event with proper tier hierarchy.",
+      "acceptanceCriteria": [
+        "Sponsors data defined in src/data/sponsors.ts with typed array: each sponsor has name, tier (founding/official/organizer/municipal/charity), logoUrl (placeholder path), websiteUrl, description",
+        "Sponsor section on home page with h2 Our Sponsors and Partners",
+        "Sponsors grouped by tier with tier labels: Founding Sponsor (CIBC), Official Sponsors (ON Running shoe, Natrilyte hydration, Be Active Physio awards), Event Organizers (TapeGeeks GearTOP PacePerformance Bronte Runners), Municipal Partners (Town of Oakville), Supported Charity (Oakville Dads)",
+        "Founding sponsor logo largest, official sponsors medium, organizers and others smaller",
+        "Each logo is a clickable link opening sponsor URL in new tab with rel=noopener noreferrer",
+        "Placeholder colored div with sponsor name text used where logo images are not yet available",
+        "Become a Sponsor CTA button linking to /sponsors/",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 8,
+      "passes": true,
+      "notes": "Sponsor URLs: CIBC https://www.cibc.com/en/personal-banking.html, ON Running https://www.on.com/en-ca/, TapeGeeks https://tapegeeks.com/, GearTOP https://geartopdesign.com/, Pace Performance https://paceperformance.ca/, Town of Oakville https://www.oakville.ca/, Oakville Dads https://ocf.fcsuite.com/erp/donate/create/fund?funit_id=1533"
+    },
+    {
+      "id": "US-009",
+      "title": "Community impact and charity section",
+      "description": "As a visitor, I want to understand the charitable mission so I feel good about participating.",
+      "acceptanceCriteria": [
+        "Section on home page with h2 Running for Our Community",
+        "Oakville Dads Community Fund highlighted as primary charity partner",
+        "Fundraising goal display: $10,000+ Goal with visual progress placeholder",
+        "Blockquote: Not a dollar leaves Oakville attributed to Oakville Dads Community Fund",
+        "Three stat cards: Families Helped (placeholder number), Local Impact (100% stays in Oakville), Volunteers (70+ committed)",
+        "Donate Now CTA button linking to https://ocf.fcsuite.com/erp/donate/create/fund?funit_id=1533 in new tab",
+        "Warm community tone with red accent color",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 9,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-010",
+      "title": "Festival highlights section on home page",
+      "description": "As a visitor, I want a preview of the Father's Day Festival so I know it's more than just a race.",
+      "acceptanceCriteria": [
+        "Section on home page with h2 Father's Day Waterfront Festival",
+        "Subtitle: After the morning races the celebration continues 10 AM to 3 PM",
+        "Four highlight cards in grid: Live Music (local bands on main stage), Vendor Market (50+ local businesses), Kids Zone (jumping castle face painting games), Beer Garden (craft brewery partner)",
+        "Each card has icon placeholder, title, short description",
+        "Learn More CTA linking to /festival/",
+        "Section uses light gray #F5F5F5 background to alternate from white sections",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 10,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-011",
+      "title": "FAQ preview on home page with accordion",
+      "description": "As a visitor, I want quick answers to top questions without leaving the home page.",
+      "acceptanceCriteria": [
+        "FAQ data defined in src/content/faq/ as markdown collection with question and answer fields and category and order frontmatter",
+        "At least 8 FAQ items created: What distances are available, What time does the race start, Is the course stroller-friendly, What is the refund policy, Where do I park, What is included with registration, Can I register on race day, Who benefits from this event",
+        "Home page FAQ section shows top 5 items in accordion format",
+        "Accordion component: click question to expand/collapse answer, only one open at a time, smooth height transition",
+        "Accordion is keyboard accessible: tab to focus, enter/space to toggle, aria-expanded and aria-controls attributes",
+        "View All FAQ link to /faq/ page at bottom of section",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 11,
+      "passes": true,
+      "notes": "Use Astro content collections for FAQ data so items can be edited in markdown files."
+    },
+    {
+      "id": "US-012",
+      "title": "Newsletter email capture component",
+      "description": "As an organizer, I want to capture visitor emails so I can send event updates.",
+      "acceptanceCriteria": [
+        "NewsletterCapture.astro component with email input and Subscribe button",
+        "Heading: Stay Updated on Bronte Harbour Classic",
+        "Placed on home page above footer",
+        "Honeypot hidden field for spam prevention",
+        "Client-side email format validation before submit",
+        "On submit: shows success message (Thank you! You'll receive updates soon) and hides form",
+        "Form action posts to /api/newsletter endpoint placeholder (logs to console for now)",
+        "Component accepts a sourcePage prop for tracking",
+        "Section has dark background (#111111) with white text for visual contrast",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 12,
+      "passes": true,
+      "notes": "Form handler will be connected to email service later. For now just client-side UX."
+    },
+    {
+      "id": "US-013",
+      "title": "Sticky register CTA bar",
+      "description": "As a visitor scrolling the page, I want a persistent registration CTA so I can register at any point.",
+      "acceptanceCriteria": [
+        "StickyBar.astro island component (client:load) fixed to bottom of viewport",
+        "Shows current pricing tier name and price (reads from pricing data)",
+        "Register Now button linking to Race Roster with UTM params utm_source=website utm_medium=sticky_bar utm_campaign=bhc2026",
+        "Bar appears only after user scrolls past the hero section (uses IntersectionObserver)",
+        "Close/dismiss X button that hides bar for the session (sessionStorage)",
+        "Bar has red (#E10600) background with white text",
+        "Does not cause Cumulative Layout Shift (position fixed, no document flow impact)",
+        "On mobile: full width at bottom. On desktop: bar at bottom with max-width centered",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 13,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-014",
+      "title": "Social media feed section on home page",
+      "description": "As a visitor, I want to see latest social media posts to feel community energy.",
+      "acceptanceCriteria": [
+        "Section on home page with h2 Join the Conversation",
+        "Hashtag display: #BronteHarbourClassic #BHC5K in large styled text",
+        "Grid of 6 social media post placeholder cards (3x2 on desktop, 2x3 on tablet, 1 column mobile)",
+        "Each card: placeholder image area with Instagram icon overlay, links to Instagram profile",
+        "Follow Us on Instagram CTA button linking to Instagram profile (placeholder URL)",
+        "Links to all social platforms below: Instagram Facebook Strava",
+        "Section lazy loads (uses client:visible Astro directive if interactive)",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 14,
+      "passes": true,
+      "notes": "For MVP use placeholder grid. Real Instagram embed or API integration can be added later. The key is the visual space and social proof section exists."
+    },
+    {
+      "id": "US-015",
+      "title": "5K race detail page",
+      "description": "As a potential runner, I want detailed information about the 5K race to decide if it's right for me.",
+      "acceptanceCriteria": [
+        "Page at src/pages/races/5k.astro using BaseLayout with title Bronte Harbour Classic 5K Race and description",
+        "Breadcrumb: Home > Races > 5K",
+        "Sections: Race Overview (chip-timed flat waterfront course), Who Its For (all ages all abilities), Course Summary with link to /course-map/, What You Get (medal timing festival swag), Awards Categories (overall male/female, age groups 19 and under, 20-29, 30-39, 40-49, 50-59, 60+), Rules (strollers welcome, headphones allowed, no wheeled vehicles), Register CTA",
+        "Reuses EventFacts component",
+        "Includes pricing section (reuses pricing component or links to home page pricing)",
+        "Register CTA links to Race Roster with UTM params utm_source=website utm_medium=5k_page utm_campaign=bhc2026",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 15,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-016",
+      "title": "Kids 1K Fun Run detail page",
+      "description": "As a parent, I want dedicated information about the Kids 1K so I can register my child with confidence.",
+      "acceptanceCriteria": [
+        "Page at src/pages/races/kids-1k.astro using BaseLayout with title Kids 1K Fun Run and description",
+        "Breadcrumb: Home > Races > Kids 1K Fun Run",
+        "Sections: Overview (ages 2-12, non-timed, every child gets finisher medal), What Kids Get (medal, festival access, fun memories), Safety (supervised course, parent-friendly), Pricing (Premier $29.47 / Standard $40.37), Register CTA",
+        "Family-friendly warm tone throughout",
+        "Register CTA links to Race Roster with UTM params utm_source=website utm_medium=kids1k_page utm_campaign=bhc2026",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 16,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-017",
+      "title": "Festival overview page",
+      "description": "As a visitor, I want to know what happens at the Father's Day Festival so I can plan my day.",
+      "acceptanceCriteria": [
+        "Page at src/pages/festival/index.astro using BaseLayout with title Father's Day Waterfront Festival",
+        "Breadcrumb: Home > Festival",
+        "Sections: Festival Overview (10 AM - 3 PM after morning races), Live Music (local bands main stage), Vendor Market (50+ booths local businesses food), Kids Zone (jumping castle face painting games ages 2-12), Beer Garden (craft brewery partner), Food and Drink",
+        "Link to /festival/schedule/ for detailed timeline",
+        "Link to /vendors/ for vendor application info",
+        "This isn't just a race its a Father's Day celebration messaging",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 17,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-018",
+      "title": "Race day schedule page",
+      "description": "As a participant, I want a minute-by-minute schedule so I know exactly when and where to be.",
+      "acceptanceCriteria": [
+        "Page at src/pages/festival/schedule.astro using BaseLayout with title Race Day Schedule",
+        "Breadcrumb: Home > Festival > Schedule",
+        "Vertical timeline layout with time on left and activity description on right",
+        "Timeline entries: 7:00 AM Ontario Street closes and traffic control, 7:00 AM Red Bull DJ at start line, 8:00 AM 5K Race and Kids 1K Fun Run START, 9:15 AM Awards ceremony on main stage, 10:00 AM Festival opens and live music begins, 10:00 AM-3:00 PM Vendor market kids zone beer garden, 3:00 PM Festival ends",
+        "Last Updated timestamp at bottom of page",
+        "Mobile-friendly: timeline stacks vertically with times above descriptions",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 18,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-019",
+      "title": "Course map page with route details",
+      "description": "As a runner, I want to see the race course so I can visualize the route and plan logistics.",
+      "acceptanceCriteria": [
+        "Page at src/pages/course-map.astro using BaseLayout with title Course Map",
+        "Breadcrumb: Home > Course Map",
+        "Embedded Google Maps iframe showing Bronte Harbour Park Oakville Ontario (static map centered on coordinates 43.3918 -79.7095)",
+        "Route description text: Flat out-and-back along Lakeshore Rd and waterfront, entirely paved, stroller-friendly",
+        "Start/Finish location: Bronte Harbour Park main entrance area",
+        "Aid station noted at 2.5K mark (parking lot area)",
+        "Accessible text alternative for the map with full address and directions",
+        "Parking and Transit section: available parking areas, Google Maps link to Bronte Harbour Park",
+        "Road closure information for Ontario Street",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 19,
+      "passes": true,
+      "notes": "Google Maps embed should be lazy loaded to avoid blocking page load."
+    },
+    {
+      "id": "US-020",
+      "title": "Sponsors page with tiers table and inquiry form",
+      "description": "As a potential sponsor, I want to see sponsorship packages and submit an inquiry.",
+      "acceptanceCriteria": [
+        "Page at src/pages/sponsors.astro using BaseLayout with title Become a Sponsor",
+        "Breadcrumb: Home > Sponsors",
+        "Current sponsors section reusing sponsor showcase component from home page",
+        "Sponsorship packages table with 6 tiers: Title $8000 (max visibility naming rights VIP), Gold $5000 (large logo booth race shirt), Silver $2500 (logo on bib booth ceremony), Bronze $850 (logo on website ceremony social), Vendor Booth $250 (10x10 booth), Swag Bag Insert $200 (product in finisher bags)",
+        "Benefits comparison grid showing what each tier includes",
+        "Event audience stats: 500+ runners, 1000+ festival attendees, waterfront location, Father's Day timing",
+        "Sponsor inquiry form with fields: company name (required), contact name (required), email (required), phone, tier interest (dropdown with tier options), message (textarea)",
+        "Honeypot hidden field for spam prevention",
+        "Client-side validation on required fields",
+        "Success message shown after form submission",
+        "Form posts to /api/sponsor-inquiry endpoint placeholder",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 20,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-021",
+      "title": "Vendors and expo page with application form",
+      "description": "As a potential vendor, I want booth details and an application form so I can apply for a spot.",
+      "acceptanceCriteria": [
+        "Page at src/pages/vendors.astro using BaseLayout with title Vendor Expo",
+        "Breadcrumb: Home > Vendors",
+        "Sections: Expo Overview (50-70 booths expected), Booth Details ($250 per booth 10x10 vendor-supplied tent), Setup and Hours (setup 5:30-7:30 AM, festival 10 AM-3 PM, teardown after 3 PM), Requirements (insurance, food permits if food vendor, professional setup), Who Should Apply (food vendors, local businesses, health fitness, merchandise, non-profits)",
+        "Vendor application form: business name (required), contact name (required), email (required), phone, business type (dropdown: Food, Retail, Health/Fitness, Services, Non-Profit, Other), product/service description (textarea), food vendor checkbox, special requirements (textarea)",
+        "Honeypot spam protection",
+        "Success message on submission",
+        "Form posts to /api/vendor-application endpoint placeholder",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 21,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-022",
+      "title": "Volunteer page with roles and signup form",
+      "description": "As a community member, I want to sign up as a volunteer and know what roles are available.",
+      "acceptanceCriteria": [
+        "Page at src/pages/volunteer.astro using BaseLayout with title Volunteer",
+        "Breadcrumb: Home > Volunteer",
+        "Sections: Why Volunteer (be part of history, support community), Volunteer Roles grid (Water Station 6-8 people, Course Marshal 10-12, Finish Line 4-6, Kids Zone 8-10, Setup Crew 20, Registration 4-6, Cleanup 15-20), Shifts and Times (early 5:30-7:30 AM, race 7:30-9:30 AM, festival 10 AM-3 PM, cleanup 3-5 PM), Volunteer Perks (t-shirt, meals, recognition, community impact)",
+        "Oakville Dads partnership mentioned as primary volunteer organization",
+        "Signup form: name (required), email (required), phone, role preference (multi-select checkboxes), shift preference (dropdown: Early Setup, Race Support, Festival, Cleanup, Flexible), experience or notes (textarea)",
+        "Honeypot spam protection",
+        "Success message on submission",
+        "Form posts to /api/volunteer-signup endpoint placeholder",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 22,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-023",
+      "title": "Full FAQ page with FAQPage JSON-LD schema",
+      "description": "As a visitor, I want a comprehensive FAQ page that answers all my questions and helps SEO.",
+      "acceptanceCriteria": [
+        "Page at src/pages/faq.astro using BaseLayout with title Frequently Asked Questions",
+        "Breadcrumb: Home > FAQ",
+        "Renders all FAQ items from content collection in accordion format grouped by category",
+        "Categories: Race Information, Registration, Festival, Logistics",
+        "Accordion keyboard accessible with aria-expanded and aria-controls",
+        "FAQPage JSON-LD schema generated from FAQ content collection data, includes all questions and answers",
+        "Contact fallback at bottom: Still have questions? Contact us at info@bronteharbourclassic.com",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 23,
+      "passes": true,
+      "notes": "Reuses the same FAQ content collection and accordion component from home page preview."
+    },
+    {
+      "id": "US-024",
+      "title": "Contact page with structured form",
+      "description": "As a visitor, I want to contact the organizers with questions or partnership inquiries.",
+      "acceptanceCriteria": [
+        "Page at src/pages/contact.astro using BaseLayout with title Contact Us",
+        "Breadcrumb: Home > Contact",
+        "Contact info displayed: info@bronteharbourclassic.com, social media links",
+        "Contact form: name (required), email (required), subject dropdown (General Inquiry, Sponsorship, Vendor Application, Volunteer, Media/Press, Other), message textarea (required)",
+        "Honeypot spam protection",
+        "Client-side validation on required fields",
+        "Success confirmation message on submit",
+        "Form posts to /api/contact endpoint placeholder",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 24,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-025",
+      "title": "Blog content collection and news pages",
+      "description": "As an organizer, I want a blog section to publish event updates for SEO and engagement.",
+      "acceptanceCriteria": [
+        "Astro content collection configured at src/content/blog/ with schema: title (string), date (date), author (string), excerpt (string), tags (array of strings), image (optional string)",
+        "3 placeholder blog posts created as markdown files: Welcome to Bronte Harbour Classic 2026, Meet the Race Directors, Why We Run for Oakville Dads",
+        "News listing page at src/pages/news/index.astro showing posts in reverse chronological order with title date excerpt and Read More link",
+        "Dynamic blog post page at src/pages/news/[...slug].astro rendering full post content with title date author and back link",
+        "RSS feed endpoint at src/pages/rss.xml.ts using @astrojs/rss generating valid RSS",
+        "Breadcrumb on post pages: Home > News > Post Title",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 25,
+      "passes": true,
+      "notes": "Install @astrojs/rss package for RSS feed generation."
+    },
+    {
+      "id": "US-026",
+      "title": "Media kit page with press assets",
+      "description": "As a journalist, I want downloadable press assets and event facts so I can cover the event.",
+      "acceptanceCriteria": [
+        "Page at src/pages/media-kit.astro using BaseLayout with title Media Kit",
+        "Breadcrumb: Home > Media Kit",
+        "Event summary paragraph (copy-ready for press)",
+        "Key Facts list: date, location, distances, expected participants, charity partner, organizers",
+        "Leadership Team section: Greg Kowalczyk (Co-Race Director, CEO TapeGeeks & GearTOP), Charles Sathmary (Co-Race Director, elite Canadian distance athlete with times 13:32/5K 27:51/10K 2:13:07 marathon sub-4 mile), Greg Pace (Race Advisor, 30+ year director Moon in June Road Race)",
+        "Downloadable Assets section with placeholder links for logo and press photos",
+        "Press contact: info@bronteharbourclassic.com",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 26,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-027",
+      "title": "SEO meta tags and Open Graph across all pages",
+      "description": "As an organizer, I want proper SEO meta tags on every page for search ranking and social sharing.",
+      "acceptanceCriteria": [
+        "BaseLayout enhanced: accepts and renders unique title, meta description, canonical URL, og:title, og:description, og:image, og:type, og:url, twitter:card (summary_large_image), twitter:title, twitter:description, twitter:image",
+        "Default og:image set to Bronte Harbour aerial photo placeholder path",
+        "Every page (home, races/5k, races/kids-1k, festival, festival/schedule, course-map, sponsors, vendors, volunteer, faq, contact, news, media-kit) passes unique title and description",
+        "Geo meta tags on all pages: geo.region=CA-ON, geo.placename=Oakville, geo.position=43.3918;-79.7095, ICBM=43.3918,-79.7095",
+        "Sitemap auto-generated at /sitemap-index.xml via @astrojs/sitemap (already configured in US-001)",
+        "Typecheck passes"
+      ],
+      "priority": 27,
+      "passes": true,
+      "notes": "This story audits and ensures all pages have proper unique SEO. BaseLayout should already have the slots from US-002."
+    },
+    {
+      "id": "US-028",
+      "title": "GA4 analytics events and UTM tracking",
+      "description": "As an organizer, I want to track visitor behavior and registration funnel to measure marketing effectiveness.",
+      "acceptanceCriteria": [
+        "GA4 script tag added to BaseLayout head with measurement ID read from environment variable PUBLIC_GA4_ID (renders nothing if not set)",
+        "Analytics helper module at src/utils/analytics.ts with trackEvent function that calls gtag",
+        "All Race Roster outbound links across entire site verified to include UTM params: utm_source=website, utm_medium=[location-specific], utm_campaign=bhc2026",
+        "Events implemented: click_register (params: cta_location, race_type), outbound_raceroster (params: utm_campaign, race_type), newsletter_signup (params: source_page), share_social (params: network, page_type)",
+        "Form submission events: submit_sponsor_form, submit_vendor_form, submit_volunteer_form fire on successful form submission",
+        "Outbound link click tracking on all external links using navigator.sendBeacon or gtag",
+        "Typecheck passes"
+      ],
+      "priority": 28,
+      "passes": true,
+      "notes": "GA4 measurement ID will be provided later. Code should gracefully handle missing ID."
+    }
+  ]
+}
