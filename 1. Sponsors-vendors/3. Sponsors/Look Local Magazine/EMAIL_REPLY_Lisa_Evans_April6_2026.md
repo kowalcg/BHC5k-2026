@@ -19,7 +19,10 @@ Lisa
 
 ---
 
-## Greg's Reply (April 6, 2026)
+## Greg's Reply — Sent April 6, 2026
+
+**To:** writelisaevans32@gmail.com
+**Subject:** Re: Bronte Harbour Classic - Look Local Info Request
 
 Hi Lisa,
 
