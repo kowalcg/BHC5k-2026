@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bronte Harbour Classic 2026 — Creator Breakout Brief</title>
+<style>
+  :root {
+    --bhc-red: #E10600;
+    --bhc-red-dim: #8a0a05;
+    --bg: #0b0d10;
+    --bg-card: #13171c;
+    --bg-card-2: #171c23;
+    --border: #2a2f38;
+    --fg: #e8ecf1;
+    --fg-dim: #9aa3ad;
+    --fg-mute: #6a7280;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  a { color: var(--bhc-red); text-decoration: none; border-bottom: 1px dotted var(--bhc-red-dim); }
+  a:hover { color: #ff3b2e; border-bottom-color: #ff3b2e; }
+  code, .mono { font-family: var(--mono); font-size: 0.92em; }
+  .wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 40px 24px 120px;
+  }
+  header.masthead {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+  }
+  .prompt {
+    color: var(--fg-mute);
+    font-family: var(--mono);
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+  .prompt .caret { color: var(--bhc-red); }
+  h1 {
+    margin: 0 0 8px;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+  }
+  h1 .dot { color: var(--bhc-red); }
+  .sub {
+    color: var(--fg-dim);
+    font-size: 16px;
+    margin: 0;
+  }
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .chip {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--fg-dim);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-family: var(--mono);
+  }
+  .chip.red { color: var(--bhc-red); border-color: var(--bhc-red-dim); }
+  section {
+    margin: 48px 0;
+  }
+  section h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--fg-mute);
+    margin: 0 0 16px;
+    font-weight: 700;
+    font-family: var(--mono);
+  }
+  section h2 .num { color: var(--bhc-red); margin-right: 6px; }
+  section h3 {
+    margin: 0 0 6px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 14px;
+  }
+  .card.featured {
+    background: linear-gradient(180deg, var(--bg-card-2), var(--bg-card));
+    border-left: 3px solid var(--bhc-red);
+  }
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+  }
+  .fact {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .fact .k {
+    color: var(--fg-mute);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: var(--mono);
+    margin-bottom: 4px;
+  }
+  .fact .v { color: var(--fg); font-weight: 600; }
+  .truth-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;
+  }
+  .truth {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .truth .tag {
+    display: inline-block;
+    background: var(--bhc-red);
+    color: #fff;
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-right: 6px;
+    font-weight: 700;
+  }
+  .concept {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--bhc-red);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+  }
+  .concept .line1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+  .concept .cid {
+    font-family: var(--mono);
+    color: var(--bhc-red);
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .concept .title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--fg);
+  }
+  .concept .pri {
+    font-family: var(--mono);
+    font-size: 11px;
+    background: var(--bhc-red);
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+  }
+  .concept .hook {
+    color: var(--fg-dim);
+    font-style: italic;
+    margin: 8px 0;
+    border-left: 2px solid var(--border);
+    padding-left: 12px;
+  }
+  .concept .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+  .concept .meta span {
+    font-family: var(--mono);
+    font-size: 11px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--fg-dim);
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+  .concept .scores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--border);
+  }
+  .concept .scores .s {
+    text-align: center;
+  }
+  .concept .scores .lbl {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--fg-mute);
+    font-family: var(--mono);
+    letter-spacing: 0.06em;
+    margin-bottom: 3px;
+  }
+  .concept .scores .val {
+    color: var(--fg);
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .bar {
+    display: inline-block;
+    width: 52px;
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+  .bar > i {
+    display: block;
+    height: 100%;
+    background: var(--bhc-red);
+  }
+  .wave {
+    display: grid;
+    grid-template-columns: 80px 1fr 120px;
+    gap: 10px;
+    padding: 10px 14px;
+    border-bottom: 1px dashed var(--border);
+    align-items: center;
+  }
+  .wave:last-child { border-bottom: none; }
+  .wave .w { font-family: var(--mono); color: var(--fg-mute); font-size: 12px; }
+  .wave .what { color: var(--fg); }
+  .wave .ship { font-family: var(--mono); color: var(--bhc-red); font-size: 12px; text-align: right; }
+  .paid-tiers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 12px;
+  }
+  .tier {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .tier.chosen { border-color: var(--bhc-red); }
+  .tier .amt {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--bhc-red);
+    font-family: var(--mono);
+  }
+  .tier .what {
+    color: var(--fg-dim);
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  .metrics {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .metrics th, .metrics td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .metrics th {
+    color: var(--fg-mute);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    font-family: var(--mono);
+    font-weight: 600;
+  }
+  .metrics td.val {
+    font-family: var(--mono);
+    color: var(--bhc-red);
+    font-weight: 700;
+  }
+  .stages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px;
+  }
+  .stage {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .stage .n {
+    font-family: var(--mono);
+    color: var(--bhc-red);
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .stage .t { font-weight: 600; margin-top: 4px; }
+  .stage .d { color: var(--fg-dim); font-size: 12px; margin-top: 4px; }
+  footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--fg-mute);
+    font-size: 12px;
+    font-family: var(--mono);
+  }
+  @media (max-width: 640px) {
+    .concept .scores { grid-template-columns: repeat(2, 1fr); }
+    .wave { grid-template-columns: 60px 1fr; }
+    .wave .ship { grid-column: 2; text-align: left; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="prompt"><span class="caret">&gt;</span> creator-breakout-brief / bhc5k-2026 / v1.0 / 2026-04-15</div>
+    <h1>Bronte Harbour Classic<span class="dot">.</span></h1>
+    <p class="sub">Creator Breakout Brief — organic-first marketing plan for the inaugural Father's Day race + festival.</p>
+    <div class="meta-row">
+      <span class="chip red">INAUGURAL</span>
+      <span class="chip">5K + Kids 1K</span>
+      <span class="chip">Sun Jun 21, 2026 · 8:00 AM</span>
+      <span class="chip">Bronte Harbour Park, Oakville</span>
+      <span class="chip">Target: 800+</span>
+      <span class="chip">Charity: Oakville Dads</span>
+    </div>
+  </header>
+
+  <section>
+    <h2><span class="num">01.</span>Executive Summary</h2>
+    <div class="card featured">
+      <p style="margin:0 0 10px">
+        We are running an organic-first, evidence-driven content plan for the inaugural
+        Bronte Harbour Classic. The single most ownable angle is
+        <strong>the only Father's Day race + festival on the Oakville waterfront</strong> —
+        no other GTA race can say all three at once.
+      </p>
+      <p style="margin:0 0 10px">
+        Launch wave is <strong>5 concepts across 5 archetypes</strong>, shipping between
+        Apr 20 and May 5. Winners get doubled-down on in Phase 2 (May 15–Jun 14).
+        Paid amplification (Meta + Google) is optional, Phase 3, and only runs against
+        creative that already has organic signal.
+      </p>
+      <p style="margin:0">
+        Highest-leverage play: <strong>C01 Training Diary Series</strong> (Peer Finisher
+        archetype) — lowest production cost, highest compounding emotional return, kills
+        the biggest objection for the biggest segment (first-time 5K runners).
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">02.</span>Event Facts</h2>
+    <div class="facts">
+      <div class="fact"><div class="k">Date</div><div class="v">Sun Jun 21, 2026 · 8:00 AM</div></div>
+      <div class="fact"><div class="k">Location</div><div class="v">Bronte Harbour Park, Oakville</div></div>
+      <div class="fact"><div class="k">Distances</div><div class="v">5K (chip-timed) · Kids 1K (ages 2–12)</div></div>
+      <div class="fact"><div class="k">Pricing (5K)</div><div class="v">$45.82 premier → $62.15 early bird</div></div>
+      <div class="fact"><div class="k">Pricing (Kids)</div><div class="v">$29.47 / $40.37</div></div>
+      <div class="fact"><div class="k">Charity</div><div class="v">Oakville Dads Charity</div></div>
+      <div class="fact"><div class="k">Credibility</div><div class="v">Town of Oakville Approved · Chip-Timed</div></div>
+      <div class="fact"><div class="k">Organized by</div><div class="v">Bronte Runners Club · TapeGeeks · GearTOP · Pace Performance</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">03.</span>Brand Truths <span style="color:var(--fg-mute);font-weight:400;">(what only we can say)</span></h2>
+    <div class="truth-grid">
+      <div class="truth"><span class="tag">T1</span>Only Father's Day race-festival on the Oakville waterfront.</div>
+      <div class="truth"><span class="tag">T2</span>Born from a running club, not a promoter.</div>
+      <div class="truth"><span class="tag">T3</span>A 5K <em>and</em> a festival — the day is the product.</div>
+      <div class="truth"><span class="tag">T4</span>Flat, fast, scenic waterfront — beginners and PR-chasers both.</div>
+      <div class="truth"><span class="tag">T5</span>Inaugural year stakes — every medal is "the first one."</div>
+      <div class="truth"><span class="tag">T6</span>Charity with a human face — Oakville Dads, not logo placement.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">04.</span>Launch Wave — Five P1 Concepts</h2>
+
+    <div class="concept">
+      <div class="line1">
+        <div><span class="cid">C01</span> &nbsp; <span class="title">Week 1 to the Starting Line — Training Diary</span></div>
+        <span class="pri">P1</span>
+      </div>
+      <div class="hook">"I'm [name], I'm [age], I joined Bronte Runners in January. I signed up for the 5K. This is week 1."</div>
+      <div class="meta">
+        <span>Archetype: A1 Peer Finisher</span><span>Pattern: B</span><span>IG Reels + FB</span><span>Kills: O1, O2, D1</span>
+      </div>
+      <div class="scores">
+        <div class="s"><div class="lbl">Strategic Fit</div><div class="val">5<span class="bar"><i style="width:100%"></i></span></div></div>
+        <div class="s"><div class="lbl">Evidence</div><div class="val">4<span class="bar"><i style="width:80%"></i></span></div></div>
+        <div class="s"><div class="lbl">Production</div><div class="val">5<span class="bar"><i style="width:100%"></i></span></div></div>
+        <div class="s"><div class="lbl">Confidence</div><div class="val">Directional</div></div>
+      </div>
+    </div>
+
+    <div class="concept">
+      <div class="line1">
+        <div><span class="cid">C02</span> &nbsp; <span class="title">A Day My Kid Will Remember — Dad + Kids 1K</span></div>
+        <span class="pri">P1</span>
+      </div>
+      <div class="hook">"My daughter said she wanted to run a race with me for Father's Day. So we're running Bronte Harbour Classic together."</div>
+      <div class="meta">
+        <span>Archetype: A2 Dad Hero</span><span>Pattern: C</span><span>FB + IG</span><span>Kills: O8, O9, O10, D2</span>
+      </div>
+      <div class="scores">
+        <div class="s"><div class="lbl">Strategic Fit</div><div class="val">5<span class="bar"><i style="width:100%"></i></span></div></div>
+        <div class="s"><div class="lbl">Evidence</div><div class="val">3<span class="bar"><i style="width:60%"></i></span></div></div>
+        <div class="s"><div class="lbl">Production</div><div class="val">4<span class="bar"><i style="width:80%"></i></span></div></div>
+        <div class="s"><div class="lbl">Confidence</div><div class="val">Hypothesis</div></div>
+      </div>
+    </div>
+
+    <div class="concept">
+      <div class="line1">
+        <div><span class="cid">C04</span> &nbsp; <span class="title">From the Race Director — Inaugural Build-Out</span></div>
+        <span class="pri">P1</span>
+      </div>
+      <div class="hook">"Day 67 before the first Bronte Harbour Classic. Today we [unboxed medals / walked the course / met with the Town]."</div>
+      <div class="meta">
+        <span>Archetype: A4 Race Director</span><span>Pattern: G</span><span>FB + IG + LinkedIn</span><span>Kills: O5, O12, T5</span>
+      </div>
+      <div class="scores">
+        <div class="s"><div class="lbl">Strategic Fit</div><div class="val">5<span class="bar"><i style="width:100%"></i></span></div></div>
+        <div class="s"><div class="lbl">Evidence</div><div class="val">3<span class="bar"><i style="width:60%"></i></span></div></div>
+        <div class="s"><div class="lbl">Production</div><div class="val">5<span class="bar"><i style="width:100%"></i></span></div></div>
+        <div class="s"><div class="lbl">Confidence</div><div class="val">Directional</div></div>
+      </div>
+    </div>
+
+    <div class="concept">
+      <div class="line1">
+        <div><span class="cid">C05</span> &nbsp; <span class="title">Premier Ends — Price Tier Urgency</span></div>
+        <span class="pri">P1</span>
+      </div>
+      <div class="hook">"You have 72 hours. After [date], your 5K entry costs $16.33 more. No surprises — just the schedule."</div>
+      <div class="meta">
+        <span>Archetype: direct brand voice</span><span>Pattern: D</span><span>Email + FB/IG</span><span>Kills: O4, fence-sitters</span>
+      </div>
+      <div class="scores">
+        <div class="s"><div class="lbl">Strategic Fit</div><div class="val">4<span class="bar"><i style="width:80%"></i></span></div></div>
+        <div class="s"><div class="lbl">Evidence</div><div class="val">5<span class="bar"><i style="width:100%"></i></span></div></div>
+        <div class="s"><div class="lbl">Production</div><div class="val">5<span class="bar"><i style="width:100%"></i></span></div></div>
+        <div class="s"><div class="lbl">Confidence</div><div class="val">Strong</div></div>
+      </div>
+    </div>
+
+    <div class="concept">
+      <div class="line1">
+        <div><span class="cid">C06</span> &nbsp; <span class="title">Spotted At — Local Business Window Drops</span></div>
+        <span class="pri">P1</span>
+      </div>
+      <div class="hook">"Spotted at @peachcoffeeshop — Father's Day is going to be a day 👀"</div>
+      <div class="meta">
+        <span>Archetype: A3 Local Insider</span><span>Pattern: F</span><span>IG + FB</span><span>Kills: O12, O13, D4</span>
+      </div>
+      <div class="scores">
+        <div class="s"><div class="lbl">Strategic Fit</div><div class="val">4<span class="bar"><i style="width:80%"></i></span></div></div>
+        <div class="s"><div class="lbl">Evidence</div><div class="val">4<span class="bar"><i style="width:80%"></i></span></div></div>
+        <div class="s"><div class="lbl">Production</div><div class="val">5<span class="bar"><i style="width:100%"></i></span></div></div>
+        <div class="s"><div class="lbl">Confidence</div><div class="val">Directional</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">05.</span>Shipping Schedule — Phase 1 (Apr 15 → May 15)</h2>
+    <div class="card">
+      <div class="wave"><div class="w">Week 1</div><div class="what">C04 post #1 · C06 Peach Coffee window drop</div><div class="ship">by Apr 26</div></div>
+      <div class="wave"><div class="w">Week 2</div><div class="what">C04 post #2 · C01 week-1 diary · C05 email blast #1</div><div class="ship">by May 3</div></div>
+      <div class="wave"><div class="w">Week 3</div><div class="what">C04 post #3 · C01 week-2 · C02 Dad + Kids post #1 · C06 Second Cup</div><div class="ship">by May 10</div></div>
+      <div class="wave"><div class="w">Week 4</div><div class="what">C04 post #4 · C01 week-3 · C02 post #2 · C05 email #2</div><div class="ship">by May 17</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">06.</span>Success Metrics</h2>
+    <table class="metrics">
+      <thead>
+        <tr><th>Metric</th><th>Source</th><th>Win threshold (30 days)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Registrations attributed to organic</td><td>Race Roster + UTMs</td><td class="val">+75</td></tr>
+        <tr><td>Newsletter signups</td><td>Site form</td><td class="val">+50</td></tr>
+        <tr><td>IG follower growth</td><td>IG Insights</td><td class="val">+15%</td></tr>
+        <tr><td>FB page followers</td><td>FB Insights</td><td class="val">+10%</td></tr>
+        <tr><td>Reach per winning concept</td><td>IG/FB Insights</td><td class="val">≥3× account median</td></tr>
+        <tr><td>Press / local repost</td><td>Manual log</td><td class="val">≥1</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2><span class="num">07.</span>Phase 3 — Paid Amplification <span style="color:var(--fg-mute);font-weight:400;">(optional, only after organic winners exist)</span></h2>
+    <div class="paid-tiers">
+      <div class="tier">
+        <div class="amt">$0</div>
+        <div class="what">Skip paid. We didn't prove enough. Go back to Phase 1.</div>
+      </div>
+      <div class="tier chosen">
+        <div class="amt">$250</div>
+        <div class="what">Meta boost of the single best organic post. 14 days. Traffic to /races/5k/.</div>
+      </div>
+      <div class="tier">
+        <div class="amt">$750</div>
+        <div class="what">Above + Google Search on [5k race oakville], [oakville father's day event], [bronte harbour race].</div>
+      </div>
+      <div class="tier">
+        <div class="amt">$1,500+</div>
+        <div class="what">Above + 1 paid micro-influencer post from Oakville/Burlington running community (~10k, ~$300).</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">08.</span>Workbook Stages</h2>
+    <div class="stages">
+      <a class="stage" href="README.md"><div class="n">00</div><div class="t">README</div><div class="d">How to use this workbook</div></a>
+      <a class="stage" href="01-brand-snapshot.md"><div class="n">01</div><div class="t">Brand Snapshot</div><div class="d">Truths, objections, desires, anti-positioning</div></a>
+      <a class="stage" href="02-breakout-patterns.md"><div class="n">02</div><div class="t">Breakout Patterns</div><div class="d">8 pattern hypotheses (A–H) to validate</div></a>
+      <a class="stage" href="03-creator-archetypes.md"><div class="n">03</div><div class="t">Creator Archetypes</div><div class="d">6 roles + casting call</div></a>
+      <a class="stage" href="04-concept-slate.md"><div class="n">04</div><div class="t">Concept Slate</div><div class="d">12 scored concept cards</div></a>
+      <a class="stage" href="05-test-plan.md"><div class="n">05</div><div class="t">Test Plan</div><div class="d">Launch wave, metrics, kill criteria, paid layer</div></a>
+    </div>
+  </section>
+
+  <footer>
+    adapted from the open-source
+    <a href="https://github.com/TheMattBerman/creator-breakout-kit">Creator Breakout Kit</a>
+    by Matt Berman · Emerald Digital · MIT License
+    <br>
+    bronteharbourclassic.com · organized by Bronte Runners Club · supporting Oakville Dads Charity
+  </footer>
+
+</div>
+</body>
+</html>
