@@ -1044,6 +1044,14 @@
                 <div class="preset-btn" onclick="loadPreset('sponsors')">🤝 Sponsor Feature</div>
                 <div class="preset-btn" onclick="loadPreset('family')">👨‍👩‍👧 Family Fun</div>
             </div>
+            <div style="margin-top: 12px; color: #ff6666; font-size: 0.75em; letter-spacing: 0.08em; text-transform: uppercase;">Breakout Brief · P1 Concepts</div>
+            <div class="quick-presets" style="margin-top: 6px;">
+                <div class="preset-btn" onclick="loadPreset('c01-diary')" title="C01 — Training Diary (A1 Peer Finisher)">📔 C01 Training Diary</div>
+                <div class="preset-btn" onclick="loadPreset('c02-dadkid')" title="C02 — Dad + Kids 1K (A2 Dad Hero)">👨‍👧 C02 Dad + Kids 1K</div>
+                <div class="preset-btn" onclick="loadPreset('c04-buildout')" title="C04 — Inaugural Build-Out (A4 Race Director)">🔨 C04 Build-Out</div>
+                <div class="preset-btn" onclick="loadPreset('c05-urgency')" title="C05 — Price Tier Urgency">⏳ C05 Tier Urgency</div>
+                <div class="preset-btn" onclick="loadPreset('c06-window')" title="C06 — Local Business Windows (A3 Local Insider)">☕ C06 Local Window</div>
+            </div>
         </header>
 
         <div class="main-layout">
@@ -2703,6 +2711,70 @@ GOAL: UNMISTAKABLY Bronte Harbour Classic branded - viewer immediately identifie
                     document.getElementById('distance').value = 'kids';
                     document.getElementById('include-kids').checked = true;
                     document.getElementById('include-fathersday').checked = true;
+                    break;
+
+                // ==========================================================
+                // Breakout Brief P1 Concepts
+                // See: 4. Tools/creator-breakout-brief/04-concept-slate.md
+                // ==========================================================
+                case 'c01-diary':
+                    // C01 · Training Diary Series (A1 Peer Finisher)
+                    // Weekly reel from a real Bronte Runners first-timer.
+                    // Kills O1 (not a real runner), O2 (5K is far), D1.
+                    document.getElementById('category').value = 'participants';
+                    document.getElementById('phase').value = 'sprint';
+                    document.getElementById('audience').value = 'first-timers';
+                    document.getElementById('include-runners').checked = true;
+                    document.getElementById('include-emojis').checked = true;
+                    document.getElementById('special-notes').value = 'Week X of training diary from a real Bronte Runners member. First-time 5K. Phone-shot, earnest, one-take. Same opener every week. Vulnerable beats polish.';
+                    break;
+
+                case 'c02-dadkid':
+                    // C02 · Dad + Kids 1K (A2 Dad Hero)
+                    // Father's Day wedge. Kills O8, O9, O10, D2.
+                    document.getElementById('category').value = 'kids';
+                    document.getElementById('phase').value = 'sprint';
+                    document.getElementById('audience').value = 'families';
+                    document.getElementById('distance').value = 'kids';
+                    document.getElementById('include-kids').checked = true;
+                    document.getElementById('include-fathersday').checked = true;
+                    document.getElementById('include-emojis').checked = true;
+                    document.getElementById('special-notes').value = 'Dad training with his kid for the Kids 1K. Father\'s Day memory. Warm, earnest, not macho. Oakville Dads Charity tie-in.';
+                    break;
+
+                case 'c04-buildout':
+                    // C04 · Inaugural Build-Out (A4 Race Director)
+                    // Greg K. voice only. Kills O5, O12, T5.
+                    document.getElementById('category').value = 'custom';
+                    document.getElementById('custom-category').value = 'Behind-the-Scenes Build-Out · From the Race Director';
+                    document.getElementById('phase').value = 'sprint';
+                    document.getElementById('audience').value = 'all-runners';
+                    document.getElementById('include-runners').checked = true;
+                    document.getElementById('special-notes').value = 'Day X before the inaugural Bronte Harbour Classic. Greg K. race director selfie video. One genuine moment — course walk, medal unbox, Town meeting. Credibility via showing, not telling.';
+                    break;
+
+                case 'c05-urgency':
+                    // C05 · Price Tier Urgency
+                    // Direct-response. Kills O4, pushes fence-sitters.
+                    document.getElementById('category').value = 'registration';
+                    document.getElementById('phase').value = 'sprint';
+                    document.getElementById('audience').value = 'all-runners';
+                    document.getElementById('urgency').checked = true;
+                    document.getElementById('strong-cta').checked = true;
+                    document.getElementById('include-pricing').checked = true;
+                    document.getElementById('include-date').checked = true;
+                    document.getElementById('announcement').value = 'Premier pricing ends [DATE]. After that, 5K entry is $16.33 more per runner. No tricks — just the Race Roster schedule.';
+                    break;
+
+                case 'c06-window':
+                    // C06 · Local Business Window Drops (A3 Local Insider)
+                    // Community trust signal. Kills O12, O13, D4.
+                    document.getElementById('category').value = 'local';
+                    document.getElementById('phase').value = 'sprint';
+                    document.getElementById('audience').value = 'local';
+                    document.getElementById('include-location').checked = true;
+                    document.getElementById('include-emojis').checked = true;
+                    document.getElementById('special-notes').value = 'Spotted at a Bronte Village business (Peach Coffee, Second Cup, Starbucks Bronte). Borrowed trust from local brand. Ask business to repost.';
                     break;
             }
         }

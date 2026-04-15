@@ -26,6 +26,7 @@ layer bolted on if budget opens up.
 | 04 | `04-concept-slate.md` | 12 scored concept cards — hook, format, channel, archetype, objection |
 | 05 | `05-test-plan.md` | Which 3 concepts launch first, success metrics, kill criteria, organic→paid path |
 | 06 | `06-brief.html` | Single-page rendered brief for the marketing sub-team |
+| +  | `first-posts-drafts.md` | Ship-ready copy for C01, C04, C05, C06 (first launch wave) |
 
 ## How to use this
 
@@ -39,10 +40,12 @@ layer bolted on if budget opens up.
    learn, then come back.
 4. **Re-score after each test.** When a concept wins or loses, update its
    "Confidence" label in 04 from Hypothesis → Directional → Strong (or kill).
-5. **Feed winners into the content tool.** Once a concept has Directional or
-   Strong evidence, add it as a Quick Preset to
-   `../bronte-harbour-classic-content-creator-pro-v3.0.html` so the team can
-   produce at volume without re-planning.
+5. **Feed winners into the content tool.** The five P1 concepts (C01, C02,
+   C04, C05, C06) are already wired into the Content Creator Pro tool as
+   Quick Preset buttons under a "Breakout Brief · P1 Concepts" row. Open
+   `../bronte-harbour-classic-content-creator-pro-v3.0.html`, click a
+   preset, and the category/phase/audience/notes are pre-filled. Iterate
+   or generate directly.
 
 ## What this is NOT
 
