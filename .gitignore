@@ -31,3 +31,11 @@
 # Don't track the bronte-dashboard folder we just created (we'll use the original file)
 bronte-dashboard/
 
+# Playwright MCP working files
+.playwright-mcp/
+
+# Email credentials — never commit App Passwords or SMTP secrets
+press_email_config.json
+email_config.json
+email_config_greg.json
+
