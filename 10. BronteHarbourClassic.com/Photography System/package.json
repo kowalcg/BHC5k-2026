@@ -1,0 +1,30 @@
+{
+  "name": "bhc-photography-system",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Bronte Harbour Classic 5K post-race photo gallery — pipeline + standalone gallery",
+  "scripts": {
+    "gallery": "cd gallery-standalone && python3 -m http.server 8799",
+    "upload": "node pipeline/upload-photos.js",
+    "upload:watermark": "node pipeline/upload-photos.js --watermark assets/bhc-watermark.png",
+    "process": "node pipeline/process-photos.js",
+    "rename": "node pipeline/rename-assets.js",
+    "roster": "node pipeline/import-roster.js",
+    "tag": "node pipeline/tag-sponsors.js",
+    "tag:template": "node pipeline/tag-sponsors.js --template",
+    "build": "node pipeline/build-manifest.js",
+    "build:demo": "node pipeline/build-manifest.js --in sample --demo-images",
+    "coverage": "node pipeline/coverage-report.js",
+    "coverage:csv": "node pipeline/coverage-report.js --csv",
+    "reprocess": "node pipeline/reprocess-missed.js",
+    "reprocess:dry": "node pipeline/reprocess-missed.js --dry-run",
+    "emails": "node pipeline/send-emails.js"
+  },
+  "dependencies": {
+    "@google-cloud/vision": "^4.3.2",
+    "cloudinary": "^2.5.1",
+    "csv-parse": "^5.5.6",
+    "resend": "^4.0.1"
+  }
+}
