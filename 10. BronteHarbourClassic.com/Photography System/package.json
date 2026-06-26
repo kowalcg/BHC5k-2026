@@ -15,6 +15,12 @@
     "tag:template": "node pipeline/tag-sponsors.js --template",
     "build": "node pipeline/build-manifest.js",
     "build:demo": "node pipeline/build-manifest.js --in sample --demo-images",
+    "r2:pull": "node pipeline/pull-cloudinary-source.js",
+    "r2:stage": "node pipeline/upload-photos.js --local-only",
+    "r2:process": "node pipeline/process-photos.js --local",
+    "r2:variants": "node pipeline/generate-variants.js",
+    "r2:upload": "node pipeline/upload-r2.js",
+    "r2:rewrite": "node pipeline/rewrite-manifest-urls.js",
     "coverage": "node pipeline/coverage-report.js",
     "coverage:csv": "node pipeline/coverage-report.js --csv",
     "reprocess": "node pipeline/reprocess-missed.js",
@@ -22,9 +28,11 @@
     "emails": "node pipeline/send-emails.js"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1075.0",
     "@google-cloud/vision": "^4.3.2",
     "cloudinary": "^2.5.1",
     "csv-parse": "^5.5.6",
-    "resend": "^4.0.1"
+    "resend": "^4.0.1",
+    "sharp": "^0.35.2"
   }
 }

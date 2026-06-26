@@ -16,13 +16,36 @@
  *   --force        re-OCR everything (ignore existing photos-raw.json)
  *   --limit <n>    only process the first n new photos (useful for a test run)
  */
+import fs from 'node:fs';
 import path from 'node:path';
+import os from 'node:os';
 import { DATA, env, CATEGORIES, ZONE_KEYWORDS, requireCloudinary, normalizeBib, readJson, writeJson } from './lib/config.js';
 import { detectSponsors, detectThemes } from './lib/detection-maps.js';
 
 function arg(name, def) { const i = process.argv.indexOf(name); if (i === -1) return def; const n = process.argv[i + 1]; return n && !n.startsWith('--') ? n : true; }
 const FORCE = !!arg('--force', false);
 const LIMIT = arg('--limit', null) ? parseInt(arg('--limit'), 10) : Infinity;
+// --local: read from ~/BHC-2026-photos-backup/source/ instead of Cloudinary.
+// Sends image content directly to Vision (no Cloudinary URL needed).
+// This is the preferred mode now that Cloudinary is replaced by R2.
+const LOCAL = !!arg('--local', false);
+const BACKUP_SRC = path.join(os.homedir(), 'BHC-2026-photos-backup', 'source');
+
+// Walk local source dir and return [{ public_id, srcPath }].
+function listLocalSources(dir, rootLen) {
+  if (rootLen === undefined) rootLen = dir.length;
+  const out = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) { out.push(...listLocalSources(full, rootLen)); continue; }
+    if (!/\.(jpe?g|png|webp|heic)$/i.test(entry.name)) continue;
+    const rel = full.slice(rootLen + 1).split(path.sep).join('/');
+    const publicId = rel.replace(/\.[^.]+$/, '');
+    if (/(^|\/)bhc-watermark$/i.test(publicId)) continue;
+    out.push({ public_id: publicId, srcPath: full, width: 0, height: 0 });
+  }
+  return out;
+}
 
 // category is the path segment right after the root folder: bhc-2026/<category>/<file>
 function categoryFromPublicId(publicId) {
@@ -90,32 +113,39 @@ function pickBibs(annotations) {
 }
 
 async function main() {
-  requireCloudinary();
-  const { v2: cloudinary } = await import('cloudinary');
+  if (!LOCAL) requireCloudinary();
+  const { v2: cloudinary } = LOCAL ? { v2: null } : await import('cloudinary');
+  if (cloudinary) cloudinary.config({ cloud_name: env.cloudName, api_key: env.apiKey, api_secret: env.apiSecret });
   const vision = await import('@google-cloud/vision');
-  cloudinary.config({ cloud_name: env.cloudName, api_key: env.apiKey, api_secret: env.apiSecret });
   const visionClient = new vision.ImageAnnotatorClient();
 
   const outPath = path.join(DATA, 'photos-raw.json');
   const existing = FORCE ? [] : readJson(outPath, []);
   const seen = new Set(existing.map((p) => p.publicId));
 
-  // page through all resources under the event folder
-  const resources = [];
-  let next = null;
-  do {
-    const res = await cloudinary.api.resources({
-      type: 'upload', prefix: env.folder + '/', max_results: 500, next_cursor: next,
-    });
-    resources.push(...res.resources);
-    next = res.next_cursor;
-  } while (next);
+  let resources;
+  if (LOCAL) {
+    if (!fs.existsSync(BACKUP_SRC)) { console.error('Local backup source not found:', BACKUP_SRC); process.exit(1); }
+    resources = listLocalSources(BACKUP_SRC);
+    console.log(`Found ${resources.length} photos in local backup; scanning for new ones.`);
+  } else {
+    resources = [];
+    let next = null;
+    do {
+      const res = await cloudinary.api.resources({
+        type: 'upload', prefix: env.folder + '/', max_results: 500, next_cursor: next,
+      });
+      resources.push(...res.resources);
+      next = res.next_cursor;
+    } while (next);
+    console.log(`Found ${resources.length} photos in Cloudinary.`);
+  }
 
-  // Exclude the watermark logo itself (it lives in the same folder, not a race photo).
+  // Exclude the watermark logo itself.
   const toProcess = resources
     .filter((r) => !seen.has(r.public_id) && r.public_id !== env.watermarkPublicId)
     .slice(0, LIMIT);
-  console.log(`Found ${resources.length} photos in Cloudinary; ${toProcess.length} new to analyze.`);
+  console.log(`${toProcess.length} new to analyze.`);
 
   // One Vision call per image requests: bib text + sponsor logos + scene labels.
   const features = [
@@ -132,16 +162,29 @@ async function main() {
     const zones = zonesFromPublicId(r.public_id);
     let bib = null, bibs = [], sponsorTags = [], keywords = [];
     try {
-      const [result] = await visionClient.annotateImage({ image: { source: { imageUri: r.secure_url } }, features });
+      let result;
+      if (LOCAL) {
+        // Send image bytes directly to Vision — no Cloudinary URL needed.
+        const content = fs.readFileSync(r.srcPath).toString('base64');
+        [result] = await visionClient.annotateImage({ image: { content }, features });
+        // Get real pixel dimensions from sharp (already a dep via generate-variants.js).
+        if (!r.width) {
+          try {
+            const { default: sharp } = await import('sharp');
+            const meta = await sharp(r.srcPath).metadata();
+            r.width = meta.width || 0;
+            r.height = meta.height || 0;
+          } catch {}
+        }
+      } else {
+        [result] = await visionClient.annotateImage({ image: { source: { imageUri: r.secure_url } }, features });
+      }
       // Pre-race content (pace car, graphics) has no runners — don't read bibs.
       if (category !== 'pre-race') bibs = pickBibs(result.textAnnotations);
       const fullText = (result.fullTextAnnotation && result.fullTextAnnotation.text)
         || (result.textAnnotations && result.textAnnotations[0] && result.textAnnotations[0].description) || '';
       const logos = (result.logoAnnotations || []).map((l) => l.description || '');
       sponsorTags = detectSponsors(fullText, logos);
-      // Pre-race graphics are marketing assets, not race-day scenes. Theme
-      // labels on graphics are noisy, so only race-day photo categories get
-      // automatic theme suggestions.
       if (category !== 'pre-race') keywords = detectThemes(result.labelAnnotations || []);
     } catch (e) {
       console.warn(`  ⚠ Vision failed for ${r.public_id}: ${e.message}`);
@@ -154,11 +197,11 @@ async function main() {
     out.push({
       publicId: r.public_id,
       category: category,
-      zones,              // narrow physical activation zones from nested folders
-      detectedBib: bib,   // primary bib (largest) — kept for backward compat
-      detectedBibs: bibs, // all visible bibs, sorted largest-first
-      sponsorTags,        // auto-detected sponsors/vendors (merged with manual tags at build)
-      keywords,           // generic themes and reviewed/zone-backed theme tags
+      zones,
+      detectedBib: bib,
+      detectedBibs: bibs,
+      sponsorTags,
+      keywords,
       width: r.width || 1600,
       height: r.height || 1067,
     });
@@ -167,7 +210,7 @@ async function main() {
   writeJson(outPath, out);
   console.log(`✓ Wrote ${out.length} photos to ${path.relative(process.cwd(), outPath)}`);
   console.log(`  • bibs detected: ${detected} new   • sponsors auto-tagged: ${sponsored}   • themes auto-tagged: ${themed}`);
-  console.log('Next: node pipeline/import-roster.js, then build-manifest.js (tag-sponsors.js only for manual fixes)');
+  console.log('Next: npm run r2:variants  →  npm run build  →  npm run r2:upload');
 }
 
 main().catch((e) => { console.error('✗', e.message); process.exit(1); });
