@@ -184,7 +184,7 @@ async function main() {
       const fullText = (result.fullTextAnnotation && result.fullTextAnnotation.text)
         || (result.textAnnotations && result.textAnnotations[0] && result.textAnnotations[0].description) || '';
       const logos = (result.logoAnnotations || []).map((l) => l.description || '');
-      sponsorTags = detectSponsors(fullText, logos);
+      sponsorTags = detectSponsors(fullText, logos, result.fullTextAnnotation && result.fullTextAnnotation.pages);
       if (category !== 'pre-race') keywords = detectThemes(result.labelAnnotations || []);
     } catch (e) {
       console.warn(`  ⚠ Vision failed for ${r.public_id}: ${e.message}`);
