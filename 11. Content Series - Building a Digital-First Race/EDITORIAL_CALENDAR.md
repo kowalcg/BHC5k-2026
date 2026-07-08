@@ -41,6 +41,8 @@ Every pair cross-links both ways and links to live proof (/photos/, /2026/, spon
 - Internal links 4–8: sibling article cross-link + live proof pages (/2026/, /photos/) + where natural /sponsors, /vendors, /register
 - Greg posts: 2–4 external authoritative citations; ≥1 honest limitation or uncertainty (E-E-A-T); real numbers from the key-numbers bank
 - Hero image: a REAL race-day photo from the gallery library (`~/BHC-2026-photos-backup/source/bhc-2026/` locally, or repo `public/photos` manifest) — **never the pre-race AI renders** in site public/; keyword filename, descriptive alt, landscape, ≤1400px, ≤500KB
+- **ROTATE hero photo categories** — don't reuse the finish arch every week. Match the category to the topic and vary across the series: course, finish-line, kids-1k (281 photos), festival (217), awards (138), start-line. E.g. photos article → course action; sponsor/vendor article → festival/vendor village; medals article → awards or kids medal moments; ecosystem article → kids/festival
+- Hero shortlist already scouted (in `~/BHC-2026-photos-backup/source/bhc-2026/`): `kids-1k/raul-0074.jpg` — dads running hand-in-hand with kids (Father's Day story; ideal Week 6 or 7); `kids-1k/bhc2026-_MG_8447-jdk.jpg` — kids passing the Bronte lighthouse (USED Week 1 BHC); `start-line/727497290_….jpg` — start corral crowd (USED Week 1 Greg); `finish-line/CHR00017.jpg` — finish arch (in repo as `/2026-archive-finish-line.jpg`, unused, available)
 - Zero AI-isms (delve, comprehensive, crucial, leverage, seamless, landscape-as-metaphor, "in today's...")
 - **Every BHC post ends with a 2027 hook**: June 20 2027 date + CTA to /sponsors, /vendors, or registration interest, whichever fits the post
 
