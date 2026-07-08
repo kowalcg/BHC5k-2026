@@ -28,6 +28,33 @@ Every pair cross-links both ways and links to live proof (/photos/, /2026/, spon
 | 6 | Aug 12, 2026 | A Race Is Just the Start: Building a Health & Safety Ecosystem | Beyond Race Day: Staying Safe & Injury-Free Outside | tapegeeks.com, getsunup.app, sportsclinicfinder.com, runmatepro.com | 📝 Planned |
 | 7 | Aug 19, 2026 | What Digital-First Delivered: Year One by the Numbers | Thank You, 2026 — Here's What's Coming in 2027 | /2026/, 2027 teaser | 📝 Planned |
 
+## SEO standards — MANDATORY for every article (goal: rank fast for 2027 — attract vendors, sponsors, runners, visitors)
+
+**Word counts (body, excluding frontmatter):**
+- GregKowalczyk.com posts: **1,800–2,200 words** (broader organizer/business SERP competition)
+- BHC posts: **1,200–1,600 words** (local/community + partner recruiting; depth + FAQ beats raw length here)
+
+**On-page requirements (both sites, every post):**
+- Primary keyword in: title (front-loaded, <60 chars), H1, first 100 words, at least one H2, URL slug, meta description (<160 chars)
+- Quick Answer block (40–60 words, standalone) near the top — targets featured snippets + AI answers
+- FAQ section, 3–5 self-contained PAA-style answers (40–80 words each) — **mandatory on BOTH sites**
+- Internal links 4–8: sibling article cross-link + live proof pages (/2026/, /photos/) + where natural /sponsors, /vendors, /register
+- Greg posts: 2–4 external authoritative citations; ≥1 honest limitation or uncertainty (E-E-A-T); real numbers from the key-numbers bank
+- Hero image: a REAL race-day photo from the gallery library (`~/BHC-2026-photos-backup/source/bhc-2026/` locally, or repo `public/photos` manifest) — **never the pre-race AI renders** in site public/; keyword filename, descriptive alt, landscape, ≤1400px, ≤500KB
+- Zero AI-isms (delve, comprehensive, crucial, leverage, seamless, landscape-as-metaphor, "in today's...")
+- **Every BHC post ends with a 2027 hook**: June 20 2027 date + CTA to /sponsors, /vendors, or registration interest, whichever fits the post
+
+**Primary keyword targets per week:**
+| Wk | Greg-site primary keyword | BHC primary keyword |
+|----|--------------------------|---------------------|
+| 1 | race archive / why archive race results | bronte harbour classic 2026 photos results |
+| 2 | find race photos by bib number (AI photo organization) | find your race photos bib number |
+| 3 | race sponsorship benefits / why sponsor a local 5K | sponsor a 5K race Oakville / vendor expo Oakville |
+| 4 | QR code race medals | race medal QR code |
+| 5 | event website SEO / race website that grows | bronteharbourclassic.com year-round |
+| 6 | runner safety ecosystem (sun safety, injury prevention) | staying safe running outside Oakville |
+| 7 | first year race results digital marketing | Oakville 5K 2027 registration |
+
 ## Per-pair publish checklist
 
 - [ ] Greg-site article written via blog-writer skill → `src/content/blog/[slug]/index.md`, tag `Digital-First Race`, series intro block ("Part N of Building a Digital-First Race")
