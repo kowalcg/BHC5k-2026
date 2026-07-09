@@ -87,7 +87,7 @@ Every pair cross-links both ways and links to live proof (/photos/, /2026/, spon
 - 875 registrations, sold-out inaugural race (June 21, 2026, Father's Day)
 - 1,843 photos and videos in the live gallery (includes 9 drone video chapters), 92% automatic bib detection
 - Photo categories: course 813, finish line 341, kids 1K 281, festival 217, awards 138, start line 53
-- 81 mini landing pages live at /2026/ — 21 sponsors + 53 vendors + 7 organizers (every sponsor AND vendor gets one)
+- 80 mini landing pages live at /2026/ — 21 sponsors + 52 vendors + 7 organizers (every sponsor AND vendor gets one; Civitan duplicate merged Jul 9). Plus /2027/ pages growing as partners sign
 - 50+ articles on bronteharbourclassic.com/news/
 - Photo hosting migrated Cloudinary → Cloudflare R2 (June 2026), ~$99/mo → $0
 - 2027: June 20, 2027 — 5K, 10K (run only), Kids 1K; target ~1,500 participants
