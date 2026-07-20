@@ -22,7 +22,7 @@ Every pair cross-links both ways and links to live proof (/photos/, /2026/, spon
 |----|------------|---------------------------|--------------------|-------------|--------|
 | 1 | Jul 8, 2026 | Why We Archived Every Race Forever | The 2026 Archive: Your Race, Saved Forever | /2026/, medal QR | ✅ Published |
 | 2 | Jul 15, 2026 | How AI Organized 1,800+ Race Photos (and Drone Videos) | How to Find Your Race Photos (Search by Bib Number) | /photos/ | ✅ Published |
-| 3 | Jul 22, 2026 | Why Every Sponsor and Vendor Gets a Permanent Web Presence | Why Every Sponsor and Vendor Has Their Own Page | /2026/[slug] pages | 📝 Planned |
+| 3 | Jul 22, 2026 | Why Every Sponsor and Vendor Gets a Permanent Web Presence | Why Every Sponsor and Vendor Has Their Own Page | /2026/[slug] pages | ✅ Published |
 | 4 | Jul 29, 2026 | Why Our Medals Have QR Codes (When No One Else's Do) | Scan Your Medal: What the QR Code Unlocks | /2026/ hub | 📝 Planned |
 | 5 | Aug 5, 2026 | A Race Website That Grows Instead of Starting Over | Everything on BronteHarbourClassic.com (and Why It Stays Up All Year) | site-wide | 📝 Planned |
 | 6 | Aug 12, 2026 | A Race Is Just the Start: Building a Health & Safety Ecosystem | Beyond Race Day: Staying Safe & Injury-Free Outside | tapegeeks.com, getsunup.app, sportsclinicfinder.com, runmatepro.com | 📝 Planned |
