@@ -12,11 +12,15 @@ A two-sided content network documenting the digital/AI decisions behind the Merc
 - **GregKowalczyk.com** (`/news/`, tag: `Digital-First Race`) — consultant voice, for business owners and event organizers. How and why we built it.
 - **BronteHarbourClassic.com** (`/news/`, tag: `Behind the Race`) — community voice, for runners, sponsors, vendors. What it means for them.
 
-Every pair cross-links both ways and links to live proof (/photos/, /2026/, sponsor pages). The series also carries the ecosystem mission: TapeGeeks (injury-free), GearTOP/SunUp (sun safety for every runner and kid), SportClinicFinder (find a clinic), RunMate Pro.
+Every pair cross-links both ways and links to live proof (/photos/, /2026/, sponsor pages). The series also carries the ecosystem mission — TapeGeeks (injury-free), GearTOP/SunUp (sun safety), SportClinicFinder (find a clinic), RunMate Pro (training) — **each gets its own full week (6–9)**, not one shared week. Cramming all four into a single article was the original Week 6 plan; it produced shallow, generic coverage and was replaced (see revision note below).
 
 **Never mentioned in this series:** registration platform evaluations, vendor sales conversations (Movemint, Race Roster comparisons, etc.).
 
-## The 7-week schedule
+**Revision — Aug 30, 2026:** Extended from 7 to 10 weeks. Original Week 6 ("ecosystem" grab-bag) split into four distinct weeks (6–9), each keyword-researched and tied to one real partner, so the series doesn't repeat the pillars already used in weeks 1–5 (archive, AI photo-tagging, sponsor/vendor pages, QR medals, site architecture). Year-one recap moved from Week 7 to the new closing Week 10. Target dates for 6–10 reset forward from today since the original Aug 12/19 dates passed without being drafted.
+
+**Uniqueness rule (added after a Week 5 review-bypass incident — see checklist below):** before drafting any week, skim the H2 headings, Quick Answer blocks, and hero image/alt text of every previously published week in this series. No two articles may share a closing-section heading, a hero image, or a restated claim (e.g. "1,843 photos," "80 partner pages," "archived forever") as their main point — reference prior weeks briefly via cross-link instead of re-explaining them.
+
+## The 10-week schedule
 
 | Wk | Target date | GregKowalczyk.com article | BHC /news/ sibling | Proof links | Status |
 |----|------------|---------------------------|--------------------|-------------|--------|
@@ -25,8 +29,11 @@ Every pair cross-links both ways and links to live proof (/photos/, /2026/, spon
 | 3 | Jul 22, 2026 | Why Every Sponsor and Vendor Gets a Permanent Web Presence | Why Every Sponsor and Vendor Has Their Own Page | /2026/[slug] pages | ✅ Published |
 | 4 | Jul 29, 2026 | Why Our Medals Have QR Codes (When No One Else's Do) | Scan Your Medal: What the QR Code Unlocks | /2026/ hub | ✅ Published |
 | 5 | Aug 5, 2026 | A Race Website That Grows Instead of Starting Over | Everything on BronteHarbourClassic.com (and Why It Stays Up All Year) | site-wide | ✅ Published |
-| 6 | Aug 12, 2026 | A Race Is Just the Start: Building a Health & Safety Ecosystem | Beyond Race Day: Staying Safe & Injury-Free Outside | tapegeeks.com, getsunup.app, sportsclinicfinder.com, runmatepro.com | 📝 Planned |
-| 7 | Aug 19, 2026 | What Digital-First Delivered: Year One by the Numbers | Thank You, 2026 — Here's What's Coming in 2027 | /2026/, 2027 teaser | 📝 Planned |
+| 6 | Sep 2, 2026 | Why We Partnered With a Recovery Brand Before Anyone Got Hurt | How to Avoid Common Running Injuries Before Your First 5K in Oakville | tapegeeks.com | 📝 Planned |
+| 7 | Sep 9, 2026 | Why Every Outdoor Race Needs a Sun-Safety Plan (Most Don't Have One) | Sun Safety Tips for Race Day: What We Learned Protecting 875 Runners | getsunup.app | 📝 Planned |
+| 8 | Sep 16, 2026 | How We Help Runners Find the Right Clinic Before They Need One | Hurt After Race Day? How to Find a Sports Clinic Near You in Oakville | sportsclinicfinder.com | 📝 Planned |
+| 9 | Sep 23, 2026 | What We Learned Recommending a Couch-to-5K App to 875 First-Timers | New to Running? How to Train for Your First 5K | runmatepro.com | 📝 Planned |
+| 10 | Sep 30, 2026 | What Digital-First Delivered: Year One by the Numbers | Thank You, 2026 — Here's What's Coming in 2027 | /2026/, 2027 teaser | 📝 Planned |
 
 ## SEO standards — MANDATORY for every article (goal: rank fast for 2027 — attract vendors, sponsors, runners, visitors)
 
@@ -54,15 +61,22 @@ Every pair cross-links both ways and links to live proof (/photos/, /2026/, spon
 | 3 | race sponsorship benefits / why sponsor a local 5K | sponsor a 5K race Oakville / vendor expo Oakville |
 | 4 | QR code race medals | race medal QR code |
 | 5 | event website SEO / race website that grows | bronteharbourclassic.com year-round |
-| 6 | runner safety ecosystem (sun safety, injury prevention) | staying safe running outside Oakville |
-| 7 | first year race results digital marketing | Oakville 5K 2027 registration |
+| 6 | running injury prevention for beginners | avoid running injuries first 5k |
+| 7 | sun protection for runners | sun safety tips race day Oakville |
+| 8 | how to find a sports injury clinic | sports injury clinic near me Oakville |
+| 9 | couch to 5k training plan for beginners | how to train for your first 5k |
+| 10 | first year race results digital marketing | Oakville 5K 2027 registration |
+
+> Weeks 6–9 validated against real search demand (Aug 30, 2026): all four are established, actively-searched health/fitness categories dominated by national authority sites (Cleveland Clinic, hospital sports-med pages, major running-app listings). The realistic path to ranking is the same one that has worked for weeks 1–5 — a practitioner/organizer story with proprietary numbers (partnership details, 875-runner outcomes), not competing head-on with medical publishers on the generic term. Greg-site keyword = the lower-competition "why we built/partnered" angle; BHC-site keyword = the local, long-tail runner query.
 
 ## Per-pair publish checklist
 
 - [ ] Greg-site article written via blog-writer skill → `src/content/blog/[slug]/index.md`, tag `Digital-First Race`, series intro block ("Part N of Building a Digital-First Race")
 - [ ] BHC article written → `site/src/content/blog/[slug].md`, tag `Behind the Race`
 - [ ] Cross-links added both ways + live proof links verified
-- [ ] Both drafts shown to Greg BEFORE any git push
+- [ ] Uniqueness check run against every previously published week (see Uniqueness rule above) — no repeated closing headings, hero images/alt text, or restated claims
+- [ ] Both drafts pushed to a `digital-first/week-N` branch ONLY — never to `main` directly, regardless of how the draft was produced
+- [ ] Both drafts shown to Greg BEFORE any git push to `main`; Greg merges/publishes, not the drafting session
 - [ ] `npm run build` passes in each repo
 - [ ] Push main → verify live URLs after Vercel deploy (~60s)
 - [ ] `./submit-indexnow.sh` run on both sites
