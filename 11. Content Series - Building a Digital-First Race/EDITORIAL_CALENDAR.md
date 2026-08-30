@@ -16,6 +16,8 @@ Every pair cross-links both ways and links to live proof (/photos/, /2026/, spon
 
 **Never mentioned in this series:** registration platform evaluations, vendor sales conversations (Movemint, Race Roster comparisons, etc.).
 
+**Publish note — Aug 30, 2026:** Greg approved and published the original Week 6 ecosystem overview pair (drafted the same morning, before the split below was decided). Weeks 7–9 now serve as the single-topic deep dives the overview links forward to; the Week 6 row reflects what is live. The planned "Why We Partnered With a Recovery Brand Before Anyone Got Hurt" / injury-prevention pair can be folded into Weeks 7–9 if still wanted.
+
 **Revision — Aug 30, 2026:** Extended from 7 to 10 weeks. Original Week 6 ("ecosystem" grab-bag) split into four distinct weeks (6–9), each keyword-researched and tied to one real partner, so the series doesn't repeat the pillars already used in weeks 1–5 (archive, AI photo-tagging, sponsor/vendor pages, QR medals, site architecture). Year-one recap moved from Week 7 to the new closing Week 10. Target dates for 6–10 reset forward from today since the original Aug 12/19 dates passed without being drafted.
 
 **Uniqueness rule (added after a Week 5 review-bypass incident — see checklist below):** before drafting any week, skim the H2 headings, Quick Answer blocks, and hero image/alt text of every previously published week in this series. No two articles may share a closing-section heading, a hero image, or a restated claim (e.g. "1,843 photos," "80 partner pages," "archived forever") as their main point — reference prior weeks briefly via cross-link instead of re-explaining them.
@@ -29,7 +31,7 @@ Every pair cross-links both ways and links to live proof (/photos/, /2026/, spon
 | 3 | Jul 22, 2026 | Why Every Sponsor and Vendor Gets a Permanent Web Presence | Why Every Sponsor and Vendor Has Their Own Page | /2026/[slug] pages | ✅ Published |
 | 4 | Jul 29, 2026 | Why Our Medals Have QR Codes (When No One Else's Do) | Scan Your Medal: What the QR Code Unlocks | /2026/ hub | ✅ Published |
 | 5 | Aug 5, 2026 | A Race Website That Grows Instead of Starting Over | Everything on BronteHarbourClassic.com (and Why It Stays Up All Year) | site-wide | ✅ Published |
-| 6 | Sep 2, 2026 | Why We Partnered With a Recovery Brand Before Anyone Got Hurt | How to Avoid Common Running Injuries Before Your First 5K in Oakville | tapegeeks.com | 📝 Planned |
+| 6 | Aug 30, 2026 | Runner Safety Ecosystem: Building Beyond Race Day | Staying Safe Running Outside in Oakville: Beyond Race Day | tapegeeks.com, getsunup.app, sportsclinicfinder.com, runmatepro.com | ✅ Published |
 | 7 | Sep 9, 2026 | Why Every Outdoor Race Needs a Sun-Safety Plan (Most Don't Have One) | Sun Safety Tips for Race Day: What We Learned Protecting 875 Runners | getsunup.app | 📝 Planned |
 | 8 | Sep 16, 2026 | How We Help Runners Find the Right Clinic Before They Need One | Hurt After Race Day? How to Find a Sports Clinic Near You in Oakville | sportsclinicfinder.com | 📝 Planned |
 | 9 | Sep 23, 2026 | What We Learned Recommending a Couch-to-5K App to 875 First-Timers | New to Running? How to Train for Your First 5K | runmatepro.com | 📝 Planned |
@@ -49,7 +51,7 @@ Every pair cross-links both ways and links to live proof (/photos/, /2026/, spon
 - Greg posts: 2–4 external authoritative citations; ≥1 honest limitation or uncertainty (E-E-A-T); real numbers from the key-numbers bank
 - Hero image: a REAL race-day photo from the gallery library (`~/BHC-2026-photos-backup/source/bhc-2026/` locally, or repo `public/photos` manifest) — **never the pre-race AI renders** in site public/; keyword filename, descriptive alt, landscape, ≤1400px, ≤500KB
 - **ROTATE hero photo categories** — don't reuse the finish arch every week. Match the category to the topic and vary across the series: course, finish-line, kids-1k (281 photos), festival (217), awards (138), start-line. E.g. photos article → course action; sponsor/vendor article → festival/vendor village; medals article → awards or kids medal moments; ecosystem article → kids/festival
-- Hero shortlist already scouted (in `~/BHC-2026-photos-backup/source/bhc-2026/`): `kids-1k/raul-0074.jpg` — dads running hand-in-hand with kids (Father's Day story; ideal Week 6 or 7); `kids-1k/bhc2026-_MG_8447-jdk.jpg` — kids passing the Bronte lighthouse (USED Week 1 BHC); `start-line/727497290_….jpg` — start corral crowd (USED Week 1 Greg); `finish-line/CHR00017.jpg` — finish arch (in repo as `/2026-archive-finish-line.jpg`, unused, available)
+- Hero shortlist already scouted (in `~/BHC-2026-photos-backup/source/bhc-2026/`): `kids-1k/raul-0074.jpg` — dads running hand-in-hand with kids (USED Week 6 BHC); `festival/IMG_8134.jpg` — Bronte Runners tent with TapeGeeks products by the harbour (USED Week 6 Greg); `kids-1k/bhc2026-_MG_8447-jdk.jpg` — kids passing the Bronte lighthouse (USED Week 1 BHC); `start-line/727497290_….jpg` — start corral crowd (USED Week 1 Greg); `finish-line/CHR00017.jpg` — finish arch (in repo as `/2026-archive-finish-line.jpg`, unused, available)
 - Zero AI-isms (delve, comprehensive, crucial, leverage, seamless, landscape-as-metaphor, "in today's...")
 - **Every BHC post ends with a 2027 hook**: June 20 2027 date + CTA to /sponsors, /vendors, or registration interest, whichever fits the post
 
@@ -87,7 +89,7 @@ Every pair cross-links both ways and links to live proof (/photos/, /2026/, spon
 
 - Race name: **Mercedes-Benz Oakville Bronte Harbour Classic 5K** — never shortened on first use
 - Venue: **Bronte Heritage Waterfront Park** (never "Bronte Harbour Park")
-- Greg & Charles = **Race Co-Directors**
+- Greg = **Race Director** (sole, for 2027+ and any present-tense mention). "Race Co-Directors" (Greg & Charles) only when referring back to the completed June 2026 race — never "Co-Race Directors"
 - 2026 was **5K + Kids 1K only**; 10K arrives 2027 (forward-looking mentions only)
 - 2026 total = **875 registrations**
 - ON shoes: "8 pairs of ON Running performance shoes" — never a dollar value
