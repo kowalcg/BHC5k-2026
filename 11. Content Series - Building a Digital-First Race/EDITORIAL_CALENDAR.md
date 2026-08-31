@@ -32,7 +32,7 @@ Every pair cross-links both ways and links to live proof (/photos/, /2026/, spon
 | 4 | Jul 29, 2026 | Why Our Medals Have QR Codes (When No One Else's Do) | Scan Your Medal: What the QR Code Unlocks | /2026/ hub | ✅ Published |
 | 5 | Aug 5, 2026 | A Race Website That Grows Instead of Starting Over | Everything on BronteHarbourClassic.com (and Why It Stays Up All Year) | site-wide | ✅ Published |
 | 6 | Aug 30, 2026 | Runner Safety Ecosystem: Building Beyond Race Day | Staying Safe Running Outside in Oakville: Beyond Race Day | tapegeeks.com, getsunup.app, sportsclinicfinder.com, runmatepro.com | ✅ Published |
-| 7 | Sep 9, 2026 | Why Every Outdoor Race Needs a Sun-Safety Plan (Most Don't Have One) | Sun Safety Tips for Race Day: What We Learned Protecting 875 Runners | getsunup.app | 📝 Planned |
+| 7 | Sep 9, 2026 | Why Every Outdoor Race Needs a Sun-Safety Plan | Sun Safety Tips for Race Day: What We Learned Protecting 875 Runners | getsunup.app | ✅ Published |
 | 8 | Sep 16, 2026 | How We Help Runners Find the Right Clinic Before They Need One | Hurt After Race Day? How to Find a Sports Clinic Near You in Oakville | sportsclinicfinder.com | 📝 Planned |
 | 9 | Sep 23, 2026 | What We Learned Recommending a Couch-to-5K App to 875 First-Timers | New to Running? How to Train for Your First 5K | runmatepro.com | 📝 Planned |
 | 10 | Sep 30, 2026 | What Digital-First Delivered: Year One by the Numbers | Thank You, 2026 — Here's What's Coming in 2027 | /2026/, 2027 teaser | 📝 Planned |
